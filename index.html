@@ -8,14 +8,15 @@
 /* AI Hub 对标情报站 · 数据层 V4
    每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-07-29.2";
+window.AIHUB_DATA_VERSION = "2026-07-29.3";
 window.AIHUB_HISTORY = [
   { date: "2026-07-29", note: "模块一情报批量补强:手动检索官方 blog/新闻中心、AI 媒体、财经媒体、政府监管、研报平台,新增 21 条关键动态(运营商 MoMA2.0/WorkBuddy、清朗整治AI乱象/拟人化办法/988款备案/香港备忘录、千问10亿下载/100亿下载、GPT-5.6/GLM-5.2、硅基流动20亿B轮/OpenRouter卖身、算力全链涨价与算力银行、DeepSeek降价75%/智谱提价/定价分裂、MCP协议栈/智能体爆发、博云融资),insights 增至 45 条" },
   { date: "2026-07-29", note: "模块一升级:新增动态分类树(政策/行业/技术趋势 + 厂商[原厂/聚合/运营商→三大运营商]竖排导航,与标签双维度筛选);情报信源库扩充为 12 类(新增原厂/运营商官方、AI 媒体、财经媒体、政府监管、研报平台),UI 改为折叠展示" },
   { date: "2026-07-29", note: "每日自动更新:新增 6 条动态(Kimi K3 开源/蚂蚁 LLaDA2.2/GPU 租赁涨价/WAIC 2026 闭幕/开放权重公开信/Claude Opus 5;信源:GitHub、Anthropic 官网、量子位、国金证券、人民日报海外版),已备份当日快照" },
   { date: "2026-07-27", note: "V4:新增情报信源库(官网+公众号);天翼云星辰MaaS 加入功能对标;DMXAPI/Novita 加入商业模式;价格矩阵全部采用官网/定价页真实数据(硅基流动/DMXAPI/Together/Novita/CMI/MoMA),新增多模态价格表" },
   { date: "2026-07-27", note: "V3:动态加原文链接、补全 6 月热点;对标拆分 9 家厂商并引入细分指标;价格对标改为矩阵" },
-  { date: "2026-07-27", note: "初版上线:四大模块 + 技术架构页" }
+  { date: "2026-07-27", note: "初版上线:四大模块 + 技术架构页" },
+  { date: "2026-07-29", note: "修复:localStorage 旧快照覆盖线上最新数据的问题——loadState 改为按数据版本(__ver)校验,版本不符即丢弃本地缓存、以发布数据为准;新增区域维度(8 区域)与 24 条海外/港澳/台/东南亚情报,insights 增至 69 条(版本 2026-07-29.3)" }
 ];
 
 window.AIHUB_DATA = {
@@ -1051,8 +1052,8 @@ var catMap={};
 var hiddenBm={}, hiddenBiz={}, hiddenPrice={};
 var RCOLORS=["#2b5cff","#00b3a4","#f2994a","#7c3aed","#e0483e","#0e9de0","#2e7d32","#c76a15","#d63384"];
 
-function loadState(){ try{var s=localStorage.getItem(LS_DATA); if(s) return JSON.parse(s);}catch(e){} return JSON.parse(JSON.stringify(base)); }
-function persist(){ localStorage.setItem(LS_DATA, JSON.stringify(state)); }
+function loadState(){ try{var s=localStorage.getItem(LS_DATA); if(s){ var sv=JSON.parse(s); if(sv&&sv.__ver===window.AIHUB_DATA_VERSION) return sv; } }catch(e){} return JSON.parse(JSON.stringify(base)); }
+function persist(){ var d=JSON.parse(JSON.stringify(state)); try{ d.__ver=window.AIHUB_DATA_VERSION; localStorage.setItem(LS_DATA, JSON.stringify(d)); }catch(e){} }
 function toast(m){ var t=document.getElementById("toast"); t.textContent=m; t.style.display="block"; setTimeout(function(){t.style.display="none"},2200); }
 function esc(s){ return String(s==null?"":s); }
 
