@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Hub · 市场情报与对标分析平台</title>
+<script>/* ===== AI Hub 数据层(已内联,单文件自包含) ===== */
+/* AI Hub 对标情报站 · 数据层 V4
+   每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
+   页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
+window.AIHUB_DATA_VERSION = "2026-07-29";
+window.AIHUB_HISTORY = [
+  { date: "2026-07-29", note: "每日自动更新:新增 6 条动态(Kimi K3 开源/蚂蚁 LLaDA2.2/GPU 租赁涨价/WAIC 2026 闭幕/开放权重公开信/Claude Opus 5;信源:GitHub、Anthropic 官网、量子位、国金证券、人民日报海外版),已备份当日快照" },
+  { date: "2026-07-27", note: "V4:新增情报信源库(官网+公众号);天翼云星辰MaaS 加入功能对标;DMXAPI/Novita 加入商业模式;价格矩阵全部采用官网/定价页真实数据(硅基流动/DMXAPI/Together/Novita/CMI/MoMA),新增多模态价格表" },
+  { date: "2026-07-27", note: "V3:动态加原文链接、补全 6 月热点;对标拆分 9 家厂商并引入细分指标;价格对标改为矩阵" },
+  { date: "2026-07-27", note: "初版上线:四大模块 + 技术架构页" }
+];
+
+window.AIHUB_DATA = {
+
+  /* ================= 模块一:AI 行业洞察与生态动态 ================= */
+  insights: [
+    /* ---- 2026-07 ---- */
+    { date: "2026-07-28", tag: "开源动态", title: "月之暗面开源 Kimi K3:全球首个近 3 万亿参数开源模型", source: "Moonshot AI GitHub", url: "https://github.com/MoonshotAI/Kimi-K3",
+      summary: "Kimi K3 总参数 2.8T、激活 104B,原生视觉理解、1M 上下文;权重、技术报告与 MoonEP/FlashKDA/AgentEnv 全套 Infra 同步开放,华为昇腾宣布 0day 全链路适配。" },
+    { date: "2026-07-28", tag: "开源动态", title: "蚂蚁开源 LLaDA2.2:全球首个大规模 Agentic 扩散语言模型", source: "量子位", url: "",
+      summary: "千亿参数 MoE 扩散架构,原生 128K 上下文,引入 Levenshtein 编辑与 L-EBPO 强化学习,首次让扩散模型具备长程任务自我修正能力,吞吐量达对标模型 1.64 倍。" },
+    { date: "2026-07-28", tag: "算力", title: "GPU 租赁价持续上行:B200 综合价升至 5.0-5.2 美元/GPU·时", source: "SemiAnalysis/国金证券", url: "",
+      summary: "B200 租赁价较 2025 年 8 月累计上涨 25%-30%,H100 回升至约 3.1 美元;国内百亿级算力长单加速落地,Kimi 因算力紧缺暂停 C 端新订阅,供需紧张未缓解。" },
+    { date: "2026-07-28", tag: "案例", title: "WAIC 2026 闭幕:意向采购约 203.6 亿元,央企加码算力底座", source: "人民日报海外版", url: "",
+      summary: "展览超 10 万平米、观众超 40 万人次;中国 AI 从'炫技'转向工厂与生活场景实干;中国移动等央企发布 AI 基座与算力建设路径,智能体规模化落地成焦点。" },
+    { date: "2026-07-27", tag: "开源动态", title: "25 家科技巨头联署开放权重公开信,Anthropic 发文回应缺席", source: "Anthropic 官网", url: "https://www.anthropic.com/news/position-open-weights-models",
+      summary: "英伟达、微软、Meta、OpenAI、谷歌等 25 家美企联署《开放权重与美国 AI 领导力》公开信;Anthropic 未签署并单独发表官方立场,开源与闭源路线之争白热化。" },
+    { date: "2026-07-24", tag: "模型更新", title: "Anthropic 发布 Claude Opus 5:$5/$25 与上代同价,长程智能体增强", source: "Anthropic 官网", url: "https://www.anthropic.com/news/claude-opus-5",
+      summary: "Opus 5 定价 $5/$25 每百万 tokens,仅为 Fable 5 一半;1M 上下文,支持三层嵌套子智能体;ARC-AGI 3 得分达第二名三倍,已成为 Claude Max 默认模型。" },
+    { date: "2026-07-27", tag: "竞品", title: "DMXAPI 以'折扣聚合'模式定价:全线低于官网 4.8-9.5 折", source: "DMXAPI 官网定价页", url: "https://www.dmxapi.cn/rmb",
+      summary: "DMXAPI 按模型分组折扣:DeepSeek-V4-Pro 8.5 折(2.55/5.1 元)、qwen3.5-plus 系列 5 折(0.4/2.4 元)、qwen3-coder-plus 4.8 折,并提供官方直连(-guan)与 Claude Code 专用(-cc)通道,代表'低价走量'型聚合打法。" },
+    { date: "2026-07-27", tag: "竞品", title: "Novita AI 多款模型美元定价低于同业,批量推理 5 折", source: "Novita AI 官网定价页", url: "https://novita.ai/pricing",
+      summary: "Novita 上 Kimi-K2.6($0.80/$3.40)、GPT-OSS-120b($0.05/$0.25)、DeepSeek-V4-Flash($0.14/$0.28)均为各渠道最低价之一;Batch API 输入输出 5 折,缓存读取价为输入 20-50%。" },
+    { date: "2026-07-27", tag: "算力", title: "Together AI 公布预留吞吐(PTU)与 GPU 租赁价:H100 $3.99/时起", source: "Together AI 官网定价页", url: "https://www.together.ai/pricing",
+      summary: "Together AI 形成'模型 API + 预留吞吐 + 专属实例 + GPU 集群 + 微调'完整商业栈:H100 按需 $3.99/GPU·时(181 天长约 $3.09),B200 $8.19;微调 LoRA $0.48/百万 tokens 起。" },
+    { date: "2026-07-27", tag: "竞品", title: "CMI AI Hub 模型广场在架 GPT-5.6 全系与 Claude 4.8", source: "CMI AI Hub 官网", url: "https://mcloud.cmi.chinamobile.com/cmp-web/AIHub/modelSquare",
+      summary: "GPT-5.6 Sol/Terra/Luna、Claude Opus 4.8/4.7/4.6、Sonnet 4.6、Haiku 4.5、MiniMax-M2.5、Gemini 3.1 等已在架,美元按量计价与官方同价(如 Claude Opus 4.8 $5.25/$26.25),上下文最高 1050K,另覆盖视频(Veo/Seedance/Wan)与图像模型。" },
+    { date: "2026-07-25", tag: "竞品", title: "七牛云 AI 推出企业月度套餐,双协议兼容成差异点", source: "七牛云官网", url: "https://www.qiniu.com/",
+      summary: "Enterprise S/M/B 月度套餐(2,999-9,999 元/月)约 10-50 亿积分/月、无速率限制;同时兼容 OpenAI 与 Anthropic 双 SDK,Claude 生态代码零改动切换到国内模型。" },
+    { date: "2026-07-22", tag: "模型更新", title: "Kimi K2.6 发布,强化长程代码与垂类场景", source: "Moonshot AI 开放平台", url: "https://platform.moonshot.cn/",
+      summary: "输入 6.5 元/百万 tokens、输出 27 元,缓存命中 1.1 元;在法律、金融、科研等高严谨场景有公开案例背书,配套联网搜索、Memory、Code-Runner 等开箱工具。" },
+    { date: "2026-07-20", tag: "竞品", title: "OpenRouter 在架模型超 400 个,聚合广度继续领先", source: "OpenRouter 官网", url: "https://openrouter.ai/",
+      summary: "接入 60+ 供应商、400+ 模型,单 API Key 自动路由与故障转移;充值收 5.5% 手续费。无标准化 SLA、企业功能有限,数据经境外转发是国内企业主要顾虑。" },
+    { date: "2026-07-18", tag: "案例", title: "金融机构采用'聚合网关+私有化'混合模式落地大模型", source: "公开行业报道", url: "",
+      summary: "多家银行、券商以聚合网关统一纳管内外部模型:公有云模型承担非敏感业务,私有化开源模型处理涉密数据,核心诉求为审计日志、成本分摊与数据不出域。" },
+    { date: "2026-07-15", tag: "政策", title: "生成式 AI 备案与算法备案持续扩容,合规成准入门槛", source: "国家网信办公开信息", url: "https://beian.cac.gov.cn/",
+      summary: "生成式人工智能服务备案名单持续更新,面向公众服务的模型与平台需完成备案;企业采购时将备案资质、数据跨境合规作为供应商准入硬指标。" },
+    { date: "2026-07-12", tag: "竞品", title: "硅基流动以'预留实例+私有化'切入生产级市场", source: "硅基流动官网", url: "https://siliconflow.cn/pricing",
+      summary: "主推推理加速、预留实例独占算力与 BYOC 私有化部署,商用版 99.9% SLA;定价页显示 GLM-5.2 8/28 元、DeepSeek-V4-Pro 12/24 元、V4-Flash 1/2 元每百万 tokens,缓存命中价低至 0.1 折档。" },
+    /* ---- 2026-06 ---- */
+    { date: "2026-06-30", tag: "模型更新", title: "DeepSeek-V4 Preview 发布,Agent 推理能力强化", source: "DeepSeek 官网", url: "https://platform.deepseek.com/",
+      summary: "专项强化 Agentic 场景超长上下文效率与推理能力,源头厂商 API 首发;各聚合平台数日内跟进上架,上架速度成为聚合平台竞争力指标。" },
+    { date: "2026-06-26", tag: "模型更新", title: "火山方舟发布 Doubao-Seed-2.0 系列,多媒体矩阵扩容", source: "火山引擎官网", url: "https://www.volcengine.com/product/ark",
+      summary: "豆包 Seed-2.0 Pro/Lite/Mini/Code 四档齐发,配套 Seedance 视频、Seedream 图像模型;平台宣称可承载 500 万 TPM、30ms 级响应。" },
+    { date: "2026-06-22", tag: "开源动态", title: "Qwen3.5 系列开源扩容,小尺寸模型进入聚合平台", source: "阿里云官网", url: "https://bailian.console.aliyun.com/",
+      summary: "Qwen3.5-4B、35B-A3B 等开源规格上架各聚合平台;移动云 MoMA 定价 4B 仅 0.5/2 元每百万 tokens,低成本场景(分类/摘要)加速普及。" },
+    { date: "2026-06-20", tag: "模型更新", title: "Qwen3.7 旗舰上线百炼,免费额度创行业新高", source: "阿里云官网", url: "https://help.aliyun.com/zh/model-studio/model-pricing",
+      summary: "百炼上架 Qwen3.7-Max/Plus 并限时折扣,新增 60 语言实时同传模型;新用户 7,000 万 tokens 免费额度(90 天)为业内最高,显著拉低试用门槛。" },
+    { date: "2026-06-15", tag: "案例", title: "跨境电商借助聚合平台实现多模型成本优化", source: "公开行业报道", url: "",
+      summary: "头部跨境电商将客服、翻译、素材生成按场景路由到不同价位模型,配合缓存与降级策略,整体推理成本下降 40%+;'按效果/成本路由'是核心采购动因。" },
+    { date: "2026-06-10", tag: "政策", title: "欧盟 AI 法案分阶段实施,出海企业合规需求上升", source: "欧盟委员会官网", url: "https://digital-strategy.ec.europa.eu/",
+      summary: "AI Act 对通用目的大模型的透明度、系统性风险评估要求陆续生效,出海企业需要平台侧提供模型合规信息、数据驻留与审计证据,催生'合规即服务'需求。" },
+    { date: "2026-06-05", tag: "竞品", title: "移动云 MoMA 公布自营模型定价,2500 万 tokens 免费体验", source: "移动云帮助中心", url: "https://ecloud.10086.cn/op-help-center/doc/article/91592",
+      summary: "MoMA 以'五个统一'(认证/调度/SLA/运维/计费)定位,自营模型按量:DeepSeek-V3 2/8 元、R1 4/16 元、GLM-5.1 6/24 元每百万 tokens;2500 万 tokens 限时 1 个月免费。" },
+    { date: "2026-06-01", tag: "竞品", title: "三大运营商云全面开战 Token 经营:套餐与 TPM 包落地", source: "腾讯新闻·一线", url: "https://new.qq.com/rain/a/20260601A02BVI00",
+      summary: "天翼云 Coding Plan 49-469 元/月、Token Plan(GLM 39.9-299.9 元/月,DeepSeek 9.9-49.9 元/月),TPM 保障包 DeepSeek-V3 1 万元/月;联通云个人 15-45 元/月、团队 198-1398 元/月;移动云团队版 5000 元/月,并推出机密模型服务(392-56000 元档)。" }
+  ],
+
+  /* ================= 情报信源库(每日爬虫监控清单) ================= */
+  intelSources: [
+    { cat: "政策与合规", icon: "📜", color: "#c81e1e",
+      sites: [
+        { name: "国家网信办·备案系统", url: "https://beian.cac.gov.cn/", desc: "算法/大模型备案名单与进度" },
+        { name: "中国信通院 CAICT", url: "https://www.caict.ac.cn/", desc: "AI 安全治理白皮书、数据跨境指南" },
+        { name: "欧盟委员会 AI Act", url: "https://digital-strategy.ec.europa.eu/", desc: "欧盟《人工智能法案》及实施指南" },
+        { name: "美国 NIST AI RMF", url: "https://www.nist.gov/artificial-intelligence", desc: "AI 风险管理框架,全球合规基准" }
+      ],
+      wechat: ["网信中国(备案名单首发)", "中国信通院(白皮书/标准解读)", "网安寻路人(数据跨境实务)", "数据与算法治理(备案实操)", "走出去智库 CGGT(海外监管)"] },
+    { cat: "技术与产品发布", icon: "🚀", color: "#2b5cff",
+      sites: [
+        { name: "OpenAI Blog", url: "https://openai.com/blog", desc: "O 系列推理模型、新架构首发" },
+        { name: "Anthropic News", url: "https://www.anthropic.com/news", desc: "Claude 系列与前沿研究" },
+        { name: "Google DeepMind", url: "https://deepmind.google/blog", desc: "Gemini 系列技术发布" }
+      ],
+      wechat: ["机器之心(全球技术发布最快)", "量子位 QbitAI(商业化解读)", "新智元(架构深度剖析)", "智源社区 BAAI(FlagEval 评测)"] },
+    { cat: "模型与开源动态", icon: "🧠", color: "#7c3aed",
+      sites: [
+        { name: "HF Open LLM Leaderboard", url: "https://huggingface.co/spaces/open-llm-leaderboard", desc: "全球开源模型权威榜单" },
+        { name: "LMSYS Chatbot Arena", url: "https://lmarena.ai/", desc: "盲测人类偏好排行" },
+        { name: "OpenCompass", url: "https://opencompass.org.cn/", desc: "国内最具公信力评测榜单" },
+        { name: "GitHub Trending", url: "https://github.com/trending", desc: "Llama/Qwen/DeepSeek 仓库动态" }
+      ],
+      wechat: ["通义千问 / DeepSeek / 智谱AI(官方 Release)", "大模型之路(部署成本分析)", "Hugging Face(开源速递)"] },
+    { cat: "聚合与中间层玩家", icon: "⚔️", color: "#c76a15",
+      sites: [
+        { name: "IT 桔子", url: "https://www.itjuzi.com/", desc: "API 聚合平台融资轮次与估值" },
+        { name: "OpenRouter / Together / Anyscale 官方博客", url: "https://openrouter.ai/", desc: "海外聚合平台降价与新功能" },
+        { name: "36氪企服点评", url: "https://36kr.com/project", desc: "AI 中间件商业分析" }
+      ],
+      wechat: ["36氪 / 钛媒体(融资与合作)", "极客邦 InfoQ(高并发路由/缓存技术拆解)", "中国移动IT / 天翼云 / 秒云AI(竞品官方动态)", "算力与AI(聚合网关技术演进)"] },
+    { cat: "应用层与算力", icon: "💰", color: "#2e7d32",
+      sites: [
+        { name: "TrendForce 集邦咨询", url: "https://www.trendforce.com/", desc: "算力芯片/HBM/服务器价格趋势" },
+        { name: "Product Hunt", url: "https://www.producthunt.com/", desc: "每日全球 AI 爆款应用首发" },
+        { name: "AutoDL / 矩池云等租赁平台", url: "https://www.autodl.com/", desc: "A100/H100/4090 实时租赁价基准" }
+      ],
+      wechat: ["晚点LatePost(模型调用内幕)", "非凡产研Lab(AI 应用榜单拆解)", "算力智库 / 算力时代(租赁价格走势)", "硅星人(海外爆款技术栈)"] },
+    { cat: "企业客户实践", icon: "🏢", color: "#00917f",
+      sites: [
+        { name: "云厂商客户案例中心(阿里云/火山/腾讯/百度)", url: "https://www.aliyun.com/", desc: "标杆案例与行业方案架构" },
+        { name: "McKinsey / Gartner", url: "https://www.mckinsey.com/", desc: "企业 AI 采纳报告与痛点数据" }
+      ],
+      wechat: ["CIO时代 / 数字化转型俱乐部(甲方选型视角)", "哈佛商业评论 HBRC(转型案例)", "金融电子化 / 银行家(金融业合规实践)", "阿里云 / 火山引擎 / 百度智能云(大客户 PR)"] }
+  ],
+  intelDaily: { name: "微信公众号每日 AI 资讯(示例)", url: "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg" },
+
+  /* ================= 模块二:聚合平台功能对标 ================= */
+  benchmark: {
+    vendors: ["移动云 MoMA", "CMI AI Hub", "天翼云星辰MaaS", "秒云", "腾讯云 TokenHub", "OpenRouter", "硅基流动", "七牛云 AI", "Together AI", "Anyscale"],
+    groups: [
+      { group: "平台定位", metrics: [
+        { m: "定位主张", cells: [
+          "'五个统一'(认证/调度/SLA/运维/计费)的运营商级 MaaS 聚合平台",
+          "面向出海/跨境企业的国际模型聚合与调度入口",
+          "国资云 MaaS 平台(星辰自研+三方模型),Token 经营先行者",
+          "云原生 AI 基础设施与模型服务交付商",
+          "腾讯云生态内的模型聚合与 Token 分发服务",
+          "全球最大模型聚合路由层(纯接入层)",
+          "高性价比开源模型推理云",
+          "双协议兼容的企业级模型聚合平台",
+          "开源模型推理云 + GPU 算力服务",
+          "Ray 生态企业级 AI 计算平台" ]},
+        { m: "服务客群", cells: [
+          "政企客户、行业大客户、个人开发者(分层套餐)",
+          "出海企业、跨境业务客户、国际企业",
+          "政企客户、行业客户、开发者",
+          "成长型企业、私有化需求客户",
+          "腾讯云存量客户、生态开发者",
+          "全球开发者、AI 创业团队、研究型团队",
+          "开发者、成本敏感型企业",
+          "国内企业、Claude 生态迁移客户",
+          "海外开发者、AI 原生企业",
+          "需自建/托管推理的中大型企业" ]},
+        { m: "服务模式", cells: [
+          "按量 + 套餐 + 项目制,政企专线/代表处交付",
+          "平台订阅 + 网络/算力/模型一站式打包",
+          "按量 + Token Plan 套餐 + TPM 保障包 + 项目制",
+          "SaaS + 私有化定制交付",
+          "按量 + 资源包,云账号一体化",
+          "纯按量充值(credits),自助服务",
+          "按量 + 预留实例 + 私有化/BYOC",
+          "按量 + 月度企业套餐",
+          "按量 + 预留吞吐(PTU)+ 专属实例 + GPU 集群",
+          "平台订阅 + 算力消耗计费" ]}
+      ]},
+      { group: "模型生态", metrics: [
+        { m: "模型规模", cells: [
+          "300+ 模型(官方宣称),自营+三方", "国际主流旗舰全覆盖(GPT/Claude/Gemini/Qwen/DeepSeek/豆包/视频/图像)",
+          "星辰自研 + 主流三方模型(以官网为准)", "主流开源/商用模型(公开资料有限)",
+          "混元系+三方主流模型", "400+ 模型 / 60+ 供应商", "120+ 模型(对话/生图/语音/视频)",
+          "50+ 全球主流模型", "200+ 开源模型", "以自有/开源模型托管为主" ]},
+        { m: "模型覆盖", cells: [
+          "国产为主(九天/DeepSeek/通义/GLM/豆包/Kimi)+少量 LLaMA",
+          "海外旗舰齐全(GPT-5.6 全系、Claude 4.x 全系、Gemini 3.1)+国产头部(DeepSeek-V4、Qwen3.7、豆包 Seed)+多模态",
+          "国产为主(DeepSeek/GLM 设专项套餐)", "国产开源为主", "国产为主,混元首发",
+          "海外全谱系+开源长尾微调", "国产开源为主+部分 Claude", "国产头部+部分海外",
+          "Llama/DeepSeek/Qwen/GLM/Kimi 等开源", "开源模型为主" ]},
+        { m: "上架时效", cells: [
+          "主流新模型快速跟进(GLM-5.1 等已在架)", "国际新模型同步上架(GPT-5.6/Claude 4.8 已在架)",
+          "主流模型跟进,套餐体系更新快", "跟随主流版本", "混元新模型首发",
+          "新模型上架速度全球最快之一", "新开源模型快速上架(Kimi-K2.7 等已在架)", "头部模型同步上架",
+          "开源新模型首发快", "以自托管版本为主" ]}
+      ]},
+      { group: "协议与接入", metrics: [
+        { m: "API 协议", cells: [
+          "自研 API,部分兼容 OpenAI", "OpenAI 兼容", "OpenAI 兼容(以官网为准)", "OpenAI 兼容", "OpenAI 兼容",
+          "OpenAI 兼容,统一端点", "OpenAI 兼容", "OpenAI + Anthropic 双协议(国内唯一)",
+          "OpenAI 兼容", "OpenAI 兼容(Endpoints)" ]},
+        { m: "认证与接入", cells: [
+          "移动云统一认证,主/子账号体系", "CMI mCloud 账号体系", "天翼云账号体系", "账号 + API Key",
+          "腾讯云 CAM 权限体系", "单 Key + Workspaces 团队空间", "子账号体系",
+          "七牛云账号体系", "团队账号管理", "企业账号 + VPC 接入" ]}
+      ]},
+      { group: "核心技术", metrics: [
+        { m: "智能路由", cells: [
+          "●●● 三策略智能路由(成本/效果/均衡)自动选模型", "●● 按区域/时延调度(跨境场景)",
+          "●● 模型分发与调度", "● 基础负载均衡", "●● 按场景/产品分发",
+          "●●● 自动路由+故障转移(成本/可用率)", "●● 推理加速调度", "●● 多模型切换",
+          "●● 推理优化调度", "●● 自有集群调度" ]},
+        { m: "性能与 SLA", cells: [
+          "99.95% SLA(移动云底座),秒级容灾,推理提速约 42%", "依托 CMI 全球骨干网,跨境低时延,企业级保障",
+          "TPM 包保障低延迟高并发(DeepSeek-V3 1 万/月、R1 2 万/月)", "以商务协议为准", "腾讯云标准 SLA,星脉网络加持",
+          "无标准化 SLA,聚合层毫秒级开销", "99.9% SLA(商用版),宣称推理 10x 提速", "企业套餐保障,国内直连低延迟",
+          "99.9% SLA,自研推理栈+PTU 预留吞吐", "企业版 SLA,RayTurbo 优化运行时" ]}
+      ]},
+      { group: "企业能力", metrics: [
+        { m: "权限与账号", cells: [
+          "政企账号体系,客户经理/代表处对接", "企业账号 + 客户经理贴身支持", "政企账号体系,属地化服务", "基础账号管理",
+          "CAM 子账号/RBAC 成熟", "Workspaces 支出上限/成员管理(企业功能有限)", "子账号 + 用量告警",
+          "企业子账号", "团队/成员管理", "企业 RBAC" ]},
+        { m: "用量监测", cells: [
+          "控制台 Token 明细可查,无隐形消费", "平台侧用量与账单管理", "平台计量 + 账单管理", "基础计量",
+          "云监控 + 费用中心联动", "Token 级用量面板", "用量面板 + 告警",
+          "Token 计量 + 积分账单", "用量面板", "平台监控" ]},
+        { m: "安全治理", cells: [
+          "机密容器+硬件隔离,全链路加密;机密模型服务(明文不上云)", "中港两地合规、数据跨境方案、全链路加密审计",
+          "国资云安全合规体系", "私有化隔离部署", "腾讯安全体系、内容安全",
+          "● 数据经境外转发,治理能力有限", "BYOC/私有化数据隔离", "国内合规、数据主权清晰",
+          "专属实例隔离", "VPC/私有部署" ]},
+        { m: "认证与采购", cells: [
+          "政企采购链路、合同/发票完备,等保合规", "国际合规资质,中港双轨", "运营商政企采购链路、国资背景", "常规云安全认证",
+          "腾讯云合规体系、发票", "无企业发票/SLA 承诺", "企业版合同/SLA", "等保合规、企业发票",
+          "SOC2 等(以官网为准)", "企业合规(以官网为准)" ]}
+      ]},
+      { group: "体验与工具", metrics: [
+        { m: "体验中心", cells: [
+          "模型广场 + 体验中心(免费额度在线领取)", "模型广场在线查看规格与美元价格", "控制台体验", "控制台试用",
+          "控制台在线体验", "Playground 全模型试玩", "在线体验 + API 调试",
+          "在线体验 + 调试", "Playground", "托管控制台" ]},
+        { m: "应用构建", cells: [
+          "一键部署、智能体应用(移动云生态)", "以官网为准(待补充)", "星辰智能体生态", "定制化交付",
+          "腾讯元器/知识引擎联动", "无(专注接入层)", "轻量应用层",
+          "轻量应用层", "微调服务(LoRA $0.48/百万 tokens 起)+ Code Sandbox", "Ray 分布式训练/推理框架" ]}
+      ]},
+      { group: "计费与成本", metrics: [
+        { m: "计费模式", cells: [
+          "按量(元/百万 tokens)+ Coding Plan(40/200 元/月)+ 团队版(5,000 元/月)", "美元按量计价 + 一站式打包定价",
+          "按量 + Token Plan(GLM 39.9-299.9、DeepSeek 9.9-49.9 元/月)+ TPM 包", "订阅 + 按量", "按量 + 资源包折扣",
+          "credits 充值(5.5% 手续费)", "按量(低价)+ 预留实例", "按量 + Enterprise 套餐(2,999-9,999 元/月)",
+          "按量(美元)+ PTU 预留吞吐 + 实例租赁", "算力消耗计费(美元)" ]},
+        { m: "免费额度", cells: [
+          "2500 万 tokens 限时 1 个月(自营模型)", "POC/体验支持(以商务为准)", "新客体验额度", "试用配额",
+          "新客额度(混元 100 万 tokens)", "部分 :free 免费模型", "新客赠额 + 小模型免费(bge 系列免费)",
+          "新客 300 万 tokens", "新客 credits", "试用额度" ]},
+        { m: "特色资费", cells: [
+          "上海试点 1 元=40 万 tokens 话费支付;机密模型包 392-56,000 元档", "跨境打包价,整体 TCO 优化",
+          "TPM 包(确定性算力保障)为运营商首创", "定制报价", "资源包",
+          "无套餐,纯按量", "预留实例锁定算力成本", "月付套餐无速率限制",
+          "GPU 租赁 H100 $3.99/时起(长约 $3.09);微调服务", "企业年度协议" ]}
+      ]},
+      { group: "算力网络", metrics: [
+        { m: "算力资源", cells: [
+          "92.5 EFLOPS 智算,呼和浩特等资源池自营", "CMI 全球算力资源协同", "天翼云全国智算资源(息壤)", "第三方算力整合",
+          "腾讯云星星海算力", "不持有算力(纯路由)", "自建 + 合作算力", "合作算力",
+          "自有 GPU 集群(H100/H200/B200/GB200)", "客户自有云 + Anyscale 托管" ]},
+        { m: "网络节点", cells: [
+          "全国 30+ 节点,100% 省份覆盖,政企专线", "全球骨干网/POP 点,跨境低时延", "电信骨干网,属地化服务", "合作 IDC",
+          "腾讯全球骨干网", "境外基础设施,国内访问需加速", "国内直连", "国内 CDN/直连",
+          "北美/海外节点", "客户 VPC 内" ]}
+      ]}
+    ],
+    summary: {
+      "移动云 MoMA": "运营商级'五个统一'聚合平台:政企合规与算网资源最强,智能路由三策略+秒级容灾;海外模型覆盖与协议标准化是短板。",
+      "CMI AI Hub": "跨境模型聚合入口:国际旗舰模型齐全(文本/视频/图像全模态)、美元同价、中港合规;差异化在'网络+合规+一站式',应用工具链待补齐。",
+      "天翼云星辰MaaS": "国资云 Token 经营标杆:套餐/TPM 包分层最细,政企渠道强;模型生态与开发者体验弱于互联网平台。",
+      "秒云": "轻量化云原生交付,适合私有化项目;平台化能力与模型生态公开信息有限。",
+      "腾讯云 TokenHub": "依托腾讯云生态,企业账号/监控/安全体系成熟;本质是大云厂商模型服务,跨厂商聚合广度有限。",
+      "OpenRouter": "模型广度与路由能力全球第一,适合探索与评测;无 SLA、无企业治理、数据出境,生产级 toB 慎用。",
+      "硅基流动": "开源推理性价比之王,预留实例+私有化补齐生产级能力;缓存命中价极低,海外旗舰覆盖有限。",
+      "七牛云 AI": "国内唯一 OpenAI+Anthropic 双协议,月套餐成本可控;模型规模中等,路由能力一般。",
+      "Together AI": "'模型 API+PTU+GPU 集群+微调'全栈最完整,开源模型首发快;面向海外,国内企业采购与合规链路长。",
+      "Anyscale": "Ray 分布式框架护城河深,适合自建推理的企业;不是标准聚合平台,接入成品模型选择少。"
+    },
+    radarDims: ["模型生态", "智能路由", "企业治理", "安全合规", "成本灵活性", "算力网络"],
+    radarScores: {
+      "移动云 MoMA":      [4, 4, 5, 5, 4, 5],
+      "CMI AI Hub":       [5, 4, 4, 5, 4, 5],
+      "天翼云星辰MaaS":   [3, 3, 5, 5, 4, 5],
+      "秒云":             [3, 2, 3, 3, 3, 3],
+      "腾讯云 TokenHub":  [4, 3, 4, 4, 3, 4],
+      "OpenRouter":       [5, 5, 2, 2, 4, 2],
+      "硅基流动":         [4, 3, 3, 4, 5, 4],
+      "七牛云 AI":        [4, 3, 4, 4, 5, 3],
+      "Together AI":      [4, 3, 3, 3, 4, 5],
+      "Anyscale":         [3, 3, 4, 4, 3, 4]
+    }
+  },
+
+  /* ================= 模块三:价格及商业模式对标 ================= */
+  business: {
+    vendors: ["移动云 MoMA", "CMI AI Hub", "天翼云星辰MaaS", "腾讯云 TokenHub", "OpenRouter", "硅基流动", "七牛云 AI", "DMXAPI", "Together AI", "Novita AI"],
+    dims: ["核心盈利模式", "计费模式", "免费与入门", "套餐体系", "加价率/手续费", "缓存折扣", "批量/承诺折扣", "增值收入", "最低消费", "SLA 与商务保障", "发票与采购"],
+    cells: {
+      "核心盈利模式": ["Token 按量 + 套餐订阅 + 项目集成", "跨境打包(网络+算力+模型)价差", "Token 转售 + 云资源带动", "Token 分销 + 云生态带动", "充值手续费 + 价差", "推理服务费 + 预留实例 + 私有化", "按量 + 月度企业套餐", "折扣聚合(低于官网价的走量价差)", "模型 API + GPU 算力 + 微调", "低价模型 API + GPU 云 + 多模态生成"],
+      "计费模式": ["按量(元/百万 tokens)+ 订阅 + 项目制", "美元按量 + 打包定价", "按量 + Token Plan + TPM 保障包", "按量 + 资源包", "credits 纯按量", "按量 + 预留实例 + BYOC", "按量 + 月套餐(积分制)", "按量,分组倍率 4.8-9.5 折", "按量(美元)+ PTU + 实例租赁", "美元按量 + Batch 5 折"],
+      "免费与入门": ["2500 万 tokens 限时 1 个月(自营)", "POC/体验支持(商务申请)", "新客体验额度", "新客额度(混元 100 万)", "部分 :free 免费模型", "新客赠额 + bge 等免费模型", "新客 300 万 tokens", "多款免费模型(限流,如 kimi-k2.7-code-free)", "新客 credits", "Ling-3.0-flash 等免费模型"],
+      "套餐体系": ["Coding Plan 40/200 元/月;团队版 5,000 元/月;上海试点 1 元=40 万 tokens", "一站式打包(按方案定制)", "Coding Plan 49/149/469 元/月;Token Plan:GLM 39.9-299.9、DeepSeek 9.9-49.9 元/月;TPM 包 V3 1 万/月、R1 2 万/月", "资源包折扣", "无套餐", "预留实例(锁定算力)", "Enterprise S/M/B:2,999/4,999/9,999 元/月(约 10-50 亿积分)", "无月套餐,纯折扣按量", "承诺消费折扣 + 预留吞吐", "Batch API 5 折"],
+      "加价率/手续费": ["整体宣称低于行业均价约 30%", "与官方美元价基本持平", "未公开", "未公开", "充值 5.5% 手续费", "低加价走量(缓存命中价极低)", "低加价,套餐摊薄", "反向定价:普遍低于官网(qwen3.5-plus 5 折、deepseek-v4-pro 8.5 折)", "接近上游成本价 + 算力收益", "低价策略(多款为全渠道最低之一)"],
+      "缓存折扣": ["—(待补充)", "—(待补充)", "—(待补充)", "支持(混元系)", "透传上游缓存价", "缓存命中价低至 0.1 折档(如 V4-Flash 0.02 元)", "支持", "透传 + 折上折", "cached 价约为输入 15-20%", "Cache Read 为输入 20-50%"],
+      "批量/承诺折扣": ["大客户框架协议;机密模型包 392-56,000 元档", "企业协议折扣", "TPM 包保障确定性算力", "资源包", "无", "预留实例即承诺折扣", "套餐无速率限制", "—(待补充)", "GPU 长约最高降 23%(181 天)", "Batch 输入输出 5 折"],
+      "增值收入": ["集成、运维、机密模型服务、专线", "跨境专线、合规审计、贴身运维", "云网资源带动、智能体应用", "生态服务联动", "无", "私有化部署、SLA、推理加速服务", "企业套餐服务", "Claude Code 专用(-cc)与官方直连(-guan)通道", "微调(LoRA $0.48/M 起)、Code Sandbox、存储", "GPU 租赁、图像/视频/语音生成"],
+      "最低消费": ["个人 15 元/月起;团队版 5,000 元/月", "按方案定制", "套餐 9.9 元/月起", "无硬性门槛", "无(充值即用)", "无;预留实例有门槛", "无;企业套餐月费制", "无", "无(按量);租赁/微调有最低消费(微调 $4 起)", "无"],
+      "SLA 与商务保障": ["99.95%(移动云底座)+秒级容灾", "企业级 SLA(商务协议)", "TPM 包保障低延迟高并发", "腾讯云标准 SLA", "无标准化 SLA", "99.9%(商用版)", "企业套餐保障", "以官网为准", "99.9%", "以官网为准"],
+      "发票与采购": ["政企采购链路、合同/发票完备", "国际商务体系、支持中港双轨", "运营商政企采购体系", "腾讯云采购体系", "无企业发票", "企业版合同/发票", "企业发票", "以官网为准", "美元结算、海外采购", "美元结算"]
+    }
+  },
+
+  /* 价格对标矩阵:模型 × 厂商;单位见单元格(¥=元/百万 tokens,$=美元/百万 tokens);— 为未上架/未公开 */
+  pricing: {
+    vendors: ["官方原厂", "移动云 MoMA", "CMI AI Hub", "OpenRouter", "硅基流动", "DMXAPI", "Together AI", "Novita AI"],
+    rows: [
+      { model: "DeepSeek-V4-Pro", ctx: "1024K", note: "旗舰 MoE 1.6T", cells: {
+        "CMI AI Hub": "$1.53 / $3.06", "硅基流动": "¥12 / 24(缓存 0.1)", "DMXAPI": "¥2.55 / 5.1(8.5 折)", "Together AI": "$1.74 / $3.48", "Novita AI": "$1.60 / $3.20(缓存 0.135)", "OpenRouter": "透传上游价", "官方原厂": "见 DeepSeek 官网", "移动云 MoMA": "—" } },
+      { model: "DeepSeek-V4-Flash", ctx: "1024K", note: "高并发轻量", cells: {
+        "CMI AI Hub": "$0.167 / $0.449", "硅基流动": "¥1 / 2(缓存 0.02)", "DMXAPI": "¥0.79 / 1.58(7.9 折)", "Novita AI": "$0.14 / $0.28(缓存 0.028)", "OpenRouter": "透传上游价", "官方原厂": "见 DeepSeek 官网", "移动云 MoMA": "—", "Together AI": "—" } },
+      { model: "DeepSeek-V3.2", ctx: "256K", note: "稀疏注意力正式版", cells: {
+        "CMI AI Hub": "$0.51 / $1.48", "硅基流动": "¥4 / 6(缓存 0.4)", "DMXAPI": "¥1.58 / 2.37(7.9 折)", "Novita AI": "$0.269 / $0.40(缓存 0.135)", "官方原厂": "见 DeepSeek 官网", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "Together AI": "—" } },
+      { model: "DeepSeek-V3", ctx: "128K", note: "官方直调最低", cells: {
+        "官方原厂": "¥0.14 / 0.28(缓存 0.0028)", "移动云 MoMA": "¥2 / 8", "OpenRouter": "透传上游价", "CMI AI Hub": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
+      { model: "DeepSeek-R1", ctx: "320K", note: "推理模型", cells: {
+        "移动云 MoMA": "¥4 / 16", "CMI AI Hub": "$1.188 / $4.752", "Novita AI": "$0.70 / $2.50(0528 版)", "DMXAPI": "¥4 / 16(官方直连无折扣)", "官方原厂": "见 DeepSeek 官网", "OpenRouter": "透传上游价", "硅基流动": "—", "Together AI": "—" } },
+      { model: "GLM-5.2", ctx: "1M", note: "智谱最新旗舰", cells: {
+        "硅基流动": "¥8 / 28(缓存 2)", "Together AI": "$1.40 / $4.40(缓存 0.26)", "Novita AI": "$1.40 / $4.40(缓存 0.26)", "官方原厂": "见智谱官网", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "DMXAPI": "—" } },
+      { model: "GLM-5.1", ctx: "200K", note: "MoMA 与官方同价", cells: {
+        "移动云 MoMA": "¥6 / 24(32K 以上档 8 / 28)", "硅基流动": "¥6 / 24(Pro 同价,缓存 1.3)", "Together AI": "$1.40 / $4.40", "Novita AI": "$1.38 / $4.40", "官方原厂": "见智谱官网", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "DMXAPI": "—" } },
+      { model: "Kimi-K2.6", ctx: "256K", note: "Novita 渠道最低", cells: {
+        "官方原厂": "¥6.5 / 27(缓存 1.1)", "硅基流动": "¥6.5 / 27(缓存 1.1)", "Together AI": "$1.20 / $4.50(缓存 0.20)", "Novita AI": "$0.80 / $3.40(缓存 0.16)", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "DMXAPI": "—" } },
+      { model: "Qwen3.7-Max", ctx: "1000K", note: "阿里旗舰", cells: {
+        "DMXAPI": "¥11.4 / 34.2(原价 ¥12/36,9.5 折)", "CMI AI Hub": "$2.575 / $7.725", "Together AI": "$1.25 / $3.75(缓存 0.13)", "Novita AI": "$1.25 / $3.75(缓存 0.25)", "官方原厂": "见百炼定价页", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—" } },
+      { model: "Qwen3.7-Plus", ctx: "1000K", note: "高性价比多模态", cells: {
+        "CMI AI Hub": "$0.412 / $1.648", "DMXAPI": "¥1.58 / 6.32(原价 ¥2/8,7.9 折)", "Together AI": "$0.32 / $1.28", "官方原厂": "见百炼定价页", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "Novita AI": "—" } },
+      { model: "Qwen3.5-Plus", ctx: "1000K", note: "DMXAPI 5 折最低", cells: {
+        "官方原厂": "¥0.8 / 4.8(原价)", "DMXAPI": "¥0.4 / 2.4(5 折)", "CMI AI Hub": "$0.412 / $2.472", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "Together AI": "—", "Novita AI": "—" } },
+      { model: "Qwen3.5-397B-A17B", ctx: "256K", note: "旗舰开源 MoE", cells: {
+        "硅基流动": "¥1.2 / 7.2(≤128K 档)", "DMXAPI": "¥0.4 / 2.4(5 折)", "Together AI": "$0.60 / $3.60(缓存 0.35)", "Novita AI": "$0.60 / $3.60", "官方原厂": "开源免费(自托管)", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价" } },
+      { model: "Qwen3.5-35B-A3B", ctx: "256K", note: "轻量 MoE", cells: {
+        "移动云 MoMA": "¥0.4 / 3.2(128K 以上档 1.6 / 12.8)", "硅基流动": "¥0.4 / 3.2(≤128K 档)", "DMXAPI": "¥0.2 / 1.6(5 折)", "Novita AI": "$0.25 / $2.00", "CMI AI Hub": "$0.386 / $2.318(3.6 版)", "官方原厂": "开源免费(自托管)", "OpenRouter": "透传上游价", "Together AI": "—" } },
+      { model: "MiniMax-M3", ctx: "1M", note: "Agent 原生 MoE", cells: {
+        "DMXAPI": "¥1.869 / 7.476(原价 ¥2.1/8.4,8.9 折)", "Together AI": "$0.30 / $1.20(缓存 0.06)", "官方原厂": "见 MiniMax 官网", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "Novita AI": "—" } },
+      { model: "MiniMax-M2.5", ctx: "128K", note: "MoMA/硅基/CMI 同价", cells: {
+        "移动云 MoMA": "¥2.1 / 8.4", "硅基流动": "¥2.1 / 8.4(缓存 0.21)", "CMI AI Hub": "$0.2418 / $0.9672", "Novita AI": "$0.30 / $1.20", "官方原厂": "见 MiniMax 官网", "OpenRouter": "透传上游价", "DMXAPI": "—", "Together AI": "—" } },
+      { model: "Claude Opus 4.8", ctx: "1000K", note: "海外旗舰,CMI 同价", cells: {
+        "官方原厂": "$5.25 / $26.25", "CMI AI Hub": "$5.25 / $26.25(与官方同价)", "OpenRouter": "透传官方价", "移动云 MoMA": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
+      { model: "Claude Sonnet 4.6", ctx: "200K", note: "海外中坚", cells: {
+        "官方原厂": "$2.91 / $14.55", "CMI AI Hub": "$2.91 / $14.55(与官方同价)", "OpenRouter": "透传官方价", "移动云 MoMA": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
+      { model: "GPT-5.6 Terra / Sol", ctx: "1024K", note: "海外旗舰,CMI 同价", cells: {
+        "官方原厂": "Terra $2.2 / $13.2;Sol $4.4 / $26.4", "CMI AI Hub": "与官方同价", "OpenRouter": "透传官方价", "移动云 MoMA": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
+      { model: "GPT-OSS-120b(开源)", ctx: "128K", note: "Novita 渠道最低", cells: {
+        "Novita AI": "$0.05 / $0.25", "CMI AI Hub": "$0.095 / $0.475", "Together AI": "$0.15 / $0.60", "官方原厂": "开源免费(自托管)", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "DMXAPI": "—" } },
+      { model: "Llama-4-Maverick", ctx: "1000K", note: "Meta 开源旗舰", cells: {
+        "CMI AI Hub": "$0.22 / $0.88", "Novita AI": "$0.27 / $0.85", "官方原厂": "开源免费(自托管)", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—" } }
+    ],
+    mmRows: [
+      { model: "Veo 3.1(视频)", unit: "美元/秒", cells: { "CMI AI Hub": "$0.18(视频)/ $0.36(含音频)", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—", "官方原厂": "见 Google 官网" } },
+      { model: "Wan2.7-T2v(文生视频)", unit: "美元/秒", cells: { "CMI AI Hub": "$0.1545 / 秒", "DMXAPI": "¥0.6 / 秒(720P)、¥1 / 秒(1080P)", "官方原厂": "见百炼定价页", "Novita AI": "—", "硅基流动": "—" } },
+      { model: "Seedance-1.5-Pro(视频)", unit: "美元/百万 tokens", cells: { "CMI AI Hub": "$1.14(视频)/ $2.28(含音频)", "官方原厂": "见火山引擎", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—" } },
+      { model: "Kling v1.6 i2v(视频)", unit: "美元/个", cells: { "Novita AI": "$0.27(5s 720P)/ $0.54(10s)", "官方原厂": "见快影官方", "CMI AI Hub": "—", "DMXAPI": "—", "硅基流动": "—" } },
+      { model: "Wan2.2-I2V/T2V-A14B(视频)", unit: "元/个", cells: { "硅基流动": "¥2 / 个", "官方原厂": "开源免费(自托管)", "CMI AI Hub": "—", "DMXAPI": "—", "Novita AI": "—" } },
+      { model: "Qwen-Image(文生图)", unit: "美元/张", cells: { "CMI AI Hub": "$0.036 / 张", "硅基流动": "¥0.30 / 张", "DMXAPI": "¥0.25 / 张", "Novita AI": "$0.02 / 张", "官方原厂": "见百炼定价页" } },
+      { model: "Seedream-4.5(图像)", unit: "美元/张", cells: { "CMI AI Hub": "$0.038 / 张", "官方原厂": "见火山引擎", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—" } },
+      { model: "Z-Image-Turbo(图像)", unit: "元/张", cells: { "硅基流动": "¥0.10 / 张", "DMXAPI": "¥0.10-0.20 / 张", "官方原厂": "见通义官网", "CMI AI Hub": "—", "Novita AI": "—" } },
+      { model: "GPT-Image-1(图像)", unit: "美元/百万 tokens", cells: { "CMI AI Hub": "输入 $4.4(文本)/ $8.8(图片),输出 $35.2", "官方原厂": "见 OpenAI 官网", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—" } }
+    ],
+    findings: [
+      { title: "国产旗舰:官方/原厂直调或折扣聚合最低", desc: "DeepSeek-V3 官方 0.14/0.28 元为全渠道最低;DeepSeek-V4-Pro 经 DMXAPI 8.5 折后(2.55/5.1 元)低于硅基流动(12/24 元);Qwen3.5-Plus 经 DMXAPI 5 折(0.4/2.4 元)为国产模型最低档 —— 折扣聚合平台正在改写价格锚点。" },
+      { title: "Kimi-K2.6、GPT-OSS-120b:Novita 全渠道最低", desc: "Kimi-K2.6 在 Novita($0.80/$3.40)低于官方与硅基(¥6.5/27);GPT-OSS-120b 在 Novita($0.05/$0.25)同样最低 —— 开源/海外托管模型的价格洼地在美国二线推理云。" },
+      { title: "MoMA:GLM-5.1 与官方同价,运营商走'同价+服务'路线", desc: "GLM-5.1 在 MoMA(6/24 元)与硅基一致;MiniMax-M2.5 在 MoMA/硅基/CMI 三家同价 —— 头部模型在各渠道价格趋同,竞争转向服务与治理。" },
+      { title: "海外旗舰:CMI AI Hub 与官方美元同价", desc: "Claude Opus 4.8($5.25/$26.25)、GPT-5.6 等在 CMI 与官方价一致,省去境外支付/合规/网络成本,是跨境调用的价格锚点;OpenRouter 为透传价+5.5% 充值手续费。" },
+      { title: "成本优化组合拳已成行业标配", desc: "缓存命中价(硅基低至 0.02 元/百万)、批量 5 折(Novita Batch)、预留吞吐(Together PTU、天翼 TPM 包)、分段计价(长上下文加价)—— 平台需同时具备四类机制才有成本竞争力。" }
+    ]
+  },
+
+  /* ================= 模块四:差异化定位 ================= */
+  differentiation: [
+    { title: "网络层差异化", desc: "依托中信国际电讯全球骨干网,提供跨境低时延 AI 调用,解决出海企业网络痛点。", icon: "🌐" },
+    { title: "安全合规差异化", desc: "融合中港两地合规资质,提供数据跨境合规方案、全链路加密与审计能力。", icon: "🛡️" },
+    { title: "行业场景差异化", desc: "聚焦金融、跨境电商、制造业等优势行业,预装行业模型与知识库模板。", icon: "🏭" },
+    { title: "服务模式差异化", desc: "提供'网络 + 算力 + 模型 + 运维'一站式打包服务,客户经理贴身支持。", icon: "🤝" }
+  ],
+  priorities: [
+    { level: "P0", name: "共性必做功能", color: "#2b5cff", items: ["统一 API 网关", "模型市场", "Token 计量计费", "调用监控", "多租户管理"] },
+    { level: "P1", name: "竞争必备功能", color: "#00b3a4", items: ["智能路由(成本/效果)", "故障自动切换", "缓存优化", "成本分析看板"] },
+    { level: "P2", name: "差异化亮点", color: "#f2994a", items: ["跨境网络加速", "多区域容灾", "合规审计报告", "行业解决方案包", "混合部署调度"] }
+  ],
+  architecture: [
+    { layer: "应用层", en: "Application", items: ["模型广场", "开发工具", "Agent 框架", "行业模板"], color: "#7c3aed" },
+    { layer: "管控层", en: "Management", items: ["计量计费", "监控告警", "运营分析", "安全审计"], color: "#f2994a" },
+    { layer: "模型层", en: "Model", items: ["多模型适配", "推理引擎", "缓存加速"], color: "#00b3a4" },
+    { layer: "调度层", en: "Scheduling", items: ["智能路由", "负载均衡", "故障容灾"], color: "#2b5cff" },
+    { layer: "接入层", en: "Access", items: ["统一 API 网关", "鉴权", "限流"], color: "#0e9de0" }
+  ]
+};
+
+</script>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#fff; --ink:#1a2233; --ink2:#4a5568; --ink3:#8a94a6;
+    --brand:#2b5cff; --accent:#00b3a4; --warn:#f2994a; --line:#e5eaf2;
+    --shadow:0 2px 12px rgba(27,46,94,.07); --r:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:1260px;margin:0 auto;padding:0 24px}
+  button{font-family:inherit;cursor:pointer}
+  a{color:var(--brand);text-decoration:none}
+
+  nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:6px;height:56px}
+  .logo{font-weight:800;font-size:16px;display:flex;align-items:center;gap:9px;margin-right:auto;white-space:nowrap}
+  .logo .dot{width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,var(--brand),var(--accent))}
+  nav a.nl{font-size:13px;color:var(--ink2);padding:6px 10px;border-radius:8px;white-space:nowrap}
+  nav a.nl:hover{background:#eef2ff;color:var(--brand)}
+  .navbtn{font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--ink2);padding:6px 13px;border-radius:99px;white-space:nowrap}
+  .navbtn:hover{border-color:var(--brand);color:var(--brand)}
+  .navbtn.act{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+  .hero{background:linear-gradient(160deg,#0c1c48,#1b3a8f 50%,#2b5cff);color:#fff;padding:56px 0 48px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-130px;top:-130px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(0,179,164,.32),transparent 65%)}
+  .hero .wrap{position:relative;z-index:2}
+  .tagline{display:inline-block;font-size:12px;letter-spacing:2px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);padding:4px 13px;border-radius:99px;margin-bottom:16px}
+  .hero h1{font-size:30px;font-weight:800;line-height:1.35;margin-bottom:10px}
+  .hero h1 span{background:linear-gradient(90deg,#5eead4,#93c5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:#c7d4f5;font-size:14px;max-width:840px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .meta .m{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:8px 16px;font-size:12.5px;color:#dbe5ff}
+  .meta .m b{color:#fff}
+
+  section{padding:52px 0}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:3px;color:var(--brand);text-transform:uppercase;margin-bottom:8px}
+  h2{font-size:24px;font-weight:800;margin-bottom:8px}
+  .lead{color:var(--ink2);font-size:13.8px;max-width:880px;margin-bottom:24px}
+
+  /* module 1 */
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+  .search{flex:1;min-width:200px;display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 14px}
+  .search input{border:none;outline:none;width:100%;height:40px;font-size:13.5px;background:transparent}
+  .tchip{font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--ink2);padding:6px 14px;border-radius:99px}
+  .tchip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .dlbtn{font-size:12.5px;border:1px solid var(--accent);background:#e2f7f4;color:#00917f;padding:7px 16px;border-radius:99px;font-weight:600}
+  .dlbtn:hover{background:var(--accent);color:#fff}
+  .month{font-size:14px;font-weight:800;color:var(--ink);margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+  .month::after{content:"";flex:1;height:1px;background:var(--line)}
+  .month .badge{font-size:11px;background:#e8efff;color:var(--brand);padding:2px 10px;border-radius:99px;font-weight:700}
+  .timeline{position:relative;padding-left:26px}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--brand),var(--accent))}
+  .tl-item{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 20px;margin-bottom:12px;box-shadow:var(--shadow)}
+  .tl-item::before{content:"";position:absolute;left:-24px;top:21px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--brand)}
+  .tl-head{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:4px}
+  .tl-date{font-size:12px;color:var(--ink3);font-weight:600}
+  .htag{font-size:11.5px;font-weight:700;padding:2px 10px;border-radius:99px}
+  .ht-政策{background:#fde8e8;color:#c81e1e}.ht-模型更新{background:#e8efff;color:#2b5cff}
+  .ht-开源动态{background:#f1e9fd;color:#7c3aed}.ht-竞品{background:#fdf0e3;color:#c76a15}
+  .ht-案例{background:#e2f7f4;color:#00917f}.ht-算力{background:#e8f6e8;color:#2e7d32}
+  .tl-item h3{font-size:15px;margin-bottom:3px}
+  .tl-item h3 a:hover{text-decoration:underline}
+  .tl-item p{font-size:13px;color:var(--ink2)}
+  .tl-src{font-size:11.5px;color:var(--ink3);margin-top:5px}
+  .jump{font-size:11.5px;color:var(--brand);margin-left:6px;white-space:nowrap}
+  .del{display:none;position:absolute;right:12px;top:12px;border:none;background:#fde8e8;color:#c81e1e;width:24px;height:24px;border-radius:8px;font-size:13px}
+  body.editing .del{display:block}
+  .addbar{display:none;margin-bottom:14px}
+  body.editing .addbar{display:block}
+  .addbtn{border:1.5px dashed var(--brand);color:var(--brand);background:#f5f8ff;border-radius:10px;padding:10px 18px;font-size:13px;width:100%}
+  body.editing [data-ed]{outline:1.5px dashed #b9c8ff;outline-offset:2px;border-radius:6px;cursor:text}
+  body.editing [data-ed]:hover{outline-color:var(--brand)}
+  .pager{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-top:22px}
+  .pbtn{font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--ink2);min-width:34px;height:34px;padding:0 12px;border-radius:9px}
+  .pbtn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .pbtn:disabled{opacity:.4;cursor:not-allowed}
+  .pinfo{font-size:12px;color:var(--ink3);margin:0 8px}
+
+  /* sources */
+  .srcgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+  .srccard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
+  .srccard h4{font-size:14.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .srccard h4 .ci{width:8px;height:8px;border-radius:50%;flex:none}
+  .srcsite{display:block;font-size:12.6px;padding:7px 10px;border-radius:8px;background:#f6f8fc;margin-bottom:6px;color:var(--ink2)}
+  .srcsite:hover{color:var(--brand);background:#eef2ff;text-decoration:none}
+  .srcsite b{color:var(--ink);font-weight:600}
+  .srcsite span{display:block;font-size:11.5px;color:var(--ink3)}
+  .wxbox{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+  .wxbox .wt{font-size:11.5px;font-weight:700;color:var(--ink3);margin-bottom:5px}
+  .wxchip{display:inline-block;font-size:11.5px;background:#e8f6e8;color:#2e7d32;border-radius:99px;padding:2px 10px;margin:0 5px 5px 0}
+
+  /* tables */
+  .vpick{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .vpk{font-size:12px;border:1px solid var(--line);background:#fff;color:var(--ink2);padding:5px 12px;border-radius:99px}
+  .vpk.on{background:#e8efff;color:var(--brand);border-color:var(--brand);font-weight:600}
+  .tblbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:auto;max-height:660px}
+  table{border-collapse:collapse;width:100%;min-width:960px;font-size:12.6px}
+  thead th{position:sticky;top:0;background:#f2f5fb;font-weight:700;text-align:left;padding:12px 13px;border-bottom:2px solid var(--line);white-space:nowrap;z-index:2}
+  tbody td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2);min-width:120px}
+  tbody tr:hover{background:#f7f9ff}
+  td.dim{font-weight:700;color:var(--ink);white-space:nowrap;background:#fafbfe}
+  td.grp{font-weight:800;color:var(--brand);white-space:nowrap;background:#f0f4fd;border-right:2px solid var(--line);font-size:12.8px}
+  .viewsw{display:flex;gap:8px;margin-bottom:18px}
+  .vsw{font-size:13px;border:1px solid var(--line);background:#fff;color:var(--ink2);padding:7px 18px;border-radius:99px}
+  .vsw.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .radarwrap{display:none}.radarwrap.show{display:block}
+  .tblwrap.hide{display:none}
+  .radargrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+  .rcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+  .rcard h4{font-size:14.5px;text-align:center;margin-bottom:2px}
+  .rcard .pos{font-size:11.5px;color:var(--ink3);text-align:center;margin-bottom:4px}
+  .bigcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px;font-size:12px;color:var(--ink2)}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .sumgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:20px}
+  .sumcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+  .sumcard h4{font-size:14px;margin-bottom:5px}
+  .sumcard p{font-size:12.6px;color:var(--ink2)}
+  .sumcard.acc{border-left-color:var(--accent)}
+
+  h3.sub{font-size:17px;margin:28px 0 12px;display:flex;align-items:center;gap:8px}
+  h3.sub::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--brand)}
+  .pnote{font-size:12px;color:var(--ink3);margin-top:10px}
+
+  .grid{display:grid;gap:16px}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .dcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow)}
+  .dcard h4{font-size:15px;margin-bottom:6px}
+  .dcard .ic{font-size:20px}
+  .dcard p{font-size:13px;color:var(--ink2)}
+  .pcol{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+  .pcol .lv{display:inline-block;font-size:12px;font-weight:800;color:#fff;padding:3px 12px;border-radius:99px;margin-bottom:10px}
+  .pcol h4{font-size:15px;margin-bottom:10px}
+  .pitem{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2);padding:7px 10px;border-radius:8px;background:#f6f8fc;margin-bottom:7px}
+  .pitem::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand);flex:none}
+
+  .arch{display:flex;flex-direction:column;gap:12px;max-width:900px;margin:0 auto}
+  .arow{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow)}
+  .arow .ln{width:110px;flex:none;font-weight:800;font-size:14.5px}
+  .arow .en{font-size:10.5px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase}
+  .arow .items{display:flex;flex-wrap:wrap;gap:8px}
+  .aitem{font-size:12.5px;background:#f2f5fb;border:1px solid var(--line);padding:4px 13px;border-radius:99px;color:var(--ink2)}
+  .conn{width:2px;height:14px;background:var(--line);margin:0 auto}
+
+  .editbar{position:fixed;bottom:22px;right:22px;z-index:300;display:flex;flex-direction:column;gap:8px}
+  .ebtn{border:none;border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600;box-shadow:0 4px 16px rgba(27,46,94,.18)}
+  .ebtn.ok{background:var(--accent);color:#fff}
+  .ebtn.ghost{background:#fff;color:var(--ink2);border:1px solid var(--line)}
+
+  .modal{display:none;position:fixed;inset:0;background:rgba(15,25,50,.5);z-index:400;align-items:center;justify-content:center}
+  .modal.show{display:flex}
+  .mbox{background:#fff;border-radius:16px;width:min(680px,92vw);max-height:78vh;overflow:auto;padding:26px 28px}
+  .mbox h3{font-size:17px;margin-bottom:4px}
+  .mbox .hint{font-size:12.5px;color:var(--ink3);margin-bottom:16px}
+  .hrow{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+  .hrow .t{font-size:13px;font-weight:700;white-space:nowrap}
+  .hrow .n{font-size:12px;color:var(--ink3);flex:1}
+  .hbtn{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 12px;color:var(--ink2);white-space:nowrap}
+  .hbtn:hover{border-color:var(--brand);color:var(--brand)}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#101a30;color:#fff;font-size:13px;padding:11px 22px;border-radius:99px;z-index:500;display:none}
+
+  footer{background:#101a30;color:#93a1c0;padding:30px 0;font-size:12.5px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+  footer b{color:#fff}
+  @media(max-width:760px){nav a.nl{display:none}.hero h1{font-size:23px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><span class="dot"></span>AI Hub 情报站</div>
+    <a class="nl" href="#m1">行业洞察</a>
+    <a class="nl" href="#m2">功能对标</a>
+    <a class="nl" href="#m3">价格与模式</a>
+    <a class="nl" href="#m4">差异化定位</a>
+    <a class="nl" href="#m5">技术架构</a>
+    <button class="navbtn" id="btnHistory">🕘 历史版本</button>
+    <button class="navbtn" id="btnEdit">✏️ 编辑模式</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tagline">AI HUB · MARKET INTELLIGENCE</div>
+    <h1>AI 聚合平台市场情报<br><span>与对标分析平台</span></h1>
+    <p>追踪 AI 行业生态动态(政策/模型/开源/竞品/算力/案例),基于各平台官网与帮助文档一手信息对标功能、价格与商业模式,锚定我司平台差异化定位。支持在线编辑、每日 10:00 自动更新、历史版本溯源。</p>
+    <div class="meta">
+      <div class="m">数据版本:<b id="ver">-</b></div>
+      <div class="m">行业动态:<b id="cntInsight">-</b> 条</div>
+      <div class="m">对标厂商:<b id="cntVendor">-</b> 家</div>
+      <div class="m">更新机制:<b>每日 10:00 自动巡检 · 历史新闻保留</b></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 模块一 ============ -->
+<section id="m1">
+  <div class="wrap">
+    <div class="kicker">Module 1 · Industry Insights</div>
+    <h2>AI 行业洞察与生态动态</h2>
+    <p class="lead">按时间轴与月度归类追踪行业动态,点击标题可跳转原文;每页展示 10 条,支持搜索、标签筛选与 Excel 表格下载(含全部历史新闻)。</p>
+    <div class="toolbar">
+      <div class="search">🔍&nbsp;<input id="kw" placeholder="搜索标题 / 内容关键词…"></div>
+      <div id="tagbar"></div>
+      <button class="dlbtn" id="btnCsv">⬇ 下载 Excel 新闻表</button>
+    </div>
+    <div class="addbar"><button class="addbtn" id="btnAdd">＋ 新增一条动态</button></div>
+    <div id="newsbox"></div>
+    <div class="pager" id="pager"></div>
+
+    <h3 class="sub">情报信源库(每日 10:00 自动巡检)</h3>
+    <p class="lead" style="margin-bottom:16px">每日定时任务围绕以下六类信源采集行业动态:官方网站定向监控 + 微信公众号每日 AI 资讯检索聚合。</p>
+    <div class="srcgrid" id="srcGrid"></div>
+    <p class="pnote" id="dailySrc"></p>
+  </div>
+</section>
+
+<!-- ============ 模块二 ============ -->
+<section id="m2" style="background:#edf1f8">
+  <div class="wrap">
+    <div class="kicker">Module 2 · Capability Benchmark</div>
+    <h2>聚合平台功能对标</h2>
+    <p class="lead">覆盖运营商系、互联网系、国际主流共 9 家聚合平台,按 8 大维度 16 项细分指标对标(信息源自各平台官网与帮助文档)。可勾选厂商自定义对比列,或切换雷达视图;厂商结论卡片见表格下方。</p>
+    <div class="viewsw">
+      <button class="vsw on" data-v="table">📊 表格视图</button>
+      <button class="vsw" data-v="radar">🎯 雷达视图</button>
+    </div>
+    <div class="tblwrap" id="tblwrap">
+      <div class="vpick" id="vpick"></div>
+      <div class="tblbox"><table id="bmTable"></table></div>
+      <h3 class="sub">各厂商对标结论</h3>
+      <div class="sumgrid" id="bmSummary"></div>
+    </div>
+    <div class="radarwrap" id="radarwrap">
+      <div class="bigcard">
+        <h4 style="text-align:center;font-size:15px;margin-bottom:6px">总能力对标雷达</h4>
+        <div id="bigRadar" style="display:flex;justify-content:center"></div>
+        <div class="legend" id="bigLegend"></div>
+      </div>
+      <div class="radargrid" id="radarGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 模块三 ============ -->
+<section id="m3">
+  <div class="wrap">
+    <div class="kicker">Module 3 · Pricing & Business Model</div>
+    <h2>模型价格及商业模式对标</h2>
+    <p class="lead">3.1 为各聚合厂商商业模式对比;3.2 按"模型 × 厂商"矩阵对比官方原厂与聚合平台价格(单位:元/百万 tokens;≈ 为汇率换算或估算,— 为未上架/未公开),可筛选对标对象;3.3 为分厂商对标结论。</p>
+
+    <h3 class="sub">3.1 聚合平台商业模式对比</h3>
+    <div class="vpick" id="bizpick"></div>
+    <div class="tblbox"><table id="bizTable"></table></div>
+
+    <h3 class="sub">3.2 主流模型价格对标矩阵(输入 / 输出,元 / 百万 Tokens)</h3>
+    <div class="vpick" id="pricepick"></div>
+    <div class="tblbox"><table id="priceTable"></table></div>
+    <p class="pnote">注:¥ 为元人民币、$ 为美元(参考汇率 ≈7.2);缓存价格见括号;"透传"表示平台按上游官方价原价转发。数据来源:各平台官网定价页(硅基流动/DMXAPI/Together/Novita/CMI AI Hub/移动云 MoMA 等,2026-07 抓取)。</p>
+
+    <h3 class="sub">3.3 多模态模型价格对标(视频 / 图像生成)</h3>
+    <div class="tblbox"><table id="mmTable"></table></div>
+
+    <h3 class="sub">3.4 价格对标结论</h3>
+    <div class="sumgrid" id="priceFindings"></div>
+  </div>
+</section>
+
+<!-- ============ 模块四 ============ -->
+<section id="m4" style="background:#edf1f8">
+  <div class="wrap">
+    <div class="kicker">Module 4 · Differentiation</div>
+    <h2>差异化定位</h2>
+    <p class="lead">基于对标结论,锚定我司平台四层差异化能力与功能优先级图谱。</p>
+    <h3 class="sub">4.1 差异化能力矩阵</h3>
+    <div class="grid g4" id="diffGrid"></div>
+    <h3 class="sub">4.2 平台核心功能优先级图谱</h3>
+    <div class="grid g3" id="prioGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 技术架构 ============ -->
+<section id="m5">
+  <div class="wrap">
+    <div class="kicker">Module 5 · Reference Architecture</div>
+    <h2>技术架构参考</h2>
+    <p class="lead">业界主流 MaaS 平台五层架构参考,供研发进行平台架构设计与差距分析。</p>
+    <div class="arch" id="arch"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>AI Hub · 市场情报与对标分析平台</b><br>内部参考资料 · 数据来源:各平台官网/帮助文档及公开资料,以官方实时信息为准</div>
+    <div style="text-align:right">每日 10:00 定时更新 · 历史新闻保留可溯源<br><span id="ftVer"></span></div>
+  </div>
+</footer>
+
+<div class="editbar" id="editbar" style="display:none">
+  <button class="ebtn ok" id="btnSave">💾 保存修改</button>
+  <button class="ebtn ghost" id="btnExport">⬇ 导出 JSON</button>
+  <button class="ebtn ghost" id="btnImport">⬆ 导入 JSON</button>
+  <button class="ebtn ghost" id="btnReset">↺ 恢复默认数据</button>
+  <input type="file" id="fileImp" accept=".json" style="display:none">
+</div>
+
+<div class="modal" id="hmodal">
+  <div class="mbox">
+    <h3>🕘 历史版本与溯源</h3>
+    <div class="hint">每日定时更新会在服务端按日归档数据快照(history/ 目录),并在下方留痕;每次手动保存也会在浏览器生成本机快照,可一键回滚。</div>
+    <div id="hlist"></div>
+    <div style="text-align:right;margin-top:10px"><button class="hbtn" id="hclose">关闭</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= state ================= */
+var LS_DATA="AIHUB_DATA_V4", LS_SNAP="AIHUB_SNAPSHOTS_V4";
+var base=JSON.parse(JSON.stringify(window.AIHUB_DATA));
+var state=loadState();
+var curTag="全部", curKw="", curPage=1, PAGE_SIZE=10, editing=false;
+var hiddenBm={}, hiddenBiz={}, hiddenPrice={};
+var RCOLORS=["#2b5cff","#00b3a4","#f2994a","#7c3aed","#e0483e","#0e9de0","#2e7d32","#c76a15","#d63384"];
+
+function loadState(){ try{var s=localStorage.getItem(LS_DATA); if(s) return JSON.parse(s);}catch(e){} return JSON.parse(JSON.stringify(base)); }
+function persist(){ localStorage.setItem(LS_DATA, JSON.stringify(state)); }
+function toast(m){ var t=document.getElementById("toast"); t.textContent=m; t.style.display="block"; setTimeout(function(){t.style.display="none"},2200); }
+function esc(s){ return String(s==null?"":s); }
+
+/* ================= module 1 ================= */
+function allTags(){ var m={}; state.insights.forEach(function(i){m[i.tag]=1;}); return ["全部"].concat(Object.keys(m)); }
+function renderTagbar(){
+  var bar=document.getElementById("tagbar"); bar.innerHTML="";
+  allTags().forEach(function(t){
+    var b=document.createElement("button"); b.className="tchip"+(t===curTag?" on":""); b.textContent=t==="全部"?"全部":"#"+t;
+    b.onclick=function(){ curTag=t; curPage=1; renderTagbar(); renderNews(); };
+    bar.appendChild(b);
+  });
+}
+function filteredNews(){
+  return state.insights.slice().sort(function(a,b){return b.date<a.date?-1:1;}).filter(function(it){
+    if(curTag!=="全部"&&it.tag!==curTag) return false;
+    if(curKw&&(it.title+it.summary).toLowerCase().indexOf(curKw)<0) return false;
+    return true;
+  });
+}
+function renderNews(){
+  var items=filteredNews();
+  var pages=Math.max(1, Math.ceil(items.length/PAGE_SIZE));
+  if(curPage>pages) curPage=pages;
+  var slice=items.slice((curPage-1)*PAGE_SIZE, curPage*PAGE_SIZE);
+  var box=document.getElementById("newsbox"); box.innerHTML="";
+  var lastMonth="";
+  slice.forEach(function(it){
+    var month=it.date.slice(0,7);
+    if(month!==lastMonth){
+      lastMonth=month;
+      var cnt=items.filter(function(x){return x.date.slice(0,7)===month;}).length;
+      box.innerHTML+='<div class="month">📅 '+month.replace("-"," 年 ")+' 月 <span class="badge">'+cnt+' 条</span></div><div class="timeline" data-month="'+month+'"></div>';
+    }
+    var tl=box.querySelector('[data-month="'+month+'"]');
+    var d=document.createElement("div"); d.className="tl-item";
+    var titleHtml = it.url
+      ? '<a href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.title)+'</a><a class="jump" href="'+esc(it.url)+'" target="_blank" rel="noopener">查看原文 ↗</a>'
+      : esc(it.title);
+    d.innerHTML='<button class="del" title="删除">✕</button>'+
+      '<div class="tl-head"><span class="tl-date">'+esc(it.date)+'</span><span class="htag ht-'+esc(it.tag)+'">#'+esc(it.tag)+'</span></div>'+
+      '<h3 data-ed-title>'+titleHtml+'</h3>'+
+      '<p data-ed="insights.'+state.insights.indexOf(it)+'.summary">'+esc(it.summary)+'</p>'+
+      '<div class="tl-src">来源:<span data-ed="insights.'+state.insights.indexOf(it)+'.source">'+esc(it.source)+'</span>'+
+      (editing?(' · 链接:<span data-ed="insights.'+state.insights.indexOf(it)+'.url">'+esc(it.url)+'</span>'):"")+'</div>';
+    if(editing){
+      var h=d.querySelector("[data-ed-title]");
+      h.setAttribute("data-ed","insights."+state.insights.indexOf(it)+".title");
+      h.textContent=it.title;
+      var jumps=d.querySelectorAll(".jump"); jumps.forEach(function(j){j.remove();});
+    }
+    d.querySelector(".del").onclick=function(){
+      var ri=state.insights.indexOf(it);
+      if(ri>=0){ state.insights.splice(ri,1); renderAll(); toast("已删除,记得保存"); }
+    };
+    tl.appendChild(d);
+  });
+  if(!slice.length){ box.innerHTML='<div style="color:var(--ink3);font-size:13px;padding:20px 0">没有匹配的动态,试试更换关键词或标签。</div>'; }
+  renderPager(pages, items.length);
+  document.getElementById("cntInsight").textContent=state.insights.length;
+  bindEditable();
+}
+function renderPager(pages, total){
+  var p=document.getElementById("pager"); p.innerHTML="";
+  if(pages<=1){ if(total) p.innerHTML='<span class="pinfo">共 '+total+' 条</span>'; return; }
+  function btn(label, page, dis, on){
+    var b=document.createElement("button"); b.className="pbtn"+(on?" on":""); b.textContent=label; b.disabled=!!dis;
+    b.onclick=function(){ curPage=page; renderNews(); document.getElementById("m1").scrollIntoView({behavior:"smooth"}); };
+    p.appendChild(b);
+  }
+  btn("‹ 上一页", curPage-1, curPage<=1);
+  for(var i=1;i<=pages;i++){ if(pages>9 && Math.abs(i-curPage)>3 && i!==1 && i!==pages) continue; btn(i, i, false, i===curPage); }
+  btn("下一页 ›", curPage+1, curPage>=pages);
+  var info=document.createElement("span"); info.className="pinfo"; info.textContent="第 "+curPage+"/"+pages+" 页 · 共 "+total+" 条"; p.appendChild(info);
+}
+document.getElementById("kw").addEventListener("input",function(e){ curKw=e.target.value.trim().toLowerCase(); curPage=1; renderNews(); });
+document.getElementById("btnAdd").onclick=function(){
+  var today=new Date().toISOString().slice(0,10);
+  state.insights.unshift({date:today,tag:"竞品",title:"(新动态标题,点击编辑)",summary:"(内容摘要,点击编辑)",source:"来源",url:""});
+  curPage=1; renderAll(); toast("已添加,请编辑内容后保存");
+};
+document.getElementById("btnCsv").onclick=function(){
+  var rows=[["日期","标签","标题","摘要","来源","原文链接"]];
+  state.insights.slice().sort(function(a,b){return b.date<a.date?-1:1;}).forEach(function(it){
+    rows.push([it.date, "#"+it.tag, it.title, it.summary, it.source, it.url||""]);
+  });
+  var csv="﻿"+rows.map(function(r){ return r.map(function(c){ return '"'+String(c).replace(/"/g,'""')+'"'; }).join(","); }).join("\r\n");
+  var blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="aihub-news-"+new Date().toISOString().slice(0,10)+".csv"; a.click();
+  toast("已下载 Excel 新闻表(共 "+state.insights.length+" 条)");
+};
+
+/* ================= module 2 ================= */
+function renderPick(boxId, vendors, hidden, rerender){
+  var box=document.getElementById(boxId); box.innerHTML="";
+  vendors.forEach(function(v){
+    var b=document.createElement("button"); b.className="vpk"+(hidden[v]?"":" on"); b.textContent=v;
+    b.onclick=function(){ hidden[v]=!hidden[v]; renderPick(boxId,vendors,hidden,rerender); rerender(); };
+    box.appendChild(b);
+  });
+}
+function renderBmTable(){
+  var t=document.getElementById("bmTable");
+  var vis=state.benchmark.vendors.filter(function(v){return !hiddenBm[v];});
+  var html="<thead><tr><th>维度</th><th>细分指标</th>"+vis.map(function(v){return "<th>"+esc(v)+"</th>"}).join("")+"</tr></thead><tbody>";
+  state.benchmark.groups.forEach(function(g,gi){
+    g.metrics.forEach(function(mt,mi){
+      html+="<tr>";
+      if(mi===0) html+="<td class='grp' rowspan='"+g.metrics.length+"'>"+esc(g.group)+"</td>";
+      html+="<td class='dim'>"+esc(mt.m)+"</td>";
+      vis.forEach(function(v){
+        var vi=state.benchmark.vendors.indexOf(v);
+        html+="<td data-ed='benchmark.groups."+gi+".metrics."+mi+".cells."+vi+"'>"+esc(mt.cells[vi])+"</td>";
+      });
+      html+="</tr>";
+    });
+  });
+  t.innerHTML=html+"</tbody>";
+  var s=document.getElementById("bmSummary"); s.innerHTML="";
+  state.benchmark.vendors.forEach(function(v){
+    if(hiddenBm[v]) return;
+    s.innerHTML+='<div class="sumcard"><h4>'+esc(v)+'</h4><p data-ed="benchmark.summary.'+v+'">'+esc(state.benchmark.summary[v]||"")+"</p></div>";
+  });
+  bindEditable();
+}
+function radarSVG(datasets,dims,size){
+  var cx=size/2, cy=size/2, R=size/2-46, n=dims.length, i;
+  function pt(k,val){ var ang=-Math.PI/2+k*2*Math.PI/n; var r=R*val/5; return [cx+r*Math.cos(ang), cy+r*Math.sin(ang)]; }
+  var s='<svg width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'">';
+  for(var j=1;j<=5;j++){ var ring=[]; for(i=0;i<n;i++){var p=pt(i,j); ring.push(p[0].toFixed(1)+","+p[1].toFixed(1));} s+='<polygon points="'+ring.join(" ")+'" fill="none" stroke="#e2e8f2"/>'; }
+  for(i=0;i<n;i++){
+    var p2=pt(i,5); s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+p2[0]+'" y2="'+p2[1]+'" stroke="#e2e8f2"/>';
+    var lp=pt(i,5.75); s+='<text x="'+lp[0]+'" y="'+lp[1]+'" font-size="11" fill="#4a5568" text-anchor="middle">'+dims[i]+'</text>';
+  }
+  datasets.forEach(function(ds,di){
+    var pts=[]; for(i=0;i<n;i++){var q=pt(i,ds.scores[i]); pts.push(q[0].toFixed(1)+","+q[1].toFixed(1));}
+    var c=RCOLORS[di%RCOLORS.length];
+    s+='<polygon points="'+pts.join(" ")+'" fill="'+c+'22" stroke="'+c+'" stroke-width="2"/>';
+    for(i=0;i<n;i++){var q2=pt(i,ds.scores[i]); s+='<circle cx="'+q2[0]+'" cy="'+q2[1]+'" r="3" fill="'+c+'"/>';}
+  });
+  return s+"</svg>";
+}
+function renderRadars(){
+  var dims=state.benchmark.radarDims;
+  var ds=state.benchmark.vendors.map(function(v){return {name:v,scores:state.benchmark.radarScores[v]};});
+  document.getElementById("bigRadar").innerHTML=radarSVG(ds,dims,470);
+  var lg=document.getElementById("bigLegend"); lg.innerHTML="";
+  ds.forEach(function(d,i){ lg.innerHTML+='<span><i style="background:'+RCOLORS[i%RCOLORS.length]+'"></i>'+esc(d.name)+"</span>"; });
+  var grid=document.getElementById("radarGrid"); grid.innerHTML="";
+  ds.forEach(function(d,i){
+    var pos=(state.benchmark.groups[0].metrics[0].cells)[state.benchmark.vendors.indexOf(d.name)]||"";
+    var c=document.createElement("div"); c.className="rcard";
+    c.innerHTML="<h4>"+esc(d.name)+"</h4><div class='pos'>"+esc(pos)+"</div>"+
+      '<div style="display:flex;justify-content:center">'+radarSVG([d],dims,250)+"</div>"+
+      '<div style="font-size:12px;color:var(--ink3);text-align:center;margin-top:4px">综合 '+(d.scores.reduce(function(a,b){return a+b},0)/dims.length).toFixed(1)+' / 5.0</div>';
+    grid.appendChild(c);
+  });
+}
+document.querySelectorAll(".vsw").forEach(function(b){
+  b.onclick=function(){
+    document.querySelectorAll(".vsw").forEach(function(x){x.classList.remove("on")}); b.classList.add("on");
+    var v=b.getAttribute("data-v");
+    document.getElementById("tblwrap").classList.toggle("hide",v!=="table");
+    document.getElementById("radarwrap").classList.toggle("show",v==="radar");
+  };
+});
+
+/* ================= module 3 ================= */
+function renderBiz(){
+  var t=document.getElementById("bizTable");
+  var vis=state.business.vendors.filter(function(v){return !hiddenBiz[v];});
+  var html="<thead><tr><th>对标维度</th>"+vis.map(function(v){return "<th>"+esc(v)+"</th>"}).join("")+"</tr></thead><tbody>";
+  state.business.dims.forEach(function(dim){
+    html+="<tr><td class='dim'>"+esc(dim)+"</td>";
+    vis.forEach(function(v){
+      var vi=state.business.vendors.indexOf(v);
+      html+="<td data-ed='business.cells."+dim+"."+vi+"'>"+esc(state.business.cells[dim][vi])+"</td>";
+    });
+    html+="</tr>";
+  });
+  t.innerHTML=html+"</tbody>";
+  bindEditable();
+}
+function renderPrice(){
+  var t=document.getElementById("priceTable");
+  var vis=state.pricing.vendors.filter(function(v){return !hiddenPrice[v];});
+  var html="<thead><tr><th>模型</th><th>上下文</th>"+vis.map(function(v){return "<th>"+esc(v)+"<br><span style='font-weight:400;font-size:11px'>输入 / 输出(缓存)</span></th>"}).join("")+"<th>备注</th></tr></thead><tbody>";
+  state.pricing.rows.forEach(function(r,ri){
+    html+="<tr><td class='dim'>"+esc(r.model)+"</td><td>"+esc(r.ctx)+"</td>";
+    vis.forEach(function(v){
+      var c=r.cells[v];
+      html+="<td data-ed='pricing.rows."+ri+".cells."+v+"'>"+(c?esc(c):"—")+"</td>";
+    });
+    html+="<td data-ed='pricing.rows."+ri+".note'>"+esc(r.note)+"</td></tr>";
+  });
+  t.innerHTML=html+"</tbody>";
+  var f=document.getElementById("priceFindings"); f.innerHTML="";
+  state.pricing.findings.forEach(function(fd,fi){
+    f.innerHTML+='<div class="sumcard acc"><h4 data-ed="pricing.findings.'+fi+'.title">'+esc(fd.title)+'</h4><p data-ed="pricing.findings.'+fi+'.desc">'+esc(fd.desc)+"</p></div>";
+  });
+  bindEditable();
+}
+/* 多模态价格表 */
+function renderMm(){
+  var t=document.getElementById("mmTable");
+  if(!t||!state.pricing.mmRows) return;
+  var mvendors=["官方原厂","CMI AI Hub","硅基流动","DMXAPI","Novita AI"];
+  var html="<thead><tr><th>模型</th><th>计费单位</th>"+mvendors.map(function(v){return "<th>"+esc(v)+"</th>"}).join("")+"</tr></thead><tbody>";
+  state.pricing.mmRows.forEach(function(r,ri){
+    html+="<tr><td class='dim'>"+esc(r.model)+"</td><td>"+esc(r.unit)+"</td>";
+    mvendors.forEach(function(v){
+      var c=r.cells[v];
+      html+="<td data-ed='pricing.mmRows."+ri+".cells."+v+"'>"+(c?esc(c):"—")+"</td>";
+    });
+    html+="</tr>";
+  });
+  t.innerHTML=html+"</tbody>";
+}
+/* 情报信源库 */
+function renderSources(){
+  var g=document.getElementById("srcGrid");
+  if(!g||!state.intelSources) return;
+  g.innerHTML="";
+  state.intelSources.forEach(function(c,ci){
+    var sites=c.sites.map(function(s,si){
+      return '<a class="srcsite" href="'+esc(s.url)+'" target="_blank" rel="noopener"><b>'+esc(s.name)+'</b><span>'+esc(s.desc)+"</span></a>";
+    }).join("");
+    var wx=c.wechat.map(function(w){ return '<span class="wxchip">'+esc(w)+"</span>"; }).join("");
+    g.innerHTML+='<div class="srccard"><h4><span class="ci" style="background:'+c.color+'"></span>'+c.icon+" "+esc(c.cat)+"</h4>"+sites+
+      '<div class="wxbox"><div class="wt">📱 微信公众号</div>'+wx+"</div></div>";
+  });
+  var d=document.getElementById("dailySrc");
+  if(d&&state.intelDaily){ d.innerHTML='每日 AI 资讯参考:<a href="'+esc(state.intelDaily.url)+'" target="_blank" rel="noopener">'+esc(state.intelDaily.name)+' ↗</a>(公众号资讯由定时任务每日检索聚合,不逐一罗列)'; }
+}
+
+/* ================= module 4 & 5 ================= */
+function renderDiff(){
+  var g=document.getElementById("diffGrid"); g.innerHTML="";
+  state.differentiation.forEach(function(d,i){
+    g.innerHTML+='<div class="dcard"><h4><span class="ic">'+d.icon+'</span> <span data-ed="differentiation.'+i+'.title">'+esc(d.title)+'</span></h4><p data-ed="differentiation.'+i+'.desc">'+esc(d.desc)+"</p></div>";
+  });
+  var p=document.getElementById("prioGrid"); p.innerHTML="";
+  state.priorities.forEach(function(pr,pi){
+    var items=pr.items.map(function(it,ii){ return '<div class="pitem"><span data-ed="priorities.'+pi+'.items.'+ii+'">'+esc(it)+"</span></div>"; }).join("");
+    p.innerHTML+='<div class="pcol"><span class="lv" style="background:'+pr.color+'">'+pr.level+"</span><h4>"+esc(pr.name)+"</h4>"+items+"</div>";
+  });
+}
+function renderArch(){
+  var a=document.getElementById("arch"); a.innerHTML="";
+  state.architecture.forEach(function(L,i){
+    a.innerHTML+='<div class="arow"><div class="ln" style="color:'+L.color+'">'+esc(L.layer)+'<div class="en">'+esc(L.en)+'</div></div><div class="items">'+L.items.map(function(x){return '<span class="aitem">'+esc(x)+"</span>"}).join("")+"</div></div>";
+    if(i<state.architecture.length-1) a.innerHTML+='<div class="conn"></div>';
+  });
+}
+
+/* ================= editing ================= */
+function setByPath(path,val){
+  var keys=path.split("."), obj=state;
+  for(var i=0;i<keys.length-1;i++){ var k=keys[i]; obj=obj[/^\d+$/.test(k)?+k:k]; if(obj==null) return; }
+  var last=keys[keys.length-1]; obj[/^\d+$/.test(last)?+last:last]=val;
+}
+function bindEditable(){
+  document.querySelectorAll("[data-ed]").forEach(function(el){
+    if(editing) el.setAttribute("contenteditable","true"); else el.removeAttribute("contenteditable");
+    if(!el.__bound){
+      el.__bound=true;
+      el.addEventListener("blur",function(){
+        if(!editing) return;
+        setByPath(el.getAttribute("data-ed"), el.textContent.replace(/^#/,""));
+      });
+    }
+  });
+}
+document.getElementById("btnEdit").onclick=function(){
+  editing=!editing;
+  document.body.classList.toggle("editing",editing);
+  document.getElementById("editbar").style.display=editing?"flex":"none";
+  this.classList.toggle("act",editing);
+  this.textContent=editing?"✏️ 编辑中…":"✏️ 编辑模式";
+  renderNews(); bindEditable();
+  toast(editing?"编辑模式已开启:点击虚线区域直接修改":"已退出编辑模式");
+};
+document.getElementById("btnSave").onclick=function(){ persist(); snapshot("手动保存"); renderAll(); toast("已保存并生成历史快照 ✔"); };
+document.getElementById("btnExport").onclick=function(){
+  var blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="aihub-data-"+new Date().toISOString().slice(0,10)+".json"; a.click();
+  toast("已导出 JSON 数据文件");
+};
+document.getElementById("btnImport").onclick=function(){ document.getElementById("fileImp").click(); };
+document.getElementById("fileImp").addEventListener("change",function(e){
+  var f=e.target.files[0]; if(!f) return;
+  var rd=new FileReader();
+  rd.onload=function(){ try{ state=JSON.parse(rd.result); persist(); renderAll(); toast("导入成功 ✔"); }catch(err){ toast("导入失败:文件格式不正确"); } };
+  rd.readAsText(f);
+});
+document.getElementById("btnReset").onclick=function(){
+  if(!confirm("确定恢复默认数据?本机修改将清空(历史快照仍保留)。")) return;
+  snapshot("恢复默认前的备份"); localStorage.removeItem(LS_DATA);
+  state=JSON.parse(JSON.stringify(base)); renderAll(); toast("已恢复默认数据");
+};
+
+/* ================= history ================= */
+function getSnaps(){ try{return JSON.parse(localStorage.getItem(LS_SNAP)||"[]");}catch(e){return [];} }
+function snapshot(note){
+  var snaps=getSnaps();
+  snaps.unshift({ts:new Date().toLocaleString("zh-CN"),note:note,data:JSON.stringify(state)});
+  if(snaps.length>30) snaps=snaps.slice(0,30);
+  localStorage.setItem(LS_SNAP,JSON.stringify(snaps));
+}
+document.getElementById("btnHistory").onclick=function(){
+  var l=document.getElementById("hlist"); l.innerHTML="";
+  (window.AIHUB_HISTORY||[]).forEach(function(h){
+    l.innerHTML+='<div class="hrow"><span class="t">🤖 '+esc(h.date)+'</span><span class="n">'+esc(h.note)+'</span><span style="font-size:11px;color:var(--ink3)">系统更新</span></div>';
+  });
+  var snaps=getSnaps();
+  if(!snaps.length) l.innerHTML+='<div style="font-size:12.5px;color:var(--ink3);padding:10px 0">本机暂无手动快照,保存一次修改即会生成。</div>';
+  snaps.forEach(function(s){
+    var row=document.createElement("div"); row.className="hrow";
+    row.innerHTML='<span class="t">💾 '+esc(s.ts)+'</span><span class="n">'+esc(s.note)+'</span>';
+    var b=document.createElement("button"); b.className="hbtn"; b.textContent="回滚到此版本";
+    b.onclick=function(){
+      if(!confirm("回滚到 "+s.ts+" 的版本?当前内容会先自动备份。")) return;
+      snapshot("回滚前自动备份"); state=JSON.parse(s.data); persist(); renderAll();
+      document.getElementById("hmodal").classList.remove("show"); toast("已回滚 ✔");
+    };
+    row.appendChild(b); l.appendChild(row);
+  });
+  document.getElementById("hmodal").classList.add("show");
+};
+document.getElementById("hclose").onclick=function(){ document.getElementById("hmodal").classList.remove("show"); };
+document.getElementById("hmodal").addEventListener("click",function(e){ if(e.target===this) this.classList.remove("show"); });
+
+/* ================= init ================= */
+function renderAll(){
+  renderTagbar(); renderNews();
+  renderPick("vpick",state.benchmark.vendors,hiddenBm,renderBmTable);
+  renderBmTable(); renderRadars();
+  renderPick("bizpick",state.business.vendors,hiddenBiz,renderBiz);
+  renderBiz();
+  renderPick("pricepick",state.pricing.vendors,hiddenPrice,renderPrice);
+  renderPrice(); renderMm(); renderSources(); renderDiff(); renderArch(); bindEditable();
+  document.getElementById("cntVendor").textContent=state.benchmark.vendors.length;
+  document.getElementById("ver").textContent=window.AIHUB_DATA_VERSION||"-";
+  document.getElementById("ftVer").textContent="当前数据版本 "+(window.AIHUB_DATA_VERSION||"-");
+}
+renderAll();
+</script>
+</body>
+</html>
