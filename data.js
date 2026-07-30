@@ -1,7 +1,7 @@
 /* AI Hub 对标情报站 · 数据层 V4
    每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-07-30.4";
+window.AIHUB_DATA_VERSION = "2026-07-30.5";
 window.AIHUB_HISTORY = [
   { date: "2026-07-30", note: "每日自动更新:新增 8 条动态(OpenAI gpt-oss 开源、腾讯混元 AngelSpec、蚂蚁 Ling-3.0-flash、清华 AI 失控预测框架 LoC、中国电信息壤 100EFLOPS、GPU 租赁价下行、百度 OCR 开源、OpenAI Codex Security CLI;信源:腾讯研究院/搜狐、机器之心、量子位、JYGPU、通信世界、OpenAI);GitHub 推送:跳过(连接器未连接);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 89 条" },
   { date: "2026-07-30", note: "模块一重构:分类升级为三级树(一级 政策/行业/技术/厂商 → 二级 原厂/聚合/运营商 → 三级 三大运营商);布局按用户反馈调整——分类与标签换位,分类改为顶部级联筛选条(sticky 冻结、默认只露一级、紧凑),标签移至左侧窄边栏,新闻内容区成为视觉主体;新增 12 条 07-25~30 情报(Kimi K3 开源+定价、DeepSeek V4 Preview、Claude Opus 5、OpenRouter 中国模型前五、运营商 Token 经营、苹果国行选通义、1100+员工联名、25家捍卫开放权重、OpenAI Agent 逃逸、香港全民AI/算力),insights 增至 81 条" },
@@ -715,15 +715,33 @@ window.AIHUB_DATA = {
 
   /* ================= 模块四:差异化定位 ================= */
   differentiation: [
-    { title: "网络层差异化", desc: "依托中信国际电讯全球骨干网,提供跨境低时延 AI 调用,解决出海企业网络痛点。", icon: "🌐" },
-    { title: "安全合规差异化", desc: "融合中港两地合规资质,提供数据跨境合规方案、全链路加密与审计能力。", icon: "🛡️" },
-    { title: "行业场景差异化", desc: "聚焦金融、跨境电商、制造业等优势行业,预装行业模型与知识库模板。", icon: "🏭" },
-    { title: "服务模式差异化", desc: "提供'网络 + 算力 + 模型 + 运维'一站式打包服务,客户经理贴身支持。", icon: "🤝" }
+    { title: "网络层差异化", icon: "🌐", desc: "依托中信国际电讯全球骨干网,跨境低时延直连国际旗舰模型,解决出海企业网络与境外支付/合规痛点。", bench: "对标 15 家,仅运营商云与 CMI 具运营商级骨干网" },
+    { title: "安全合规差异化", icon: "🛡️", desc: "融合中港两地合规资质,提供数据跨境合规方案、全链路加密与审计;'网络+合规'一体化。", bench: "治理深度可比 Portkey/LiteLLM,CMI 胜在一体化" },
+    { title: "行业场景差异化", icon: "🏭", desc: "聚焦金融、跨境电商、制造业等优势行业,预装行业模型与知识库模板。", bench: "对标厂商以通用能力为主,行业化是 CMI 补齐方向" },
+    { title: "服务模式差异化", icon: "🤝", desc: "提供'网络+算力+模型+运维'一站式打包,客户经理贴身支持与企业级 SLA。", bench: "仅移动云/天翼等运营商云具同等贴身服务" }
   ],
   priorities: [
-    { level: "P0", name: "共性必做功能", color: "#2b5cff", items: ["统一 API 网关", "模型市场", "Token 计量计费", "调用监控", "多租户管理"] },
-    { level: "P1", name: "竞争必备功能", color: "#00b3a4", items: ["智能路由(成本/效果)", "故障自动切换", "缓存优化", "成本分析看板"] },
-    { level: "P2", name: "差异化亮点", color: "#f2994a", items: ["跨境网络加速", "多区域容灾", "合规审计报告", "行业解决方案包", "混合部署调度"] }
+    { level: "P0", name: "共性必做功能(聚合平台基线)", color: "#2b5cff", items: [
+      { t: "统一 API 接入/网关", heat: ["agg_unified"] },
+      { t: "多模型聚合 / 模型目录", heat: ["agg_models", "agg_catalog"] },
+      { t: "按 token 计量计费", heat: ["per_token"] },
+      { t: "密钥与权限管理", heat: ["key_pool", "rbac"] },
+      { t: "调用监控与可观测", heat: ["observ"] }
+    ]},
+    { level: "P1", name: "竞争必备功能(行业门槛)", color: "#00b3a4", items: [
+      { t: "智能路由与故障切换", heat: ["route", "failover", "smart"] },
+      { t: "缓存命中计费", heat: ["cache_bill"] },
+      { t: "用量对账与成本分析", heat: ["recon", "budget", "analysis"] },
+      { t: "上下文安全存储", heat: ["ctx_store"] },
+      { t: "全链路审计", heat: ["audit"] }
+    ]},
+    { level: "P2", name: "差异化亮点(CMI 优势区)", color: "#f2994a", items: [
+      { t: "跨境低时延网络加速", tag: "CMI" },
+      { t: "中港合规一站式方案", tag: "CMI" },
+      { t: "国际旗舰模型美元同价", tag: "CMI" },
+      { t: "多区域容灾 / 安全沙箱", heat: ["sandbox", "failover"] },
+      { t: "行业解决方案包", tag: "CMI" }
+    ]}
   ],
   architecture: [
     { layer: "应用层", en: "Application", items: ["模型广场", "开发工具", "Agent 框架", "行业模板"], color: "#7c3aed" },
