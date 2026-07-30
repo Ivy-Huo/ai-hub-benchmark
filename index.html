@@ -174,6 +174,18 @@
   .billTable tbody td,.secTable tbody td{min-width:150px}
   .ourcol{background:#eaf1ff !important}
   .sumcard.ouradd{border-left-color:#2b5cff;background:#f3f8ff}
+  .diffgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px;margin-top:18px}
+  .diffcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);border-top:3px solid var(--brand)}
+  .diffcard.our{border-top-color:#2b5cff;background:#f3f8ff}
+  .diffcard h4{font-size:14px;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+  .diffcard .dcol{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .diffcard .dbox{padding:8px 10px;border-radius:9px;font-size:12px;line-height:1.5}
+  .diffcard .dbox.d{background:#fff4ec;border:1px solid #ffd9bf}
+  .diffcard .dbox.c{background:#eef6ff;border:1px solid #cfe0ff}
+  .diffcard .dbox b{display:block;font-size:11.5px;margin-bottom:4px;letter-spacing:.3px}
+  .diffcard .dbox ul{margin:0;padding-left:16px}
+  .diffcard .dbox li{margin:2px 0}
+  .diffchart svg{max-width:100%;height:auto}
 
   h3.sub{font-size:17px;margin:28px 0 12px;display:flex;align-items:center;gap:8px}
   h3.sub::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--brand)}
@@ -297,6 +309,7 @@
       <button class="vsw" data-v="billing">💰 计费专项</button>
       <button class="vsw" data-v="security">🛡️ 安全专项</button>
       <button class="vsw" data-v="radar">🎯 雷达视图</button>
+      <button class="vsw" data-v="diffcom">🧭 差异化·共性</button>
     </div>
 
     <!-- 详细对标表 -->
@@ -336,6 +349,14 @@
         <div class="legend" id="bigLegend"></div>
       </div>
       <div class="radargrid" id="radarGrid"></div>
+    </div>
+
+    <!-- 差异化共性能力总结 -->
+    <div class="bmview hide" id="v-diffcom">
+      <p class="pnote">能力定位图:横轴 = 共性能力覆盖度(由 26 项能力热力矩阵计算),纵轴 = 差异化指数(0-5),泡泡大小 = 综合能力强弱。右上角为"全能标杆",左上角为"差异化利基";蓝心大泡泡为 <b>CMI AI Hub</b>,虚线框代表 OpenRouter + Portkey + LiteLLM 基准线。<br>下方卡片逐家拆解 ⭐差异化能力(相对聚合基线的独特优势)与 ✓共性能力(聚合平台应普遍具备的基线能力)。</p>
+      <div class="bigcard"><div id="diffChart" class="diffchart" style="display:flex;justify-content:center"></div><div class="legend" id="diffLegend"></div></div>
+      <h3 class="sub">差异化 vs 共性能力总结(逐家)</h3>
+      <div class="diffgrid" id="diffCards"></div>
     </div>
   </div>
 </section>
@@ -715,11 +736,57 @@ function renderRadars(){
     grid.appendChild(c);
   });
 }
+function renderDiffCommon(){
+  var bm=state.benchmark;
+  if(!bm.diffCommon) return;
+  var vendors=bm.vendors.filter(function(v){return !hiddenBm[v];});
+  var capTotal = bm.heat.cats.reduce(function(a,c){return a+c.caps.length;},0);
+  function commonCov(v){ var lv=bm.heat.levels[v]||[]; var s=0; for(var i=0;i<lv.length;i++){ s += lv[i]===2?1 : lv[i]===1?0.5 : 0; } return Math.round(s/capTotal*100); }
+  function radarAvg(v){ var sc=bm.radarScores[v]||[]; var t=0; for(var i=0;i<sc.length;i++) t+=sc[i]; return sc.length? t/sc.length : 0; }
+  var W=820,H=440,ml=58,mr=24,mt=24,mb=52;
+  var px=function(c){ return ml + c/100*(W-ml-mr); };
+  var py=function(d){ return mt + (5-d)/5*(H-mt-mb); };
+  var s='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" font-family="inherit">';
+  s+='<rect x="'+px(50)+'" y="'+mt+'" width="'+(W-ml-mr-px(50))+'" height="'+(py(2.5)-mt)+'" fill="#fff7ee"/>';
+  s+='<rect x="'+ml+'" y="'+py(2.5)+'" width="'+(px(50)-ml)+'" height="'+(H-mt-mb-py(2.5))+'" fill="#eef4ff"/>';
+  for(var gx=0;gx<=100;gx+=20){ s+='<line x1="'+px(gx)+'" y1="'+mt+'" x2="'+px(gx)+'" y2="'+(H-mb)+'" stroke="#eef0f4"/><text x="'+px(gx)+'" y="'+(H-mb+16)+'" font-size="11" fill="#9aa3b2" text-anchor="middle">'+gx+'%</text>'; }
+  for(var gy=0;gy<=5;gy+=1){ s+='<line x1="'+ml+'" y1="'+py(gy)+'" x2="'+(W-mr)+'" y2="'+py(gy)+'" stroke="#eef0f4"/><text x="'+(ml-8)+'" y="'+(py(gy)+4)+'" font-size="11" fill="#9aa3b2" text-anchor="end">'+gy+'</text>'; }
+  s+='<line x1="'+ml+'" y1="'+mt+'" x2="'+ml+'" y2="'+(H-mb)+'" stroke="#c7cdda"/><line x1="'+ml+'" y1="'+(H-mb)+'" x2="'+(W-mr)+'" y2="'+(H-mb)+'" stroke="#c7cdda"/>';
+  s+='<text x="'+(ml+(W-ml-mr)/2)+'" y="'+(H-12)+'" font-size="12.5" fill="#6b7280" text-anchor="middle">共性能力覆盖度 →</text>';
+  s+='<text x="16" y="'+(mt+(H-mt-mb)/2)+'" font-size="12.5" fill="#6b7280" text-anchor="middle" transform="rotate(-90 16 '+(mt+(H-mt-mb)/2)+')">差异化指数 →</text>';
+  s+='<text x="'+px(75)+'" y="'+(mt+16)+'" font-size="12" fill="#caa46a" text-anchor="middle" font-weight="700">全能标杆</text>';
+  s+='<text x="'+px(25)+'" y="'+(mt+16)+'" font-size="12" fill="#7c93c9" text-anchor="middle" font-weight="700">差异化利基</text>';
+  var baseVend=["OpenRouter","Portkey","LiteLLM"];
+  var bc=baseVend.reduce(function(a,v){return a+commonCov(v);},0)/baseVend.length;
+  var bd=baseVend.reduce(function(a,v){return a+bm.diffCommon[v].diffIdx;},0)/baseVend.length;
+  s+='<rect x="'+(px(bc)-26)+'" y="'+(py(bd+0.4))+'" width="52" height="40" fill="none" stroke="#2b5cff" stroke-dasharray="5 4" rx="7"/>';
+  s+='<text x="'+px(bc)+'" y="'+(py(bd+0.4)-4)+'" font-size="10" fill="#2b5cff" text-anchor="middle">基准线</text>';
+  vendors.forEach(function(v){
+    var c=commonCov(v), d=bm.diffCommon[v].diffIdx, r=8+radarAvg(v)*2.2;
+    var isOurs=(v===bm.ours), fill=isOurs?'#2b5cff':'#5b8def', op=isOurs?1:0.8;
+    s+='<circle cx="'+px(c)+'" cy="'+py(d)+'" r="'+r+'" fill="'+fill+'" fill-opacity="'+op+'" stroke="'+(isOurs?'#102a6b':'#3a5fae')+'" stroke-width="'+(isOurs?2.5:1)+'"><title>'+esc(v)+' · 共性 '+c+'% · 差异化 '+d+' · 综合 '+radarAvg(v).toFixed(1)+'</title></circle>';
+    s+='<text x="'+px(c)+'" y="'+(py(d)+r+13)+'" font-size="10.5" fill="#374151" text-anchor="middle">'+esc(v)+'</text>';
+  });
+  s+='</svg>';
+  document.getElementById("diffChart").innerHTML=s;
+  var lg=document.getElementById("diffLegend"); lg.innerHTML='<span><i style="background:#2b5cff"></i>CMI AI Hub(我们的平台)</span><span><i style="background:#5b8def"></i>其他聚合平台</span><span style="border:1px dashed #2b5cff;padding:1px 6px;border-radius:4px">虚框 = 基准线(OpenRouter+Portkey+LiteLLM 均值)</span>';
+  var g=document.getElementById("diffCards"); g.innerHTML="";
+  vendors.forEach(function(v){
+    var d=bm.diffCommon[v]; if(!d) return;
+    var isOurs=(v===bm.ours);
+    var diffLi=d.diff.map(function(x){return '<li>'+esc(x)+'</li>';}).join("");
+    var comLi=d.common.map(function(x){return '<li>'+esc(x)+'</li>';}).join("");
+    var c='<div class="diffcard'+(isOurs?' our':'')+'"><h4>'+(isOurs?'⭐ ':'')+esc(v)+' <span style="font-size:11px;color:#9aa3b2;font-weight:400">差异化 '+d.diffIdx+'/5 · 共性 '+commonCov(v)+'%</span></h4>';
+    c+='<div class="dcol"><div class="dbox d"><b>⭐ 差异化能力(独特优势)</b><ul>'+diffLi+'</ul></div>';
+    c+='<div class="dbox c"><b>✓ 共性能力(基线)</b><ul>'+comLi+'</ul></div></div></div>';
+    g.innerHTML+=c;
+  });
+}
 document.querySelectorAll(".vsw").forEach(function(b){
   b.onclick=function(){
     document.querySelectorAll(".vsw").forEach(function(x){x.classList.remove("on")}); b.classList.add("on");
     var v=b.getAttribute("data-v");
-    ["detail","heat","billing","security","radar"].forEach(function(id){
+    ["detail","heat","billing","security","radar","diffcom"].forEach(function(id){
       var el=document.getElementById("v-"+id); if(!el) return;
       el.classList.toggle("hide", id!==v);
       el.classList.toggle("show", id===v);
@@ -906,7 +973,7 @@ function renderAll(){
   renderPick("heatpick",state.benchmark.vendors,hiddenHeat,renderHeat);
   renderPick("billpick",state.benchmark.vendors,hiddenBill,renderBilling);
   renderPick("secpick",state.benchmark.vendors,hiddenSec,renderSecurity);
-  renderBmTable(); renderHeat(); renderBilling(); renderSecurity(); renderRadars();
+  renderBmTable(); renderHeat(); renderBilling(); renderSecurity(); renderRadars(); renderDiffCommon();
   renderPick("bizpick",state.business.vendors,hiddenBiz,renderBiz);
   renderBiz();
   renderPick("pricepick",state.pricing.vendors,hiddenPrice,renderPrice);
