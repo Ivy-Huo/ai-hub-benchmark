@@ -8,8 +8,10 @@
 /* AI Hub 对标情报站 · 数据层 V4
    每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-07-29.4";
+window.AIHUB_DATA_VERSION = "2026-07-30.2";
 window.AIHUB_HISTORY = [
+  { date: "2026-07-30", note: "每日自动更新:新增 8 条动态(OpenAI gpt-oss 开源、腾讯混元 AngelSpec、蚂蚁 Ling-3.0-flash、清华 AI 失控预测框架 LoC、中国电信息壤 100EFLOPS、GPU 租赁价下行、百度 OCR 开源、OpenAI Codex Security CLI;信源:腾讯研究院/搜狐、机器之心、量子位、JYGPU、通信世界、OpenAI);GitHub 推送:跳过(连接器未连接);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 89 条" },
+  { date: "2026-07-30", note: "模块一重构:分类升级为三级树(一级 政策/行业/技术/厂商 → 二级 原厂/聚合/运营商 → 三级 三大运营商);布局按用户反馈调整——分类与标签换位,分类改为顶部级联筛选条(sticky 冻结、默认只露一级、紧凑),标签移至左侧窄边栏,新闻内容区成为视觉主体;新增 12 条 07-25~30 情报(Kimi K3 开源+定价、DeepSeek V4 Preview、Claude Opus 5、OpenRouter 中国模型前五、运营商 Token 经营、苹果国行选通义、1100+员工联名、25家捍卫开放权重、OpenAI Agent 逃逸、香港全民AI/算力),insights 增至 81 条" },
   { date: "2026-07-29", note: "强制重建:版本升 2026-07-29.4 触发 GitHub Pages 重新构建,确保线上服务含 localStorage 版本门控修复(69 条 + 区域维度)" },
   { date: "2026-07-29", note: "模块一情报批量补强:手动检索官方 blog/新闻中心、AI 媒体、财经媒体、政府监管、研报平台,新增 21 条关键动态(运营商 MoMA2.0/WorkBuddy、清朗整治AI乱象/拟人化办法/988款备案/香港备忘录、千问10亿下载/100亿下载、GPT-5.6/GLM-5.2、硅基流动20亿B轮/OpenRouter卖身、算力全链涨价与算力银行、DeepSeek降价75%/智谱提价/定价分裂、MCP协议栈/智能体爆发、博云融资),insights 增至 45 条" },
   { date: "2026-07-29", note: "模块一升级:新增动态分类树(政策/行业/技术趋势 + 厂商[原厂/聚合/运营商→三大运营商]竖排导航,与标签双维度筛选);情报信源库扩充为 12 类(新增原厂/运营商官方、AI 媒体、财经媒体、政府监管、研报平台),UI 改为折叠展示" },
@@ -24,6 +26,46 @@ window.AIHUB_DATA = {
 
   /* ================= 模块一:AI 行业洞察与生态动态 ================= */
   insights: [
+    { date: "2026-07-30", tag: "开源动态", cat: "llm", region: "na", title: "OpenAI 四年来首次开放权重:开源 gpt-oss-120b 与 20b", source: "腾讯新闻 / 搜狗", url: "https://openai.com/blog",
+      summary: "7月29日 OpenAI 发布 gpt-oss-120b(117B/5.1B MoE)与 gpt-oss-20b(约21B),Apache 2.0 许可、纯文本、可商用,结束自 GPT-2 以来七年闭源,开源格局迎最大变量。" },
+    { date: "2026-07-30", tag: "开源动态", cat: "llm", region: "cn", title: "腾讯混元开源 AngelSpec 投机解码框架,推理加速最高 2.4 倍", source: "腾讯研究院 AI 速递 / 搜狐", url: "https://www.sohu.com/a/1056423726_455313",
+      summary: "腾讯研究院披露混元开源投机解码框架 AngelSpec,覆盖 drafter 训练到部署全链路,同步开源 Hy3-A21B 的 MTP 与 DFly drafter 权重;六大基准较 AR 基线平均加速 1.98–2.40 倍。" },
+    { date: "2026-07-30", tag: "模型更新", cat: "llm", region: "cn", title: "蚂蚁百灵发布 Ling-3.0-flash:124B 参数 11 项超越万亿旗舰", source: "腾讯研究院 AI 速递 / 搜狐", url: "https://www.sohu.com/a/1056423726_455313",
+      summary: "蚂蚁百灵发布原生混合推理模型 Ling-3.0-flash,总参 124B、激活仅 5.1B,采用 5:1 混合线性注意力与 1/64 稀疏 MoE,在 12 项基准中 11 项优于万亿旗舰 Ring-2.6-1T,将于 8 月 3 日开源权重。" },
+    { date: "2026-07-30", tag: "技术趋势", cat: "tech", region: "cn", title: "清华等提出 AI『失控行为预测框架』LoC,可提前观测风险", source: "机器之心 / 新浪", url: "https://k.sina.com.cn/article_5953190046_162d6789e06703mob6.html",
+      summary: "清华、上海期智研究院与剑桥团队提出 LoC Behavioural Framework,将欺骗、自我保护、网络攻击等孤立信号纳入统一行为路径,在失控发生前从早期微小信号判断系统是否滑向难以控制状态。" },
+    { date: "2026-07-30", tag: "算力", cat: "op_ct", region: "cn", title: "中国电信息壤算力平台纳管破 100EFLOPS,入选工信部典型案例", source: "通信世界 / 微博", url: "https://weibo.com/ttarticle/p/show?id=2309405326305691566376",
+      summary: "中国电信云网融合新型算力基础设施入选工信部 2025 年度新型信息基础设施典型案例;自研『息壤』全国一体化智算平台纳管算力突破 100EFLOPS、适配 12 款国产芯片、落地 21 省市,并率先落地 9.9 元/月 Token 套餐。" },
+    { date: "2026-07-30", tag: "算力", cat: "ind", region: "global", title: "国内 GPU 算力租赁价格加速下行:B200 三周跌三成", source: "JYGPU / 摩根大通", url: "https://www.jygpu.com/article/733.html",
+      summary: "7 月算力市场现拐点:国产 GPU 产能爬坡叠加新卡入局,B200 租赁价三周从 6.11 跌至 4.22 美元/时;H100 8 卡月租 9.2 万降至 8.45 万,H20/910B/4090 普遍降 10%–17%,结束连续七月上涨。" },
+    { date: "2026-07-30", tag: "开源动态", cat: "llm", region: "cn", title: "百度开源新 OCR 模型 Unlimited-OCR,一次可吃下一本书", source: "量子位", url: "https://www.qbitai.com/",
+      summary: "百度开源 Unlimited-OCR,据量子位报道可一次处理整本书的长文档识别,作者疑似前 DeepSeek 研究员;面向文档智能与多页扫描场景,进一步丰富国产开源模型矩阵。" },
+    { date: "2026-07-30", tag: "开源动态", cat: "llm", region: "na", title: "OpenAI 开源 Codex Security CLI 并推两款转录模型", source: "观点新媒体 / 腾讯新闻", url: "https://openai.com/blog",
+      summary: "7 月 28–29 日 OpenAI 开源代码安全命令行工具 Codex Security CLI(早期阶段),并通过 API 推出 GPT-Live-Transcribe 与 GPT-Transcribe 两款转录模型,语义准确率较 Whisper 显著提升。" },
+    { date: "2026-07-29", tag: "竞品", cat: "ind", region: "cn", title: "中国模型包揽 OpenRouter 全球调用量前五,占比约 63.5%", source: "腾讯新闻·AI大模型动态", url: "https://new.qq.com/rain/a20260730A02HPV00",
+      summary: "OpenRouter 周榜:中国模型占全球调用量约 63.5%,前五均为中文模型(小米 MiMo-V2.5 登顶、DeepSeek、腾讯混元、智谱 GLM-5.2),Claude 近一年首度跌出榜单。" },
+    { date: "2026-07-29", tag: "竞品", cat: "llm", region: "cn", title: "Kimi K3 定价对齐 Claude Sonnet 5,月之暗面估值升至 350 亿美元", source: "第一财经", url: "https://www.163.com/dy/article/L31LC5S40519DDQ2.html",
+      summary: "K3 非缓存输入/输出 $3/$15 每百万 token、缓存命中 $0.3,与 Sonnet 5 标准价一致;月之暗面完成 35 亿美元融资、估值 350 亿美元,新一轮投前估值约 500 亿美元。" },
+    { date: "2026-07-29", tag: "案例", cat: "llm", region: "cn", title: "苹果国行 AI 落地选定阿里通义千问(Qwen3.8-Max)", source: "腾讯新闻·AI大模型动态", url: "https://new.qq.com/rain/a20260730A02HPV00",
+      summary: "多方消息:苹果国行 AI 选择阿里通义千问 Qwen3.8-Max(2.4 万亿参数);vivo X500 系列入网备案兼容豆包、通义等多款大模型;阿里千问系列下载量突破 4 亿。" },
+    { date: "2026-07-29", tag: "政策", cat: "policy", region: "hk", title: "香港启动『全民 AI』普惠计划:拨款 5000 万港元分层培训", source: "人民网/大公报", url: "https://so.html5.qq.com/page/real/search_news?docid=70000021_0796a6a9a9a06052",
+      summary: "创科局统筹,数码港(基础普及)、香港科技园(专业转化)、生产力局(实务提升)三机构协作,两年办超 200 场活动、惠及约 5 万人次;孙东在 APEC 数字周介绍。" },
+    { date: "2026-07-28", tag: "开源动态", cat: "llm", region: "cn", title: "DeepSeek V4 Preview 双版本同步开源,默认上下文升至 1M", source: "AGI HUNT 日报", url: "https://agihunt.info/daily/latest",
+      summary: "V4-Pro(总参 1.6T/激活 49B)与 V4-Flash(284B/13B)同步开源,官方称 V4-Pro 在世界知识、数学、STEM、编程接近顶级闭源;V4 并永久降价至 1/4。" },
+    { date: "2026-07-28", tag: "政策", cat: "ind", region: "na", title: "1100+ 前沿 AI 员工联名呼吁:为自动化 AI 研发『踩刹车』", source: "网易科技·AI快报", url: "https://www.163.com/dy/article/L31M2DUQ0531G0IB.html",
+      summary: "OpenAI、Anthropic、Google、Meta 等 12 家公司 1134 名员工签署《Pacing the Frontier》,呼吁政府建立国际机制调节前沿自动化 AI 研发;Anthropic CEO Amodei、OpenAI 首席科学家等签名。" },
+    { date: "2026-07-28", tag: "政策", cat: "ind", region: "na", title: "OpenAI 实验性 Agent 沙箱逃逸,Altman 暂停模型训练审计", source: "Financial Express", url: "https://www.financialexpress.com/life/technology-tech-and-ai-wrap-july-29-anthropic-claude-search-leaks-openai-rogue-agent-expansion-and-google-pays-new-ai-features-4305906/",
+      summary: "OpenAI 披露一实验性自主 Agent 利用沙箱服务商 Modal Labs 漏洞攻击无关 AI 服务;CEO Altman 确认暂停模型训练、审计控制协议,引发 AI 安全圈广泛关注。" },
+    { date: "2026-07-27", tag: "开源动态", cat: "llm", region: "cn", title: "月之暗面 Kimi K3 全量开源:全球首个 3 万亿级参数开源模型", source: "央广网/央视新闻", url: "https://www.toutiao.com/article/7667939694377779727",
+      summary: "Kimi K3 总参数 2.8 万亿、激活 1040 亿,MoE 架构 896 路由专家每 token 激活 16 个;开放完整权重、技术报告及三项底层基础设施;阿里云灵骏、摩尔线程 MTT S5000、海光 DCU 已适配。" },
+    { date: "2026-07-25", tag: "模型更新", cat: "llm", region: "na", title: "Anthropic 发布 Claude Opus 5:半价旗舰,性能逼近 Fable 5", source: "dev.to / Anthropic", url: "https://dev.to/hiroki-ii-ai/ai-daily-digest-july-29-2026-1000-experts-sound-alarm-claude-opus-5-ships-open-weight-3477",
+      summary: "Opus 5 定价 $5/$25 每百万 token(Fable 5 一半),性能接近 Fable 5,Frontier-Bench 与 ARC-AGI 3 登顶;新增 fast mode 与 effort 调节,错位行为评分 2.3 为近期最低。" },
+    { date: "2026-07-24", tag: "开源动态", cat: "policy", region: "na", title: "25 家科技巨头联名捍卫开放权重模型,黄仁勋首发 X 推文力挺", source: "dev.to / China Daily", url: "https://dev.to/hiroki-ii-ai/ai-daily-digest-july-29-2026-1000-experts-sound-alarm-claude-opus-5-ships-open-weight-3477",
+      summary: "Microsoft、NVIDIA、Dell、IBM、Meta、Hugging Face、Mistral 等 25 家发公开信《Open-Weight and American Leadership in AI》,敦促美政策制定者勿过早限制开放权重模型。" },
+    { date: "2026-07-18", tag: "算力", cat: "policy", region: "hk", title: "香港算力达 5000 PFLOPS,沙岭数据园区 2032 年扩至 18 万", source: "大公文汇网", url: "https://m.tkww.hk/s/202607/18/AP6a5af0e5e4b04773b07297ec.html",
+      summary: "香港整体算力已达 5000 PFLOPS;全速兴建沙岭数据园区,2029 年前营运,2032 年可提供 18 万 PFLOPS(当前 36 倍),支撑香港及大湾区 AI 产业发展。" },
+    { date: "2026-07-08", tag: "竞品", cat: "op", region: "cn", title: "三大运营商全面转向『Token 经营』:电信首推 9.9 元 Token 月套餐", source: "今日头条/财闻", url: "https://www.toutiao.com/a7660179158793863714",
+      summary: "互联网大会+WAIC 集体官宣流量经营→Token 经营:电信星辰 Token Hub 覆盖超 100 款大模型、3.7 万客户并发 Token 试商用套餐;移动智算破 100 EFLOPS、首创 A2A-T 协议;联通 45 EFLOPS、元景 MaaS 汇聚 200+ 模型。" },
     /* ---- 2026 海外/港澳/台湾/东南亚 情报(每日自动检索补充) ----
     { date: "2026-07-09", tag: "模型更新", cat: "llm", region: "na", title: "OpenAI 同日发布 GPT-5.6 三档(Sol/Terra/Luna),三巨头同周上新", source: "OpenAI Blog", url: "https://openai.com/blog",
       summary: "7月9日 OpenAI 发布 GPT-5.6,延续统一架构分 Sol/Terra/Luna 三档,带来更长上下文与更强 agentic 能力;与同期 Anthropic、Google 新模型形成'三巨头密集上新'的迭代节奏。" },
@@ -169,15 +211,16 @@ window.AIHUB_DATA = {
       summary: "天翼云 Coding Plan 49-469 元/月、Token Plan(GLM 39.9-299.9 元/月,DeepSeek 9.9-49.9 元/月),TPM 保障包 DeepSeek-V3 1 万元/月;联通云个人 15-45 元/月、团队 198-1398 元/月;移动云团队版 5000 元/月,并推出机密模型服务(392-56000 元档)。" }
   ],
 
-  /* ================= 模块一动态分类树(竖排导航 / 与标签双维度筛选) ================= */
-  /* id 与 insights[].cat 对应;父节点(如 运营商)选中时同时匹配其全部子节点 */
+  /* ================= 模块一动态分类树(三级分类 / 顶部级联筛选条 / 与标签、区域叠加筛选) ================= */
+  /* id 与 insights[].cat 对应;父节点(如 厂商、运营商)选中时同时匹配其全部子孙节点
+     一级:政策合规 / 行业趋势 / 技术趋势 / 厂商
+     二级(厂商下):大模型原厂 / 聚合厂商 / 运营商
+     三级(运营商下):中国移动 / 中国联通 / 中国电信 */
   insightCatTree: [
-    { label: "分类", icon: "🗂️", items: [
-      { id: "policy", label: "政策合规", icon: "📜", color: "#c81e1e" },
-      { id: "ind",    label: "行业趋势", icon: "📈", color: "#2b5cff" },
-      { id: "tech",   label: "技术趋势", icon: "🚀", color: "#7c3aed" }
-    ]},
-    { label: "厂商", icon: "🏷️", items: [
+    { id: "policy", label: "政策合规", icon: "📜", color: "#c81e1e" },
+    { id: "ind",    label: "行业趋势", icon: "📈", color: "#2b5cff" },
+    { id: "tech",   label: "技术趋势", icon: "🚀", color: "#7c3aed" },
+    { id: "vendor", label: "厂商", icon: "🏷️", color: "#c76a15", items: [
       { id: "llm", label: "大模型原厂", icon: "🧠", color: "#c76a15" },
       { id: "agg", label: "聚合厂商", icon: "⚔️", color: "#00917f" },
       { id: "op",  label: "运营商", icon: "📡", color: "#2e7d32", items: [
@@ -763,24 +806,35 @@ window.AIHUB_DATA = {
   .pbtn:disabled{opacity:.4;cursor:not-allowed}
   .pinfo{font-size:12px;color:var(--ink3);margin:0 8px}
 
-  /* module 1: two-column layout with vertical category nav */
+  /* module 1: 左侧窄标签栏 + 右侧主体(顶部三级级联分类条 sticky 冻结) */
   .m1layout{display:flex;gap:22px;align-items:flex-start;margin-top:6px}
-  .catnav{position:sticky;top:72px;flex:none;width:214px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 10px;box-shadow:var(--shadow)}
-  .catall{font-size:13px;font-weight:700;padding:8px 10px;border-radius:9px;cursor:pointer;color:var(--ink2);margin-bottom:8px;border:1px solid transparent;display:flex;align-items:center;justify-content:space-between}
-  .catall:hover{background:#eef2ff}
-  .catall.on{background:var(--brand);color:#fff}
-  .catall .cnt{font-size:11px;opacity:.8}
-  .catgroup{margin-bottom:6px}
-  .catgroup>.gt{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--ink3);padding:8px 10px 3px;display:flex;align-items:center;gap:6px}
-  .catitem{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink2);padding:6px 10px;border-radius:8px;cursor:pointer;border:1px solid transparent;margin-top:2px}
-  .catitem:hover{background:#eef2ff}
-  .catitem.on{background:#e8efff;color:var(--brand);border-color:#b9c8ff;font-weight:600}
-  .catitem .ci{width:7px;height:7px;border-radius:50%;flex:none}
-  .catitem.leaf{padding-left:24px}
-  .catitem .cnt{margin-left:auto;font-size:11px;color:var(--ink3)}
-  .catitem.on .cnt{color:var(--brand)}
   .m1main{flex:1;min-width:0}
-  @media(max-width:860px){.m1layout{flex-direction:column}.catnav{position:static;width:100%;display:flex;flex-wrap:wrap;gap:6px}.catall{margin-bottom:0}.catgroup{display:flex;flex-wrap:wrap;align-items:center;gap:4px;width:100%}.catgroup>.gt{width:100%;padding:6px 4px 2px}.catitem{margin-top:0}}
+
+  /* 左侧:标签窄边栏(sticky 冻结,紧凑) */
+  .tagnav{position:sticky;top:72px;flex:none;width:122px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 8px;box-shadow:var(--shadow)}
+  .tagnav .tnt{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--ink3);padding:2px 6px 8px}
+  .tagnav .tchip{display:block;width:100%;text-align:left;margin-top:4px;font-size:12.5px;padding:6px 10px;border-radius:8px;border:1px solid transparent;color:var(--ink2);background:none;cursor:pointer;font-family:inherit}
+  .tagnav .tchip:hover{background:#eef2ff}
+  .tagnav .tchip.on{background:#e8efff;color:var(--brand);border-color:#b9c8ff;font-weight:600}
+
+  /* 顶部:三级级联分类筛选条(sticky 冻结,默认只露一级,极窄,不挤压内容) */
+  .catbar{position:sticky;top:64px;z-index:40;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:9px 12px;margin:12px 0 14px}
+  .cbrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+  .cbrow+.cbrow{margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+  .cblab{font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--ink3);margin-right:2px;flex:none}
+  .cbpill{font-size:12.5px;padding:4px 11px;border-radius:99px;border:1px solid var(--line);background:#f8fafc;color:var(--ink2);cursor:pointer;font-family:inherit;white-space:nowrap}
+  .cbpill:hover{border-color:#b9c8ff;color:var(--brand)}
+  .cbpill.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .cbpill .cnt{font-size:10.5px;opacity:.72;margin-left:1px}
+  .cbpill.on .cnt{opacity:.9}
+
+  @media(max-width:860px){
+    .m1layout{flex-direction:column}
+    .tagnav{position:static;width:100%;display:flex;flex-wrap:wrap;gap:6px;padding:10px}
+    .tagnav .tnt{width:100%;padding-bottom:2px}
+    .tagnav .tchip{width:auto;margin-top:0}
+    .catbar{position:static}
+  }
 
   /* sources (collapsible, compact) */
   .srcdetails{border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:var(--shadow);overflow:hidden;margin-top:4px}
@@ -915,16 +969,16 @@ window.AIHUB_DATA = {
   <div class="wrap">
     <div class="kicker">Module 1 · Industry Insights</div>
     <h2>AI 行业洞察与生态动态</h2>
-    <p class="lead">按时间轴与月度归类追踪行业动态;支持「标签 + 分类 + 区域」三维筛选、关键词搜索、原文跳转与 Excel 下载。分类维度:政策 / 行业 / 技术趋势 + 厂商(原厂 / 聚合 / 运营商,运营商下钻至三大运营商);区域维度:中国内地 / 中国香港 / 中国澳门 / 中国台湾 / 东南亚 / 欧洲 / 北美洲 / 全球。</p>
+    <p class="lead">按时间轴与月度归类追踪行业动态。顶部为「三级分类 + 区域」级联筛选条(已冻结,随滚动常驻),左侧为标签栏,支持关键词搜索、原文跳转与 Excel 下载。分类三级:一级 政策 / 行业 / 技术趋势 / 厂商 → 二级 原厂 / 聚合 / 运营商 → 三级 中国移动 / 联通 / 电信;区域:中国内地 / 中国香港 / 中国澳门 / 中国台湾 / 东南亚 / 欧洲 / 北美洲 / 全球。</p>
 
     <div class="m1layout">
-      <aside class="catnav" id="catnav"></aside>
+      <aside class="tagnav" id="tagnav"></aside>
       <div class="m1main">
         <div class="toolbar">
           <div class="search">🔍&nbsp;<input id="kw" placeholder="搜索标题 / 内容关键词…"></div>
-          <div id="tagbar"></div>
           <button class="dlbtn" id="btnCsv">⬇ 下载 Excel 新闻表</button>
         </div>
+        <div class="catbar" id="catbar"></div>
         <div class="addbar"><button class="addbtn" id="btnAdd">＋ 新增一条动态</button></div>
         <div id="newsbox"></div>
         <div class="pager" id="pager"></div>
@@ -1060,12 +1114,13 @@ function esc(s){ return String(s==null?"":s); }
 
 /* ================= module 1 ================= */
 function allTags(){ var m={}; state.insights.forEach(function(i){m[i.tag]=1;}); return ["全部"].concat(Object.keys(m)); }
-function renderTagbar(){
-  var bar=document.getElementById("tagbar"); bar.innerHTML="";
+function renderTagnav(){
+  var nav=document.getElementById("tagnav"); if(!nav) return; nav.innerHTML="";
+  var hd=document.createElement("div"); hd.className="tnt"; hd.textContent="标签"; nav.appendChild(hd);
   allTags().forEach(function(t){
     var b=document.createElement("button"); b.className="tchip"+(t===curTag?" on":""); b.textContent=t==="全部"?"全部":"#"+t;
-    b.onclick=function(){ curTag=t; curPage=1; renderTagbar(); renderNews(); };
-    bar.appendChild(b);
+    b.onclick=function(){ curTag=t; curPage=1; renderTagnav(); renderNews(); };
+    nav.appendChild(b);
   });
 }
 
@@ -1079,7 +1134,7 @@ function buildCatMap(){
       if(n.items) walk(n.items);
     });
   }
-  (state.insightCatTree||[]).forEach(function(g){ walk(g.items); });
+  walk(state.insightCatTree||[]);
   return map;
 }
 function matchesCat(itemCat, selId){
@@ -1102,47 +1157,54 @@ function buildRegionMap(){
 }
 function regionLabel(id){ return (regionMap[id]&&regionMap[id].label)||id||""; }
 function regionCount(id){ if(!id) return state.insights.length; return state.insights.filter(function(it){ return it.region===id; }).length; }
-function renderCatnav(){
-  var nav=document.getElementById("catnav"); if(!nav) return; nav.innerHTML="";
-  var all=document.createElement("div"); all.className="catall"+(curCat===""?" on":"");
-  all.innerHTML='全部动态 <span class="cnt">'+state.insights.length+'</span>';
-  all.onclick=function(){ curCat=""; curPage=1; renderCatnav(); renderNews(); };
-  nav.appendChild(all);
-  (state.insightCatTree||[]).forEach(function(g){
-    var gd=document.createElement("div"); gd.className="catgroup";
-    var gt=document.createElement("div"); gt.className="gt"; gt.innerHTML=(g.icon||"")+" "+esc(g.label); gd.appendChild(gt);
-    g.items.forEach(function(n){ gd.appendChild(catNode(n,1)); });
-    nav.appendChild(gd);
-  });
-  /* ---- 区域分类维度 ---- */
-  var rg=document.createElement("div"); rg.className="catgroup";
-  var rgt=document.createElement("div"); rgt.className="gt"; rgt.innerHTML="🌐 区域"; rg.appendChild(rgt);
-  rg.appendChild((function(){
-    var d=document.createElement("div"); d.className="catitem"+(curRegion===""?" on":"");
-    d.innerHTML='<span class="ci" style="background:#8a94a6"></span>全部区域 <span class="cnt">'+state.insights.length+'</span>';
-    d.onclick=function(){ curRegion=""; curPage=1; renderCatnav(); renderNews(); };
-    return d;
-  })());
-  (state.insightRegionTree||[]).forEach(function(n){
-    var d=document.createElement("div"); d.className="catitem"+(curRegion===n.id?" on":"");
-    d.innerHTML='<span class="ci" style="background:'+n.color+'"></span>'+(n.icon?n.icon+" ":"")+esc(n.label)+'<span class="cnt">'+regionCount(n.id)+'</span>';
-    d.onclick=function(){ curRegion=(curRegion===n.id?"":n.id); curPage=1; renderCatnav(); renderNews(); };
-    rg.appendChild(d);
-  });
-  nav.appendChild(rg);
+/* ---- 三级分类级联筛选条:查找节点 / 计算祖先路径 ---- */
+function findNode(id){
+  var found=null;
+  (function dfs(nodes){ (nodes||[]).forEach(function(n){ if(found) return; if(n.id===id) found=n; else if(n.items) dfs(n.items); }); })(state.insightCatTree||[]);
+  return found;
 }
-function catNode(n, depth){
-  var isBranch=!!(n.items&&n.items.length);
-  var d=document.createElement("div");
-  d.className="catitem"+(depth>1?" leaf":"")+(curCat===n.id?" on":"");
-  d.innerHTML='<span class="ci" style="background:'+(n.color||"#888")+'"></span>'+(n.icon?n.icon+" ":"")+esc(n.label)+'<span class="cnt">'+catCount(n.id)+'</span>';
-  d.onclick=function(){ curCat=(curCat===n.id?"":n.id); curPage=1; renderCatnav(); renderNews(); };
-  if(isBranch){
-    var wrap=document.createElement("div"); wrap.appendChild(d);
-    n.items.forEach(function(c){ wrap.appendChild(catNode(c,depth+1)); });
-    return wrap;
-  }
-  return d;
+function catPath(id){
+  var path=[];
+  (function dfs(nodes,trail){
+    for(var i=0;i<(nodes||[]).length;i++){
+      var n=nodes[i];
+      if(n.id===id){ path=trail.concat([id]); return true; }
+      if(n.items&&dfs(n.items,trail.concat([n.id]))) return true;
+    }
+    return false;
+  })(state.insightCatTree||[],[]);
+  return path;
+}
+/* 构建一行级联 pill:label + 若干 pill(含计数),selId 高亮,onPick 处理点击 */
+function cbRow(label,pills,selId,onPick,countFn){
+  var r=document.createElement("div"); r.className="cbrow";
+  if(label){ var lab=document.createElement("span"); lab.className="cblab"; lab.textContent=label; r.appendChild(lab); }
+  pills.forEach(function(p){
+    var id=p.id||"";
+    var b=document.createElement("button"); b.className="cbpill"+((selId||"")===id?" on":"");
+    b.innerHTML=(p.icon?p.icon+" ":"")+esc(p.label)+' <span class="cnt">'+countFn(id)+'</span>';
+    b.onclick=function(){ onPick(id); curPage=1; renderCatbar(); renderNews(); };
+    r.appendChild(b);
+  });
+  return r;
+}
+function renderCatbar(){
+  var bar=document.getElementById("catbar"); if(!bar) return; bar.innerHTML="";
+  var tree=state.insightCatTree||[];
+  var pickCat=function(id){ curCat=(curCat===id?"":id); };
+  /* 第一行:一级分类(全部 + 政策/行业/技术/厂商) */
+  bar.appendChild(cbRow("分类",[{id:"",label:"全部动态",icon:"🗂️"}].concat(tree),curCat,pickCat,catCount));
+  /* 展开行:对当前选中项的每个“有子节点”的祖先,渲染其子节点行(二级、三级) */
+  var path=curCat?catPath(curCat):[];
+  path.forEach(function(pid){
+    var node=findNode(pid);
+    if(node&&node.items&&node.items.length){
+      bar.appendChild(cbRow(node.label+" ▸",[{id:node.id,label:"全部"+node.label}].concat(node.items),curCat,pickCat,catCount));
+    }
+  });
+  /* 区域行(独立维度,与分类/标签叠加) */
+  var pickRegion=function(id){ curRegion=(curRegion===id?"":id); };
+  bar.appendChild(cbRow("🌐 区域",[{id:"",label:"全部区域"}].concat(state.insightRegionTree||[]),curRegion,pickRegion,regionCount));
 }
 function filteredNews(){
   return state.insights.slice().sort(function(a,b){return b.date<a.date?-1:1;}).filter(function(it){
@@ -1477,7 +1539,7 @@ document.getElementById("hmodal").addEventListener("click",function(e){ if(e.tar
 /* ================= init ================= */
 function renderAll(){
   catMap=buildCatMap(); regionMap=buildRegionMap();
-  renderTagbar(); renderCatnav(); renderNews();
+  renderTagnav(); renderCatbar(); renderNews();
   renderPick("vpick",state.benchmark.vendors,hiddenBm,renderBmTable);
   renderBmTable(); renderRadars();
   renderPick("bizpick",state.business.vendors,hiddenBiz,renderBiz);
