@@ -164,6 +164,16 @@
   .sumcard h4{font-size:14px;margin-bottom:5px}
   .sumcard p{font-size:12.6px;color:var(--ink2)}
   .sumcard.acc{border-left-color:var(--accent)}
+  .bmview.hide{display:none}
+  .bmview.show{display:block}
+  .heatTable tbody td,.heatTable thead th{padding:8px 6px;text-align:center;min-width:72px}
+  .heatTable tbody td.hm{font-size:15px;line-height:1}
+  .hm2{background:#e7f6ec}
+  .hm1{background:#fff6e0}
+  .hm0{background:#f3f4f6}
+  .billTable tbody td,.secTable tbody td{min-width:150px}
+  .ourcol{background:#eaf1ff !important}
+  .sumcard.ouradd{border-left-color:#2b5cff;background:#f3f8ff}
 
   h3.sub{font-size:17px;margin:28px 0 12px;display:flex;align-items:center;gap:8px}
   h3.sub::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--brand)}
@@ -280,20 +290,48 @@
   <div class="wrap">
     <div class="kicker">Module 2 · Capability Benchmark</div>
     <h2>聚合平台功能对标</h2>
-    <p class="lead">覆盖运营商系、互联网系、国际主流共 9 家聚合平台,按 8 大维度 16 项细分指标对标(信息源自各平台官网与帮助文档)。可勾选厂商自定义对比列,或切换雷达视图;厂商结论卡片见表格下方。</p>
+    <p class="lead">覆盖运营商系、互联网系、国际网关型与主流 MaaS 共 <b>15</b> 家聚合平台,按 6 大分组 19 项细分指标 + 能力热力矩阵(26 项能力) + 计费 / 安全专项对标;并引入 <b>OpenRouter + Portkey + LiteLLM</b> 能力集合作为基准线,重点挖掘各平台优势特点,为 CMI AI Hub 建设提供参考。可勾选厂商自定义对比列,切换"热力矩阵 / 计费 / 安全 / 雷达"等视图;核心特点卡见各视图内。</p>
     <div class="viewsw">
-      <button class="vsw on" data-v="table">📊 表格视图</button>
+      <button class="vsw on" data-v="detail">📋 详细对标表</button>
+      <button class="vsw" data-v="heat">🔥 能力热力矩阵</button>
+      <button class="vsw" data-v="billing">💰 计费专项</button>
+      <button class="vsw" data-v="security">🛡️ 安全专项</button>
       <button class="vsw" data-v="radar">🎯 雷达视图</button>
     </div>
-    <div class="tblwrap" id="tblwrap">
+
+    <!-- 详细对标表 -->
+    <div class="bmview show" id="v-detail">
       <div class="vpick" id="vpick"></div>
       <div class="tblbox"><table id="bmTable"></table></div>
-      <h3 class="sub">各厂商对标结论</h3>
+      <h3 class="sub">核心特点卡 · 各厂商对标结论</h3>
       <div class="sumgrid" id="bmSummary"></div>
     </div>
-    <div class="radarwrap" id="radarwrap">
+
+    <!-- 能力热力矩阵 -->
+    <div class="bmview hide" id="v-heat">
+      <div class="vpick" id="heatpick"></div>
+      <div class="tblbox"><table id="heatTable" class="heatTable"></table></div>
+      <p class="pnote">图例:🟩 完整支持(2) · 🟨 部分支持 / 有限(1) · ⬜ 无 / 不适用(0)。能力评估以 OpenRouter(广度/路由)+ Portkey(治理/可观测)+ LiteLLM(自托管/安全)的组合能力为基准线。</p>
+    </div>
+
+    <!-- 计费专项 -->
+    <div class="bmview hide" id="v-billing">
+      <div class="vpick" id="billpick"></div>
+      <div class="tblbox"><table id="billTable" class="billTable"></table></div>
+      <p class="pnote">计费维度对照:是否采用 API Key 池聚合多家密钥、计价是否透传 / 平台抽成 / 厂商自定、是否支持缓存命中计费、按 token(输入/输出分开)计费、后付费与预付费形态,以及计费粒度与对账能力。</p>
+    </div>
+
+    <!-- 安全专项 -->
+    <div class="bmview hide" id="v-security">
+      <div class="vpick" id="secpick"></div>
+      <div class="tblbox"><table id="secTable" class="secTable"></table></div>
+      <p class="pnote">安全维度对照:身份权限(RBAC/SSO)、数据脱敏与策略执行、历史上下文安全存储、内容策略审核、出域控制(数据不出境)、全链路审计、安全沙箱/隔离、敏感信息脱敏/拦截,以及 Token 运营管理(预算/流转/审计)。</p>
+    </div>
+
+    <!-- 雷达视图 -->
+    <div class="bmview hide" id="v-radar">
       <div class="bigcard">
-        <h4 style="text-align:center;font-size:15px;margin-bottom:6px">总能力对标雷达</h4>
+        <h4 style="text-align:center;font-size:15px;margin-bottom:6px">总能力对标雷达(8 维度)</h4>
         <div id="bigRadar" style="display:flex;justify-content:center"></div>
         <div class="legend" id="bigLegend"></div>
       </div>
@@ -301,7 +339,6 @@
     </div>
   </div>
 </section>
-
 <!-- ============ 模块三 ============ -->
 <section id="m3">
   <div class="wrap">
@@ -569,18 +606,21 @@ document.getElementById("btnCsv").onclick=function(){
 };
 
 /* ================= module 2 ================= */
+var hiddenHeat={}, hiddenBill={}, hiddenSec={};
 function renderPick(boxId, vendors, hidden, rerender){
-  var box=document.getElementById(boxId); box.innerHTML="";
+  var box=document.getElementById(boxId); if(!box) return; box.innerHTML="";
   vendors.forEach(function(v){
     var b=document.createElement("button"); b.className="vpk"+(hidden[v]?"":" on"); b.textContent=v;
     b.onclick=function(){ hidden[v]=!hidden[v]; renderPick(boxId,vendors,hidden,rerender); rerender(); };
     box.appendChild(b);
   });
 }
+function bmVis(map){ return state.benchmark.vendors.filter(function(v){return !map[v];}); }
+function cellCls(v,ours,extra){ return ' class="'+(extra?extra+" ":"")+(v===ours?"ourcol":"")+'"'; }
 function renderBmTable(){
-  var t=document.getElementById("bmTable");
-  var vis=state.benchmark.vendors.filter(function(v){return !hiddenBm[v];});
-  var html="<thead><tr><th>维度</th><th>细分指标</th>"+vis.map(function(v){return "<th>"+esc(v)+"</th>"}).join("")+"</tr></thead><tbody>";
+  var t=document.getElementById("bmTable"); if(!t) return;
+  var vis=bmVis(hiddenBm), ours=state.benchmark.ours;
+  var html="<thead><tr><th>分组</th><th>细分指标</th>"+vis.map(function(v){return "<th"+cellCls(v,ours,"")+">"+esc(v)+"</th>"}).join("")+"</tr></thead><tbody>";
   state.benchmark.groups.forEach(function(g,gi){
     g.metrics.forEach(function(mt,mi){
       html+="<tr>";
@@ -588,19 +628,60 @@ function renderBmTable(){
       html+="<td class='dim'>"+esc(mt.m)+"</td>";
       vis.forEach(function(v){
         var vi=state.benchmark.vendors.indexOf(v);
-        html+="<td data-ed='benchmark.groups."+gi+".metrics."+mi+".cells."+vi+"'>"+esc(mt.cells[vi])+"</td>";
+        html+="<td"+cellCls(v,ours,"")+' data-ed="benchmark.groups.'+gi+'.metrics.'+mi+'.cells.'+vi+'">'+esc(mt.cells[vi])+"</td>";
       });
       html+="</tr>";
     });
   });
   t.innerHTML=html+"</tbody>";
-  var s=document.getElementById("bmSummary"); s.innerHTML="";
-  state.benchmark.vendors.forEach(function(v){
-    if(hiddenBm[v]) return;
-    s.innerHTML+='<div class="sumcard"><h4>'+esc(v)+'</h4><p data-ed="benchmark.summary.'+v+'">'+esc(state.benchmark.summary[v]||"")+"</p></div>";
-  });
+  var s=document.getElementById("bmSummary"); if(s){ s.innerHTML="";
+    state.benchmark.vendors.forEach(function(v){
+      if(hiddenBm[v]) return;
+      s.innerHTML+='<div class="sumcard'+(v===ours?' ouradd':"")+'"><h4>'+esc(v)+'</h4><p data-ed="benchmark.summary.'+v+'">'+esc(state.benchmark.summary[v]||"")+"</p></div>";
+    });
+  }
   bindEditable();
 }
+function heatSym(v){ return v===2?"🟩":(v===1?"🟨":"⬜"); }
+function renderHeat(){
+  var t=document.getElementById("heatTable"); if(!t) return;
+  var vis=bmVis(hiddenHeat), ours=state.benchmark.ours;
+  var caps=[]; state.benchmark.heat.cats.forEach(function(c){ c.caps.forEach(function(x){caps.push(x);}); });
+  var html="<thead><tr><th>能力类别</th><th>能力项</th>"+vis.map(function(v){return "<th"+cellCls(v,ours,"")+">"+esc(v)+"</th>"}).join("")+"</tr></thead><tbody>";
+  var ci=0;
+  state.benchmark.heat.cats.forEach(function(c){
+    var first=true, rows=c.caps.length;
+    c.caps.forEach(function(x){
+      html+="<tr>";
+      if(first){ html+="<td class='grp' rowspan='"+rows+"'>"+esc(c.cat)+"</td>"; first=false; }
+      html+="<td class='dim'>"+esc(x.label)+"</td>";
+      vis.forEach(function(v){
+        var vi=state.benchmark.vendors.indexOf(v);
+        var lv=state.benchmark.heat.levels[v][ci];
+        html+="<td"+cellCls(v,ours,"hm hm"+lv)+">"+heatSym(lv)+"</td>";
+      });
+      html+="</tr>"; ci++;
+    });
+  });
+  t.innerHTML=html+"</tbody>";
+}
+function renderRowsTable(tid, rows, map, pathPrefix){
+  var t=document.getElementById(tid); if(!t) return;
+  var vis=bmVis(map), ours=state.benchmark.ours;
+  var html="<thead><tr><th>对标维度</th>"+vis.map(function(v){return "<th"+cellCls(v,ours,"")+">"+esc(v)+"</th>"}).join("")+"</tr></thead><tbody>";
+  rows.forEach(function(r,ri){
+    html+="<tr><td class='dim'>"+esc(r.label)+"</td>";
+    vis.forEach(function(v){
+      var vi=state.benchmark.vendors.indexOf(v);
+      html+="<td"+cellCls(v,ours,"")+' data-ed="benchmark.'+pathPrefix+'.rows.'+ri+'.cells.'+vi+'">'+esc(r.cells[vi])+"</td>";
+    });
+    html+="</tr>";
+  });
+  t.innerHTML=html+"</tbody>";
+  bindEditable();
+}
+function renderBilling(){ renderRowsTable("billTable", state.benchmark.billing.rows, hiddenBill, "billing"); }
+function renderSecurity(){ renderRowsTable("secTable", state.benchmark.security.rows, hiddenSec, "security"); }
 function radarSVG(datasets,dims,size){
   var cx=size/2, cy=size/2, R=size/2-46, n=dims.length, i;
   function pt(k,val){ var ang=-Math.PI/2+k*2*Math.PI/n; var r=R*val/5; return [cx+r*Math.cos(ang), cy+r*Math.sin(ang)]; }
@@ -626,11 +707,11 @@ function renderRadars(){
   ds.forEach(function(d,i){ lg.innerHTML+='<span><i style="background:'+RCOLORS[i%RCOLORS.length]+'"></i>'+esc(d.name)+"</span>"; });
   var grid=document.getElementById("radarGrid"); grid.innerHTML="";
   ds.forEach(function(d,i){
-    var pos=(state.benchmark.groups[0].metrics[0].cells)[state.benchmark.vendors.indexOf(d.name)]||"";
+    var sum=(d.scores.reduce(function(a,b){return a+b},0)/dims.length).toFixed(1);
     var c=document.createElement("div"); c.className="rcard";
-    c.innerHTML="<h4>"+esc(d.name)+"</h4><div class='pos'>"+esc(pos)+"</div>"+
+    c.innerHTML="<h4>"+esc(d.name)+"</h4>"+
       '<div style="display:flex;justify-content:center">'+radarSVG([d],dims,250)+"</div>"+
-      '<div style="font-size:12px;color:var(--ink3);text-align:center;margin-top:4px">综合 '+(d.scores.reduce(function(a,b){return a+b},0)/dims.length).toFixed(1)+' / 5.0</div>';
+      '<div style="font-size:12px;color:var(--ink3);text-align:center;margin-top:4px">综合 '+sum+' / 5.0</div>';
     grid.appendChild(c);
   });
 }
@@ -638,8 +719,11 @@ document.querySelectorAll(".vsw").forEach(function(b){
   b.onclick=function(){
     document.querySelectorAll(".vsw").forEach(function(x){x.classList.remove("on")}); b.classList.add("on");
     var v=b.getAttribute("data-v");
-    document.getElementById("tblwrap").classList.toggle("hide",v!=="table");
-    document.getElementById("radarwrap").classList.toggle("show",v==="radar");
+    ["detail","heat","billing","security","radar"].forEach(function(id){
+      var el=document.getElementById("v-"+id); if(!el) return;
+      el.classList.toggle("hide", id!==v);
+      el.classList.toggle("show", id===v);
+    });
   };
 });
 
@@ -819,7 +903,10 @@ function renderAll(){
   catMap=buildCatMap(); regionMap=buildRegionMap();
   renderTagnav(); renderCatbar(); renderNews();
   renderPick("vpick",state.benchmark.vendors,hiddenBm,renderBmTable);
-  renderBmTable(); renderRadars();
+  renderPick("heatpick",state.benchmark.vendors,hiddenHeat,renderHeat);
+  renderPick("billpick",state.benchmark.vendors,hiddenBill,renderBilling);
+  renderPick("secpick",state.benchmark.vendors,hiddenSec,renderSecurity);
+  renderBmTable(); renderHeat(); renderBilling(); renderSecurity(); renderRadars();
   renderPick("bizpick",state.business.vendors,hiddenBiz,renderBiz);
   renderBiz();
   renderPick("pricepick",state.pricing.vendors,hiddenPrice,renderPrice);
