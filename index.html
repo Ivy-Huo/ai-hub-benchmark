@@ -217,11 +217,18 @@
 
   .arch{display:flex;flex-direction:column;gap:12px;max-width:900px;margin:0 auto}
   .arow{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow)}
-  .arow .ln{width:110px;flex:none;font-weight:800;font-size:14.5px}
+  .arow .ln{width:128px;flex:none;font-weight:800;font-size:14.5px}
   .arow .en{font-size:10.5px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase}
   .arow .items{display:flex;flex-wrap:wrap;gap:8px}
   .aitem{font-size:12.5px;background:#f2f5fb;border:1px solid var(--line);padding:4px 13px;border-radius:99px;color:var(--ink2)}
   .conn{width:2px;height:14px;background:var(--line);margin:0 auto}
+  .archex{display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:100%;margin-top:10px;padding-top:9px;border-top:1px dashed var(--line)}
+  .aexlbl{font-size:11px;color:var(--ink3);font-weight:800;margin-right:2px}
+  .aex{font-size:11.5px;background:#eef4ff;border:1px solid #cfe0ff;color:#2b5cff;padding:3px 10px;border-radius:99px}
+  .arow.eco{align-items:flex-start}
+  .ecog{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:3px 0}
+  .ecolbl{font-size:11px;font-weight:800;color:var(--ink3);min-width:104px}
+  .aitem.eco{background:#f3f6fb}
 
   .editbar{position:fixed;bottom:22px;right:22px;z-index:300;display:flex;flex-direction:column;gap:8px}
   .ebtn{border:none;border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600;box-shadow:0 4px 16px rgba(27,46,94,.18)}
@@ -414,8 +421,9 @@
   <div class="wrap">
     <div class="kicker">Module 5 · Reference Architecture</div>
     <h2>技术架构参考</h2>
-    <p class="lead">业界主流 MaaS 平台五层架构参考,供研发进行平台架构设计与差距分析。</p>
+    <p class="lead">基于模块二 26 项核心能力与 16 家聚合厂商对标结论沉淀的聚合平台分层参考架构:自顶向下覆盖接入聚合、智能路由、身份治理、计费成本、安全合规、运营可观测六大能力层,底层为模型生态与算力网络;每层标注其<b>代表厂商</b>(按该层能力在 16 家中的覆盖度均值 ≥1.5 自动生成),并附<b>聚合厂商生态全景</b>。</p>
     <div class="arch" id="arch"></div>
+    <p class="pnote">核心功能取自模块二能力热力矩阵(26 项);代表厂商为数据驱动——对每一层,取该层能力在 16 家对标中覆盖度(均值 ≥1.5,即多数能力为"完整支持")的厂商标出。架构层与厂商生态均可在线编辑。</p>
   </div>
 </section>
 
@@ -930,11 +938,31 @@ function renderDiff(){
   });
 }
 function renderArch(){
-  var a=document.getElementById("arch"); a.innerHTML="";
-  state.architecture.forEach(function(L,i){
-    a.innerHTML+='<div class="arow"><div class="ln" style="color:'+L.color+'">'+esc(L.layer)+'<div class="en">'+esc(L.en)+'</div></div><div class="items">'+L.items.map(function(x){return '<span class="aitem">'+esc(x)+"</span>"}).join("")+"</div></div>";
-    if(i<state.architecture.length-1) a.innerHTML+='<div class="conn"></div>';
+  var a=document.getElementById("arch"); if(!a) return; a.innerHTML="";
+  var heat=state.benchmark.heat;
+  var capIdx={}, i=0;
+  heat.cats.forEach(function(c){ c.caps.forEach(function(cp){ capIdx[cp.id]=i++; }); });
+  var vlist=state.benchmark.vendors;
+  state.architecture.forEach(function(L,li){
+    var ex=[];
+    if(L.caps&&L.caps.length){
+      ex=vlist.filter(function(v){
+        var lv=heat.levels[v]; if(!lv) return false;
+        var sum=0; L.caps.forEach(function(cid){ sum+=(lv[capIdx[cid]]||0); });
+        return sum/L.caps.length>=1.5;
+      });
+    }
+    a.innerHTML+='<div class="arow"><div class="ln" style="color:'+L.color+'">'+esc(L.layer)+'<div class="en">'+esc(L.en)+'</div></div><div class="items">'
+      +L.functions.map(function(x){return '<span class="aitem">'+esc(x)+'</span>';}).join("")
+      +(ex.length?'<div class="archex"><span class="aexlbl">代表厂商</span>'+ex.map(function(v){return '<span class="aex">'+esc(v)+'</span>';}).join("")+'</div>':'')
+      +'</div></div>';
+    if(li<state.architecture.length-1) a.innerHTML+='<div class="conn"></div>';
   });
+  a.innerHTML+='<div class="conn"></div><div class="arow eco"><div class="ln" style="color:#374151">聚合厂商生态<div class="en">Vendor Ecosystem · 16</div></div><div class="items">';
+  (state.vendorEco||[]).forEach(function(g){
+    a.innerHTML+='<div class="ecog"><span class="ecolbl">'+esc(g.group)+'</span>'+g.vendors.map(function(v){return '<span class="aitem eco">'+esc(v)+'</span>';}).join("")+'</div>';
+  });
+  a.innerHTML+='</div></div>';
 }
 
 /* ================= editing ================= */
