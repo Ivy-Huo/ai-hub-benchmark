@@ -1,8 +1,12 @@
 /* AI Hub 对标情报站 · 数据层
    每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-07-31.1";
+window.AIHUB_DATA_VERSION = "2026-07-31.2";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-07-31",
+    "note": "模块三原厂价格落地:为阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax 填充真实原厂价格(原生取官方原厂价、开源取各原厂官方转售价,来源各原厂定价页),新增科大讯飞并补星火 X2/Ultra/Pro/Lite 原生行;模块二取消 CMI '我方'特殊高亮(ours 置空)改为中立行业对标,模块四差异化定位同步去 CMI 化"
+  },
   {
     "date": "2026-07-31",
     "note": "模块二真实数据溯源:新增 n1n(国内直连型 LLM 聚合网关,来源 llm-api.apifox.cn)为第16家对标厂商;据官方文档修正天翼云星辰TokenHub、移动云MoMA、OpenRouter 的模型数量/计费/路由/合规字段;新增 benchmark.sources 标注各家官方数据来源链接"
@@ -2057,7 +2061,7 @@ window.AIHUB_DATA = {
       "Anyscale",
       "n1n"
     ],
-    "ours": "CMI AI Hub",
+    "ours": "",
     "groups": [
       {
         "group": "一、统一接入与模型聚合",
@@ -5839,7 +5843,8 @@ window.AIHUB_DATA = {
       "DeepSeek",
       "智谱",
       "Kimi",
-      "MiniMax"
+      "MiniMax",
+      "科大讯飞"
     ],
     "rows": [
       {
@@ -5856,14 +5861,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$1.6 / $3.2(缓存0.135)",
           "Together AI": "$1.74 / $3.48(缓存0.2)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
-          "火山引擎方舟": null,
-          "百度千帆": null,
-          "腾讯云": null,
-          "DeepSeek": null,
+          "阿里云百炼": "¥12 / ¥24(缓存2.4)",
+          "火山引擎方舟": "¥12 / ¥24(缓存1)",
+          "百度千帆": "¥12 / ¥24(缓存1)",
+          "腾讯云": "¥12 / ¥24(缓存1)",
+          "DeepSeek": "¥3 / ¥6(缓存0.025)",
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -5880,14 +5886,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.14 / $0.28(缓存0.028)",
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
-          "火山引擎方舟": null,
-          "百度千帆": null,
-          "腾讯云": null,
-          "DeepSeek": null,
+          "阿里云百炼": "¥1 / ¥2(缓存0.2)",
+          "火山引擎方舟": "¥1 / ¥2(缓存0.2)",
+          "百度千帆": "¥1 / ¥2(缓存0.2)",
+          "腾讯云": "¥1 / ¥2(缓存0.2)",
+          "DeepSeek": "¥1 / ¥2(缓存0.02)",
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -5904,14 +5911,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.269 / $0.4(缓存0.1345)",
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
-          "火山引擎方舟": null,
-          "百度千帆": null,
-          "腾讯云": null,
-          "DeepSeek": null,
+          "阿里云百炼": "¥2 / ¥3(缓存0.4)",
+          "火山引擎方舟": "¥2 / ¥3(缓存0.4)",
+          "百度千帆": "¥2 / ¥3(缓存0.4)",
+          "腾讯云": "¥2 / ¥3(缓存0.4)",
+          "DeepSeek": "$0.28 / $0.42(缓存0.028)",
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": "¥2 / ¥3"
         }
       },
       {
@@ -5928,14 +5936,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.7 / $2.5(缓存0.35)",
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
-          "火山引擎方舟": null,
-          "百度千帆": null,
+          "阿里云百炼": "¥4 / ¥16(缓存0.8)",
+          "火山引擎方舟": "¥4 / ¥16(缓存0.8)",
+          "百度千帆": "¥4 / ¥16",
           "腾讯云": null,
-          "DeepSeek": null,
+          "DeepSeek": "$0.7 / $2.5",
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -5952,14 +5961,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
-          "火山引擎方舟": null,
-          "百度千帆": null,
+          "阿里云百炼": "¥2 / ¥8(缓存0.4)",
+          "火山引擎方舟": "¥2 / ¥8(缓存0.4)",
+          "百度千帆": "¥2 / ¥8",
           "腾讯云": null,
-          "DeepSeek": null,
+          "DeepSeek": "$0.2 / $0.8",
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -5976,14 +5986,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$1.4 / $4.4(缓存0.26)",
           "Together AI": "$1.4 / $4.4(缓存0.26)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
-          "火山引擎方舟": null,
-          "百度千帆": null,
-          "腾讯云": null,
+          "阿里云百炼": "¥8 / ¥28(缓存2)",
+          "火山引擎方舟": "¥8 / ¥28(缓存2)",
+          "百度千帆": "¥8 / ¥28(缓存2)",
+          "腾讯云": "¥8 / ¥28(缓存2)",
           "DeepSeek": null,
-          "智谱": null,
+          "智谱": "$1.4 / $4.4(缓存0.26)",
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6000,14 +6011,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$1.38 / $4.4(缓存0.26)",
           "Together AI": "$1.4 / $4.4(缓存0.26)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥6 / ¥24(缓存1.2)",
           "火山引擎方舟": null,
-          "百度千帆": null,
-          "腾讯云": null,
+          "百度千帆": "¥6 / ¥24(缓存1.3)",
+          "腾讯云": "¥6 / ¥24(缓存1.3)",
           "DeepSeek": null,
-          "智谱": null,
+          "智谱": "$1.4 / $4.4(缓存0.26)",
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6024,14 +6036,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.8 / $3.4(缓存0.16)",
           "Together AI": "$1.2 / $4.5(缓存0.2)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥6.5 / ¥27(缓存1.3)",
           "火山引擎方舟": null,
-          "百度千帆": null,
-          "腾讯云": null,
+          "百度千帆": "¥6.5 / ¥27(缓存1.1)",
+          "腾讯云": "¥6.5 / ¥27(缓存1.1)",
           "DeepSeek": null,
           "智谱": null,
-          "Kimi": null,
-          "MiniMax": null
+          "Kimi": "¥6.5 / ¥27(缓存1.1)",
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6048,14 +6061,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": "$3 / $15(缓存0.3)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥20 / ¥100(缓存2)",
           "火山引擎方舟": null,
           "百度千帆": null,
-          "腾讯云": null,
+          "腾讯云": "¥20 / ¥100(缓存2)",
           "DeepSeek": null,
           "智谱": null,
-          "Kimi": null,
-          "MiniMax": null
+          "Kimi": "¥20 / ¥100(缓存2)",
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6072,14 +6086,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$1.25 / $3.75(缓存0.25)",
           "Together AI": "$1.25 / $3.75(缓存0.13)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥12 / ¥36",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6096,14 +6111,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": "$0.32 / $1.28",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥2 / ¥8",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6120,14 +6136,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥0.8 / ¥4.8(缓存0.08)",
           "火山引擎方舟": null,
           "百度千帆": null,
-          "腾讯云": null,
+          "腾讯云": "¥0.8 / ¥4.8(缓存0.08)",
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6144,14 +6161,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.6 / $3.6",
           "Together AI": "$0.6 / $3.6(缓存0.35)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥1.2 / ¥7.2",
           "火山引擎方舟": null,
-          "百度千帆": null,
+          "百度千帆": "¥1.2 / ¥7.2",
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6168,14 +6186,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.25 / $2",
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥0.4 / ¥3.2",
           "火山引擎方舟": null,
-          "百度千帆": null,
+          "百度千帆": "¥0.4 / ¥3.2",
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6192,14 +6211,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥0.6 / ¥4.8",
           "火山引擎方舟": null,
-          "百度千帆": null,
+          "百度千帆": "¥0.6 / ¥4.8",
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6216,14 +6236,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥0.8 / ¥6.4",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6240,14 +6261,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥2.5 / ¥10",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6264,14 +6286,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "$1.648 / $6.592",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6288,14 +6311,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": "$0.3 / $1.2(缓存0.06)",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥4.2 / ¥16.8(缓存0.84)",
           "火山引擎方舟": null,
           "百度千帆": null,
-          "腾讯云": null,
+          "腾讯云": "¥2.1 / ¥8.4(缓存0.42)",
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": "¥3.15 / ¥12.6(缓存0.63)",
+          "科大讯飞": null
         }
       },
       {
@@ -6312,14 +6336,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.3 / $1.2(缓存0.03)",
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥2.1 / ¥8.4(缓存0.42)",
           "火山引擎方舟": null,
           "百度千帆": null,
-          "腾讯云": null,
+          "腾讯云": "¥2.1 / ¥8.4(缓存0.21)",
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": "¥2.1 / ¥8.4(缓存0.21)",
+          "科大讯飞": null
         }
       },
       {
@@ -6343,7 +6368,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6367,7 +6393,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6391,7 +6418,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6415,7 +6443,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6439,7 +6468,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6463,7 +6493,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6487,7 +6518,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6511,7 +6543,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6535,7 +6568,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6559,7 +6593,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6583,7 +6618,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6607,7 +6643,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6624,14 +6661,15 @@ window.AIHUB_DATA = {
           "Novita AI": "$0.05 / $0.25",
           "Together AI": "$0.15 / $0.6",
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥1 / ¥5",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6655,7 +6693,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6679,7 +6718,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6703,7 +6743,8 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6720,14 +6761,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥4 / ¥16(缓存0.8)",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6744,14 +6786,15 @@ window.AIHUB_DATA = {
           "Novita AI": null,
           "Together AI": null,
           "天翼云星辰MaaS": null,
-          "阿里云百炼": null,
+          "阿里云百炼": "¥2 / ¥8",
           "火山引擎方舟": null,
           "百度千帆": null,
           "腾讯云": null,
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
         }
       },
       {
@@ -6775,7 +6818,44 @@ window.AIHUB_DATA = {
           "DeepSeek": null,
           "智谱": null,
           "Kimi": null,
-          "MiniMax": null
+          "MiniMax": null,
+          "科大讯飞": null
+        }
+      },
+      {
+        "model": "星火 X2",
+        "ctx": "128K",
+        "note": "讯飞星火大模型 · 文本生成",
+        "cells": {
+          "官方原厂": "¥2 / ¥2",
+          "科大讯飞": "¥2 / ¥2"
+        }
+      },
+      {
+        "model": "星火 Ultra",
+        "ctx": "128K",
+        "note": "讯飞星火大模型 · 文本生成",
+        "cells": {
+          "官方原厂": "¥0.8 / ¥0.8",
+          "科大讯飞": "¥0.8 / ¥0.8"
+        }
+      },
+      {
+        "model": "星火 Pro",
+        "ctx": "128K",
+        "note": "讯飞星火大模型 · 文本生成",
+        "cells": {
+          "官方原厂": "¥5 / ¥5",
+          "科大讯飞": "¥5 / ¥5"
+        }
+      },
+      {
+        "model": "星火 Lite",
+        "ctx": "128K",
+        "note": "讯飞星火大模型 · 文本生成",
+        "cells": {
+          "官方原厂": "¥0 / ¥0",
+          "科大讯飞": "¥0 / ¥0"
         }
       }
     ],
@@ -7450,26 +7530,26 @@ window.AIHUB_DATA = {
     {
       "title": "网络层差异化",
       "icon": "🌐",
-      "desc": "依托中信国际电讯全球骨干网,跨境低时延直连国际旗舰模型,解决出海企业网络与境外支付/合规痛点。",
-      "bench": "对标 15 家,仅运营商云与 CMI 具运营商级骨干网"
+      "desc": "运营商系平台凭自有骨干网提供跨境低时延直连;国际网关型依赖全球边缘节点。网络能力是聚合平台首要分水岭。",
+      "bench": "对标 16 家,仅运营商系平台(移动云/天翼云等)具运营商级骨干网"
     },
     {
       "title": "安全合规差异化",
       "icon": "🛡️",
-      "desc": "融合中港两地合规资质,提供数据跨境合规方案、全链路加密与审计;'网络+合规'一体化。",
-      "bench": "治理深度可比 Portkey/LiteLLM,CMI 胜在一体化"
+      "desc": "企业级治理(类 Portkey/LiteLLM 的 RBAC/审计/脱敏)与合规资质是 toB 落地门槛;'网络+合规'一体化能力稀缺。",
+      "bench": "治理深度标杆为 Portkey/LiteLLM 等开源/企业网关"
     },
     {
       "title": "行业场景差异化",
       "icon": "🏭",
-      "desc": "聚焦金融、跨境电商、制造业等优势行业,预装行业模型与知识库模板。",
-      "bench": "对标厂商以通用能力为主,行业化是 CMI 补齐方向"
+      "desc": "主流平台以通用能力为主,预装行业模型与知识库模板是差异化空间与高价值区。",
+      "bench": "主流平台以通用能力为主,行业化是普遍短板与机会"
     },
     {
       "title": "服务模式差异化",
       "icon": "🤝",
-      "desc": "提供'网络+算力+模型+运维'一站式打包,客户经理贴身支持与企业级 SLA。",
-      "bench": "仅移动云/天翼等运营商云具同等贴身服务"
+      "desc": "运营商云提供'网络+算力+模型+运维'一站式打包与贴身 SLA;纯 API 网关靠自助与文档。",
+      "bench": "仅运营商云提供贴身服务+企业级 SLA 打包"
     }
   ],
   "priorities": [
@@ -7555,20 +7635,20 @@ window.AIHUB_DATA = {
     },
     {
       "level": "P2",
-      "name": "差异化亮点(CMI 优势区)",
+      "name": "差异化亮点(运营商/合规型平台优势区)",
       "color": "#f2994a",
       "items": [
         {
           "t": "跨境低时延网络加速",
-          "tag": "CMI"
+          "tag": "运营商/合规型"
         },
         {
           "t": "中港合规一站式方案",
-          "tag": "CMI"
+          "tag": "运营商/合规型"
         },
         {
           "t": "国际旗舰模型美元同价",
-          "tag": "CMI"
+          "tag": "运营商/合规型"
         },
         {
           "t": "多区域容灾 / 安全沙箱",
@@ -7579,7 +7659,7 @@ window.AIHUB_DATA = {
         },
         {
           "t": "行业解决方案包",
-          "tag": "CMI"
+          "tag": "运营商/合规型"
         }
       ]
     }
