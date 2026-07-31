@@ -1,7 +1,7 @@
 /* AI Hub 对标情报站 · 数据层
    每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-07-31.2";
+window.AIHUB_DATA_VERSION = "2026-07-31.3";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-07-31",
@@ -7666,56 +7666,60 @@ window.AIHUB_DATA = {
   ],
   "architecture": [
     {
-      "layer": "应用层",
-      "en": "Application",
-      "items": [
-        "模型广场",
-        "开发工具",
-        "Agent 框架",
-        "行业模板"
-      ],
-      "color": "#7c3aed"
+      "layer": "接入与聚合层",
+      "en": "Access & Aggregation",
+      "color": "#0e9de0",
+      "caps": ["agg_unified","agg_models","agg_catalog","key_pool","proto"],
+      "functions": ["统一接入入口","多厂商模型聚合","统一模型目录/API","API Key 池/密钥管理","OpenAI 兼容协议"]
     },
     {
-      "layer": "管控层",
-      "en": "Management",
-      "items": [
-        "计量计费",
-        "监控告警",
-        "运营分析",
-        "安全审计"
-      ],
-      "color": "#f2994a"
+      "layer": "智能路由与优化层",
+      "en": "Routing & Optimization",
+      "color": "#2b5cff",
+      "caps": ["route","failover","smart","analysis"],
+      "functions": ["模型路由决策","故障切换/降级","智能路由推荐","价格/质量/速度分析"]
     },
     {
-      "layer": "模型层",
-      "en": "Model",
-      "items": [
-        "多模型适配",
-        "推理引擎",
-        "缓存加速"
-      ],
-      "color": "#00b3a4"
+      "layer": "身份与权限治理层",
+      "en": "Identity & Governance",
+      "color": "#7c3aed",
+      "caps": ["rbac","sandbox","teams"],
+      "functions": ["用户/权限/项目/RBAC","安全沙箱/隔离","多团队/组织管理"]
     },
     {
-      "layer": "调度层",
-      "en": "Scheduling",
-      "items": [
-        "智能路由",
-        "负载均衡",
-        "故障容灾"
-      ],
-      "color": "#2b5cff"
+      "layer": "计费与成本管理层",
+      "en": "Billing & Cost",
+      "color": "#f2994a",
+      "caps": ["passthrough","cache_bill","per_token","post_pre","budget","recon"],
+      "functions": ["透传/平台抽成/厂商自定","缓存命中计费","按 token 计费","后付费/预付费","Token 预算/配额/审计","计量/计费/对账"]
     },
     {
-      "layer": "接入层",
-      "en": "Access",
-      "items": [
-        "统一 API 网关",
-        "鉴权",
-        "限流"
-      ],
-      "color": "#0e9de0"
+      "layer": "数据安全与合规层",
+      "en": "Security & Compliance",
+      "color": "#e5484d",
+      "caps": ["mask","ctx_store","content","egress","audit","pii_block"],
+      "functions": ["数据脱敏/策略执行","上下文安全存储","内容策略审核","出域控制","全链路审计","敏感信息拦截"]
+    },
+    {
+      "layer": "运营服务与可观测层",
+      "en": "Ops & Observability",
+      "color": "#00b3a4",
+      "caps": ["ops","observ"],
+      "functions": ["运营分析/客户服务","可观测性"]
+    },
+    {
+      "layer": "模型生态与算力网络层",
+      "en": "Model Ecosystem & Compute",
+      "color": "#6b7280",
+      "caps": [],
+      "functions": ["多厂商模型生态(500+ 模型)","多云/多供应商算力调度","运营商骨干网/跨境合规","开源社区模型","闭源商业模型"]
     }
+  ],
+  "vendorEco": [
+    { "group": "运营商系", "vendors": ["移动云 MoMA","CMI AI Hub","天翼云星辰MaaS"] },
+    { "group": "互联网 / 云 MaaS", "vendors": ["阿里云百炼","百度智能云千帆","火山引擎方舟","腾讯云 TokenHub","硅基流动","七牛云 AI","秒云"] },
+    { "group": "国际网关型", "vendors": ["OpenRouter","Together AI","Anyscale"] },
+    { "group": "网关治理 / 自托管", "vendors": ["Portkey","LiteLLM"] },
+    { "group": "国内直连网关", "vendors": ["n1n"] }
   ]
 };
