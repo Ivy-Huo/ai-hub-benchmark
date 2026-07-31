@@ -265,7 +265,7 @@
   <div class="wrap">
     <div class="tagline">AI HUB · MARKET INTELLIGENCE</div>
     <h1>AI 聚合平台市场情报<br><span>与对标分析平台</span></h1>
-    <p>追踪 AI 行业生态动态(政策/模型/开源/竞品/算力/案例),基于各平台官网与帮助文档一手信息对标功能、价格与商业模式,锚定我司平台差异化定位。支持在线编辑、每日 10:00 自动更新、历史版本溯源。</p>
+    <p>追踪 AI 行业生态动态(政策/模型/开源/竞品/算力/案例),基于各平台官网与帮助文档一手信息对标功能、价格与商业模式,锚定聚合平台差异化定位。支持在线编辑、每日 10:00 自动更新、历史版本溯源。</p>
     <div class="meta">
       <div class="m">数据版本:<b id="ver">-</b></div>
       <div class="m">行业动态:<b id="cntInsight">-</b> 条</div>
@@ -313,7 +313,7 @@
   <div class="wrap">
     <div class="kicker">Module 2 · Capability Benchmark</div>
     <h2>聚合平台功能对标</h2>
-    <p class="lead">覆盖运营商系、互联网系、国际网关型与主流 MaaS 共 <b>15</b> 家聚合平台,按 6 大分组 19 项细分指标 + 能力热力矩阵(26 项能力) + 计费 / 安全专项对标;并引入 <b>OpenRouter + Portkey + LiteLLM</b> 能力集合作为基准线,重点挖掘各平台优势特点,为 CMI AI Hub 建设提供参考。可勾选厂商自定义对比列,切换"热力矩阵 / 计费 / 安全 / 雷达"等视图;核心特点卡见各视图内。</p>
+    <p class="lead">覆盖运营商系、互联网系、国际网关型与主流 MaaS 共 <b>16</b> 家聚合平台,按 6 大分组 19 项细分指标 + 能力热力矩阵(26 项能力) + 计费 / 安全专项对标;并引入 <b>OpenRouter + Portkey + LiteLLM</b> 能力集合作为基准线,重点挖掘各平台优势特点,为聚合平台选型与能力建设提供参考。可勾选厂商自定义对比列,切换"热力矩阵 / 计费 / 安全 / 雷达"等视图;核心特点卡见各视图内。</p>
     <div class="viewsw">
       <button class="vsw on" data-v="detail">📋 详细对标表</button>
       <button class="vsw" data-v="heat">🔥 能力热力矩阵</button>
@@ -364,7 +364,7 @@
 
     <!-- 差异化共性能力总结 -->
     <div class="bmview hide" id="v-diffcom">
-      <p class="pnote">能力定位图:横轴 = 共性能力覆盖度(由 26 项能力热力矩阵计算),纵轴 = 差异化指数(0-5),泡泡大小 = 综合能力强弱。右上角为"全能标杆",左上角为"差异化利基";蓝心大泡泡为 <b>CMI AI Hub</b>,虚线框代表 OpenRouter + Portkey + LiteLLM 基准线。<br>下方卡片逐家拆解 ⭐差异化能力(相对聚合基线的独特优势)与 ✓共性能力(聚合平台应普遍具备的基线能力)。</p>
+      <p class="pnote">能力定位图:横轴 = 共性能力覆盖度(由 26 项能力热力矩阵计算),纵轴 = 差异化指数(0-5),泡泡大小 = 综合能力强弱。右上角为"全能标杆",左上角为"差异化利基";虚线框代表 OpenRouter + Portkey + LiteLLM 基准线(行业参考基线)。<br>下方卡片逐家拆解 ⭐差异化能力(相对聚合基线的独特优势)与 ✓共性能力(聚合平台应普遍具备的基线能力)。</p>
       <div class="bigcard"><div id="diffChart" class="diffchart" style="display:flex;justify-content:center"></div><div class="legend" id="diffLegend"></div></div>
       <h3 class="sub">差异化 vs 共性能力总结(逐家)</h3>
       <div class="diffgrid" id="diffCards"></div>
@@ -376,7 +376,7 @@
   <div class="wrap">
     <div class="kicker">Module 3 · Pricing & Business Model</div>
     <h2>模型价格及商业模式对标</h2>
-    <p class="lead">3.1 为各聚合厂商商业模式对比;3.2 按"模型 × 厂商"矩阵对比官方原厂与聚合平台价格(单位:元/百万 tokens;≈ 为汇率换算或估算,— 为未上架/未公开),可筛选对标对象;3.3 为分厂商对标结论。</p>
+    <p class="lead">3.1 为各聚合厂商商业模式对比;3.2 按"模型 × 厂商"矩阵对比官方原厂、各原厂平台与聚合平台价格(单位:元/百万 tokens;≈ 为汇率换算或估算,— 为未上架/未公开),可筛选对标对象;3.3 为分厂商对标结论。</p>
 
     <h3 class="sub">3.1 聚合平台商业模式对比</h3>
     <div class="vpick" id="bizpick"></div>
@@ -385,7 +385,7 @@
     <h3 class="sub">3.2 主流模型价格对标矩阵(输入 / 输出,元 / 百万 Tokens)</h3>
     <div class="vpick" id="pricepick"></div>
     <div class="tblbox"><table id="priceTable"></table></div>
-    <p class="pnote">注:¥ 为元人民币、$ 为美元(参考汇率 ≈7.2);缓存价格见括号;"透传"表示平台按上游官方价原价转发。数据来源:各平台官网定价页(硅基流动/DMXAPI/Together/Novita/CMI AI Hub/移动云 MoMA 等,2026-07 抓取)。</p>
+    <p class="pnote">注:¥ 为元人民币、$ 为美元(参考汇率 ≈7.2);缓存价格见括号;"透传"表示平台按上游官方价原价转发。数据来源:各平台官网定价页(硅基流动/DMXAPI/Together/Novita/移动云 MoMA/阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax/科大讯飞 等,2026-07 抓取);原厂平台列已据其官方定价页填充真实价格(原生模型取官方价、开源模型取官方转售价)。</p>
 
     <h3 class="sub">3.3 多模态模型价格对标(视频 / 图像生成)</h3>
     <div class="tblbox"><table id="mmTable"></table></div>
@@ -400,8 +400,8 @@
   <div class="wrap">
     <div class="kicker">Module 4 · Differentiation</div>
     <h2>差异化定位</h2>
-    <p class="lead">基于模块二 15 家聚合平台对标结论提炼,锚定我司平台差异化能力与功能优先级图谱。</p>
-    <div class="bench-banner">📊 本模块由 <b>模块二 · 15 家聚合平台对标</b> 结论自动提炼 &nbsp;|&nbsp; CMI 差异化指数 <b>4/5</b> &nbsp;|&nbsp; 基准线 <b>OpenRouter + Portkey + LiteLLM</b> &nbsp;|&nbsp; 共性能力覆盖度实时取自模块二能力热力矩阵</div>
+    <p class="lead">基于模块二 16 家聚合平台对标结论提炼,锚定聚合平台差异化能力维度与功能优先级图谱。</p>
+    <div class="bench-banner">📊 本模块由 <b>模块二 · 16 家聚合平台对标</b> 结论自动提炼 &nbsp;|&nbsp; 基准线 <b>OpenRouter + Portkey + LiteLLM</b> &nbsp;|&nbsp; 共性能力覆盖度实时取自模块二能力热力矩阵</div>
     <h3 class="sub">4.1 差异化能力矩阵</h3>
     <div class="grid g4" id="diffGrid"></div>
     <h3 class="sub">4.2 平台核心功能优先级图谱</h3>
@@ -785,7 +785,7 @@ function renderDiffCommon(){
   });
   s+='</svg>';
   document.getElementById("diffChart").innerHTML=s;
-  var lg=document.getElementById("diffLegend"); lg.innerHTML='<span><i style="background:#2b5cff"></i>CMI AI Hub(我们的平台)</span><span><i style="background:#5b8def"></i>其他聚合平台</span><span style="border:1px dashed #2b5cff;padding:1px 6px;border-radius:4px">虚框 = 基准线(OpenRouter+Portkey+LiteLLM 均值)</span>';
+  var lg=document.getElementById("diffLegend"); lg.innerHTML='<span><i style="background:#5b8def"></i>聚合平台</span><span style="border:1px dashed #2b5cff;padding:1px 6px;border-radius:4px">虚框 = 基准线(OpenRouter+Portkey+LiteLLM 均值)</span>';
   var g=document.getElementById("diffCards"); g.innerHTML="";
   vendors.forEach(function(v){
     var d=bm.diffCommon[v]; if(!d) return;
