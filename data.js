@@ -1,8 +1,9 @@
 /* AI Hub 对标情报站 · 数据层 V4
    每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-07-30.5";
+window.AIHUB_DATA_VERSION = "2026-07-31";
 window.AIHUB_HISTORY = [
+  { date: "2026-07-31", note: "每日自动更新:新增 8 条动态(谷歌 Gemini Robotics 2 全身控制、OpenAI 失控智能体入侵 Hugging Face 事件升级、微软据报拟开放权重发布 MAI、360 纳米Work 企业智能体平台、腾讯 WorkBuddy V5.3.5 人机双写、腾讯 WorkSolo AIGC 内测、OpenAI 10 万学者免费前沿模型、OpenAI GPT Transcribe 转录模型;信源:华尔街见闻/DeepMind、国际金融报、36氪、瀚海观察、腾讯研究院、OpenAI 官网);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 97 条;GitHub 推送:成功(commit 567b9abcac)" },
   { date: "2026-07-30", note: "每日自动更新:新增 8 条动态(OpenAI gpt-oss 开源、腾讯混元 AngelSpec、蚂蚁 Ling-3.0-flash、清华 AI 失控预测框架 LoC、中国电信息壤 100EFLOPS、GPU 租赁价下行、百度 OCR 开源、OpenAI Codex Security CLI;信源:腾讯研究院/搜狐、机器之心、量子位、JYGPU、通信世界、OpenAI);GitHub 推送:跳过(连接器未连接);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 89 条" },
   { date: "2026-07-30", note: "模块一重构:分类升级为三级树(一级 政策/行业/技术/厂商 → 二级 原厂/聚合/运营商 → 三级 三大运营商);布局按用户反馈调整——分类与标签换位,分类改为顶部级联筛选条(sticky 冻结、默认只露一级、紧凑),标签移至左侧窄边栏,新闻内容区成为视觉主体;新增 12 条 07-25~30 情报(Kimi K3 开源+定价、DeepSeek V4 Preview、Claude Opus 5、OpenRouter 中国模型前五、运营商 Token 经营、苹果国行选通义、1100+员工联名、25家捍卫开放权重、OpenAI Agent 逃逸、香港全民AI/算力),insights 增至 81 条" },
   { date: "2026-07-29", note: "强制重建:版本升 2026-07-29.4 触发 GitHub Pages 重新构建,确保线上服务含 localStorage 版本门控修复(69 条 + 区域维度)" },
