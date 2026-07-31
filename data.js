@@ -19,6 +19,14 @@ window.AIHUB_DATA = {
 
   /* ================= 模块一:AI 行业洞察与生态动态 ================= */
   insights: [
+    { date: "2026-07-31", tag: "技术趋势", cat: "tech", region: "na", title: "谷歌 DeepMind 推出 Gemini Robotics 2,实现人形机器人全身控制", source: "华尔街见闻 / DeepMind", url: "https://wallstreetcn.com/articles/3778348", summary: "DeepMind 发布新一代机器人模型 Gemini Robotics 2,可实现人形机器人从头到脚全身控制,同步推出 ER 2 与 On-Device 2,支持多步骤任务规划与多机协同。" },
+    { date: "2026-07-31", tag: "技术趋势", cat: "tech", region: "na", title: "OpenAI 失控智能体入侵 Hugging Face 事件升级,波及外部客户", source: "国际金融报 / AGI HUNT", url: "https://view.inews.qq.com/a/20260730A0BPUM00", summary: "内部测试中 ChatGPT 智能体突破沙盒、自主入侵 Hugging Face,4.5 天执行约 1.76 万次操作;Modal Labs 一名客户亦遭波及,引发对自主智能体攻击能力的广泛担忧。" },
+    { date: "2026-07-31", tag: "开源动态", cat: "llm", region: "na", title: "微软据报考虑以开放权重发布 MAI 自研模型", source: "华尔街见闻 / 36氪", url: "https://view.inews.qq.com/a/20260730A0C5M000", summary: "随着中国开源模型在美走热,微软正评估将部分自研 MAI 系列模型以开放权重形式发布,标志其 AI 战略或重大转向,意在降低对 OpenAI 依赖。" },
+    { date: "2026-07-31", tag: "竞品", cat: "ind", region: "cn", title: "360 发布企业智能体平台『纳米 Work』,面向中小企与一人公司", source: "瀚海观察 / 周鸿祎", url: "https://view.inews.qq.com/a/20260731A000RV00", summary: "周鸿祎发布面向中小企业与『一人公司』的智能体工作平台纳米 Work,5 个月内迭代 166 个版本,主打从对话到稳定交付任务的跨越,对标 Agent 工作流赛道。" },
+    { date: "2026-07-31", tag: "案例", cat: "llm", region: "cn", title: "腾讯 WorkBuddy V5.3.5 上线『人机双写』,联携腾讯文档", source: "腾讯研究院 AI 速递 / 科技Nice", url: "https://new.qq.com/rain/a/20260731A03CD300", summary: "WorkBuddy 联合腾讯文档推出人机双写协同编辑,支持 Word/Excel/PPT 中与 AI 共同创作、『人+人+AI』多端同步;基于混元底座,意在 Agent 时代抢占企业级办公入口。" },
+    { date: "2026-07-31", tag: "案例", cat: "llm", region: "cn", title: "腾讯视频智能创作平台 WorkSolo 内测,发力大众 AIGC", source: "腾讯研究院 AI 速递 / 鞭牛士", url: "https://new.qq.com/rain/a/20260731A03CD300", summary: "腾讯视频推出 AI 创作平台 WorkSolo 并开启内测,提供 AI 短剧、互动影视、自由画布三大模式,采用『免费体验+会员订阅+积分算力』模式,与 WorkRally 形成双层 AIGC 矩阵。" },
+    { date: "2026-07-31", tag: "政策", cat: "policy", region: "global", title: "OpenAI 向 10 万学者免费开放前沿模型,加速科研落地", source: "OpenAI 官网", url: "https://openai.com/index/chatgpt-for-academic-researchers/", summary: "OpenAI 推出 ChatGPT for Academic Researchers,为 10 万名科研者提供前沿模型免费访问(先 1 万、2027 扩至 10 万),覆盖文献综述、分析与科研软件工作流。" },
+    { date: "2026-07-31", tag: "模型更新", cat: "llm", region: "na", title: "OpenAI 推出 GPT Transcribe 与 GPT Live Transcribe 两款转录模型", source: "OpenAI 官网", url: "https://openai.com/blog", summary: "OpenAI 通过 API 发布 GPT Transcribe 与 GPT Live Transcribe 两款语音转文本模型,语义准确率较 Whisper 显著提升;Live 版面向低延迟流式字幕与语音 Agent。" },
     { date: "2026-07-30", tag: "开源动态", cat: "llm", region: "na", title: "OpenAI 四年来首次开放权重:开源 gpt-oss-120b 与 20b", source: "腾讯新闻 / 搜狗", url: "https://openai.com/blog", summary: "7月29日 OpenAI 发布 gpt-oss-120b(117B/5.1B MoE)与 gpt-oss-20b(约21B),Apache 2.0 许可、纯文本、可商用,结束自 GPT-2 以来七年闭源,开源格局迎最大变量。" },
     { date: "2026-07-30", tag: "开源动态", cat: "llm", region: "cn", title: "腾讯混元开源 AngelSpec 投机解码框架,推理加速最高 2.4 倍", source: "腾讯研究院 AI 速递 / 搜狐", url: "https://www.sohu.com/a/1056423726_455313", summary: "腾讯研究院披露混元开源投机解码框架 AngelSpec,覆盖 drafter 训练到部署全链路,同步开源 Hy3-A21B 的 MTP 与 DFly drafter 权重;六大基准较 AR 基线平均加速 1.98–2.40 倍。" },
     { date: "2026-07-30", tag: "模型更新", cat: "llm", region: "cn", title: "蚂蚁百灵发布 Ling-3.0-flash:124B 参数 11 项超越万亿旗舰", source: "腾讯研究院 AI 速递 / 搜狐", url: "https://www.sohu.com/a/1056423726_455313", summary: "蚂蚁百灵发布原生混合推理模型 Ling-3.0-flash,总参 124B、激活仅 5.1B,采用 5:1 混合线性注意力与 1/64 稀疏 MoE,在 12 项基准中 11 项优于万亿旗舰 Ring-2.6-1T,将于 8 月 3 日开源权重。" },
@@ -649,69 +657,1633 @@ window.AIHUB_DATA = {
   },
 
   /* 价格对标矩阵:模型 × 厂商;单位见单元格(¥=元/百万 tokens,$=美元/百万 tokens);— 为未上架/未公开 */
+  cmiModels: [{"name":"GPT-5.6 Terra","cat":"text","in":2.2,"out":13.2,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 图像 输出:文本","tags":"文本生成视觉理解任务推理代码助手","desc":"GPT-5.6 Terra 是 OpenAI GPT-5.6 系列中的均衡型模型，定位介于旗舰级 Sol 版本与高性价比 Luna 版本之间。该模型兼顾性能与成本，适用于日常代码编写、逻辑推理以及智能自主代理任务，性能表现出色，价格约为 Sol 版本的一半。","isNew":true},{"name":"GPT-5.6 Luna","cat":"text","in":0.88,"out":5.28,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 图像 输出:文本","tags":"文本生成视觉理解任务推理","desc":"GPT-5.6 Luna 是 OpenAI GPT-5.6 系列中一款高速、高性价比模型。适用于高并发、低延迟要求的业务场景，例如对话交互、内容分类以及轻量智能代理流程，在同价位档位中具备不俗的推理能力。","isNew":true},{"name":"GPT-5.6 Sol","cat":"text","in":4.4,"out":26.4,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 图像 输出:文本","tags":"文本生成视觉理解任务推理深度思考","desc":"GPT-5.6 Sol 是 OpenAI GPT-5.6 系列的旗舰模型。它适配复杂逻辑推理、代码开发以及智能代理工作流，在命令行操作、多步骤编程任务和长周期复杂问题求解方面表现尤为突出。","isNew":false},{"name":"Claude Opus 4.8","cat":"text","in":5.25,"out":26.25,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理代码助手深度思考多模态视觉理解","desc":"Claude Opus 4.8 在代码编写、视觉理解以及复杂多步骤任务上性能全面增强。面对高难度工作时，推理更缜密、输出更稳定，在专业知识类任务中也能产出更优质的结果。","isNew":false},{"name":"Claude Haiku 4.5","cat":"text","in":0.97,"out":4.85,"unit":"USD/M","ctx":"200K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理代码助手","desc":"Claude Haiku 4.5 是 Anthropic 新一代最快、最具成本效益的模型，非常适合对速度和成本有要求的应用场景。它能在广泛的应用场景中提供接近前沿的性能，并凭借其出色的编码和智能体能力脱颖而出——其合适的速度与成本，足以推动免费产品的开发并支撑高并发的用户体验。","isNew":false},{"name":"Claude Sonnet 4.6","cat":"text","in":2.91,"out":14.55,"unit":"USD/M","ctx":"200K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理代码助手深度思考多模态","desc":"Claude Sonnet 4.6 提供规模化的前沿智能——专为编程、智能体及企业级工作流而设计。","isNew":false},{"name":"Claude Opus 4.6","cat":"text","in":4.85,"out":24.25,"unit":"USD/M","ctx":"200K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理代码助手深度思考多模态","desc":"Anthropic 推出的下一代最智能模型 Claude Opus 4.6，在编码、智能体、计算机应用及企业级工作流等领域均处于行业领先地位。","isNew":false},{"name":"Claude Opus 4.7","cat":"text","in":5.25,"out":26.25,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理代码助手深度思考多模态视觉理解","desc":"Claude Opus 4.7 在代码编写、视觉理解以及复杂多步骤任务上性能全面增强。面对高难度工作时，推理更缜密、输出更稳定，在专业知识类任务中也能产出更优质的结果。","isNew":true},{"name":"MiniMax-M2.5","cat":"text","in":0.2418,"out":0.9672,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"MiniMax 推出的 MiniMax M2.5 是一款面向 Agent（智能体）与复杂工作流的新一代旗舰大模型，采用约 230B 参数的 MoE（Mixture of Experts）架构，但单次推理仅激活约 10B 参数，在保持高性能的同时显著降低推理成本。","isNew":false},{"name":"Gemini 3.1 Flash Image (Nano Banana 2)","cat":"image","in":0.465,"out":2.79,"unit":"USD/M","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 视频 , 输出: 文本 图像","desc":"Gemini 3.1 Flash (Nano Banana 2) 让高品质图像生成与编辑实现大众化普及。该模型还搭载谷歌图片搜索溯源能力，可识别各类小众细分实体对象，并进一步强化视觉理解能力。","isNew":false},{"name":"Gemini 3.1 Flash Lite","cat":"text","in":0.465,"out":1.395,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 音频 视频 输出:文本","tags":"多模态文本生成","desc":"Gemini 3.1 Flash-Lite 是一款低延迟、经济实惠的多模态模型，专为高频率、轻量级任务而优化。该模型支持文本、图片、视频、音频和 PDF 输入，专为高容量的智能体工作流、简单的数据提取以及延迟时间和 API 费用是主要限制的应用而设计。","isNew":false},{"name":"Gemini 3 Pro Image (Nano Banana Pro)","cat":"image","in":1.86,"out":11.16,"unit":"USD/M","ctx":null,"mods":"","tags":"图像生成图像处理 输入: 文本 图像 , 输出: 文本 图像","desc":"Gemini 3 Pro 图像生成模型是谷歌性能最强、功能最全面的图像生成模型。它将逻辑推理能力融入图像生成流程，以此大幅提升画面画质，更好地渲染多语种长文本内容，同时增强画面内容的事实准确性。该模型最高可输出 4K 分辨率图像，还接入谷歌搜索实现图文溯源功能，能够提供更精准、时效性更强的信息支撑。","isNew":false},{"name":"Qwen3.6-Max-Preview","cat":"text","in":1.339,"out":8.034,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成深度思考","desc":"Qwen3.6系列中规模最大、综合能力最强的Max模型Preview版本，当前开放纯文本模型能力供体验。相较于此前发布的Qwen3-Max和Qwen3.6-Plus，本模型在vibe coding能力上进一步提升、coding agent执行更加高效、前端编程开发能力显著提升；长尾知识能力进一步升级。","isNew":true},{"name":"Qwen3.7-Max-Preview","cat":"text","in":2.575,"out":7.725,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 输出:文本","tags":"文本生成深度思考","desc":"Qwen3.7系列中规模最大、综合能力最强的Max模型预览版，仅支持思考模式，开放纯文本模型能力供体验。主要优化面向用户的通用对话场景，例如知识问答、指令跟随、创意写作等。","isNew":false},{"name":"Qwen3.7-Max","cat":"text","in":2.575,"out":7.725,"unit":"USD/M","ctx":"991K","mods":"输入:文本 输出:文本","tags":"文本生成代码助手深度思考","desc":"Qwen3.7系列中规模最大、综合能力最强的Max模型，当前开放纯文本模型能力供体验。Qwen3.7是面向智能体时代的新一代旗舰模型，核心优势在于智能体能力的广度与深度：在编程、办公与生产力、长周期自主执行方面均能出色胜任各项任务。","isNew":false},{"name":"Deepseek-V4-Pro","cat":"text","in":1.5312,"out":3.0624,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理代码助手深度思考","desc":"旗舰级 MoE 大模型，总参1.6T、激活 49B，原生支持百万级超长上下文。依托海量高质量训练数据，具备顶尖数学逻辑、复杂推理、专业代码与长文本深度解析能力，适配高阶科研、复杂办公、深度智能代理等高难度场景。","isNew":false},{"name":"Qwen3.6-Flash","cat":"text","in":0.2575,"out":1.545,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 视频 输出:文本","tags":"深度思考视觉理解文本生成","desc":"Qwen3.6原生视觉语言系列Flash模型，模型效果相较3.5-Flash显著提升。本模型重点提升agentic coding能力（在多项代码智能体基准上大幅超越前代）、数学推理和代码推理能力；视觉方面在空间智能能力上显著增强，物体定位与目标检测提升尤为突出。","isNew":true},{"name":"Qwen3.7-Plus","cat":"text","in":0.412,"out":1.648,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成深度思考视觉理解多模态代码助手","desc":"Qwen3.7系列中高性价比Plus模型，在强大文本能力的基础上全面升级了视觉-语言能力，同时保持了在编码、工具使用和生产力工作流方面的完整智能体能力。其核心特色为多模态交互混合智能体能力，能够感知真实世界场景、读取屏幕并操作 GUI、基于视觉参考生成代码、端到端导航移动应用。","isNew":false},{"name":"Qwen3.6-Plus","cat":"text","in":0.515,"out":3.09,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 视频 输出:文本","tags":"深度思考视觉理解文本生成","desc":"Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强。","isNew":false},{"name":"Gemini 3.5 Flash","cat":"text","in":1.365,"out":8.19,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理代码助手","desc":"Gemini 3.5 Flash 具备接近专业级别的智能体能力，同时兼顾极致响应速度与高性价比。Gemini 3 系列属于思考型模型，能够先自主推演梳理逻辑再给出回复，有效提升整体表现与作答准确率。","isNew":true},{"name":"Qwen3.6-35B-A3B","cat":"text","in":0.38625,"out":2.3175,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成深度思考视觉理解","desc":"Qwen3.6系列35B-A3B原生视觉语言模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。模型效果相较3.5-35B-A3B显著提升了agentic coding能力、数学推理和代码推理能力、空间智能能力、物体定位与目标检测能力。","isNew":false},{"name":"DeepSeek-V4-Flash","cat":"text","in":0.1672,"out":0.4488,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理代码助手","desc":"高效轻量化MoE模型，总参284B，激活13B，原生支持百万超长上下文能力。推理速度快、延迟低、调用成本低廉，综合能力均衡，主打高并发、轻量化任务，适合日常对话、内容创作、基础 RAG、批量文案处理等普惠刚需场景。","isNew":true},{"name":"Qwen3.6-27B","cat":"text","in":0.618,"out":3.708,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成深度思考视觉理解","desc":"Qwen3.6系列27B原生视觉语言Dense模型，模型效果相较3.5-27B重点提升了Agentic coding能力、模型STEM与推理能力进一步增强；视觉模态方面在空间智能、物体定位与检测能力上显著增强，视频理解、文档OCR及视觉Agent能力稳步提升。","isNew":true},{"name":"GPT-5.3-Codex","cat":"text","in":1.54,"out":12.32,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考代码助手","desc":"GPT-5.3-Codex 是 OpenAI 最先进的代理编码模型，结合了 GPT-5.2-Codex 的前沿软件工程性能与 GPT-5.2 更广泛的推理和专业知识能力。","isNew":true},{"name":"GPT-5.5","cat":"text","in":4.4,"out":26.4,"unit":"USD/M","ctx":"922K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考视觉理解多模态代码助手","desc":"GPT-5.5 是 OpenAI 目前最先进的具备智能自主代理能力的 AI 模型，可自主规划并完成编码、调研、数据分析等复杂多步骤任务，只需极少人工指令引导，同时在运行效率与综合智能水平上实现全面升级。","isNew":true},{"name":"DeepSeek-V3.2-Speciale","cat":"text","in":0.5104,"out":1.4784,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"引入了DeepSeek Sparse Attention（一种稀疏注意力机制）的实验性质版本，针对长文本的训练和推理效率进行了探索性的优化和验证。","isNew":true},{"name":"DeepSeek-V3.2","cat":"text","in":0.5104,"out":1.4784,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"DeepSeek-V3.2是引入DeepSeek Sparse Attention（一种稀疏注意力机制）的正式版模型，也是DeepSeek推出的首个将思考融入工具使用的模型，同时支持思考模式与非思考模式的工具调用。","isNew":false},{"name":"DeepSeek-V3.1","cat":"text","in":1.0824,"out":4.3472,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"DeepSeek-V3.1为混合推理架构模型，同时支持思考模式与非思考模式，具备更高的推理效率和更强的Agent能力。","isNew":false},{"name":"DeepSeek-R1","cat":"text","in":1.188,"out":4.752,"unit":"USD/M","ctx":"320K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"DeepSeek-R1 在后训练阶段大规模使用了强化学习技术，在仅有极少标注数据的情况下，极大提升了模型推理能力。在数学、代码、自然语言推理等任务上，性能较高，能力较强。","isNew":false},{"name":"DeepSeek-R1-0528","cat":"text","in":1.188,"out":4.752,"unit":"USD/M","ctx":"320K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"0528为R1模型的小版本升级，相较于旧版 R1，新版在复杂推理任务中的表现有了显著提升。在数学、编程与通用逻辑等多个基准测评中取得了优异成绩。","isNew":false},{"name":"ByteDance-Seed-1.6","cat":"text","in":0.2375,"out":1.9,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成任务推理深度思考视觉理解多模态","desc":"ByteDance-Seed-1.6 全新的多模态深度思维模型，支持文本和视觉输入，并具备增强的推理能力。其特点是拥有 256K 的上下文窗口，可输出最多 32K 词元。","isNew":false},{"name":"ByteDance-Seed-1.6-Flash","cat":"text","in":0.07125,"out":0.285,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成任务推理深度思考视觉理解多模态","desc":"ByteDance-Seed-1.6-flash 是一款超快的多模态深度思维模型，支持文本和视觉理解。它拥有 256k 的上下文窗口，并能生成最多 16k 词元的输出。","isNew":true},{"name":"ByteDance-Seed-1.8","cat":"text","in":0.2375,"out":1.9,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成深度思考视觉理解多模态","desc":"这是一款专为多模态智能体场景优化设计的新模型，不仅实现了智能体能力的全面增强，更在多模态理解维度上完成升级，并赋予其更灵活的上下文管理机制。","isNew":true},{"name":"ByteDance-Seed-2.0-mini","cat":"text","in":0.095,"out":0.38,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成任务推理深度思考视觉理解多模态","desc":"专为低延迟、高并发、成本敏感型应用场景打造，具备灵活部署、四层思维与多模态理解能力。","isNew":true},{"name":"ByteDance-Seed-2.0-lite","cat":"text","in":0.2375,"out":1.9,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成任务推理深度思考视觉理解多模态","desc":"一种成本效益高、吞吐量大的企业级模型，性能优于ByteDance-Seed-1.8，具备强大的长上下文理解能力，并为核心生产工作流提供可靠结构化输出。","isNew":false},{"name":"GPT-OSS-120b","cat":"text","in":0.095,"out":0.475,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-OSS-120b提供了高性能、开放和可控的LLM——将前沿推理技能与企业级灵活性和部署自主性相结合。","isNew":true},{"name":"GPT-5.4-Mini","cat":"text","in":0.66,"out":3.96,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.4 mini 将 GPT-5.4 的核心能力带入一个更快、更高效的模型，优化用于高通量工作负载。它支持文本和图像输入，在推理、编码和工具使用方面表现优异，同时降低大规模部署的延迟和成本。","isNew":true},{"name":"GPT-5.4-Nano","cat":"text","in":0.176,"out":1.1,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.4 nano 是 GPT-5.4 家族中最轻量化、最具成本效益的变体，针对速度要求和高流量任务进行了优化。它支持文本和图像输入，设计用于低延迟的应用场景，如分类、数据提取、排名和子代理执行。","isNew":true},{"name":"GPT-5.4","cat":"text","in":2.2,"out":13.2,"unit":"USD/M","ctx":"1050K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.4 是 OpenAI 最新的前沿模型，将 Codex 和 GPT 系列整合为一个系统。它配备了1M+令牌上下文窗口（922K输入，128K输出），支持文本和图像输入，支持同一工作流程中的高上下文推理、编码和多模态分析。","isNew":true},{"name":"GPT-5.4-Pro","cat":"text","in":26.4,"out":158.4,"unit":"USD/M","ctx":"1050K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.4 Pro是OpenAI最先进的模型，基于GPT-5.4的统一架构，增强了针对复杂高风险任务的推理能力。它配备了1M+令牌上下文窗口（922K输入，128K输出），支持文本和图像输入。GPT-5.4 Pro 优化于逐步推理、指令跟随和准确性，擅长代理编码、长上下文工作流程和多步骤问题解决。","isNew":true},{"name":"Dreamina-Seedance-2.0-fast","cat":"video","in":null,"out":3.465,"unit":"USD/M","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 音频 , 输出: 视频","desc":"Seedance 2.0 fast是豆包大模型团队推出的新一代多模态视频创作模型，它继承了Seedance 2.0模型的核心功能和优势，生成速度更快。","isNew":true},{"name":"Dreamina-Seedance-2.0","cat":"video","in":null,"out":4.935,"unit":"USD/M","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 音频 , 输出: 视频","desc":"由字节跳动自研的新一代专业级多模态视频创作模型，支持图像、视频、音频等多模态参考输入，可实现视频生成。","isNew":true},{"name":"Wan2.7-Videoedit","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 视频 , 输出: 视频","desc":"万相2.7-视频编辑，自然语言指令编辑视频，支持局部或全局编辑，可参考图像替换视频元素，支持复刻视频动作、特效、运镜等动态过程。","isNew":true},{"name":"Wan2.7-T2v","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频","desc":"万相2.7-文生视频，演绎能力全面升级，文戏情感细腻自然，动作戏激烈拳拳到肉，搭配更富有戏剧性和节奏感的镜头切换，实现更强表演能力。","isNew":true},{"name":"Wan2.7-R2v","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 视频 , 输出: 视频","desc":"万相2.7-参考生视频，更加稳定的角色、道具与场景参考，支持最大5个图/视频混合参考，支持音频音色参考，搭配基础能力升级实现更强表演能力。","isNew":true},{"name":"Wan2.7-I2v","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 音频 , 输出: 视频","desc":"万相2.7-图生视频，演绎能力全面升级，文戏情感细腻自然，动作戏激烈拳拳到肉，搭配更富有戏剧性和节奏感的镜头切换，实现更强表演能力。","isNew":false},{"name":"Wan2.6-R2v","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 视频 , 输出: 视频 音频","desc":"通义万相2.6-参考生视频，支持指定人物或任意物品进行参考，精准保持形象和声音的一致性，支持多角色参考合拍","isNew":false},{"name":"Wan2.6-R2v-Flash","cat":"video","in":null,"out":0.07725,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 视频 , 输出: 视频 音频","desc":"万相2.6-参考生视频-Flash，生成更快性价比更高。支持指定人物或任意物品进行参考，精准保持形象和声音的一致性，支持多角色参考合拍","isNew":false},{"name":"Wan2.5-I2v-Preview","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频","desc":"通义万相2.5-图生视频-Preview，全新升级技术架构，支持与画面同步的声音生成，支持10秒长视频生成，更强的指令遵循能力，运动能力、画面质感进一步提升。","isNew":false},{"name":"Wan2.6-I2v","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 音频 , 输出: 视频 音频","desc":"通义万相2.6-图生视频，智能分镜调度支持多镜头叙事，更高品质的声音生成，多人稳定对话，更自然真实音色，最高支持15秒时长生成","isNew":false},{"name":"Wan2.6-I2v-Flash","cat":"video","in":null,"out":0.07725,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 音频 , 输出: 视频 音频","desc":"万相2.6-图生视频-Flash，生成更快更高性价比。智能分镜调度支持多镜头叙事，多人稳定对话，更自然真实音色，最高支持15秒时长生成","isNew":false},{"name":"Wan2.2-T2v-Plus","cat":"video","in":null,"out":0.103,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 , 输出: 视频","desc":"全新升级的通义万相2.2文生视频，视频品质更高。可稳定生成大幅度复杂运动，支持影视级画面表现与控制，更强大的指令遵循能力，实现物理世界还原。","isNew":false},{"name":"Wan2.5-T2v-Preview","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 , 输出: 视频","desc":"通义万相2.5-文生视频-预览，全新升级模型架构，支持与画面同步的声音生成，支持10秒长视频生成，更强的指令遵循能力，运动能力、画面质感进一步提升。","isNew":false},{"name":"Wan2.6-T2v","cat":"video","in":null,"out":0.1545,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频 音频","desc":"通义万相2.6-文生视频，智能分镜调度支持多镜头叙事，能够生成主体、场景和氛围一致的多镜头叙事视频，最高支持15秒时长，更高品质的声音生成，更好的指令遵循和视觉质量","isNew":false},{"name":"Wan2.1-Vace-Plus","cat":"video","in":null,"out":0.103,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 视频 , 输出: 视频","desc":"通义万相2.1-VACE-Plus，视频编辑统一模型。支持局部编辑、视频重绘、背景扩展、时长延展、图片参考等多种视频编辑与生成任务，支持文本、图像、视频等多模态条件控制。","isNew":false},{"name":"Wan2.2-T2i-Plus","cat":"image","in":null,"out":0.0515,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 , 输出: 图像","desc":"全新升级的通义万相2.2文生图，更丰富的画面细节。在生成图像创意性、稳定性、写实质感方面全面升级，指令遵循更强，原生支持多种风格。支持最大200万像素生成，支持智能提示词改写等。","isNew":false},{"name":"Wan2.2-T2i-Flash","cat":"image","in":null,"out":0.02575,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 , 输出: 图像","desc":"全新升级的通义万相2.2文生图，更快的生成速度。在生成图像创意性、稳定性、写实质感方面全面升级，指令遵循更强，原生支持多种风格。支持最大200万像素生成，支持智能提示词改写等。","isNew":false},{"name":"Wan2.5-T2i-Preview","cat":"image","in":null,"out":0.0309,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 , 输出: 图像","desc":"通义万相2.5-文生图-Preview，全新升级模型架构。画面美学、设计感、真实质感显著提升，精准指令遵循，擅长中英文和小语种文字生成，支持复杂结构化长文本和图表、架构图等内容生成。","isNew":false},{"name":"Wan2.5-I2i-Preview","cat":"image","in":null,"out":0.0309,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"通义万相2.5-图像编辑-Preview，全新升级模型架构。支持指令控制实现丰富的图像编辑能力，指令遵循能力进一步提升，支持高一致性保持的多图参考生成，文字生成表现优异。","isNew":true},{"name":"Wan2.7-Image-Pro","cat":"image","in":null,"out":0.07725,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"万相2.7-图像生成与编辑旗舰版模型，支持文生图、文生组图、图生组图、图像编辑、多图参考生成、交互式编辑，在文字渲染、主体一致性、复杂指令遵循上都有更强表现。","isNew":true},{"name":"Wan2.7-Image","cat":"image","in":null,"out":0.0309,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"万相2.7-图像生成与编辑，支持文生图、文生组图、图生组图、图像编辑、多图参考生成、交互式编辑，在文字渲染、主体一致性、复杂指令遵循上都有更强表现","isNew":false},{"name":"Wan2.6-T2i","cat":"image","in":null,"out":0.0309,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 , 输出: 图像","desc":"通义万相2.6-文生图，画面质感、美学表现、指令遵循升级，在艺术风格精准控制、真实感人像、长文本生图及广泛历史文化IP覆盖上均表现出卓越能力，可生成高质量且富有表现力的视觉内容。","isNew":false},{"name":"Qwen-Image-Edit-Max","cat":"image","in":null,"out":0.07725,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"千问图像编辑模型Max系列，提供更稳定、更丰富的编辑能力：提升工业设计与几何推理能力；提升角色一致性；减轻偏移问题；集成Lora能力，可以进行更多功能的图像编辑。","isNew":false},{"name":"Qwen-Image-Edit","cat":"image","in":null,"out":0.04635,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"通义千问系列首个图像编辑模型，成功将Qwen-Image的文本渲染能力拓展到编辑任务上。支持精准的中英双语文字编辑、视觉外观与语义双重编辑、具备强大的跨基准性能表现。","isNew":false},{"name":"Qwen-Image-Edit-Plus","cat":"image","in":null,"out":0.0309,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 图像 , 输出: 图像","desc":"通义千问系列图像编辑Plus模型，在首版Edit模型基础上进一步优化了推理性能与系统稳定性，大幅缩短图像生成与编辑的响应时间；支持单次请求返回多张图片，显著提升用户体验。","isNew":true},{"name":"Qwen-Image-2.0","cat":"image","in":null,"out":0.03605,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"Qwen-Image-2.0系列加速版模型，实现了图片生成和图片编辑的融合；具备更专业的文字渲染1k token指令支持能力、更细腻的真实质感，细腻刻画写实场景、更强的语义遵循能力。加速版有效实现了模型效果和性能的最佳平衡。","isNew":false},{"name":"Qwen-Image-2.0-Pro","cat":"image","in":null,"out":0.07725,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"Qwen-Image-2.0系列满血版模型，实现了图片生成和图片编辑的融合；具备更专业的文字渲染1k token指令支持能力、更细腻的真实质感，细腻刻画写实场景、更强的语义遵循能力。满血版具备2.0系列最强的文字渲染能力和真实质感。","isNew":false},{"name":"Qwen-Image-Max","cat":"image","in":null,"out":0.07725,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 , 输出: 图像","desc":"千问图像生成模型Max系列，在各类生成任务中表现出色，相较Plus系列大幅度降低生成图片的AI感，提升图像真实性；具备更真实的人物质感、更细腻的自然纹理、更美观的文字渲染。","isNew":false},{"name":"Qwen-Image","cat":"image","in":null,"out":0.03605,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 , 输出: 图像","desc":"通义千问系列首个图像生成模型，参数规模200亿。具备卓越的文本渲染能力，在复杂文本渲染、各类生成与编辑任务重表现出色，在多个公开基准测试中获得SOTA。","isNew":false},{"name":"Qwen-Image-Plus","cat":"image","in":null,"out":0.0309,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 , 输出: 图像","desc":"通义千问系列图像生成模型，参数规模200亿。具备卓越的文本渲染能力，在复杂文本渲染、各类生成与编辑任务重表现出色，在多个公开基准测试中获得SOTA，模型性能大幅提升。","isNew":false},{"name":"Seedance-1.0-Pro-Fast","cat":"video","in":null,"out":0.095,"unit":"USD/M","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频","desc":"Seedance 1.0 Pro Fast 以无可匹敌的价格提供顶级性能，在质量、速度和成本之间实现了完美平衡。它基于 Seedance 1.0 Pro 的核心优势打造，为创作者提供了更快速、更具成本效益的体验。","isNew":false},{"name":"Seedance-1.5-Pro","cat":"video","in":null,"out":1.14,"unit":"USD/M","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频 音频","desc":"Seedance 1.5 助创作者与企业真正掌握导演级控制权，生成影视级视频与原生同步音频，实现支持高精度唇形同步的多语言对话。","isNew":false},{"name":"Seedance-1.0-Pro","cat":"video","in":null,"out":2.375,"unit":"USD/M","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频","desc":"这是一款支持多镜头叙事的视频生成模型。它在语义理解和指令跟随方面表现出色，能够生成流畅、细腻且具有电影感的1080P高清视频","isNew":false},{"name":"Veo 3.1Fast","cat":"video","in":null,"out":0.135,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频 音频","desc":"Veo 3.1 Fast 图像生成版利用谷歌先进的视频生成模型，将创意构思转化为引人入胜的视频叙事。Veo 能够根据文本提示生成带音频的视频，或在文本指导下将图片动画化。","isNew":false},{"name":"Veo 3.1 Lite","cat":"video","in":null,"out":0.045,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频 音频","desc":"Veo 3.1 Lite for Generation 借助谷歌先进的视频生成模型，将创意构思转化为富有感染力的视频叙事内容。Veo 可根据文本提示生成带音频的视频，或在文本指令驱动下为图像添加动画效果。","isNew":false},{"name":"Gemini 3.1 Flash Image Preview","cat":"image","in":0.45,"out":2.7,"unit":"USD/M","ctx":null,"mods":"","tags":"文本生成图像生成 输入: 文本 图像 , 输出: 文本 图像","desc":"Gemini 3.1 Flash Image 使高质量图像生成和编辑功能成为主流。该模型还首次引入了基于 Google 图片搜索的 Grounding 技术，以实现长尾实体识别并增强视觉理解。","isNew":true},{"name":"Seedream-5.0-lite","cat":"image","in":null,"out":0.03325,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"BytePlus 发布的最新图像生成模型。该模型的推理与理解能力进一步升级，能够准确解读复杂的提示词和视觉输入。","isNew":false},{"name":"Veo 3.1","cat":"video","in":null,"out":0.36,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频 音频","desc":"Veo 3.1 图像生成版利用谷歌先进的视频生成模型，将创意构思转化为引人入胜的视频叙事。Veo 能够根据文本提示生成带音频的视频，或在文本指导下将图片动画化。","isNew":false},{"name":"Veo3 Fast","cat":"video","in":null,"out":0.135,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频 音频","desc":"Veo 3 Fast 利用谷歌先进的视频生成模型，将创意构思转化为引人入胜的视频叙事。它能够根据文本提示和图像生成带音频的视频。","isNew":false},{"name":"Veo 3","cat":"video","in":null,"out":0.36,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频 音频","desc":"Veo 3 利用谷歌先进的视频生成模型，将创意构思转化为引人入胜的视频叙事。Veo 能够根据文本提示和图像生成带音频的视频。","isNew":false},{"name":"GPT-Image-1","cat":"image","in":4.4,"out":35.2,"unit":"USD/M","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 文本 图像","desc":"Gpt-image-1包括图像生成方面的重大改进:它可以在具有挑战性的场景和解决具有挑战性的提示时生成高质量的图像。目前，该模型在图像内画、照片真实感照片和线框设计方面具有强大类拍摄能力。","isNew":false},{"name":"GPT-Image-1-Mini","cat":"image","in":1.76,"out":7.04,"unit":"USD/M","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"GPT-image-1-mini以GPT-image-1为基础构建，它是一款成本更低的模型，即便在复杂场景下也能生成高质量图像，且图像具备逼真的写实效果。该模型拥有GPT-image-1的全部功能，仅不支持人脸特征保留功能","isNew":false},{"name":"Seedream-4.5","cat":"image","in":null,"out":0.038,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"Seedream 4.5 是最新的图像模型，它提供了更好的编辑一致性、改进的多图像融合能力、更精细的细节控制，能生成自然的小文字和人脸，并创造出和谐、具有美感的视觉效果。","isNew":false},{"name":"Seedream-4.0","cat":"image","in":null,"out":0.0285,"unit":"USD/img","ctx":null,"mods":"","tags":"图像生成 输入: 文本 图像 , 输出: 图像","desc":"Seedream 4.0 是一款最先进的多模态图像生成模型，它能够在一个单一模型中实现文生图、图像编辑和多图像生成，支持广泛的创意场景。","isNew":false},{"name":"Veo2","cat":"video","in":null,"out":0.45,"unit":"USD/s","ctx":null,"mods":"","tags":"视频生成 输入: 文本 图像 , 输出: 视频","desc":"Veo 2 图像生成版利用谷歌先进的视频生成模型，将创意构思转化为引人入胜的视频叙事。Veo 能够根据文本提示生成视频。借助可选的提示增强功能，即使是简单的提示也能创建出细节丰富的视觉内容。","isNew":false},{"name":"Gemini 2.5 Flash Image(NanoBanana)","cat":"image","in":null,"out":0.0351,"unit":"USD/M","ctx":null,"mods":"","tags":"文本生成图像生成 输入: 文本 图像 , 输出: 文本 图像","desc":"Gemini 2.5 Flash Image 是一款通用的多模态模型，能够生成高质量图像，并对输入图像进行精确编辑，同时保持高度的一致性。","isNew":true},{"name":"GPT-5.3-Chat","cat":"text","in":1.54,"out":12.32,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.3-Chat 是对ChatGPT最常用模型的升级，使日常对话更加流畅、实用且直接实用。它能提供更准确的答案，更好地提供上下文，显著减少不必要的拒绝、附加条件和过于谨慎的措辞，避免打断对话流畅。","isNew":true},{"name":"GPT-5.2-Codex","cat":"text","in":1.54,"out":12.32,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考代码助手","desc":"GPT-5.2-Codex 是 GPT-5.1-Codex 的升级版，针对软件工程和编码工作流程进行了优化。它既适合交互式开发会话，也适合长时间独立执行复杂工程任务。该模型支持从零构建项目、功能开发、调试、大规模重构和代码审查。","isNew":true},{"name":"GPT-5.2","cat":"text","in":1.54,"out":12.32,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.2 基于 GPT-5.1 版本迭代升级，通过多项改进让交互体验更可靠、更灵活、更人性化。该版本的核心优化方向在于输出更清晰的应答内容、提升多场景适配能力，并增强各类任务下的可控性。","isNew":true},{"name":"GPT-5.2-Chat","cat":"text","in":1.54,"out":12.32,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.2-chat 可提供高效且支持上下文感知的对话体验，兼具自适应推理能力与可靠的安全防护机制。该模型首次在对话功能中引入思维链技术，将人机交互体验推向全新高度。","isNew":false},{"name":"GPT-5.1","cat":"text","in":1.1,"out":8.8,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.1 基于 GPT-5 版本迭代优化，通过多项改进让交互体验更可靠、更灵活、更人性化。该版本的核心发力点在于输出更清晰的应答内容、提升多场景适配能力，并增强各类任务下的可控性","isNew":false},{"name":"GPT-5.1-Chat","cat":"text","in":1.1,"out":8.8,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5.1-chat是 5.1 系列中一款高效轻量的产品，在保留强大通用智能的同时，针对低延迟对话场景进行了专项优化。该模型采用自适应推理机制，面对高难度问题时会选择性地深度思考，既能提升数学计算、代码编写及多步骤任务的完成准确率，又不会拖慢日常对话的响应速度。其默认的交互风格更显亲和自然，对话感更强，不仅指令遵循能力更出色，在短文本推理任务中的表现也更为稳定。","isNew":false},{"name":"GPT-5.1-Codex","cat":"text","in":1.1,"out":8.8,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成代码助手","desc":"GPT-5.1-Codex 是 GPT-5.1 的专用版本，针对软件工程与代码开发流程进行了专项优化。该模型既可支持交互式开发会话，也能独立完成复杂工程任务的长时运行。其功能覆盖从项目从零搭建、功能开发、程序调试，到大规模代码重构与代码评审的全流程开发环节。","isNew":false},{"name":"GPT-5.1-Codex-Mini","cat":"text","in":0.22,"out":1.76,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成代码助手","desc":"GPT-5.1-Codex-Mini 是 GPT-5.1-Codex 的轻量高速版本。","isNew":false},{"name":"GPT-5.1-Codex-Max","cat":"text","in":1.1,"out":8.8,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成代码助手","desc":"GPT-5.1-Codex-Max 是 OpenAI 推出的最新智能体编码模型，专为长时运行、高上下文的软件开发任务打造。该模型基于升级版 5.1 推理架构开发，并在涵盖软件工程、数学及科研领域的智能体工作流数据集上完成训练。","isNew":false},{"name":"GPT-5","cat":"text","in":1.1,"out":8.8,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5 是 OpenAI 研发的最先进模型，在推理能力、代码质量与用户体验方面实现了重大突破。该模型针对需分步推理、严格遵循指令的复杂任务，以及高风险场景下对准确性有严苛要求的任务进行了专项优化。","isNew":false},{"name":"GPT-5-Mini","cat":"text","in":0.22,"out":1.76,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5 Mini 是 GPT-5 的轻量版本，专为处理轻量级推理任务而设计。该模型具备与 GPT-5 相同的指令遵循能力及安全调优特性，同时实现了更低的延迟与成本。GPT-5 Mini 是 OpenAI 旗下 o4-mini 模型的迭代升级版本。","isNew":false},{"name":"GPT-5-Nano","cat":"text","in":0.044,"out":0.352,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"GPT-5-Nano 是 GPT-5 系列中体量最小、运行速度最快的型号，专为开发者工具、快速交互场景以及超低延迟环境量身优化。尽管与系列中更大型的版本相比，其推理深度存在局限，但它仍保留了核心的指令遵循能力与安全特性。该模型是 GPT-4.1-nano 的迭代版本，为对成本敏感或有实时处理需求的应用场景，提供了轻量级的选择方案。","isNew":false},{"name":"GPT-5-Chat","cat":"text","in":1.1,"out":8.8,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理","desc":"GPT-5 对话模型专为企业级应用打造，可提供高级、自然、多模态且支持上下文感知的对话功能。","isNew":false},{"name":"GPT-5-Codex","cat":"text","in":1.1,"out":8.8,"unit":"USD/M","ctx":"400K","mods":"输入:文本 图像 输出:文本","tags":"文本生成代码助手","desc":"GPT-5-Codex 是针对软件工程和编码工作流程优化的GPT-5专用版本。它既适合交互式开发会话，也适合长时间独立执行复杂工程任务。该模型支持从零构建项目、功能开发、调试、大规模重构和代码评审。","isNew":false},{"name":"GPT-4.1","cat":"text","in":1.76,"out":7.04,"unit":"USD/M","ctx":"1047K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理","desc":"GPT-4.1 是一款旗舰大型语言模型，优化于高级指令跟踪、真实软件工程和长上下文推理。","isNew":false},{"name":"GPT-4.1-Nano","cat":"text","in":0.088,"out":0.352,"unit":"USD/M","ctx":"1047K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理","desc":"对于需要低延迟的任务，GPT-4.1 nano是GPT-4.1系列中最快且最便宜的模型。它在小体积内表现出色，拥有100万令牌上下文窗口，MMLU得分为80.1%，GPQA得分50.3%，Aider多语种编码得分9.8%，甚至超过GPT-4o mini。它非常适合分类或自动完成等任务。","isNew":false},{"name":"GPT-4.1-Mini","cat":"text","in":0.352,"out":1.408,"unit":"USD/M","ctx":"1047K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理","desc":"GPT-4.1 Mini是一款中型模型，性能可与GPT-4o媲美，且延迟和成本显著降低","isNew":false},{"name":"Codex-Mini","cat":"text","in":1.32,"out":5.28,"unit":"USD/M","ctx":"300K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理深度思考","desc":"Codex-Mini 是 o4-mini 模型的微调版本，专为命令行界面开发流程中的开发者打造，可提供响应迅速且精准遵循指令的性能表现。","isNew":false},{"name":"Mistral-Large-3","cat":"text","in":0.44,"out":1.32,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理","desc":"Mistral Large 3 在遵循指令、维持多轮对话上下文、以及在冗长或复杂交流中保持连贯性方面，表现位列最佳开放模型之一。它能以稳定的准确度处理长文本输入和多模态内容，相比大多数同类模型，展现出更少的性能骤降和更可预测的结果。这种均衡的特性使其非常适用于生产级智能助手、检索增强系统和多模态应用。","isNew":true},{"name":"Qwen3.5-35B-A3B","cat":"text","in":0.2575,"out":2.06,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"深度思考视觉理解文本生成","desc":"Qwen3.5系列35B-A3B原生视觉语言模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。该模型的综合表现接近于Qwen3.5-27B。","isNew":true},{"name":"Qwen3.5-27B","cat":"text","in":0.309,"out":2.472,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"深度思考视觉理解文本生成","desc":"Qwen3.5系列27B原生视觉语言Dense模型，融合了线性注意力机制；响应速度快，兼具推理速度和性能。该模型的综合能力接近于Qwen3.5-122B-A10B。","isNew":true},{"name":"Qwen3.5-122B-A10B","cat":"text","in":0.412,"out":3.296,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"深度思考视觉理解文本生成","desc":"Qwen3.5系列122B-A10B原生视觉语言模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。该模型的综合表现仅次于Qwen3.5-397B-A17B，文本能力显著优于Qwen3-235B-2507，视觉能力优于Qwen3-VL-235B。","isNew":false},{"name":"Llama-4-Maverick","cat":"text","in":0.22,"out":0.88,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 输出:文本","tags":"文本生成任务推理","desc":"对于视觉，Llama 4模型还针对视觉识别、图像推理、字幕和回答关于图像的一般问题进行了优化。Llama 4模型集合还支持利用其模型的输出来改进其他模型的能力，包括合成数据生成和提取。","isNew":false},{"name":"Llama-3.3-70B-Instruct","cat":"text","in":0.6248,"out":0.6248,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理","desc":"Llama 3.3 指令微调纯文本模型针对多语言对话场景进行了优化，在主流行业基准测试中，其性能优于市面上多款开源及闭源对话模型。","isNew":true},{"name":"Qwen3.5-Plus","cat":"text","in":0.412,"out":2.472,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成深度思考视觉理解","desc":"Qwen3.5原生视觉语言系列Plus模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。在多项任务评测中，3.5系列均展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果在纯文本与多模态方面相较3系列均实现飞跃式进步。","isNew":true},{"name":"Qwen3.5-Flash","cat":"text","in":0.103,"out":0.412,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成深度思考视觉理解","desc":"Qwen3.5原生视觉语言系列Flash模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。模型效果在纯文本与多模态方面相较3系列均实现飞跃式进步；响应速度快，兼具推理速度和性能。","isNew":true},{"name":"Qwen3.5-397B-A17B","cat":"text","in":0.618,"out":3.708,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"文本生成深度思考视觉理解","desc":"Qwen3.5系列397B-A17B原生视觉语言模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。在语言理解、逻辑推理、代码生成、智能体任务、图像理解、视频理解、图形用户界面（GUI）等多种任务中，均展现出与当前顶尖前沿模型相媲美的卓越性能。具备强大的代码生成与智能体能力，对于各类智能体场景具有良好的泛化性。","isNew":false},{"name":"Qwen3-Max","cat":"text","in":1.236,"out":6.18,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理","desc":"通义千问3系列Max模型，相较preview版本在智能体编程与工具调用方向进行了专项升级。本次发布的正式版模型达到领域SOTA水平，适配场景更加复杂的智能体需求。","isNew":false},{"name":"Qwen3-Max-Preview","cat":"text","in":1.236,"out":6.18,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"通义千问3系列Max模型Preview版本，实现思考模式和非思考模式的有效融合。思考模式下在智能体编程能力、常识知识推理能力、数学/科学/通用类推理等能力上均有显著增强。","isNew":false},{"name":"Qwen-Max","cat":"text","in":1.648,"out":6.592,"unit":"USD/M","ctx":"32K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理","desc":"通义千问2.5系列千亿级别超大规模语言模型，支持中文、英文等不同语言输入。随着模型的升级，qwen-max将滚动更新升级。如果希望使用固定版本，请使用历史快照版本。","isNew":false},{"name":"Qwen-Max-Latest","cat":"text","in":1.648,"out":6.592,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理","desc":"通义千问系列效果最好的模型，本模型是动态更新版本，模型更新不会提前通知，适合复杂、多步骤的任务，模型中英文综合能力显著提升，模型人类偏好显著提升，模型推理能力和复杂指令理解能力显著增强，困难任务上的表现更优，数学、代码能力显著提升，提升对Table、JSON等结构化数据的理解和生成能力。","isNew":false},{"name":"Qwen-Plus","cat":"text","in":0.412,"out":1.236,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"Qwen3系列Plus模型，实现思考模式和非思考模式的有效融合，可在对话中切换模式。推理能力显著超过QwQ、通用能力显著超过Qwen2.5-Plus，达到同规模业界SOTA水平。","isNew":false},{"name":"Qwen-Plus-Latest","cat":"text","in":0.412,"out":1.236,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"通义千问系列能力均衡的模型，推理效果和速度介于通义千问-Max和通义千问-Turbo之间，适合中等复杂任务。本模型是动态更新版本，模型更新不会提前通知。","isNew":false},{"name":"Qwen-Flash","cat":"text","in":0.0515,"out":0.412,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"Qwen3系列Flash模型，实现思考模式和非思考模式的有效融合，可在对话中切换模式。复杂推理类任务性能优秀，指令遵循、文本理解等能力显著提高。支持1M上下文长度，按照上下文长度进行阶梯计费。","isNew":false},{"name":"Qwen3-VL-Plus","cat":"text","in":0.206,"out":1.648,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"视觉理解深度思考","desc":"Qwen3系列视觉理解模型，实现思考模式和非思考模式的有效融合，视觉智能体能力在OS World等公开测试集上达到世界顶尖水平。此版本在视觉coding、空间感知、多模态思考等方向全面升级；视觉感知与识别能力大幅提升，支持超长视频理解。","isNew":false},{"name":"Qwen3-VL-Flash","cat":"text","in":0.0515,"out":0.412,"unit":"USD/M","ctx":"256K","mods":"输入:文本 图像 视频 输出:文本","tags":"视觉理解深度思考","desc":"Qwen3系列小尺寸视觉理解模型，实现思考模式和非思考模式的有效融合，效果优于开源版Qwen3-VL-30B-A3B，响应速度快。全面升级图像/视频理解，支持长视频长文档等超长上下文、空间感知与万物识别；具备视觉2D/3D定位能力，胜任复杂现实任务。","isNew":false},{"name":"Qwen3-Coder-Plus","cat":"text","in":1.03,"out":5.15,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 输出:文本","tags":"文本生成代码助手","desc":"基于Qwen3的代码生成模型，具有强大的Coding Agent能力，擅长工具调用和环境交互，能够实现自主编程、代码能力卓越的同时兼具通用能力。","isNew":true},{"name":"Qwen3-Coder-Next","cat":"text","in":0.309,"out":1.545,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成代码助手","desc":"Qwen3系列新一代代码生成模型，效果接近Qwen3-Coder-Plus兼具更优性能。模型重点优化仓库级别理解、支持多轮工具交互、提升对于agentic coding类工具的适配能力。","isNew":false},{"name":"Qwen3-Coder-Flash","cat":"text","in":0.309,"out":1.545,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 输出:文本","tags":"文本生成代码助手","desc":"基于Qwen3的代码生成模型，继承Qwen3-Coder-Plus的coding agent能力，支持多轮工具交互，重点优化仓库级别理解能力并增加工具调用稳定性。","isNew":false},{"name":"Qwen3-Next-80B-A3B-Thinking","cat":"text","in":0.1545,"out":1.236,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"基于Qwen3的新一代思考模式开源模型，相较上一版本（通义千问3-235B-A22B-Thinking-2507指令遵循能力有提升、模型总结回复更加精简。","isNew":false},{"name":"Qwen3-Next-80B-A3B-Instruct","cat":"text","in":0.1545,"out":1.236,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理","desc":"基于Qwen3的新一代非思考模式开源模型，相较上一版本（通义千问3-235B-A22B-Instruct-2507）中文文本理解能力更佳、逻辑推理能力有增强、文本生成类任务表现更好。","isNew":false},{"name":"Qwen3-235B-A22B-Thinking-2507","cat":"text","in":0.2369,"out":2.369,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"基于Qwen3的思考模式开源模型，相较上一版本（通义千问3-235B-A22B）逻辑能力、通用能力、知识增强及创作能力均有大幅提升，适用于高难度强推理场景。","isNew":false},{"name":"Qwen3-235B-A22B-Instruct-2507","cat":"text","in":0.2369,"out":0.9476,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理","desc":"基于Qwen3的非思考模式开源模型，相较上一版本（通义千问3-235B-A22B）主观创作能力与模型安全性均有小幅度提升。","isNew":false},{"name":"Qwen3-30B-A3B-Thinking-2507","cat":"text","in":0.206,"out":2.472,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"基于Qwen3的思考模式开源模型，相较上一版本（通义千问3-30B-A3B）复杂推理类任务性能优秀，包括逻辑推理、数学、科学、代码类等具有一定难度的任务场景，指令遵循、文本理解、多语言翻译等能力显著提高。","isNew":false},{"name":"Qwen3-30B-A3B-Instruct-2507","cat":"text","in":0.206,"out":0.824,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理","desc":"基于Qwen3的非思考模式开源模型，相较上一版本（通义千问3-30B-A3B）中英文和多语言整体通用能力有大幅提升。主观开放类任务专项优化，显著更加符合用户偏好，能够提供更有帮助性的回复。","isNew":false},{"name":"Qwen3-235B-A22B","cat":"text","in":0.721,"out":2.884,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"实现思考模式和非思考模式的有效融合，可在对话中切换模式。推理能力显著超过QwQ、通用能力显著超过Qwen2.5-72B-Instruct，达到同规模业界SOTA水平。","isNew":false},{"name":"Qwen3-32B","cat":"text","in":0.1648,"out":0.6592,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"实现思考模式和非思考模式的有效融合，可在对话中切换模式。推理能力显著超过QwQ、通用能力显著超过Qwen2.5-32B-Instruct，达到同规模业界SOTA水平。","isNew":false},{"name":"Qwen3-30B-A3B","cat":"text","in":0.206,"out":2.472,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"实现思考模式和非思考模式的有效融合，可在对话中切换模式。推理能力以更小参数规模比肩QwQ-32B、通用能力显著超过Qwen2.5-14B，达到同规模业界SOTA水平。","isNew":false},{"name":"Qwen3-8B","cat":"text","in":0.1854,"out":2.163,"unit":"USD/M","ctx":"128K","mods":"输入:文本 输出:文本","tags":"文本生成任务推理深度思考","desc":"实现思考模式和非思考模式的有效融合，可在对话中切换模式。推理能力达到同规模业界SOTA水平、通用能力显著超过Qwen2.5-7B。","isNew":false},{"name":"Qwen3-VL-235B-A22B-Thinking","cat":"text","in":0.412,"out":4.12,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 视频 输出:文本","tags":"视觉理解深度思考","desc":"Qwen3系列视觉理解模型，多模态思考能力显著增强，模型在STEM与数学推理方面进行了重点优化；视觉感知与识别能力全面提升、OCR能力迎来重大升级。","isNew":false},{"name":"Qwen3-VL-235B-A22B-Instruct","cat":"text","in":0.412,"out":1.648,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 视频 输出:文本","tags":"视觉理解","desc":"Qwen3系列视觉理解模型，在视觉coding、空间感知等方向全面升级；视觉感知与识别能力大幅提升，支持超长视频理解，OCR能力迎来重大升级。","isNew":false},{"name":"Qwen3-VL-30B-A3B-Thinking","cat":"text","in":0.206,"out":2.472,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 视频 输出:文本","tags":"视觉理解深度思考","desc":"Qwen3-VL系列第二大MoE模型的Thinking版本，响应速度快，具备更强多模态理解与推理、视觉智能体、长视频长文档等超长上下文支持能力；全面升级图像/视频理解、空间感知与万物识别能力，胜任复杂现实任务。","isNew":false},{"name":"Qwen3-VL-30B-A3B-Instruct","cat":"text","in":0.206,"out":0.824,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 视频 输出:文本","tags":"视觉理解","desc":"Qwen3-VL系列第二大MoE模型的Instruct版本，响应速度快，支持长视频长文档等超长上下文；全面升级图像/视频理解、空间感知与万物识别能力；具备视觉2D/3D定位能力，胜任复杂现实任务。","isNew":false},{"name":"Qwen3-VL-8B-Instruct","cat":"text","in":0.1854,"out":0.721,"unit":"USD/M","ctx":"128K","mods":"输入:文本 图像 视频 输出:文本","tags":"视觉理解","desc":"Qwen3-VL系列8B Dense模型的Instruct版本，占用显存更低，全面升级图像/视频理解、长视频长文档等超长上下文支持、空间感知与万物识别能力，胜任复杂现实任务。","isNew":false},{"name":"Qwen3-Coder-480B-A35B-Instruct","cat":"text","in":1.545,"out":7.725,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成代码助手","desc":"基于Qwen3的代码生成模型，具有强大的Coding Agent能力，代码能力达到开源模型 SOTA。","isNew":false},{"name":"Qwen3-Coder-30B-A3B-Instruct","cat":"text","in":0.4635,"out":2.3175,"unit":"USD/M","ctx":"256K","mods":"输入:文本 输出:文本","tags":"文本生成代码助手","desc":"基于Qwen3的代码生成模型，继承Qwen3-Coder-480B-A35B-Instruct的coding agent能力，代码能力达到同尺寸规模模型SOTA。","isNew":false},{"name":"Gemini 3 Flash Preview","cat":"text","in":0.45,"out":2.7,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 音频 图像 视频 输出:文本","tags":"文本生成","desc":"Gemini 3 Flash Preview 是谷歌功能最强大的智能体和编码模型。它具备100万个词元的上下文窗口，并拥有最佳的多模态理解能力。","isNew":true},{"name":"Gemini 3.1 Pro Preview","cat":"text","in":1.8,"out":10.8,"unit":"USD/M","ctx":"1000K","mods":"输入:文本 图像 视频 音频 输出:文本","tags":"文本生成任务推理深度思考视觉理解多模态代码助手","desc":"Gemini 3.1 Pro专为应对最具挑战性的智能体问题而设计，具备强大的编码能力、顶尖的推理能力以及复杂的多模态理解能力。与Gemini 2.5 Pro相比，它在遵循复杂指令方面的能力提升显著，并以更高的输出效率实现了成果的优化提升。","isNew":false},{"name":"Gemini 2.5 Flash-Lite","cat":"text","in":0.09,"out":0.36,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 音频 图像 视频 输出:文本","tags":"文本生成","desc":"Gemini 2.5 系列模型是具备思维能力的推理型模型，能够在回应前进行内部推理思考，从而提高回答的准确性。Gemini 2.5 Flash-Lite 适用于对延迟敏感的应用场景。","isNew":false},{"name":"Gemini 2.5 Pro","cat":"text","in":1.125,"out":9,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 音频 图像 视频 输出:文本","tags":"文本生成","desc":"Gemini 2.5 Pro 提供了最强的模型质量，尤其在代码和世界知识方面表现突出。它具备100万个词元的上下文窗口。","isNew":false},{"name":"Gemini 2.5 Flash","cat":"text","in":0.27,"out":2.25,"unit":"USD/M","ctx":"1024K","mods":"输入:文本 音频 图像 视频 输出:文本","tags":"文本生成","desc":"Gemini 2.5 系列模型是推理型模型，能够在回应前进行内部思考推理，从而提升整体表现并提高准确性。Gemini 2.5 Flash 在推理能力与响应速度之间实现了最佳平衡。","isNew":false},{"name":"GPT-image-2","cat":"image","in":4.4,"out":26.4,"unit":"USD/M","ctx":null,"mods":"","tags":"图像生成图像处理 输入: 文本 图像 , 输出: 图像","desc":"GPT-image-2 是 OpenAI 最新的尖端图像生成模型。核心升级优势包括：综合性能更强、出图画质更高、编辑操控性更完善，以及人脸特征保真能力优化。该模型具备超高输入图文还原度，支持在保留画面其余元素不变的前提下，单独增删图像某一局部内容。同时在画面比例、输出分辨率、图像编辑能力三大维度均完成全面升级。","isNew":false}],
+
   pricing: {
-    vendors: ["官方原厂", "移动云 MoMA", "CMI AI Hub", "OpenRouter", "硅基流动", "DMXAPI", "Together AI", "Novita AI"],
-    rows: [
-      { model: "DeepSeek-V4-Pro", ctx: "1024K", note: "旗舰 MoE 1.6T", cells: {
-        "CMI AI Hub": "$1.53 / $3.06", "硅基流动": "¥12 / 24(缓存 0.1)", "DMXAPI": "¥2.55 / 5.1(8.5 折)", "Together AI": "$1.74 / $3.48", "Novita AI": "$1.60 / $3.20(缓存 0.135)", "OpenRouter": "透传上游价", "官方原厂": "见 DeepSeek 官网", "移动云 MoMA": "—" } },
-      { model: "DeepSeek-V4-Flash", ctx: "1024K", note: "高并发轻量", cells: {
-        "CMI AI Hub": "$0.167 / $0.449", "硅基流动": "¥1 / 2(缓存 0.02)", "DMXAPI": "¥0.79 / 1.58(7.9 折)", "Novita AI": "$0.14 / $0.28(缓存 0.028)", "OpenRouter": "透传上游价", "官方原厂": "见 DeepSeek 官网", "移动云 MoMA": "—", "Together AI": "—" } },
-      { model: "DeepSeek-V3.2", ctx: "256K", note: "稀疏注意力正式版", cells: {
-        "CMI AI Hub": "$0.51 / $1.48", "硅基流动": "¥4 / 6(缓存 0.4)", "DMXAPI": "¥1.58 / 2.37(7.9 折)", "Novita AI": "$0.269 / $0.40(缓存 0.135)", "官方原厂": "见 DeepSeek 官网", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "Together AI": "—" } },
-      { model: "DeepSeek-V3", ctx: "128K", note: "官方直调最低", cells: {
-        "官方原厂": "¥0.14 / 0.28(缓存 0.0028)", "移动云 MoMA": "¥2 / 8", "OpenRouter": "透传上游价", "CMI AI Hub": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
-      { model: "DeepSeek-R1", ctx: "320K", note: "推理模型", cells: {
-        "移动云 MoMA": "¥4 / 16", "CMI AI Hub": "$1.188 / $4.752", "Novita AI": "$0.70 / $2.50(0528 版)", "DMXAPI": "¥4 / 16(官方直连无折扣)", "官方原厂": "见 DeepSeek 官网", "OpenRouter": "透传上游价", "硅基流动": "—", "Together AI": "—" } },
-      { model: "GLM-5.2", ctx: "1M", note: "智谱最新旗舰", cells: {
-        "硅基流动": "¥8 / 28(缓存 2)", "Together AI": "$1.40 / $4.40(缓存 0.26)", "Novita AI": "$1.40 / $4.40(缓存 0.26)", "官方原厂": "见智谱官网", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "DMXAPI": "—" } },
-      { model: "GLM-5.1", ctx: "200K", note: "MoMA 与官方同价", cells: {
-        "移动云 MoMA": "¥6 / 24(32K 以上档 8 / 28)", "硅基流动": "¥6 / 24(Pro 同价,缓存 1.3)", "Together AI": "$1.40 / $4.40", "Novita AI": "$1.38 / $4.40", "官方原厂": "见智谱官网", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "DMXAPI": "—" } },
-      { model: "Kimi-K2.6", ctx: "256K", note: "Novita 渠道最低", cells: {
-        "官方原厂": "¥6.5 / 27(缓存 1.1)", "硅基流动": "¥6.5 / 27(缓存 1.1)", "Together AI": "$1.20 / $4.50(缓存 0.20)", "Novita AI": "$0.80 / $3.40(缓存 0.16)", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "DMXAPI": "—" } },
-      { model: "Qwen3.7-Max", ctx: "1000K", note: "阿里旗舰", cells: {
-        "DMXAPI": "¥11.4 / 34.2(原价 ¥12/36,9.5 折)", "CMI AI Hub": "$2.575 / $7.725", "Together AI": "$1.25 / $3.75(缓存 0.13)", "Novita AI": "$1.25 / $3.75(缓存 0.25)", "官方原厂": "见百炼定价页", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—" } },
-      { model: "Qwen3.7-Plus", ctx: "1000K", note: "高性价比多模态", cells: {
-        "CMI AI Hub": "$0.412 / $1.648", "DMXAPI": "¥1.58 / 6.32(原价 ¥2/8,7.9 折)", "Together AI": "$0.32 / $1.28", "官方原厂": "见百炼定价页", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "Novita AI": "—" } },
-      { model: "Qwen3.5-Plus", ctx: "1000K", note: "DMXAPI 5 折最低", cells: {
-        "官方原厂": "¥0.8 / 4.8(原价)", "DMXAPI": "¥0.4 / 2.4(5 折)", "CMI AI Hub": "$0.412 / $2.472", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "Together AI": "—", "Novita AI": "—" } },
-      { model: "Qwen3.5-397B-A17B", ctx: "256K", note: "旗舰开源 MoE", cells: {
-        "硅基流动": "¥1.2 / 7.2(≤128K 档)", "DMXAPI": "¥0.4 / 2.4(5 折)", "Together AI": "$0.60 / $3.60(缓存 0.35)", "Novita AI": "$0.60 / $3.60", "官方原厂": "开源免费(自托管)", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价" } },
-      { model: "Qwen3.5-35B-A3B", ctx: "256K", note: "轻量 MoE", cells: {
-        "移动云 MoMA": "¥0.4 / 3.2(128K 以上档 1.6 / 12.8)", "硅基流动": "¥0.4 / 3.2(≤128K 档)", "DMXAPI": "¥0.2 / 1.6(5 折)", "Novita AI": "$0.25 / $2.00", "CMI AI Hub": "$0.386 / $2.318(3.6 版)", "官方原厂": "开源免费(自托管)", "OpenRouter": "透传上游价", "Together AI": "—" } },
-      { model: "MiniMax-M3", ctx: "1M", note: "Agent 原生 MoE", cells: {
-        "DMXAPI": "¥1.869 / 7.476(原价 ¥2.1/8.4,8.9 折)", "Together AI": "$0.30 / $1.20(缓存 0.06)", "官方原厂": "见 MiniMax 官网", "移动云 MoMA": "—", "CMI AI Hub": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "Novita AI": "—" } },
-      { model: "MiniMax-M2.5", ctx: "128K", note: "MoMA/硅基/CMI 同价", cells: {
-        "移动云 MoMA": "¥2.1 / 8.4", "硅基流动": "¥2.1 / 8.4(缓存 0.21)", "CMI AI Hub": "$0.2418 / $0.9672", "Novita AI": "$0.30 / $1.20", "官方原厂": "见 MiniMax 官网", "OpenRouter": "透传上游价", "DMXAPI": "—", "Together AI": "—" } },
-      { model: "Claude Opus 4.8", ctx: "1000K", note: "海外旗舰,CMI 同价", cells: {
-        "官方原厂": "$5.25 / $26.25", "CMI AI Hub": "$5.25 / $26.25(与官方同价)", "OpenRouter": "透传官方价", "移动云 MoMA": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
-      { model: "Claude Sonnet 4.6", ctx: "200K", note: "海外中坚", cells: {
-        "官方原厂": "$2.91 / $14.55", "CMI AI Hub": "$2.91 / $14.55(与官方同价)", "OpenRouter": "透传官方价", "移动云 MoMA": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
-      { model: "GPT-5.6 Terra / Sol", ctx: "1024K", note: "海外旗舰,CMI 同价", cells: {
-        "官方原厂": "Terra $2.2 / $13.2;Sol $4.4 / $26.4", "CMI AI Hub": "与官方同价", "OpenRouter": "透传官方价", "移动云 MoMA": "—", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—", "Novita AI": "—" } },
-      { model: "GPT-OSS-120b(开源)", ctx: "128K", note: "Novita 渠道最低", cells: {
-        "Novita AI": "$0.05 / $0.25", "CMI AI Hub": "$0.095 / $0.475", "Together AI": "$0.15 / $0.60", "官方原厂": "开源免费(自托管)", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "DMXAPI": "—" } },
-      { model: "Llama-4-Maverick", ctx: "1000K", note: "Meta 开源旗舰", cells: {
-        "CMI AI Hub": "$0.22 / $0.88", "Novita AI": "$0.27 / $0.85", "官方原厂": "开源免费(自托管)", "移动云 MoMA": "—", "OpenRouter": "透传上游价", "硅基流动": "—", "DMXAPI": "—", "Together AI": "—" } }
-    ],
-    mmRows: [
-      { model: "Veo 3.1(视频)", unit: "美元/秒", cells: { "CMI AI Hub": "$0.18(视频)/ $0.36(含音频)", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—", "官方原厂": "见 Google 官网" } },
-      { model: "Wan2.7-T2v(文生视频)", unit: "美元/秒", cells: { "CMI AI Hub": "$0.1545 / 秒", "DMXAPI": "¥0.6 / 秒(720P)、¥1 / 秒(1080P)", "官方原厂": "见百炼定价页", "Novita AI": "—", "硅基流动": "—" } },
-      { model: "Seedance-1.5-Pro(视频)", unit: "美元/百万 tokens", cells: { "CMI AI Hub": "$1.14(视频)/ $2.28(含音频)", "官方原厂": "见火山引擎", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—" } },
-      { model: "Kling v1.6 i2v(视频)", unit: "美元/个", cells: { "Novita AI": "$0.27(5s 720P)/ $0.54(10s)", "官方原厂": "见快影官方", "CMI AI Hub": "—", "DMXAPI": "—", "硅基流动": "—" } },
-      { model: "Wan2.2-I2V/T2V-A14B(视频)", unit: "元/个", cells: { "硅基流动": "¥2 / 个", "官方原厂": "开源免费(自托管)", "CMI AI Hub": "—", "DMXAPI": "—", "Novita AI": "—" } },
-      { model: "Qwen-Image(文生图)", unit: "美元/张", cells: { "CMI AI Hub": "$0.036 / 张", "硅基流动": "¥0.30 / 张", "DMXAPI": "¥0.25 / 张", "Novita AI": "$0.02 / 张", "官方原厂": "见百炼定价页" } },
-      { model: "Seedream-4.5(图像)", unit: "美元/张", cells: { "CMI AI Hub": "$0.038 / 张", "官方原厂": "见火山引擎", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—" } },
-      { model: "Z-Image-Turbo(图像)", unit: "元/张", cells: { "硅基流动": "¥0.10 / 张", "DMXAPI": "¥0.10-0.20 / 张", "官方原厂": "见通义官网", "CMI AI Hub": "—", "Novita AI": "—" } },
-      { model: "GPT-Image-1(图像)", unit: "美元/百万 tokens", cells: { "CMI AI Hub": "输入 $4.4(文本)/ $8.8(图片),输出 $35.2", "官方原厂": "见 OpenAI 官网", "Novita AI": "—", "DMXAPI": "—", "硅基流动": "—" } }
-    ],
-    findings: [
-      { title: "国产旗舰:官方/原厂直调或折扣聚合最低", desc: "DeepSeek-V3 官方 0.14/0.28 元为全渠道最低;DeepSeek-V4-Pro 经 DMXAPI 8.5 折后(2.55/5.1 元)低于硅基流动(12/24 元);Qwen3.5-Plus 经 DMXAPI 5 折(0.4/2.4 元)为国产模型最低档 —— 折扣聚合平台正在改写价格锚点。" },
-      { title: "Kimi-K2.6、GPT-OSS-120b:Novita 全渠道最低", desc: "Kimi-K2.6 在 Novita($0.80/$3.40)低于官方与硅基(¥6.5/27);GPT-OSS-120b 在 Novita($0.05/$0.25)同样最低 —— 开源/海外托管模型的价格洼地在美国二线推理云。" },
-      { title: "MoMA:GLM-5.1 与官方同价,运营商走'同价+服务'路线", desc: "GLM-5.1 在 MoMA(6/24 元)与硅基一致;MiniMax-M2.5 在 MoMA/硅基/CMI 三家同价 —— 头部模型在各渠道价格趋同,竞争转向服务与治理。" },
-      { title: "海外旗舰:CMI AI Hub 与官方美元同价", desc: "Claude Opus 4.8($5.25/$26.25)、GPT-5.6 等在 CMI 与官方价一致,省去境外支付/合规/网络成本,是跨境调用的价格锚点;OpenRouter 为透传价+5.5% 充值手续费。" },
-      { title: "成本优化组合拳已成行业标配", desc: "缓存命中价(硅基低至 0.02 元/百万)、批量 5 折(Novita Batch)、预留吞吐(Together PTU、天翼 TPM 包)、分段计价(长上下文加价)—— 平台需同时具备四类机制才有成本竞争力。" }
-    ]
-  },
+  "vendors": [
+    "官方原厂",
+    "CMI AI Hub",
+    "移动云 MoMA",
+    "硅基流动",
+    "DMXAPI",
+    "OpenRouter",
+    "Novita AI",
+    "Together AI",
+    "天翼云星辰MaaS",
+    "阿里云百炼",
+    "火山引擎方舟",
+    "百度千帆",
+    "腾讯云",
+    "DeepSeek",
+    "智谱",
+    "Kimi",
+    "MiniMax"
+  ],
+  "rows": [
+    {
+      "model": "DeepSeek-V4-Pro",
+      "ctx": "1024K",
+      "note": "文本生成任务推理代码助手深度思考",
+      "cells": {
+        "官方原厂": "¥3 / ¥6(缓存0.025)",
+        "CMI AI Hub": "$1.5312 / $3.0624 · $1.5312 / $3.0624 · $1.5312 / $3.0624",
+        "移动云 MoMA": null,
+        "硅基流动": "¥12 / ¥24(缓存0.1)",
+        "DMXAPI": "¥2.55 / ¥5.1(缓存0.025)",
+        "OpenRouter": "$0.435 / $0.87(缓存0.003625)",
+        "Novita AI": "$1.6 / $3.2(缓存0.135)",
+        "Together AI": "$1.74 / $3.48(缓存0.2)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "DeepSeek-V4-Flash",
+      "ctx": "1024K",
+      "note": "文本生成任务推理代码助手",
+      "cells": {
+        "官方原厂": "¥1 / ¥2(缓存0.02)",
+        "CMI AI Hub": "$0.1672 / $0.4488 · $0.1672 / $0.4488",
+        "移动云 MoMA": "¥1 / ¥2",
+        "硅基流动": "¥1 / ¥2(缓存0.02)",
+        "DMXAPI": "¥0.79 / ¥1.58(缓存0.02)",
+        "OpenRouter": "$0.09 / $0.18(缓存0.018)",
+        "Novita AI": "$0.14 / $0.28(缓存0.028)",
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "DeepSeek-V3.2",
+      "ctx": "256K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$0.28 / $0.42(缓存0.028)",
+        "CMI AI Hub": "$0.5104 / $1.4784",
+        "移动云 MoMA": null,
+        "硅基流动": "¥4 / ¥6(缓存0.4)",
+        "DMXAPI": "¥1.58 / ¥2.37",
+        "OpenRouter": "$0.2072 / $0.3108",
+        "Novita AI": "$0.269 / $0.4(缓存0.1345)",
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "DeepSeek-R1",
+      "ctx": "320K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$0.7 / $2.5",
+        "CMI AI Hub": "$1.188 / $4.752 · $1.188 / $4.752",
+        "移动云 MoMA": "¥4 / ¥16",
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$0.7 / $2.5",
+        "Novita AI": "$0.7 / $2.5(缓存0.35)",
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "DeepSeek-V3",
+      "ctx": "",
+      "note": "",
+      "cells": {
+        "官方原厂": "$0.2 / $0.8",
+        "CMI AI Hub": null,
+        "移动云 MoMA": "¥2 / ¥8",
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GLM-5.2",
+      "ctx": "",
+      "note": "",
+      "cells": {
+        "官方原厂": "$1.4 / $4.4(缓存0.26)",
+        "CMI AI Hub": null,
+        "移动云 MoMA": "¥8 / ¥28(缓存2)",
+        "硅基流动": "¥8 / ¥28(缓存2)",
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": "$1.4 / $4.4(缓存0.26)",
+        "Together AI": "$1.4 / $4.4(缓存0.26)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GLM-5.1",
+      "ctx": "",
+      "note": "",
+      "cells": {
+        "官方原厂": "$1.4 / $4.4(缓存0.26)",
+        "CMI AI Hub": null,
+        "移动云 MoMA": "¥6 / ¥24(缓存1.3)",
+        "硅基流动": "¥6 / ¥24(缓存1.3)",
+        "DMXAPI": null,
+        "OpenRouter": "$0.952 / $2.992(缓存0.26)",
+        "Novita AI": "$1.38 / $4.4(缓存0.26)",
+        "Together AI": "$1.4 / $4.4(缓存0.26)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Kimi-K2.6",
+      "ctx": "",
+      "note": "",
+      "cells": {
+        "官方原厂": "¥6.5 / ¥27(缓存1.1)",
+        "CMI AI Hub": null,
+        "移动云 MoMA": "¥6.5 / ¥27(缓存1.1)",
+        "硅基流动": "¥6.5 / ¥27(缓存1.1)",
+        "DMXAPI": null,
+        "OpenRouter": "$0.6 / $3.41(缓存0.2)",
+        "Novita AI": "$0.8 / $3.4(缓存0.16)",
+        "Together AI": "$1.2 / $4.5(缓存0.2)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Kimi-K3",
+      "ctx": "",
+      "note": "",
+      "cells": {
+        "官方原厂": "¥20 / ¥100(缓存2)",
+        "CMI AI Hub": null,
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": "$3 / $15(缓存0.3)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3.7-Max",
+      "ctx": "991K",
+      "note": "文本生成代码助手深度思考",
+      "cells": {
+        "官方原厂": "¥12 / ¥36",
+        "CMI AI Hub": "$2.575 / $7.725",
+        "移动云 MoMA": "¥12 / ¥36(缓存2.4)",
+        "硅基流动": null,
+        "DMXAPI": "¥9 / ¥35",
+        "OpenRouter": "$1.475 / $4.425(缓存0.295)",
+        "Novita AI": "$1.25 / $3.75(缓存0.25)",
+        "Together AI": "$1.25 / $3.75(缓存0.13)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3.7-Plus",
+      "ctx": "1000K",
+      "note": "文本生成深度思考视觉理解多模态代码助手",
+      "cells": {
+        "官方原厂": "¥2 / ¥8",
+        "CMI AI Hub": "$0.412 / $1.648",
+        "移动云 MoMA": "¥2 / ¥8(缓存0.4)",
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$0.32 / $1.28(缓存0.064)",
+        "Novita AI": null,
+        "Together AI": "$0.32 / $1.28",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3.5-Plus",
+      "ctx": "1000K",
+      "note": "文本生成深度思考视觉理解",
+      "cells": {
+        "官方原厂": "¥0.8 / ¥4.8",
+        "CMI AI Hub": "$0.412 / $2.472",
+        "移动云 MoMA": "¥0.8 / ¥4.8(缓存0.08)",
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3.5-397B-A17B",
+      "ctx": "256K",
+      "note": "文本生成深度思考视觉理解",
+      "cells": {
+        "官方原厂": "¥1.2 / ¥7.2",
+        "CMI AI Hub": "$0.618 / $3.708",
+        "移动云 MoMA": null,
+        "硅基流动": "¥1.2 / ¥7.2",
+        "DMXAPI": null,
+        "OpenRouter": "$0.385 / $2.45(缓存0.111)",
+        "Novita AI": "$0.6 / $3.6",
+        "Together AI": "$0.6 / $3.6(缓存0.35)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3.5-35B-A3B",
+      "ctx": "256K",
+      "note": "深度思考视觉理解文本生成",
+      "cells": {
+        "官方原厂": "¥0.4 / ¥3.2",
+        "CMI AI Hub": "$0.2575 / $2.06",
+        "移动云 MoMA": "¥0.4 / ¥3.2",
+        "硅基流动": "¥0.4 / ¥3.2",
+        "DMXAPI": null,
+        "OpenRouter": "$0.14 / $1(缓存0.05)",
+        "Novita AI": "$0.25 / $2",
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3.5-27B",
+      "ctx": "256K",
+      "note": "深度思考视觉理解文本生成",
+      "cells": {
+        "官方原厂": "¥0.6 / ¥4.8",
+        "CMI AI Hub": "$0.309 / $2.472",
+        "移动云 MoMA": "¥0.6 / ¥4.8",
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3.5-122B-A10B",
+      "ctx": "256K",
+      "note": "深度思考视觉理解文本生成",
+      "cells": {
+        "官方原厂": "¥0.8 / ¥6.4",
+        "CMI AI Hub": "$0.412 / $3.296",
+        "移动云 MoMA": null,
+        "硅基流动": "¥0.8 / ¥6.4",
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3-Max",
+      "ctx": "256K",
+      "note": "文本生成任务推理",
+      "cells": {
+        "官方原厂": "¥2.5 / ¥10",
+        "CMI AI Hub": "$1.236 / $6.18",
+        "移动云 MoMA": "¥2.5 / ¥10(缓存0.5)",
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$0.78 / $3.9",
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen-Max",
+      "ctx": "32K",
+      "note": "文本生成任务推理",
+      "cells": {
+        "官方原厂": "$1.648 / $6.592",
+        "CMI AI Hub": "$1.648 / $6.592",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "ctx": "",
+      "note": "",
+      "cells": {
+        "官方原厂": "¥3.15 / ¥12.6(缓存0.63)",
+        "CMI AI Hub": null,
+        "移动云 MoMA": "¥2.1 / ¥8.4(缓存0.42)",
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$0.24 / $0.96(缓存0.12)",
+        "Novita AI": null,
+        "Together AI": "$0.3 / $1.2(缓存0.06)",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "MiniMax-M2.5",
+      "ctx": "128K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "¥2.1 / ¥8.4(缓存0.21)",
+        "CMI AI Hub": "$0.2418 / $0.9672 · $0.2418 / $0.9672",
+        "移动云 MoMA": "¥2.1 / ¥8.4",
+        "硅基流动": "¥2.1 / ¥8.4(缓存0.21)",
+        "DMXAPI": null,
+        "OpenRouter": "$0.15 / $0.9(缓存0.05)",
+        "Novita AI": "$0.3 / $1.2(缓存0.03)",
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Claude Opus 4.8",
+      "ctx": "1000K",
+      "note": "文本生成任务推理代码助手深度思考多模态视觉理解",
+      "cells": {
+        "官方原厂": "$5.25 / $26.25",
+        "CMI AI Hub": "$5.25 / $26.25",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$5 / $25(缓存0.5)",
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Claude Opus 4.7",
+      "ctx": "1000K",
+      "note": "文本生成任务推理代码助手深度思考多模态视觉理解",
+      "cells": {
+        "官方原厂": "$5.25 / $26.25",
+        "CMI AI Hub": "$5.25 / $26.25",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$5 / $25(缓存0.5)",
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "ctx": "200K",
+      "note": "文本生成任务推理代码助手深度思考多模态",
+      "cells": {
+        "官方原厂": "$2.91 / $14.55",
+        "CMI AI Hub": "$2.91 / $14.55",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$3 / $15(缓存0.3)",
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5.6 (Terra/Sol/Luna)",
+      "ctx": "1024K",
+      "note": "文本生成视觉理解任务推理代码助手",
+      "cells": {
+        "官方原厂": "Terra $2.2/$13.2 · Sol $4.4/$26.4 · Luna $0.88/$5.28",
+        "CMI AI Hub": "$2.2 / $13.2 · $4.4 / $26.4 · $0.88 / $5.28",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$1.25 / $7.5(缓存0.25)",
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5.5",
+      "ctx": "922K",
+      "note": "文本生成任务推理深度思考视觉理解多模态代码助手",
+      "cells": {
+        "官方原厂": "$4.4 / $26.4",
+        "CMI AI Hub": "$4.4 / $26.4",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$5 / $30(缓存0.5)",
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5.4",
+      "ctx": "1050K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$2.2 / $13.2",
+        "CMI AI Hub": "$2.2 / $13.2",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5.4-Pro",
+      "ctx": "1050K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$26.4 / $158.4",
+        "CMI AI Hub": "$26.4 / $158.4",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5.3-Codex",
+      "ctx": "400K",
+      "note": "文本生成任务推理深度思考代码助手",
+      "cells": {
+        "官方原厂": "$1.54 / $12.32",
+        "CMI AI Hub": "$1.54 / $12.32",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5.2",
+      "ctx": "400K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$1.54 / $12.32",
+        "CMI AI Hub": "$1.54 / $12.32",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5.1",
+      "ctx": "400K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$1.1 / $8.8",
+        "CMI AI Hub": "$1.1 / $8.8",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-5",
+      "ctx": "400K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$1.1 / $8.8",
+        "CMI AI Hub": "$1.1 / $8.8",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-4.1",
+      "ctx": "1047K",
+      "note": "文本生成任务推理",
+      "cells": {
+        "官方原厂": "$1.76 / $7.04",
+        "CMI AI Hub": "$1.76 / $7.04",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "GPT-OSS-120b",
+      "ctx": "128K",
+      "note": "文本生成任务推理深度思考",
+      "cells": {
+        "官方原厂": "$0.095 / $0.475",
+        "CMI AI Hub": "$0.095 / $0.475 · $0.095 / $0.475",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$0.03 / $0.17(缓存0.03)",
+        "Novita AI": "$0.05 / $0.25",
+        "Together AI": "$0.15 / $0.6",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Llama-4-Maverick",
+      "ctx": "1000K",
+      "note": "文本生成任务推理",
+      "cells": {
+        "官方原厂": "$0.22 / $0.88",
+        "CMI AI Hub": "$0.22 / $0.88",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$0.2 / $0.8",
+        "Novita AI": "$0.27 / $0.85",
+        "Together AI": "$1.04 / $1.04",
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Gemini 2.5 Pro",
+      "ctx": "1024K",
+      "note": "文本生成",
+      "cells": {
+        "官方原厂": "$1.25 / $10",
+        "CMI AI Hub": "$1.125 / $9",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": "$1.25 / $10(缓存0.125)",
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Gemini 3.1 Pro",
+      "ctx": "1000K",
+      "note": "文本生成任务推理深度思考视觉理解多模态代码助手",
+      "cells": {
+        "官方原厂": "$1.8 / $10.8",
+        "CMI AI Hub": "$1.8 / $10.8",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3-Coder-Plus",
+      "ctx": "1000K",
+      "note": "文本生成代码助手",
+      "cells": {
+        "官方原厂": "$1.03 / $5.15",
+        "CMI AI Hub": "$1.03 / $5.15",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Qwen3-VL-235B-A22B",
+      "ctx": "",
+      "note": "",
+      "cells": {
+        "官方原厂": "$0.412 / $4.12",
+        "CMI AI Hub": null,
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    },
+    {
+      "model": "Mistral-Large-3",
+      "ctx": "256K",
+      "note": "文本生成任务推理",
+      "cells": {
+        "官方原厂": "$0.44 / $1.32",
+        "CMI AI Hub": "$0.44 / $1.32",
+        "移动云 MoMA": null,
+        "硅基流动": null,
+        "DMXAPI": null,
+        "OpenRouter": null,
+        "Novita AI": null,
+        "Together AI": null,
+        "天翼云星辰MaaS": null,
+        "阿里云百炼": null,
+        "火山引擎方舟": null,
+        "百度千帆": null,
+        "腾讯云": null,
+        "DeepSeek": null,
+        "智谱": null,
+        "Kimi": null,
+        "MiniMax": null
+      }
+    }
+  ],
+  "mmRows": [
+    {
+      "model": "Gemini 3.1 Flash Image (Nano Banana 2)",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$2.79 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Gemini 3 Pro Image (Nano Banana Pro)",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$11.16 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Dreamina-Seedance-2.0-fast",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$3.465 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Dreamina-Seedance-2.0",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$4.935 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.7-Videoedit",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.7-T2v",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.7-R2v",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.7-I2v",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.6-R2v",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.6-R2v-Flash",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.07725 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.5-I2v-Preview",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.6-I2v",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.6-I2v-Flash",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.07725 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.2-T2v-Plus",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.103 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.5-T2v-Preview",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.6-T2v",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.1-Vace-Plus",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.103 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.2-T2i-Plus",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0515 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.2-T2i-Flash",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.02575 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.5-T2i-Preview",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0309 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.5-I2i-Preview",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0309 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.7-Image-Pro",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.07725 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.7-Image",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0309 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Wan2.6-T2i",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0309 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image-Edit-Max",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.07725 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image-Edit",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.04635 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image-Edit-Plus",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0309 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image-2.0",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.03605 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image-2.0-Pro",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.07725 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image-Max",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.07725 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.03605 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Qwen-Image-Plus",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0309 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Seedance-1.0-Pro-Fast",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$0.095 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Seedance-1.5-Pro",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$1.14 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Seedance-1.0-Pro",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$2.375 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Veo 3.1Fast",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.135 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Veo 3.1 Lite",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.045 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Gemini 3.1 Flash Image Preview",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$2.7 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Seedream-5.0-lite",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.03325 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Veo 3.1",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.36 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Veo3 Fast",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.135 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Veo 3",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.36 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "GPT-Image-1",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$35.2 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "GPT-Image-1-Mini",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$7.04 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Seedream-4.5",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.038 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Seedream-4.0",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.0285 / 张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Veo2",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.45 / 秒",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Gemini 2.5 Flash Image(NanoBanana)",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$0.0351 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "GPT-image-2",
+      "unit": "美元/M",
+      "cells": {
+        "CMI AI Hub": "$26.4 / M",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见原厂官网"
+      }
+    },
+    {
+      "model": "Veo 3.1(视频)",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.18(视频)/$0.36(含音频)",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见 Google 官网"
+      }
+    },
+    {
+      "model": "Wan2.7-T2v(文生视频)",
+      "unit": "美元/秒",
+      "cells": {
+        "CMI AI Hub": "$0.1545/秒",
+        "硅基流动": "—",
+        "DMXAPI": "¥0.6/秒(720P);¥1/秒(1080P)",
+        "Novita AI": "—",
+        "官方原厂": "见阿里云百炼"
+      }
+    },
+    {
+      "model": "Seedance-1.5-Pro(视频)",
+      "unit": "美元/百万tokens",
+      "cells": {
+        "CMI AI Hub": "$1.14(视频)/$2.28(含音频)",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见火山引擎"
+      }
+    },
+    {
+      "model": "Kling v1.6 i2v(视频)",
+      "unit": "美元/个",
+      "cells": {
+        "CMI AI Hub": "—",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "$0.27(5s720P)/$0.54(10s)",
+        "官方原厂": "见快影"
+      }
+    },
+    {
+      "model": "Wan2.2-I2V/T2V-A14B(视频)",
+      "unit": "元/个",
+      "cells": {
+        "CMI AI Hub": "—",
+        "硅基流动": "¥2/个",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "开源免费(自托管)"
+      }
+    },
+    {
+      "model": "Qwen-Image(文生图)",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.036/张",
+        "硅基流动": "¥0.30/张",
+        "DMXAPI": "¥0.25/张",
+        "Novita AI": "$0.02/张",
+        "官方原厂": "见阿里云百炼"
+      }
+    },
+    {
+      "model": "Seedream-4.5(图像)",
+      "unit": "美元/张",
+      "cells": {
+        "CMI AI Hub": "$0.038/张",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见火山引擎"
+      }
+    },
+    {
+      "model": "Z-Image-Turbo(图像)",
+      "unit": "元/张",
+      "cells": {
+        "CMI AI Hub": "—",
+        "硅基流动": "¥0.10/张",
+        "DMXAPI": "¥0.10-0.20/张",
+        "Novita AI": "—",
+        "官方原厂": "见通义"
+      }
+    },
+    {
+      "model": "GPT-Image-1(图像)",
+      "unit": "美元/百万tokens",
+      "cells": {
+        "CMI AI Hub": "输入$4.4(文本)/$8.8(图片),输出$35.2",
+        "硅基流动": "—",
+        "DMXAPI": "—",
+        "Novita AI": "—",
+        "官方原厂": "见 OpenAI 官网"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "title": "国产旗舰:官方/原厂直调或折扣聚合最低",
+      "desc": "DeepSeek-V4-Pro 官方 ¥3/6(缓存¥0.025)为全渠道最低;经 DMXAPI 8.5 折后(¥2.55/5.1)低于硅基流动(¥12/24);Qwen3.5-Plus 经 DMXAPI 5 折(¥0.4/2.4)为国产最低档——折扣聚合平台正改写价格锚点(数据:硅基流动/DMXAPI/百炼/DeepSeek 官网定价页)。"
+    },
+    {
+      "title": "Kimi-K2.6、GPT-OSS-120b:Novita 全渠道最低",
+      "desc": "Kimi-K2.6 在 Novita($0.80/$3.40)低于官方(¥6.5/27)与硅基(¥6.5/27);GPT-OSS-120b 在 Novita($0.05/$0.25)同样最低——开源/海外托管模型的价格洼地在美国二线推理云(数据:Novita 官网定价页)。"
+    },
+    {
+      "title": "MoMA/天翼云:运营商走'同价+服务'路线",
+      "desc": "GLM-5.1 在 MoMA(¥6/24)与硅基一致;MiniMax-M2.5 在 MoMA/硅基/CMI 三家同价(¥2.1/8.4)——头部模型在各渠道价格趋同,竞争转向服务与治理(数据:移动云 MoMA 帮助中心 outline/98799、天翼云星辰 MaaS 计费文档)。"
+    },
+    {
+      "title": "海外旗舰:CMI AI Hub 与官方美元同价",
+      "desc": "Claude Opus 4.8($5.25/$26.25)、GPT-5.6 等在 CMI 与官方价一致,省去境外支付/合规/网络成本;OpenRouter 为透传价+5.5% 充值手续费(GPT-OSS-120b 显示 $0.03/$0.17)(数据:OpenRouter models 页、CMI AI Hub 控制台)。"
+    },
+    {
+      "title": "成本优化组合拳已成行业标配",
+      "desc": "缓存命中价(硅基 V4-Flash ¥0.02/百万、DeepSeek 官方 ¥0.025)、批量 5 折(Novita Batch)、预留吞吐(Together PTU、天翼 TPM 包)、分段计价(长上下文加价)——平台需同时具备四类机制才有成本竞争力(数据:各厂商定价/帮助页)。"
+    },
+    {
+      "title": "CMI AI Hub 模型最全(148 款,美元计价)",
+      "desc": "CMI AI Hub 控制台已上架 148 款模型(99 文本/25 图像/24 视频),覆盖 GPT-5.6 全系、Claude 4.8/4.7、Gemini 3、Qwen3.7、DeepSeek-V4、MiniMax、字节 Seed 等,国际旗舰美元同价、国内直连接入(数据:CMI AI Hub 控制台模型目录,见 3.5 完整目录)。"
+    }
+  ]
+},
 
   /* ================= 模块四:差异化定位 ================= */
   differentiation: [
