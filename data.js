@@ -1,8 +1,12 @@
 /* AI Hub 对标情报站 · 数据层
    每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-07-31.3";
+window.AIHUB_DATA_VERSION = "2026-08-03";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-03",
+    "note": "每日自动更新:新增 5 条动态(阿里 Qwen3.8-Max 发布/香港 AI 桥梁定位与沙岭算力/OpenAI Astra 多智能体模型曝光/发改委等多部门密集部署 AI 并加速人工智能法立法/三大运营商停运第三方号卡渠道提速边缘合规;信源:凤凰网科技·界面新闻/香港商报/华尔街见闻·The Information/央视新闻/运营商联合公告);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 102 条;修复 validate_data.js 对带引号键(insights/date)的识别盲区后校验通过"
+  },
   {
     "date": "2026-07-31",
     "note": "模块三原厂价格落地:为阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax 填充真实原厂价格(原生取官方原厂价、开源取各原厂官方转售价,来源各原厂定价页),新增科大讯飞并补星火 X2/Ultra/Pro/Lite 原生行;模块二取消 CMI '我方'特殊高亮(ours 置空)改为中立行业对标,模块四差异化定位同步去 CMI 化"
@@ -59,6 +63,56 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-03",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里发布 Qwen3.8-Max:2.4 万亿参数,主打长程编程与办公,下周开源",
+      "source": "凤凰网科技 / 界面新闻",
+      "url": "https://dy.163.com/article/L3DDU57E0556I485.html",
+      "summary": "阿里云发布 Qwen3.8-Max(2.4T 总参/95B 激活/MoE/1M 上下文),主打自主编程与长程任务,国内 API 12/36 元每百万 tokens,宣布下周开源权重。"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "hk",
+      "title": "香港 AI 定位为'桥梁':算力 5000 PFLOPS,沙岭园将达 18 万 PFLOPS",
+      "source": "香港商报 / 创新科技及工业局",
+      "url": "https://hkcd.com/hkcdweb/content/2026/08/03/content_8767867.html",
+      "summary": "香港商报谈 AI 定位为'桥梁':整体算力已达 5000 PFLOPS,沙岭数据园 2032 年提供 18 万 PFLOPS(36 倍);'全民 AI'普惠计划联动数码港、科技园、生产力局。"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 新模型家族 Astra 曝光,主打多智能体长周期协同",
+      "source": "The Information / 华尔街见闻",
+      "url": "https://www.163.com/dy/article/L396PKPB05198NMR.html",
+      "summary": "OpenAI 新模型家族 Astra 曝光,主打多智能体长周期协同,Altman 已赴白宫演示并或成特朗普政府新框架首批审查模型;据报以约 2000 美元算力破解 10 道数学难题。"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "发改委、工信部等多部门密集部署 AI 发展:加快人工智能法立法",
+      "source": "央视新闻 / 国家发改委",
+      "url": "https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&t=1785512162796&item_id=10855399071019797650&channelId=1119",
+      "summary": "发改委、工信部等密集部署 AI 发展:加快人工智能法立法、推进'模芯云用'协同、统筹智算集群与算电协同、印发算力标准、普惠算力赋能中小企业。"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "政策",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商 8 月 1 日起停运第三方号卡渠道,边缘计算合规化提速",
+      "source": "运营商联合公告 / 腾讯新闻",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7946a6e04f276752",
+      "summary": "三大运营商 8 月 1 日起全面停运第三方号卡订购渠道,仅限官方办理;叠加实名与白名单,抬高 PCDN/边缘计算入网门槛,加速行业合规化与可追溯。"
+    },
     {
       "date": "2026-07-31",
       "tag": "技术趋势",
