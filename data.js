@@ -1,8 +1,12 @@
 /* AI Hub 对标情报站 · 数据层
-   每日 10:00 定时任务自动更新 insights(只增不删,保留历史新闻)并按日归档快照;
+   名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
 window.AIHUB_DATA_VERSION = "2026-08-03";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-02",
+    "note": "每日自动更新(补跑周末周日):新增 5 条动态(DeepSeek-V4-Flash 正式版公测/字节 Seedance 2.5 视频模型/欧盟 AI 内容强制标注新规生效/OpenRouter 周调用榜前五均中国模型/蚂蚁 Agentar 2.0 商业智能体平台;信源:第一财经·IT之家/AGI HUNT/央视财经/WAIC 2026);insights 增至 107 条;GitHub 推送成功"
+  },
   {
     "date": "2026-08-03",
     "note": "每日自动更新:新增 5 条动态(阿里 Qwen3.8-Max 发布/香港 AI 桥梁定位与沙岭算力/OpenAI Astra 多智能体模型曝光/发改委等多部门密集部署 AI 并加速人工智能法立法/三大运营商停运第三方号卡渠道提速边缘合规;信源:凤凰网科技·界面新闻/香港商报/华尔街见闻·The Information/央视新闻/运营商联合公告);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 102 条;修复 validate_data.js 对带引号键(insights/date)的识别盲区后校验通过"
@@ -82,6 +86,56 @@ window.AIHUB_DATA = {
       "source": "香港商报 / 创新科技及工业局",
       "url": "https://hkcd.com/hkcdweb/content/2026/08/03/content_8767867.html",
       "summary": "香港商报谈 AI 定位为'桥梁':整体算力已达 5000 PFLOPS,沙岭数据园 2032 年提供 18 万 PFLOPS(36 倍);'全民 AI'普惠计划联动数码港、科技园、生产力局。"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek-V4-Flash 正式版上线公测,智能指数 50 逼近顶级闭源",
+      "source": "第一财经 / IT之家",
+      "url": "https://www.163.com/dy/article/L3ALO4UV0519DDQ2.html",
+      "summary": "DeepSeek 于 7/31 通过 API 文档发布 V4-Flash 正式版公测;Artificial Analysis 智能指数 50 分(较 4 月 Flash +10),单任务成本较 OpenAI GPT-5.6 Luna 低约 60%,提供约 98% 缓存命中折扣。"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "字节跳动发布 Seedance 2.5 视频模型,单次生成 30 秒",
+      "source": "IT之家 / AGI HUNT",
+      "url": "https://agihunt.info/daily/2026-08-02",
+      "summary": "字节 Dreamina 全球首发 Seedance 2.5,支持 50 个多模态参考图、单次生成 30 秒视频,主打自由度与控制力兼顾,即将登陆 Higgsfield 平台。"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟 AI 内容强制标注新规 8 月 2 日生效",
+      "source": "AGI HUNT / 欧盟官方",
+      "url": "https://agihunt.info/daily/2026-08-02",
+      "summary": "欧盟要求对高度逼真的 AI 生成内容进行强制标注与打标签,以应对生成式 AI 虚假信息风险、提升数字内容透明度,合规义务在多法域同步收紧。"
+    },
+    {
+      "date": "2026-08-02",
+      "cat": "ind",
+      "region": "global",
+      "title": "OpenRouter 周调用量榜单前五均为中国模型",
+      "source": "央视财经 / 今日头条",
+      "url": "https://www.toutiao.com/article/7669457614316519945/",
+      "summary": "OpenRouter 最新一周调用量榜前五全为中国企业模型(小米 MiMo-V2.5 登顶 10.5 万亿 Token),HuggingFace 中国开源模型累计下载量居首,国产开源在第三方渠道领先。",
+      "tag": "开源动态"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "蚂蚁数科发布商业智能体平台 Agentar 2.0",
+      "source": "探寻智讯 / WAIC 2026",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDk4NjU3MQ==&mid=2247483773",
+      "summary": "蚂蚁数科在 WAIC 2026 发布商业智能体平台 Agentar 2.0,首批预置近 200 个岗位级数字专家模板与数百个可订阅智能体工具,标志大模型加速转化为企业生产力。"
     },
     {
       "date": "2026-08-01",
