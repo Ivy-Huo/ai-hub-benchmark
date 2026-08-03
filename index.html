@@ -334,12 +334,13 @@
   <div class="wrap">
     <div class="kicker">Module 2 · Capability Benchmark</div>
     <h2>聚合平台功能对标</h2>
-    <p class="lead">覆盖运营商系、互联网系、国际网关型与主流 MaaS 共 <b>16</b> 家聚合平台,按 6 大分组 19 项细分指标 + 能力热力矩阵(26 项能力) + 计费 / 安全专项对标;并引入 <b>OpenRouter + Portkey + LiteLLM</b> 能力集合作为基准线,重点挖掘各平台优势特点,为聚合平台选型与能力建设提供参考。可勾选厂商自定义对比列,切换"热力矩阵 / 计费 / 安全 / 雷达"等视图;核心特点卡见各视图内。</p>
+    <p class="lead">覆盖运营商系、互联网系、国际网关型与主流 MaaS 共 <b>16</b> 家聚合平台,按 6 大分组 19 项细分指标 + 能力热力矩阵(26 项能力) + 计费 / 安全 / 订购体验专项对标;并引入 <b>OpenRouter + Portkey + LiteLLM</b> 能力集合作为基准线,重点挖掘各平台优势特点,为聚合平台选型与能力建设提供参考。可勾选厂商自定义对比列,切换"热力矩阵 / 计费 / 安全 / 订购与体验 / 雷达"等视图;核心特点卡见各视图内。</p>
     <div class="viewsw">
       <button class="vsw on" data-v="detail">📋 详细对标表</button>
       <button class="vsw" data-v="heat">🔥 能力热力矩阵</button>
       <button class="vsw" data-v="billing">💰 计费专项</button>
       <button class="vsw" data-v="security">🛡️ 安全专项</button>
+      <button class="vsw" data-v="onboarding">🪪 订购与体验</button>
       <button class="vsw" data-v="radar">🎯 雷达视图</button>
       <button class="vsw" data-v="diffcom">🧭 差异化·共性</button>
     </div>
@@ -371,6 +372,13 @@
       <div class="vpick" id="secpick"></div>
       <div class="tblbox"><table id="secTable" class="secTable"></table></div>
       <p class="pnote">安全维度对照:身份权限(RBAC/SSO)、数据脱敏与策略执行、历史上下文安全存储、内容策略审核、出域控制(数据不出境)、全链路审计、安全沙箱/隔离、敏感信息脱敏/拦截,以及 Token 运营管理(预算/流转/审计)。</p>
+    </div>
+
+    <!-- 订购与体验 -->
+    <div class="bmview hide" id="v-onboarding">
+      <div class="vpick" id="onbpick"></div>
+      <div class="tblbox"><table id="onbTable" class="billTable"></table></div>
+      <p class="pnote">用户订购与体验对标:实名/企业认证门槛、开通订购流程、免费额度与体验、模型广场/体验中心、控制台与调用体验、计费模式灵活度。当前已基于官方文档补全 <b>移动云 MoMA</b> 与 <b>天翼云星辰MaaS</b> 两家,其余厂商待补充(—)。</p>
     </div>
 
     <!-- 雷达视图 -->
@@ -662,7 +670,7 @@ document.getElementById("btnCsv").onclick=function(){
 };
 
 /* ================= module 2 ================= */
-var hiddenHeat={}, hiddenBill={}, hiddenSec={};
+var hiddenHeat={}, hiddenBill={}, hiddenSec={}, hiddenOnb={};
 function renderPick(boxId, vendors, hidden, rerender){
   var box=document.getElementById(boxId); if(!box) return; box.innerHTML="";
   vendors.forEach(function(v){
@@ -742,6 +750,7 @@ function renderRowsTable(tid, rows, map, pathPrefix){
 }
 function renderBilling(){ renderRowsTable("billTable", state.benchmark.billing.rows, hiddenBill, "billing"); }
 function renderSecurity(){ renderRowsTable("secTable", state.benchmark.security.rows, hiddenSec, "security"); }
+function renderOnboarding(){ renderRowsTable("onbTable", state.benchmark.onboarding.rows, hiddenOnb, "onboarding"); }
 function radarSVG(datasets,dims,size){
   var cx=size/2, cy=size/2, R=size/2-46, n=dims.length, i;
   function pt(k,val){ var ang=-Math.PI/2+k*2*Math.PI/n; var r=R*val/5; return [cx+r*Math.cos(ang), cy+r*Math.sin(ang)]; }
@@ -1089,7 +1098,8 @@ function renderAll(){
   renderPick("heatpick",state.benchmark.vendors,hiddenHeat,renderHeat);
   renderPick("billpick",state.benchmark.vendors,hiddenBill,renderBilling);
   renderPick("secpick",state.benchmark.vendors,hiddenSec,renderSecurity);
-  renderBmTable(); renderHeat(); renderBilling(); renderSecurity(); renderRadars(); renderDiffCommon();
+  renderPick("onbpick",state.benchmark.vendors,hiddenOnb,renderOnboarding);
+  renderBmTable(); renderHeat(); renderBilling(); renderSecurity(); renderOnboarding(); renderRadars(); renderDiffCommon();
   renderPick("bizpick",state.business.vendors,hiddenBiz,renderBiz);
   renderBiz();
   renderPick("pricepick",state.pricing.vendors,hiddenPrice,renderPrice);
