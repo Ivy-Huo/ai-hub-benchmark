@@ -1,7 +1,7 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-03.2";
+window.AIHUB_DATA_VERSION = "2026-08-03.3";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-02",
@@ -3512,6 +3512,64 @@ window.AIHUB_DATA = {
         }
       ]
     },
+    "onboarding": {
+      "rows": [
+        {
+          "label": "实名/企业认证",
+          "cells": [
+            "强制实名认证;支持个人/企业/政企,政企为主账号+RAM子账号",
+            "—",
+            "注册天翼云账号,使用平台前建议完成实名认证(非强制前置,按需);主/子账号体系",
+            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+          ]
+        },
+        {
+          "label": "开通/订购流程",
+          "cells": [
+            "注册移动云→完成实名→产品页进入MoMA管理控制台→模型广场在线体验/API调用;付费模型用完2500万免费额后需完成支付",
+            "—",
+            "注册天翼云账号→(实名)→进入星辰TokenHub→模型广场/体验中心试用→各账号独立开通付费或主账号开Token量包",
+            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+          ]
+        },
+        {
+          "label": "免费额度/体验",
+          "cells": [
+            "2500万tokens限时1个月免费体验(仅自营模型,Qwen3.5-35B-A3B除外);模型广场在线体验中心",
+            "—",
+            "每模型授予不等免费额度,首次使用起2周有效,主/子账号共用;到期或用完转付费",
+            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+          ]
+        },
+        {
+          "label": "模型广场/体验中心",
+          "cells": [
+            "模型广场(自研+主流开源,标签筛选)→在线体验/API调用/一键部署/微调;文本/语音/视觉体验中心;未上架模型走白名单",
+            "—",
+            "模型广场(文本/视觉/向量大模型)+体验中心,可查看及体验文本/图像能力",
+            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+          ]
+        },
+        {
+          "label": "控制台/文档与调用",
+          "cells": [
+            "管理控制台+API Key管理(主账号统管RAM Key);单用户RPM≤220、搜索API 40并发;文档导航清晰",
+            "—",
+            "控制台+服务接入模块+App Key管理;主账号管理子账号服务组与App Key;用量监控可导出",
+            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+          ]
+        },
+        {
+          "label": "计费模式灵活度",
+          "cells": [
+            "按量付费+Token资源包(点数:1万点=10元/10万点=100元/1000万点=1万元);资源包到期不退",
+            "—",
+            "多模式:按量/tokens量包/TPM包/卡时 + 包周期Token Plan/卡时;主账号开量包子账号共享",
+            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+          ]
+        }
+      ]
+    },
     "radarDims": [
       "模型生态",
       "智能路由",
@@ -3941,7 +3999,13 @@ window.AIHUB_DATA = {
     },
     "sources": {
       "移动云 MoMA": [
+        "https://ecloud.10086.cn/op-help-center/doc/article/91166",
+        "https://ecloud.10086.cn/op-help-center/doc/article/92833",
+        "https://ecloud.10086.cn/op-help-center/doc/article/88574",
+        "https://ecloud.10086.cn/op-help-center/doc/article/92457",
         "https://ecloud.10086.cn/op-help-center/doc/article/91181",
+        "https://ecloud.10086.cn/op-help-center/doc/article/91592",
+        "https://ecloud.10086.cn/op-help-center/doc/article/95323",
         "https://ecloud.10086.cn/op-help-center/doc/category/1456"
       ],
       "CMI AI Hub": [
@@ -3949,7 +4013,10 @@ window.AIHUB_DATA = {
       ],
       "天翼云星辰MaaS": [
         "https://www.ctyun.cn/products/31761580",
-        "https://ctyun.cn/document/11061839/11062238"
+        "https://www.ctyun.cn/document/11061839/11062376",
+        "https://www.ctyun.cn/document/11061839/11062235",
+        "https://www.ctyun.cn/document/11061839/11062238",
+        "https://www.ctyun.cn/document/11061839/11062267"
       ],
       "阿里云百炼": [
         "https://www.aliyun.com/product/bailian",
@@ -7638,6 +7705,10 @@ window.AIHUB_DATA = {
       {
         "title": "MoMA/天翼云:运营商走'同价+服务'路线",
         "desc": "GLM-5.1 在 MoMA(¥6/24)与硅基一致;MiniMax-M2.5 在 MoMA/硅基/CMI 三家同价(¥2.1/8.4)——头部模型在各渠道价格趋同,竞争转向服务与治理(数据:移动云 MoMA 帮助中心 article/91592、天翼云星辰 MaaS 计费文档)。"
+      },
+      {
+        "title": "运营商计费模式最丰富:按量/资源包/Token Plan/卡时多档并存",
+        "desc": "移动云 MoMA 在按量计费外提供 Token 资源包(1万点=10元 / 10万点=100元 / 1000万点=1万元,点数按模型单价抵扣,到期不退);天翼云星辰MaaS 计费模式最细,含按量/tokens量包/TPM包/卡时 + 包周期 Token Plan/卡时,且每模型授予不等免费额度(首次使用起约2周有效、主/子账号共用)。多档计费 + 免费额度显著降低中小客户试错门槛,是运营商系相对纯聚合平台的体验优势(数据:移动云 article/95323 资源包计费、天翼云 11062238 计费说明、11062376 快速入门)。"
       },
       {
         "title": "海外旗舰:CMI AI Hub 与官方美元同价",
