@@ -215,20 +215,34 @@
   .cov small{font-size:10.5px;color:#6b7a99}
   .covtag{margin-top:6px;padding-left:14px;font-size:11px;color:#c2410c;font-weight:700}
 
-  .arch{display:flex;flex-direction:column;gap:12px;max-width:900px;margin:0 auto}
-  .arow{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow)}
-  .arow .ln{width:128px;flex:none;font-weight:800;font-size:14.5px}
-  .arow .en{font-size:10.5px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase}
-  .arow .items{display:flex;flex-wrap:wrap;gap:8px}
-  .aitem{font-size:12.5px;background:#f2f5fb;border:1px solid var(--line);padding:4px 13px;border-radius:99px;color:var(--ink2)}
-  .conn{width:2px;height:14px;background:var(--line);margin:0 auto}
-  .archex{display:flex;flex-wrap:wrap;gap:6px;align-items:center;width:100%;margin-top:10px;padding-top:9px;border-top:1px dashed var(--line)}
-  .aexlbl{font-size:11px;color:var(--ink3);font-weight:800;margin-right:2px}
-  .aex{font-size:11.5px;background:#eef4ff;border:1px solid #cfe0ff;color:#2b5cff;padding:3px 10px;border-radius:99px}
-  .arow.eco{align-items:flex-start}
-  .ecog{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:3px 0}
+  .arch{display:flex;flex-direction:column;gap:0;margin-top:6px}
+  .archlegend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:6px 0 16px;padding:10px 14px;background:#f7f9ff;border:1px solid var(--line);border-radius:10px}
+  .archlegend .lg{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink2);font-weight:600}
+  .archlegend .lg i{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .alayer{display:flex;gap:14px;align-items:stretch}
+  .albadge{flex:none;width:32px;height:32px;border-radius:9px;background:var(--c,#2b5cff);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 12px -3px var(--c,#2b5cff);align-self:flex-start;margin-top:2px}
+  .albody{flex:1;background:#fff;border:1px solid var(--line);border-left:4px solid var(--c,#2b5cff);border-radius:10px;padding:13px 18px;box-shadow:var(--shadow)}
+  .alhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px}
+  .alname{font-weight:800;font-size:16px;color:var(--ink)}
+  .alen{font-size:10.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.6px}
+  .alcov{margin-left:auto;font-size:11px;font-weight:700;color:var(--c,#2b5cff);background:rgba(43,92,255,.08);padding:2px 9px;border-radius:99px}
+  .alfns{display:flex;flex-wrap:wrap;gap:7px}
+  .afn{font-size:12.5px;background:#f1f5fb;border:1px solid #e3ebf5;color:#334155;padding:4px 11px;border-radius:8px;white-space:nowrap}
+  .afn.eco{background:#f3f6fb;border-color:#e6ecf3}
+  .alex{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px;padding-top:9px;border-top:1px dashed var(--line)}
+  .alexlbl{font-size:11px;color:var(--ink3);font-weight:800;margin-right:2px}
+  .aex{font-size:11.5px;background:rgba(43,92,255,.08);border:1px solid rgba(43,92,255,.28);color:var(--c,#2b5cff);padding:3px 10px;border-radius:99px;font-weight:600}
+  .alnote{margin-top:10px;font-size:12.5px;line-height:1.6;color:#475569;background:linear-gradient(90deg,rgba(43,92,255,.06),#fafcff);border:1px solid rgba(43,92,255,.16);border-radius:8px;padding:8px 12px}
+  .alconn{display:flex;justify-content:center;height:16px}
+  .alconn span{width:2px;height:100%;background:linear-gradient(var(--line),var(--c,#2b5cff));position:relative}
+  .alconn span:after{content:"";position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--c,#2b5cff)}
+  .alayer.eco{--c:#6b7280}
+  .ecog{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0}
   .ecolbl{font-size:11px;font-weight:800;color:var(--ink3);min-width:104px}
-  .aitem.eco{background:#f3f6fb}
+  .psrow{font-size:12px;color:var(--ink2);padding:3px 0;line-height:1.7;word-break:break-all}
+  .psrow b{color:var(--ink);margin-right:4px}
+  .psrow a{color:#2b5cff;text-decoration:none}
+  .psrow a:hover{text-decoration:underline}
 
   .editbar{position:fixed;bottom:22px;right:22px;z-index:300;display:flex;flex-direction:column;gap:8px}
   .ebtn{border:none;border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600;box-shadow:0 4px 16px rgba(27,46,94,.18)}
@@ -392,7 +406,8 @@
     <h3 class="sub">3.2 主流模型价格对标矩阵(输入 / 输出,元 / 百万 Tokens)</h3>
     <div class="vpick" id="pricepick"></div>
     <div class="tblbox"><table id="priceTable"></table></div>
-    <p class="pnote">注:¥ 为元人民币、$ 为美元(参考汇率 ≈7.2);缓存价格见括号;"透传"表示平台按上游官方价原价转发。数据来源:各平台官网定价页(硅基流动/DMXAPI/Together/Novita/移动云 MoMA/阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax/科大讯飞 等,2026-07 抓取);原厂平台列已据其官方定价页填充真实价格(原生模型取官方价、开源模型取官方转售价)。</p>
+    <p class="pnote">注:¥ 为元人民币、$ 为美元(参考汇率 ≈7.2);缓存价格见括号;"透传"表示平台按上游官方价原价转发。原厂平台列已据其官方定价页填充真实价格(原生模型取官方价、开源模型取官方转售价)。</p>
+    <details class="srcdetails"><summary class="srcsummary">价格数据来源(各厂商官方定价 / 文档页)</summary><div class="srcline" id="priceSources"></div></details>
 
     <h3 class="sub">3.3 多模态模型价格对标(视频 / 图像生成)</h3>
     <div class="tblbox"><table id="mmTable"></table></div>
@@ -421,9 +436,9 @@
   <div class="wrap">
     <div class="kicker">Module 5 · Reference Architecture</div>
     <h2>技术架构参考</h2>
-    <p class="lead">基于模块二 26 项核心能力与 16 家聚合厂商对标结论沉淀的聚合平台分层参考架构:自顶向下覆盖接入聚合、智能路由、身份治理、计费成本、安全合规、运营可观测六大能力层,底层为模型生态与算力网络;每层标注其<b>代表厂商</b>(按该层能力在 16 家中的覆盖度均值 ≥1.5 自动生成),并附<b>聚合厂商生态全景</b>。</p>
+    <p class="lead">基于模块二 26 项核心能力与 16 家对标结论沉淀的聚合平台分层参考架构:自上而下 7 层,每层标注<b>核心功能</b>、数据驱动的<b>代表厂商</b>(该层能力在 16 家中覆盖度均值 ≥1.5 自动标出)与<b>设计要点</b>;底部附 16 家聚合厂商生态全景。架构层可在线编辑。</p>
     <div class="arch" id="arch"></div>
-    <p class="pnote">核心功能取自模块二能力热力矩阵(26 项);代表厂商为数据驱动——对每一层,取该层能力在 16 家对标中覆盖度(均值 ≥1.5,即多数能力为"完整支持")的厂商标出。架构层与厂商生态均可在线编辑。</p>
+    <p class="pnote">核心功能取自模块二能力热力矩阵(26 项),与对标结论一一对应;代表厂商为数据驱动(覆盖度均值 ≥1.5)。架构层与厂商生态均可在线编辑。</p>
   </div>
 </section>
 
@@ -851,6 +866,16 @@ function renderPrice(){
   state.pricing.findings.forEach(function(fd,fi){
     f.innerHTML+='<div class="sumcard acc"><h4 data-ed="pricing.findings.'+fi+'.title">'+esc(fd.title)+'</h4><p data-ed="pricing.findings.'+fi+'.desc">'+esc(fd.desc)+"</p></div>";
   });
+  var ps=document.getElementById("priceSources");
+  if(ps){
+    var psMap=state.pricing.sources||{};
+    var ph="";
+    state.pricing.vendors.forEach(function(v){
+      var u=psMap[v]; if(!u) return;
+      ph+='<div class="psrow"><b>'+esc(v)+'</b> · <a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(u)+'</a></div>';
+    });
+    ps.innerHTML=ph||"(暂无来源标注)";
+  }
   bindEditable();
 }
 /* 多模态价格表 */
@@ -943,24 +968,37 @@ function renderArch(){
   var capIdx={}, i=0;
   heat.cats.forEach(function(c){ c.caps.forEach(function(cp){ capIdx[cp.id]=i++; }); });
   var vlist=state.benchmark.vendors;
+  function repVendors(L){
+    if(!L.caps||!L.caps.length) return [];
+    return vlist.filter(function(v){
+      var lv=heat.levels[v]; if(!lv) return false;
+      var sum=0; L.caps.forEach(function(cid){ sum+=(lv[capIdx[cid]]||0); });
+      return sum/L.caps.length>=1.5;
+    });
+  }
+  var legend='<div class="archlegend">';
+  state.architecture.forEach(function(L){ legend+='<span class="lg"><i style="background:'+L.color+'"></i>'+esc(L.layer)+'</span>'; });
+  legend+='</div>';
+  a.innerHTML+=legend;
   state.architecture.forEach(function(L,li){
-    var ex=[];
-    if(L.caps&&L.caps.length){
-      ex=vlist.filter(function(v){
-        var lv=heat.levels[v]; if(!lv) return false;
-        var sum=0; L.caps.forEach(function(cid){ sum+=(lv[capIdx[cid]]||0); });
-        return sum/L.caps.length>=1.5;
-      });
-    }
-    a.innerHTML+='<div class="arow"><div class="ln" style="color:'+L.color+'">'+esc(L.layer)+'<div class="en">'+esc(L.en)+'</div></div><div class="items">'
-      +L.functions.map(function(x){return '<span class="aitem">'+esc(x)+'</span>';}).join("")
-      +(ex.length?'<div class="archex"><span class="aexlbl">代表厂商</span>'+ex.map(function(v){return '<span class="aex">'+esc(v)+'</span>';}).join("")+'</div>':'')
-      +'</div></div>';
-    if(li<state.architecture.length-1) a.innerHTML+='<div class="conn"></div>';
+    var ex=repVendors(L);
+    var n=vlist.length, k=ex.length;
+    var html='<div class="alayer" style="--c:'+L.color+'">';
+    html+='<div class="albadge">'+(li+1)+'</div>';
+    html+='<div class="albody">';
+    html+='<div class="alhead"><span class="alname">'+esc(L.layer)+'</span><span class="alen">'+esc(L.en)+'</span>'+(L.caps&&L.caps.length?'<span class="alcov">代表厂商 '+k+'/'+n+'</span>':'')+'</div>';
+    html+='<div class="alfns">'+L.functions.map(function(x){return '<span class="afn">'+esc(x)+'</span>';}).join("")+'</div>';
+    if(ex.length) html+='<div class="alex"><span class="alexlbl">代表厂商</span>'+ex.map(function(v){return '<span class="aex">'+esc(v)+'</span>';}).join("")+'</div>';
+    if(L.note) html+='<div class="alnote" data-ed="architecture.'+li+'.note">💡 '+esc(L.note)+'</div>';
+    html+='</div></div>';
+    a.innerHTML+=html;
+    if(li<state.architecture.length-1) a.innerHTML+='<div class="alconn"><span></span></div>';
   });
-  a.innerHTML+='<div class="conn"></div><div class="arow eco"><div class="ln" style="color:#374151">聚合厂商生态<div class="en">Vendor Ecosystem · 16</div></div><div class="items">';
+  var ecoN=state.vendorEco?state.vendorEco.reduce(function(s,g){return s+g.vendors.length;},0):0;
+  a.innerHTML+='<div class="alconn"><span></span></div>';
+  a.innerHTML+='<div class="alayer eco" style="--c:#6b7280"><div class="albadge">★</div><div class="albody"><div class="alhead"><span class="alname">聚合厂商生态全景</span><span class="alen">Vendor Ecosystem · '+ecoN+' 家</span></div>';
   (state.vendorEco||[]).forEach(function(g){
-    a.innerHTML+='<div class="ecog"><span class="ecolbl">'+esc(g.group)+'</span>'+g.vendors.map(function(v){return '<span class="aitem eco">'+esc(v)+'</span>';}).join("")+'</div>';
+    a.innerHTML+='<div class="ecog"><span class="ecolbl">'+esc(g.group)+'</span>'+g.vendors.map(function(v){return '<span class="afn eco">'+esc(v)+'</span>';}).join("")+'</div>';
   });
   a.innerHTML+='</div></div>';
 }
