@@ -1,7 +1,7 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-03";
+window.AIHUB_DATA_VERSION = "2026-08-03.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-02",
@@ -3952,19 +3952,20 @@ window.AIHUB_DATA = {
         "https://ctyun.cn/document/11061839/11062238"
       ],
       "阿里云百炼": [
-        "https://help.aliyun.com/zh/model-studio/model-pricing"
+        "https://www.aliyun.com/product/bailian",
+        "https://help.aliyun.com/zh/model-studio/usage-guide/"
       ],
       "百度智能云千帆": [
         "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
       ],
       "火山引擎方舟": [
-        "https://www.volcengine.com/docs/82379/1544106"
+        "https://www.volcengine.com/docs/82379/1597029"
       ],
       "腾讯云 TokenHub": [
         "https://cloud.tencent.com/document/product/1729/97731"
       ],
       "硅基流动": [
-        "https://siliconflow.cn/pricing"
+        "https://docs.siliconflow.cn"
       ],
       "七牛云 AI": [
         "https://www.qiniu.com/"
@@ -3983,14 +3984,13 @@ window.AIHUB_DATA = {
         "https://docs.litellm.ai/"
       ],
       "Together AI": [
-        "https://www.together.ai/pricing"
+        "https://docs.together.ai"
       ],
       "Anyscale": [
         "https://docs.anyscale.com/"
       ],
       "n1n": [
-        "https://llm-api.apifox.cn/",
-        "https://llm-api.apifox.cn/llm-api-price"
+        "https://llm-api.apifox.cn/"
       ]
     }
   },
@@ -5954,6 +5954,25 @@ window.AIHUB_DATA = {
       "MiniMax",
       "科大讯飞"
     ],
+    "sources": {
+      "官方原厂": "",
+      "阿里云百炼": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "硅基流动": "https://siliconflow.cn/pricing",
+      "Together AI": "https://www.together.ai/pricing",
+      "火山引擎方舟": "https://www.volcengine.com/docs/82379/1544106",
+      "百度千帆": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "OpenRouter": "https://openrouter.ai/models",
+      "Novita AI": "https://novita.ai/pricing",
+      "移动云 MoMA": "https://ecloud.10086.cn/op-help-center/doc/category/1456",
+      "天翼云星辰MaaS": "https://ctyun.cn/document/11061839/11062238",
+      "腾讯云": "https://cloud.tencent.com/document/product/1729/97731",
+      "DeepSeek": "https://platform.deepseek.com",
+      "智谱": "https://open.bigmodel.cn",
+      "Kimi": "https://platform.moonshot.cn",
+      "MiniMax": "https://www.minimax.io/price",
+      "科大讯飞": "https://www.xfyun.cn/doc",
+      "DMXAPI": "https://dmxapi.com"
+    },
     "rows": [
       {
         "model": "DeepSeek-V4-Pro",
@@ -7778,49 +7797,56 @@ window.AIHUB_DATA = {
       "en": "Access & Aggregation",
       "color": "#0e9de0",
       "caps": ["agg_unified","agg_models","agg_catalog","key_pool","proto"],
-      "functions": ["统一接入入口","多厂商模型聚合","统一模型目录/API","API Key 池/密钥管理","OpenAI 兼容协议"]
+      "functions": ["统一接入入口","多厂商模型聚合","统一模型目录/API","API Key 池/密钥管理","OpenAI 兼容协议"],
+      "note": "聚合平台最低门槛:统一 OpenAI 兼容入口 + 模型目录;需支持多 Key 池与按供应商路由,降低单点绑定。"
     },
     {
       "layer": "智能路由与优化层",
       "en": "Routing & Optimization",
       "color": "#2b5cff",
       "caps": ["route","failover","smart","analysis"],
-      "functions": ["模型路由决策","故障切换/降级","智能路由推荐","价格/质量/速度分析"]
+      "functions": ["模型路由决策","故障切换/降级","智能路由推荐","价格/质量/速度分析"],
+      "note": "路由应支持成本/时延/质量多维权重;故障切换与自动降级是 SLA 保障关键,缓存命中可显著降本。"
     },
     {
       "layer": "身份与权限治理层",
       "en": "Identity & Governance",
       "color": "#7c3aed",
       "caps": ["rbac","sandbox","teams"],
-      "functions": ["用户/权限/项目/RBAC","安全沙箱/隔离","多团队/组织管理"]
+      "functions": ["用户/权限/项目/RBAC","安全沙箱/隔离","多团队/组织管理"],
+      "note": "企业落地门槛:RBAC/项目隔离/审计是 toB 标配;沙箱隔离与多团队管理支撑多部门共用。"
     },
     {
       "layer": "计费与成本管理层",
       "en": "Billing & Cost",
       "color": "#f2994a",
       "caps": ["passthrough","cache_bill","per_token","post_pre","budget","recon"],
-      "functions": ["透传/平台抽成/厂商自定","缓存命中计费","按 token 计费","后付费/预付费","Token 预算/配额/审计","计量/计费/对账"]
+      "functions": ["透传/平台抽成/厂商自定","缓存命中计费","按 token 计费","后付费/预付费","Token 预算/配额/审计","计量/计费/对账"],
+      "note": "透传 vs 平台抽成两种模式并存;Token 预算/配额/对账是企业财务可控性的核心。"
     },
     {
       "layer": "数据安全与合规层",
       "en": "Security & Compliance",
       "color": "#e5484d",
       "caps": ["mask","ctx_store","content","egress","audit","pii_block"],
-      "functions": ["数据脱敏/策略执行","上下文安全存储","内容策略审核","出域控制","全链路审计","敏感信息拦截"]
+      "functions": ["数据脱敏/策略执行","上下文安全存储","内容策略审核","出域控制","全链路审计","敏感信息拦截"],
+      "note": "脱敏、出域控制、全链路审计、敏感信息拦截构成合规底座;出海需数据驻留与备案资质。"
     },
     {
       "layer": "运营服务与可观测层",
       "en": "Ops & Observability",
       "color": "#00b3a4",
       "caps": ["ops","observ"],
-      "functions": ["运营分析/客户服务","可观测性"]
+      "functions": ["运营分析/客户服务","可观测性"],
+      "note": "用量监控、日志、告警与运营分析支撑稳定运营;可观测性是企业 SLA 与成本对账的依据。"
     },
     {
       "layer": "模型生态与算力网络层",
       "en": "Model Ecosystem & Compute",
       "color": "#6b7280",
       "caps": [],
-      "functions": ["多厂商模型生态(500+ 模型)","多云/多供应商算力调度","运营商骨干网/跨境合规","开源社区模型","闭源商业模型"]
+      "functions": ["多厂商模型生态(500+ 模型)","多云/多供应商算力调度","运营商骨干网/跨境合规","开源社区模型","闭源商业模型"],
+      "note": "500+ 模型生态 + 多云算力调度 + 运营商骨干网/跨境合规,是聚合平台的供给侧护城河。"
     }
   ],
   "vendorEco": [
