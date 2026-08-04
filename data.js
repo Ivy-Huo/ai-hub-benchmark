@@ -1,8 +1,12 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-03.3";
+window.AIHUB_DATA_VERSION = "2026-08-04.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-04",
+    "note": "每日自动更新:新增 8 条动态(MiniMax H3 视频模型开源登顶视频编辑榜/OpenAI GPT-5.6 Luna 降价 80%/DeepSeek 开放 Harness 代理框架内测/AI Coding 价格战与单任务成本 3 美分/阿里千问办公 QwenWork 公测/白宫召集头部实验室敲定模型安全自愿框架/Hugging Face CEO 称中国开源年底或追平/三大运营商 809 亿算力资本开支;信源:MiniMax 官方·中国经营报、IT之家·财联社科创板日报、南华早报·赛迪网、驱动中国·界面新闻、极客公园、CNBC、腾讯新闻);价格变动:据 OpenAI 7/30 官方降价更新 pricing 中 GPT-5.6 官方原厂价(Terra $2/$12、Luna $0.2/$1.2、Sol Fast 新增 $10/$60);insights 增至 115 条"
+  },
   {
     "date": "2026-08-02",
     "note": "每日自动更新(补跑周末周日):新增 5 条动态(DeepSeek-V4-Flash 正式版公测/字节 Seedance 2.5 视频模型/欧盟 AI 内容强制标注新规生效/OpenRouter 周调用榜前五均中国模型/蚂蚁 Agentar 2.0 商业智能体平台;信源:第一财经·IT之家/AGI HUNT/央视财经/WAIC 2026);insights 增至 107 条;GitHub 推送成功"
@@ -67,6 +71,86 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-04",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "MiniMax 正式开源视频大模型 H3,视频编辑能力登 Artificial Analysis 全球第一",
+      "source": "MiniMax 官方 / 中国经营报",
+      "url": "https://www.minimax.io/news/minimax-h3-open-source",
+      "summary": "8/3 MiniMax 开源通用视频模型 H3,统一理解文/图/视/音多模态上下文,生成最长 15 秒、2K、原生立体声视频;昇腾、摩尔线程、海光、AMD、Intel 及 vLLM-Omni/SGLang 同日完成适配。"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "竞品",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 挥价格屠刀:GPT-5.6 Luna 降 80% 至 $0.2/$1.2,Terra 降至 $2/$12",
+      "source": "IT之家 / 财联社·科创板日报",
+      "url": "https://dy.163.com/article/L3FPRUKB0511B8LM.html",
+      "summary": "为应对 Kimi K3、DeepSeek V4-Flash,OpenAI 将 Luna 每百万 token 从 $1/$6 降至 $0.2/$1.2(降 80%)、Terra 从 $2.5/$15 降至 $2/$12;Sol 维持 $5/$30,新增 Fast 模式反涨至 $10/$60。"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "技术趋势",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek 开放 Harness 代理框架开发者内测,战略升级 Agentic AI",
+      "source": "南华早报 / 赛迪网",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3362792/chinas-deepseek-beefs-agentic-ai-harness-tests-v4-model-jolts-silicon-valley",
+      "summary": "DeepSeek 启动开源开发者内测,开放自研 DeepSeek Harness 代理框架,可将大模型转为具自主决策能力的智能体,统筹多步骤代码执行与复杂工作流;首席代理架构师崔天义披露团队正多渠道扩招。"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "AI Coding 价格战开打:V4-Flash 单任务成本约 3 美分,仅为 Claude Fable 5 的 1/105",
+      "source": "财联社·科创板日报",
+      "url": "https://www.163.com/dy/article/L3FURNNO05198CJN.html",
+      "summary": "Artificial Analysis 测算 DeepSeek V4-Flash 单任务完成成本约 3 美分居全球最低,V4 API 毛利率仍超 50%;分析师称竞争焦点已从跑分转向单任务成本、稳定性与开发者生态卡位。"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "竞品",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里企业级 Agent'千问办公'开启公测,整合三产品并打通钉钉",
+      "source": "驱动中国 / 界面新闻",
+      "url": "https://dy.163.com/article/L3FRKHJL0511CTRI.html",
+      "summary": "随 Qwen3.8-Max 发布,阿里 QwenWork(千问办公)公测,由 QoderWork、MuleRun、悟空整合而来,支持桌面端/云端/企业协同三类 Agent,已初步打通钉钉,后续推独立 App 与国际版。"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "白宫召集 OpenAI、谷歌、Anthropic 审议 AI 模型安全测试自愿框架",
+      "source": "极客公园 / 环球市场播报",
+      "url": "https://www.163.com/dy/article/L3FM8LFQ05119FMA.html",
+      "summary": "据五位知情人士,美方邀请头部 AI 实验室代表 8/4 赴白宫审议监管框架终稿:实验室向合作方及公众发布模型前须自愿提交政府评估;会议由国家网络总监办公室主办,不对外发布框架。"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "开源动态",
+      "cat": "ind",
+      "region": "global",
+      "title": "Hugging Face CEO:中国开源模型或年底追平美国,开源将主导 AI 安全",
+      "source": "CNBC / Business Insider",
+      "url": "https://www.cnbc.com/2026/08/03/hugging-face-china-ai-race-open-models.html",
+      "summary": "德尔安格称中国凭开放协同生态实现跨越、最快年底与美头部齐平,美企闭门研发存落后风险;他预判未来多数 AI 网络攻击将源自闭源私有模型,开源模型将成核心防护手段。"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "算力",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商 2026 全年算力资本开支合计 809 亿元,上半年 32 个智算招标落地",
+      "source": "腾讯新闻·边缘算力全景解析 / 运营商公开资料",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_6146a6e04dc55452",
+      "summary": "Token 经营进入产能军备期:三家全年算力资本开支合计 809 亿元;电信宁夏'Token 工厂'集采预估 164.51 亿元、息壤纳管算力破 100EFLOPS;移动云-边-端家宽算力案例获国家级创新应用。"
+    },
     {
       "date": "2026-08-03",
       "tag": "模型更新",
@@ -3520,7 +3604,19 @@ window.AIHUB_DATA = {
             "强制实名认证;支持个人/企业/政企,政企为主账号+RAM子账号",
             "—",
             "注册天翼云账号,使用平台前建议完成实名认证(非强制前置,按需);主/子账号体系",
-            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
           ]
         },
         {
@@ -3529,7 +3625,19 @@ window.AIHUB_DATA = {
             "注册移动云→完成实名→产品页进入MoMA管理控制台→模型广场在线体验/API调用;付费模型用完2500万免费额后需完成支付",
             "—",
             "注册天翼云账号→(实名)→进入星辰TokenHub→模型广场/体验中心试用→各账号独立开通付费或主账号开Token量包",
-            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
           ]
         },
         {
@@ -3538,7 +3646,19 @@ window.AIHUB_DATA = {
             "2500万tokens限时1个月免费体验(仅自营模型,Qwen3.5-35B-A3B除外);模型广场在线体验中心",
             "—",
             "每模型授予不等免费额度,首次使用起2周有效,主/子账号共用;到期或用完转付费",
-            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
           ]
         },
         {
@@ -3547,7 +3667,19 @@ window.AIHUB_DATA = {
             "模型广场(自研+主流开源,标签筛选)→在线体验/API调用/一键部署/微调;文本/语音/视觉体验中心;未上架模型走白名单",
             "—",
             "模型广场(文本/视觉/向量大模型)+体验中心,可查看及体验文本/图像能力",
-            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
           ]
         },
         {
@@ -3556,7 +3688,19 @@ window.AIHUB_DATA = {
             "管理控制台+API Key管理(主账号统管RAM Key);单用户RPM≤220、搜索API 40并发;文档导航清晰",
             "—",
             "控制台+服务接入模块+App Key管理;主账号管理子账号服务组与App Key;用量监控可导出",
-            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
           ]
         },
         {
@@ -3565,7 +3709,19 @@ window.AIHUB_DATA = {
             "按量付费+Token资源包(点数:1万点=10元/10万点=100元/1000万点=1万元);资源包到期不退",
             "—",
             "多模式:按量/tokens量包/TPM包/卡时 + 包周期Token Plan/卡时;主账号开量包子账号共享",
-            "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—", "—"
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
           ]
         }
       ]
@@ -6621,7 +6777,7 @@ window.AIHUB_DATA = {
         "ctx": "1024K",
         "note": "文本生成视觉理解任务推理代码助手",
         "cells": {
-          "官方原厂": "Terra $2.2/$13.2 · Sol $4.4/$26.4 · Luna $0.88/$5.28",
+          "官方原厂": "Terra $2/$12 · Sol $5/$30(Fast $10/$60) · Luna $0.2/$1.2",
           "CMI AI Hub": "$2.2 / $13.2 · $4.4 / $26.4 · $0.88 / $5.28",
           "移动云 MoMA": null,
           "硅基流动": null,
@@ -7867,48 +8023,112 @@ window.AIHUB_DATA = {
       "layer": "接入与聚合层",
       "en": "Access & Aggregation",
       "color": "#0e9de0",
-      "caps": ["agg_unified","agg_models","agg_catalog","key_pool","proto"],
-      "functions": ["统一接入入口","多厂商模型聚合","统一模型目录/API","API Key 池/密钥管理","OpenAI 兼容协议"],
+      "caps": [
+        "agg_unified",
+        "agg_models",
+        "agg_catalog",
+        "key_pool",
+        "proto"
+      ],
+      "functions": [
+        "统一接入入口",
+        "多厂商模型聚合",
+        "统一模型目录/API",
+        "API Key 池/密钥管理",
+        "OpenAI 兼容协议"
+      ],
       "note": "聚合平台最低门槛:统一 OpenAI 兼容入口 + 模型目录;需支持多 Key 池与按供应商路由,降低单点绑定。"
     },
     {
       "layer": "智能路由与优化层",
       "en": "Routing & Optimization",
       "color": "#2b5cff",
-      "caps": ["route","failover","smart","analysis"],
-      "functions": ["模型路由决策","故障切换/降级","智能路由推荐","价格/质量/速度分析"],
+      "caps": [
+        "route",
+        "failover",
+        "smart",
+        "analysis"
+      ],
+      "functions": [
+        "模型路由决策",
+        "故障切换/降级",
+        "智能路由推荐",
+        "价格/质量/速度分析"
+      ],
       "note": "路由应支持成本/时延/质量多维权重;故障切换与自动降级是 SLA 保障关键,缓存命中可显著降本。"
     },
     {
       "layer": "身份与权限治理层",
       "en": "Identity & Governance",
       "color": "#7c3aed",
-      "caps": ["rbac","sandbox","teams"],
-      "functions": ["用户/权限/项目/RBAC","安全沙箱/隔离","多团队/组织管理"],
+      "caps": [
+        "rbac",
+        "sandbox",
+        "teams"
+      ],
+      "functions": [
+        "用户/权限/项目/RBAC",
+        "安全沙箱/隔离",
+        "多团队/组织管理"
+      ],
       "note": "企业落地门槛:RBAC/项目隔离/审计是 toB 标配;沙箱隔离与多团队管理支撑多部门共用。"
     },
     {
       "layer": "计费与成本管理层",
       "en": "Billing & Cost",
       "color": "#f2994a",
-      "caps": ["passthrough","cache_bill","per_token","post_pre","budget","recon"],
-      "functions": ["透传/平台抽成/厂商自定","缓存命中计费","按 token 计费","后付费/预付费","Token 预算/配额/审计","计量/计费/对账"],
+      "caps": [
+        "passthrough",
+        "cache_bill",
+        "per_token",
+        "post_pre",
+        "budget",
+        "recon"
+      ],
+      "functions": [
+        "透传/平台抽成/厂商自定",
+        "缓存命中计费",
+        "按 token 计费",
+        "后付费/预付费",
+        "Token 预算/配额/审计",
+        "计量/计费/对账"
+      ],
       "note": "透传 vs 平台抽成两种模式并存;Token 预算/配额/对账是企业财务可控性的核心。"
     },
     {
       "layer": "数据安全与合规层",
       "en": "Security & Compliance",
       "color": "#e5484d",
-      "caps": ["mask","ctx_store","content","egress","audit","pii_block"],
-      "functions": ["数据脱敏/策略执行","上下文安全存储","内容策略审核","出域控制","全链路审计","敏感信息拦截"],
+      "caps": [
+        "mask",
+        "ctx_store",
+        "content",
+        "egress",
+        "audit",
+        "pii_block"
+      ],
+      "functions": [
+        "数据脱敏/策略执行",
+        "上下文安全存储",
+        "内容策略审核",
+        "出域控制",
+        "全链路审计",
+        "敏感信息拦截"
+      ],
       "note": "脱敏、出域控制、全链路审计、敏感信息拦截构成合规底座;出海需数据驻留与备案资质。"
     },
     {
       "layer": "运营服务与可观测层",
       "en": "Ops & Observability",
       "color": "#00b3a4",
-      "caps": ["ops","observ"],
-      "functions": ["运营分析/客户服务","可观测性"],
+      "caps": [
+        "ops",
+        "observ"
+      ],
+      "functions": [
+        "运营分析/客户服务",
+        "可观测性"
+      ],
       "note": "用量监控、日志、告警与运营分析支撑稳定运营;可观测性是企业 SLA 与成本对账的依据。"
     },
     {
@@ -7916,15 +8136,57 @@ window.AIHUB_DATA = {
       "en": "Model Ecosystem & Compute",
       "color": "#6b7280",
       "caps": [],
-      "functions": ["多厂商模型生态(500+ 模型)","多云/多供应商算力调度","运营商骨干网/跨境合规","开源社区模型","闭源商业模型"],
+      "functions": [
+        "多厂商模型生态(500+ 模型)",
+        "多云/多供应商算力调度",
+        "运营商骨干网/跨境合规",
+        "开源社区模型",
+        "闭源商业模型"
+      ],
       "note": "500+ 模型生态 + 多云算力调度 + 运营商骨干网/跨境合规,是聚合平台的供给侧护城河。"
     }
   ],
   "vendorEco": [
-    { "group": "运营商系", "vendors": ["移动云 MoMA","CMI AI Hub","天翼云星辰MaaS"] },
-    { "group": "互联网 / 云 MaaS", "vendors": ["阿里云百炼","百度智能云千帆","火山引擎方舟","腾讯云 TokenHub","硅基流动","七牛云 AI","秒云"] },
-    { "group": "国际网关型", "vendors": ["OpenRouter","Together AI","Anyscale"] },
-    { "group": "网关治理 / 自托管", "vendors": ["Portkey","LiteLLM"] },
-    { "group": "国内直连网关", "vendors": ["n1n"] }
+    {
+      "group": "运营商系",
+      "vendors": [
+        "移动云 MoMA",
+        "CMI AI Hub",
+        "天翼云星辰MaaS"
+      ]
+    },
+    {
+      "group": "互联网 / 云 MaaS",
+      "vendors": [
+        "阿里云百炼",
+        "百度智能云千帆",
+        "火山引擎方舟",
+        "腾讯云 TokenHub",
+        "硅基流动",
+        "七牛云 AI",
+        "秒云"
+      ]
+    },
+    {
+      "group": "国际网关型",
+      "vendors": [
+        "OpenRouter",
+        "Together AI",
+        "Anyscale"
+      ]
+    },
+    {
+      "group": "网关治理 / 自托管",
+      "vendors": [
+        "Portkey",
+        "LiteLLM"
+      ]
+    },
+    {
+      "group": "国内直连网关",
+      "vendors": [
+        "n1n"
+      ]
+    }
   ]
 };
