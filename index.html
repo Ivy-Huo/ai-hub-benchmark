@@ -105,6 +105,7 @@
   .cbpill.on{background:var(--brand);color:#fff;border-color:var(--brand)}
   .cbpill .cnt{font-size:10.5px;opacity:.72;margin-left:1px}
   .cbpill.on .cnt{opacity:.9}
+  .cbpill.zero{opacity:.4;background:#f3f4f6;color:#9aa3ad;border-style:dashed}
 
   @media(max-width:860px){
     .m1layout{flex-direction:column}
@@ -301,7 +302,7 @@
   <div class="wrap">
     <div class="kicker">Module 1 · Industry Insights</div>
     <h2>AI 行业洞察与生态动态</h2>
-    <p class="lead">按时间轴与月度归类追踪行业动态。顶部为「三级分类 + 区域」级联筛选条(已冻结,随滚动常驻),左侧为标签栏,支持关键词搜索、原文跳转与 Excel 下载。分类三级:一级 政策 / 行业 / 技术趋势 / 厂商 → 二级 原厂 / 聚合 / 运营商 → 三级 中国移动 / 联通 / 电信;区域:中国内地 / 中国香港 / 中国澳门 / 中国台湾 / 东南亚 / 欧洲 / 北美洲 / 全球。</p>
+    <p class="lead">按时间轴与月度归类追踪行业动态。顶部为「三级分类 + 区域」级联筛选条(已冻结,随滚动常驻),左侧为标签栏,支持关键词搜索、原文跳转与 Excel 下载。分类三级:一级 政策 / 行业 / 技术趋势 / 厂商 → 二级 原厂 / 聚合 / 运营商 → 三级 厂商名字(点击「聚合厂商」展开 移动云 MoMA / 天翼云星辰MaaS / 阿里云百炼 / OpenRouter… ;点击「大模型原厂」展开 DeepSeek / 智谱 / Kimi / OpenAI… ,再点具体厂商名即可按厂商筛选动态);区域:中国内地 / 中国香港 / 中国澳门 / 中国台湾 / 东南亚 / 欧洲 / 北美洲 / 全球。</p>
 
     <div class="m1layout">
       <aside class="tagnav" id="tagnav"></aside>
@@ -483,6 +484,62 @@ var base=JSON.parse(JSON.stringify(window.AIHUB_DATA));
 var state=loadState();
 var curTag="全部", curKw="", curPage=1, PAGE_SIZE=10, editing=false, curCat="", curRegion="";
 var catMap={};
+/* ---- 厂商下钻:聚合厂商 / 大模型原厂 的第三级「厂商名字」叶子(单一数据源) ----
+   id 以 v_ 前缀标识;parent 决定挂在 聚合厂商(agg) 还是 大模型原厂(llm) 下;
+   kw 为关键词,用于在 insights 的 标题/摘要/来源 中做子串匹配(不限制 cat,
+   这样厂商维度的下钻能跨分类捞出所有提及该厂商的动态)。 */
+var VENDOR_KW = {
+  v_moma:        {label:"移动云 MoMA", parent:"agg", color:"#00917f", kw:["移动云","MoMA","移动引擎"]},
+  v_ctyun:       {label:"天翼云星辰MaaS", parent:"agg", color:"#00917f", kw:["天翼云","星辰MaaS","TokenHub","ctyun"]},
+  v_bailian:     {label:"阿里云百炼", parent:"agg", color:"#00917f", kw:["阿里云百炼","百炼","Bailian","ModelStudio"]},
+  v_qianfan:     {label:"百度智能云千帆", parent:"agg", color:"#00917f", kw:["千帆","百度智能云千帆","QianFan","百度千帆"]},
+  v_ark:         {label:"火山引擎方舟", parent:"agg", color:"#00917f", kw:["火山引擎方舟","火山方舟","方舟大模型","Volcengine"]},
+  v_tencentcloud:{label:"腾讯云 TokenHub", parent:"agg", color:"#00917f", kw:["腾讯云","腾讯 TokenHub","腾讯云大模型","TokenHub"]},
+  v_siliconflow: {label:"硅基流动", parent:"agg", color:"#00917f", kw:["硅基流动","SiliconFlow","硅基"]},
+  v_qiniu:       {label:"七牛云 AI", parent:"agg", color:"#00917f", kw:["七牛云","七牛"]},
+  v_miaoyun:     {label:"秒云", parent:"agg", color:"#00917f", kw:["秒云"]},
+  v_openrouter:  {label:"OpenRouter", parent:"agg", color:"#00917f", kw:["OpenRouter"]},
+  v_portkey:     {label:"Portkey", parent:"agg", color:"#00917f", kw:["Portkey"]},
+  v_litellm:     {label:"LiteLLM", parent:"agg", color:"#00917f", kw:["LiteLLM"]},
+  v_together:    {label:"Together AI", parent:"agg", color:"#00917f", kw:["Together AI","Together"]},
+  v_anyscale:    {label:"Anyscale", parent:"agg", color:"#00917f", kw:["Anyscale"]},
+  v_n1n:         {label:"n1n", parent:"agg", color:"#00917f", kw:["n1n"]},
+  v_cmi:         {label:"CMI AI Hub", parent:"agg", color:"#00917f", kw:["CMI AI Hub","CMI AI"]},
+  v_dmxapi:      {label:"DMXAPI", parent:"agg", color:"#00917f", kw:["DMXAPI","DMX API"]},
+  v_novita:      {label:"Novita AI", parent:"agg", color:"#00917f", kw:["Novita AI","Novita"]},
+  v_deepseek:    {label:"DeepSeek", parent:"llm", color:"#c76a15", kw:["DeepSeek","深度求索"]},
+  v_zhipu:       {label:"智谱", parent:"llm", color:"#c76a15", kw:["智谱","Zhipu","GLM"]},
+  v_kimi:        {label:"Kimi(月之暗面)", parent:"llm", color:"#c76a15", kw:["Kimi","月之暗面","Moonshot"]},
+  v_minimax:     {label:"MiniMax", parent:"llm", color:"#c76a15", kw:["MiniMax","Minimax"]},
+  v_iflytek:     {label:"科大讯飞(星火)", parent:"llm", color:"#c76a15", kw:["科大讯飞","星火","iFlytek","讯飞"]},
+  v_openai:      {label:"OpenAI", parent:"llm", color:"#c76a15", kw:["OpenAI"]},
+  v_anthropic:   {label:"Anthropic(Claude)", parent:"llm", color:"#c76a15", kw:["Anthropic","Claude"]},
+  v_google:      {label:"Google(Gemini)", parent:"llm", color:"#c76a15", kw:["Gemini","谷歌","Google"]},
+  v_meta:        {label:"Meta(Llama)", parent:"llm", color:"#c76a15", kw:["Meta","Llama","LLaMA"]},
+  v_qwen:        {label:"阿里千问(Qwen)", parent:"llm", color:"#c76a15", kw:["千问","Qwen","通义千问","通义"]},
+  v_ernie:       {label:"百度文心(ERNIE)", parent:"llm", color:"#c76a15", kw:["文心","ERNIE","百度文心"]},
+  v_doubao:      {label:"字节豆包(Doubao)", parent:"llm", color:"#c76a15", kw:["豆包","Doubao","字节豆包"]},
+  v_hunyuan:     {label:"腾讯混元(Hunyuan)", parent:"llm", color:"#c76a15", kw:["混元","Hunyuan","腾讯混元"]},
+  v_xai:         {label:"xAI(Grok)", parent:"llm", color:"#c76a15", kw:["xAI","Grok"]},
+  v_mistral:     {label:"Mistral", parent:"llm", color:"#c76a15", kw:["Mistral"]}
+};
+/* 把 VENDOR_KW 中的叶子按 parent 注入到分类树(聚合厂商/大模型原厂)下,作为第三级;幂等 */
+function injectVendorLeaves(){
+  var tree=state.insightCatTree; if(!tree) return;
+  function find(id){ var f=null; (function d(ns){ (ns||[]).forEach(function(n){ if(f)return; if(n.id===id)f=n; else if(n.items)d(n.items); }); })(tree); return f; }
+  ["llm","agg"].forEach(function(pid){
+    var node=find(pid); if(!node) return;
+    var leaves=[];
+    for(var vid in VENDOR_KW){ if(VENDOR_KW[vid].parent===pid) leaves.push({id:vid,label:VENDOR_KW[vid].label,color:VENDOR_KW[vid].color}); }
+    node.items=leaves;
+  });
+}
+/* 厂商叶子(v_*)用关键词匹配整条动态,而非按 cat 字段 */
+function vendorMatch(it, vid){
+  var v=VENDOR_KW[vid]; if(!v||!v.kw||!v.kw.length) return false;
+  var t=((it.title||"")+" "+(it.summary||"")+" "+(it.source||"")).toLowerCase();
+  return v.kw.some(function(k){ return t.indexOf(k.toLowerCase())>=0; });
+}
 var hiddenBm={}, hiddenBiz={}, hiddenPrice={};
 var RCOLORS=["#2b5cff","#00b3a4","#f2994a","#7c3aed","#e0483e","#0e9de0","#2e7d32","#c76a15","#d63384"];
 
@@ -516,15 +573,16 @@ function buildCatMap(){
   walk(state.insightCatTree||[]);
   return map;
 }
-function matchesCat(itemCat, selId){
+function matchesCat(it, selId){
   if(!selId) return true;                 // 全部
-  if(itemCat===selId) return true;        // 自身
+  if(selId.indexOf("v_")===0) return vendorMatch(it, selId); // 厂商叶子:关键词匹配
+  if(it.cat===selId) return true;         // 自身
   var set=catMap[selId]; if(!set) return false;
-  return set.leaves.indexOf(itemCat)>=0;  // 子孙
+  return set.leaves.indexOf(it.cat)>=0;   // 子孙
 }
 function catCount(id){
   if(!id) return state.insights.length;
-  return state.insights.filter(function(it){ return matchesCat(it.cat, id); }).length;
+  return state.insights.filter(function(it){ return matchesCat(it, id); }).length;
 }
 function catLabel(id){ return (catMap[id]&&catMap[id].label)||id||""; }
 /* ---- 区域:构建 id -> {label,icon,color} 映射 ---- */
@@ -554,14 +612,16 @@ function catPath(id){
   })(state.insightCatTree||[],[]);
   return path;
 }
-/* 构建一行级联 pill:label + 若干 pill(含计数),selId 高亮,onPick 处理点击 */
-function cbRow(label,pills,selId,onPick,countFn){
+/* 构建一行级联 pill:label + 若干 pill(含计数)。activeSet 中任一 id 高亮(含祖先路径);count=0 的叶子置灰 */
+function cbRow(label,pills,activeSet,onPick,countFn){
   var r=document.createElement("div"); r.className="cbrow";
   if(label){ var lab=document.createElement("span"); lab.className="cblab"; lab.textContent=label; r.appendChild(lab); }
   pills.forEach(function(p){
     var id=p.id||"";
-    var b=document.createElement("button"); b.className="cbpill"+((selId||"")===id?" on":"");
-    b.innerHTML=(p.icon?p.icon+" ":"")+esc(p.label)+' <span class="cnt">'+countFn(id)+'</span>';
+    var cnt=countFn(id);
+    var b=document.createElement("button");
+    b.className="cbpill"+(activeSet.indexOf(id)>=0?" on":"")+(cnt===0?" zero":"");
+    b.innerHTML=(p.icon?p.icon+" ":"")+esc(p.label)+' <span class="cnt">'+cnt+'</span>';
     b.onclick=function(){ onPick(id); curPage=1; renderCatbar(); renderNews(); };
     r.appendChild(b);
   });
@@ -572,23 +632,23 @@ function renderCatbar(){
   var tree=state.insightCatTree||[];
   var pickCat=function(id){ curCat=(curCat===id?"":id); };
   /* 第一行:一级分类(全部 + 政策/行业/技术/厂商) */
-  bar.appendChild(cbRow("分类",[{id:"",label:"全部动态",icon:"🗂️"}].concat(tree),curCat,pickCat,catCount));
-  /* 展开行:对当前选中项的每个“有子节点”的祖先,渲染其子节点行(二级、三级) */
+  bar.appendChild(cbRow("分类",[{id:"",label:"全部动态",icon:"🗂️"}].concat(tree),curCat?catPath(curCat):[""],pickCat,catCount));
+  /* 展开行:对当前选中项的每个“有子节点”的祖先,渲染其子节点行(二级、三级,含厂商名字下钻) */
   var path=curCat?catPath(curCat):[];
   path.forEach(function(pid){
     var node=findNode(pid);
     if(node&&node.items&&node.items.length){
-      bar.appendChild(cbRow(node.label+" ▸",[{id:node.id,label:"全部"+node.label}].concat(node.items),curCat,pickCat,catCount));
+      bar.appendChild(cbRow(node.label+" ▸",[{id:node.id,label:"全部"+node.label}].concat(node.items),path,pickCat,catCount));
     }
   });
   /* 区域行(独立维度,与分类/标签叠加) */
   var pickRegion=function(id){ curRegion=(curRegion===id?"":id); };
-  bar.appendChild(cbRow("🌐 区域",[{id:"",label:"全部区域"}].concat(state.insightRegionTree||[]),curRegion,pickRegion,regionCount));
+  bar.appendChild(cbRow("🌐 区域",[{id:"",label:"全部区域"}].concat(state.insightRegionTree||[]),curRegion?[curRegion]:[""],pickRegion,regionCount));
 }
 function filteredNews(){
   return state.insights.slice().sort(function(a,b){return b.date<a.date?-1:1;}).filter(function(it){
     if(curTag!=="全部"&&it.tag!==curTag) return false;
-    if(curCat&&!matchesCat(it.cat,curCat)) return false;
+    if(curCat&&!matchesCat(it,curCat)) return false;
     if(curRegion&&it.region!==curRegion) return false;
     if(curKw&&(it.title+it.summary).toLowerCase().indexOf(curKw)<0) return false;
     return true;
@@ -1092,6 +1152,7 @@ document.getElementById("hmodal").addEventListener("click",function(e){ if(e.tar
 
 /* ================= init ================= */
 function renderAll(){
+  injectVendorLeaves();                 // 把聚合/原厂厂商名字注入分类树第三级
   catMap=buildCatMap(); regionMap=buildRegionMap();
   renderTagnav(); renderCatbar(); renderNews();
   renderPick("vpick",state.benchmark.vendors,hiddenBm,renderBmTable);
