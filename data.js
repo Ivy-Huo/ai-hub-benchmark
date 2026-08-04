@@ -5,6 +5,10 @@ window.AIHUB_DATA_VERSION = "2026-08-04.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-04",
+    "note": "工具链修复:本机 Python 运行时已不可用(.workbuddy/binaries/python/versions 为空),将 build_standalone.py / autopush.py 移植为等价的 build_standalone.js / autopush.js(Node 22),自动化手册常量与步骤 5/7 同步改用 NODE;推送链路恢复正常"
+  },
+  {
+    "date": "2026-08-04",
     "note": "每日自动更新:新增 8 条动态(MiniMax H3 视频模型开源登顶视频编辑榜/OpenAI GPT-5.6 Luna 降价 80%/DeepSeek 开放 Harness 代理框架内测/AI Coding 价格战与单任务成本 3 美分/阿里千问办公 QwenWork 公测/白宫召集头部实验室敲定模型安全自愿框架/Hugging Face CEO 称中国开源年底或追平/三大运营商 809 亿算力资本开支;信源:MiniMax 官方·中国经营报、IT之家·财联社科创板日报、南华早报·赛迪网、驱动中国·界面新闻、极客公园、CNBC、腾讯新闻);价格变动:据 OpenAI 7/30 官方降价更新 pricing 中 GPT-5.6 官方原厂价(Terra $2/$12、Luna $0.2/$1.2、Sol Fast 新增 $10/$60);insights 增至 115 条"
   },
   {
