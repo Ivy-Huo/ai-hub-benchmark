@@ -1,80 +1,85 @@
-/* AI Hub 对标情报站 · 数据层
-   名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
-   页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-04.1";
-window.AIHUB_HISTORY = [
-  {
-    "date": "2026-08-04",
-    "note": "工具链修复:本机 Python 运行时已不可用(.workbuddy/binaries/python/versions 为空),将 build_standalone.py / autopush.py 移植为等价的 build_standalone.js / autopush.js(Node 22),自动化手册常量与步骤 5/7 同步改用 NODE;推送链路恢复正常"
-  },
-  {
-    "date": "2026-08-04",
-    "note": "每日自动更新:新增 8 条动态(MiniMax H3 视频模型开源登顶视频编辑榜/OpenAI GPT-5.6 Luna 降价 80%/DeepSeek 开放 Harness 代理框架内测/AI Coding 价格战与单任务成本 3 美分/阿里千问办公 QwenWork 公测/白宫召集头部实验室敲定模型安全自愿框架/Hugging Face CEO 称中国开源年底或追平/三大运营商 809 亿算力资本开支;信源:MiniMax 官方·中国经营报、IT之家·财联社科创板日报、南华早报·赛迪网、驱动中国·界面新闻、极客公园、CNBC、腾讯新闻);价格变动:据 OpenAI 7/30 官方降价更新 pricing 中 GPT-5.6 官方原厂价(Terra $2/$12、Luna $0.2/$1.2、Sol Fast 新增 $10/$60);insights 增至 115 条"
-  },
-  {
-    "date": "2026-08-02",
-    "note": "每日自动更新(补跑周末周日):新增 5 条动态(DeepSeek-V4-Flash 正式版公测/字节 Seedance 2.5 视频模型/欧盟 AI 内容强制标注新规生效/OpenRouter 周调用榜前五均中国模型/蚂蚁 Agentar 2.0 商业智能体平台;信源:第一财经·IT之家/AGI HUNT/央视财经/WAIC 2026);insights 增至 107 条;GitHub 推送成功"
-  },
-  {
-    "date": "2026-08-03",
-    "note": "每日自动更新:新增 5 条动态(阿里 Qwen3.8-Max 发布/香港 AI 桥梁定位与沙岭算力/OpenAI Astra 多智能体模型曝光/发改委等多部门密集部署 AI 并加速人工智能法立法/三大运营商停运第三方号卡渠道提速边缘合规;信源:凤凰网科技·界面新闻/香港商报/华尔街见闻·The Information/央视新闻/运营商联合公告);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 102 条;修复 validate_data.js 对带引号键(insights/date)的识别盲区后校验通过"
-  },
-  {
-    "date": "2026-07-31",
-    "note": "模块三原厂价格落地:为阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax 填充真实原厂价格(原生取官方原厂价、开源取各原厂官方转售价,来源各原厂定价页),新增科大讯飞并补星火 X2/Ultra/Pro/Lite 原生行;模块二取消 CMI '我方'特殊高亮(ours 置空)改为中立行业对标,模块四差异化定位同步去 CMI 化"
-  },
-  {
-    "date": "2026-07-31",
-    "note": "模块二真实数据溯源:新增 n1n(国内直连型 LLM 聚合网关,来源 llm-api.apifox.cn)为第16家对标厂商;据官方文档修正天翼云星辰TokenHub、移动云MoMA、OpenRouter 的模型数量/计费/路由/合规字段;新增 benchmark.sources 标注各家官方数据来源链接"
-  },
-  {
-    "date": "2026-07-31",
-    "note": "每日自动更新:新增 8 条动态(谷歌 Gemini Robotics 2 全身控制、OpenAI 失控智能体入侵 Hugging Face 事件升级、微软据报拟开放权重发布 MAI、360 纳米Work 企业智能体平台、腾讯 WorkBuddy V5.3.5 人机双写、腾讯 WorkSolo AIGC 内测、OpenAI 10 万学者免费前沿模型、OpenAI GPT Transcribe 转录模型;信源:华尔街见闻/DeepMind、国际金融报、36氪、瀚海观察、腾讯研究院、OpenAI 官网);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 97 条;GitHub 推送:成功(commit 567b9abcac)"
-  },
-  {
-    "date": "2026-07-30",
-    "note": "每日自动更新:新增 8 条动态(OpenAI gpt-oss 开源、腾讯混元 AngelSpec、蚂蚁 Ling-3.0-flash、清华 AI 失控预测框架 LoC、中国电信息壤 100EFLOPS、GPU 租赁价下行、百度 OCR 开源、OpenAI Codex Security CLI;信源:腾讯研究院/搜狐、机器之心、量子位、JYGPU、通信世界、OpenAI);GitHub 推送:跳过(连接器未连接);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 89 条"
-  },
-  {
-    "date": "2026-07-30",
-    "note": "模块一重构:分类升级为三级树(一级 政策/行业/技术/厂商 → 二级 原厂/聚合/运营商 → 三级 三大运营商);布局按用户反馈调整——分类与标签换位,分类改为顶部级联筛选条(sticky 冻结、默认只露一级、紧凑),标签移至左侧窄边栏,新闻内容区成为视觉主体;新增 12 条 07-25~30 情报(Kimi K3 开源+定价、DeepSeek V4 Preview、Claude Opus 5、OpenRouter 中国模型前五、运营商 Token 经营、苹果国行选通义、1100+员工联名、25家捍卫开放权重、OpenAI Agent 逃逸、香港全民AI/算力),insights 增至 81 条"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "强制重建:版本升 2026-07-29.4 触发 GitHub Pages 重新构建,确保线上服务含 localStorage 版本门控修复(69 条 + 区域维度)"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "模块一情报批量补强:手动检索官方 blog/新闻中心、AI 媒体、财经媒体、政府监管、研报平台,新增 21 条关键动态(运营商 MoMA2.0/WorkBuddy、清朗整治AI乱象/拟人化办法/988款备案/香港备忘录、千问10亿下载/100亿下载、GPT-5.6/GLM-5.2、硅基流动20亿B轮/OpenRouter卖身、算力全链涨价与算力银行、DeepSeek降价75%/智谱提价/定价分裂、MCP协议栈/智能体爆发、博云融资),insights 增至 45 条"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "模块一升级:新增动态分类树(政策/行业/技术趋势 + 厂商[原厂/聚合/运营商→三大运营商]竖排导航,与标签双维度筛选);情报信源库扩充为 12 类(新增原厂/运营商官方、AI 媒体、财经媒体、政府监管、研报平台),UI 改为折叠展示"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "每日自动更新:新增 6 条动态(Kimi K3 开源/蚂蚁 LLaDA2.2/GPU 租赁涨价/WAIC 2026 闭幕/开放权重公开信/Claude Opus 5;信源:GitHub、Anthropic 官网、量子位、国金证券、人民日报海外版),已备份当日快照"
-  },
-  {
-    "date": "2026-07-27",
-    "note": "V4:新增情报信源库(官网+公众号);天翼云星辰MaaS 加入功能对标;DMXAPI/Novita 加入商业模式;价格矩阵全部采用官网/定价页真实数据(硅基流动/DMXAPI/Together/Novita/CMI/MoMA),新增多模态价格表"
-  },
-  {
-    "date": "2026-07-27",
-    "note": "V3:动态加原文链接、补全 6 月热点;对标拆分 9 家厂商并引入细分指标;价格对标改为矩阵"
-  },
-  {
-    "date": "2026-07-27",
-    "note": "初版上线:四大模块 + 技术架构页"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "修复:localStorage 旧快照覆盖线上最新数据的问题——loadState 改为按数据版本(__ver)校验,版本不符即丢弃本地缓存、以发布数据为准;新增区域维度(8 区域)与 24 条海外/港澳/台/东南亚情报,insights 增至 69 条(版本 2026-07-29.3)"
-  }
-];
-
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-05",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "网信办首发 7 款手机端侧生成式 AI 备案清单,端侧模型正式进入合规化阶段",
+      "source": "国家网信办 / 中国经济时报",
+      "url": "https://www.cac.gov.cn/",
+      "summary": "Apple 智能、华为小艺、OPPO AndesGPT、vivo 蓝心、小米澎湃 AI、三星 Galaxy AI、努比亚豆包 7 款端侧模型完成备案,系全国 988 款生成式 AI 备案中首次单列手机端侧清单,内外资同台同规。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "马斯克:下周发布 Grok 4.6,SpaceX 全量历史数据将并入 Grok 训练",
+      "source": "金融界 / SpaceX 首次财报电话会",
+      "url": "https://www.163.com/dy/article/L3I71UNO0519QIKK.html",
+      "summary": "8/4 SpaceX 首次财报电话会上马斯克称下周推出 Grok 4.6、数周内跟进 4.7,并将 SpaceX 有史以来产生的全部数据集整合进 Grok 训练;上月发布的 Grok 4.5 主打代码与财务法务任务。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "商汤开源 SenseNova U1.5-Lite-Preview:8B-MoT 原生统一多模态,支持 4K 生成",
+      "source": "商汤科技 / 智东西·36氪",
+      "url": "https://github.com/OpenSenseNova/SenseNova-U1",
+      "summary": "基于 NEO-Unify 架构在单一网络内贯通视觉理解/推理/生成/编辑,Qwen-Image-Bench 由 47.14 升至 55.20,GEdit-Bench 中英分别 8.05/8.17 超多款大参数开闭源模型;交付级 U1Pro 邀测中。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "MiniMax H3 开源许可排除美欧英韩:好莱坞版权诉讼倒逼的地域性自保条款",
+      "source": "AIbase / 腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260804A0CIRF00",
+      "summary": "稀宇科技在 H3 视频模型开源协议中限制美国、欧盟、英国、韩国用户使用,源于与好莱坞片方的版权诉讼(法院驳回其撤诉申请);美国用户需申请授权并建立合规机制,开源许可地缘化引发关注。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯混元发布 Hy ASR 3.0 preview 语音识别模型,多语种整体词错率约 3%",
+      "source": "腾讯混元 / IT之家·科技狐",
+      "url": "https://cloud.tencent.com/product/asr",
+      "summary": "依托 Hy3 大模型融合语音识别与语义理解,方言、嘈杂环境与上下文识别能力全面升级;评测普通话词错率 3.34%、英语 2.62%、粤语 3.12%,面向客服与会议转写等高噪声场景。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "全双工语音成新战场:微软 MAI Realtime 曝光,英伟达开源 11B VoiceChat 可边说边调工具",
+      "source": "AIbase / NVIDIA·Hugging Face",
+      "url": "https://huggingface.co/nvidia",
+      "summary": "微软首款自研实时语音模型 MAI Realtime 支持 16 语种、听说并行与中途插话;英伟达 8/3 开源 NemotronLabs VoiceChat(11B,权重上 HF),首个可在对话中调用工具的开放全双工模型,轮次延迟约 450ms。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "高德升级世界模型 ABot-World-0 并开源,实现全球首个 24 小时连续稳定推理",
+      "source": "高德 / AIbase",
+      "url": "https://new.qq.com/rain/a/20260804A0CIRF00",
+      "summary": "采用 LongForcing 长程训练范式缓解误差累积与分布漂移,突破交互式世界模型长时运行难题;模型已开源并集成至高德开发平台,为导航地图与具身智能长期自主运行提供路径。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "IDC:2026 中国 AI 手机出货将达 1.47 亿台增 31.6%,端侧 AI 市场规模破 8000 亿元",
+      "source": "IDC / 财联社·科创板日报",
+      "url": "https://www.163.com/dy/article/L3I6S6NB0550B1DU.html",
+      "summary": "同期全球智能手机出货预计同比降 13%、PC 降 11%,AI 终端逆势上行,AI 手机占中国市场比重超 53%,全球 Gen AI 手机达 4.32 亿台;端侧 AI 正从 L2 助手协同向 L3 任务代理演进。"
+    },
     {
       "date": "2026-08-04",
       "tag": "开源动态",
@@ -8194,3 +8199,78 @@ window.AIHUB_DATA = {
     }
   ]
 };
+window.AIHUB_DATA_VERSION = "2026-08-05.1";
+window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-05",
+    "note": "每日自动更新:新增 8 条动态(网信办首发 7 款手机端侧生成式 AI 备案清单/马斯克预告 Grok 4.6 并并入 SpaceX 全量数据/商汤开源 SenseNova U1.5-Lite-Preview 8B 统一多模态/MiniMax H3 开源许可排除美欧英韩/腾讯混元 Hy ASR 3.0 preview 多语种词错率约 3%/全双工语音赛道微软 MAI Realtime 与英伟达开源 VoiceChat/高德 ABot-World-0 世界模型 24 小时连续推理开源/IDC 中国 AI 手机 1.47 亿台与端侧 AI 8000 亿市场;信源:国家网信办·中国经济时报、金融界·SpaceX 财报会、商汤科技·智东西36氪、AIbase·腾讯新闻、IT之家·科技狐、NVIDIA·Hugging Face、高德、IDC·财联社科创板日报);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 123 条"
+  },
+  {
+    "date": "2026-08-04",
+    "note": "工具链修复:本机 Python 运行时已不可用(.workbuddy/binaries/python/versions 为空),将 build_standalone.py / autopush.py 移植为等价的 build_standalone.js / autopush.js(Node 22),自动化手册常量与步骤 5/7 同步改用 NODE;推送链路恢复正常"
+  },
+  {
+    "date": "2026-08-04",
+    "note": "每日自动更新:新增 8 条动态(MiniMax H3 视频模型开源登顶视频编辑榜/OpenAI GPT-5.6 Luna 降价 80%/DeepSeek 开放 Harness 代理框架内测/AI Coding 价格战与单任务成本 3 美分/阿里千问办公 QwenWork 公测/白宫召集头部实验室敲定模型安全自愿框架/Hugging Face CEO 称中国开源年底或追平/三大运营商 809 亿算力资本开支;信源:MiniMax 官方·中国经营报、IT之家·财联社科创板日报、南华早报·赛迪网、驱动中国·界面新闻、极客公园、CNBC、腾讯新闻);价格变动:据 OpenAI 7/30 官方降价更新 pricing 中 GPT-5.6 官方原厂价(Terra $2/$12、Luna $0.2/$1.2、Sol Fast 新增 $10/$60);insights 增至 115 条"
+  },
+  {
+    "date": "2026-08-02",
+    "note": "每日自动更新(补跑周末周日):新增 5 条动态(DeepSeek-V4-Flash 正式版公测/字节 Seedance 2.5 视频模型/欧盟 AI 内容强制标注新规生效/OpenRouter 周调用榜前五均中国模型/蚂蚁 Agentar 2.0 商业智能体平台;信源:第一财经·IT之家/AGI HUNT/央视财经/WAIC 2026);insights 增至 107 条;GitHub 推送成功"
+  },
+  {
+    "date": "2026-08-03",
+    "note": "每日自动更新:新增 5 条动态(阿里 Qwen3.8-Max 发布/香港 AI 桥梁定位与沙岭算力/OpenAI Astra 多智能体模型曝光/发改委等多部门密集部署 AI 并加速人工智能法立法/三大运营商停运第三方号卡渠道提速边缘合规;信源:凤凰网科技·界面新闻/香港商报/华尔街见闻·The Information/央视新闻/运营商联合公告);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 102 条;修复 validate_data.js 对带引号键(insights/date)的识别盲区后校验通过"
+  },
+  {
+    "date": "2026-07-31",
+    "note": "模块三原厂价格落地:为阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax 填充真实原厂价格(原生取官方原厂价、开源取各原厂官方转售价,来源各原厂定价页),新增科大讯飞并补星火 X2/Ultra/Pro/Lite 原生行;模块二取消 CMI '我方'特殊高亮(ours 置空)改为中立行业对标,模块四差异化定位同步去 CMI 化"
+  },
+  {
+    "date": "2026-07-31",
+    "note": "模块二真实数据溯源:新增 n1n(国内直连型 LLM 聚合网关,来源 llm-api.apifox.cn)为第16家对标厂商;据官方文档修正天翼云星辰TokenHub、移动云MoMA、OpenRouter 的模型数量/计费/路由/合规字段;新增 benchmark.sources 标注各家官方数据来源链接"
+  },
+  {
+    "date": "2026-07-31",
+    "note": "每日自动更新:新增 8 条动态(谷歌 Gemini Robotics 2 全身控制、OpenAI 失控智能体入侵 Hugging Face 事件升级、微软据报拟开放权重发布 MAI、360 纳米Work 企业智能体平台、腾讯 WorkBuddy V5.3.5 人机双写、腾讯 WorkSolo AIGC 内测、OpenAI 10 万学者免费前沿模型、OpenAI GPT Transcribe 转录模型;信源:华尔街见闻/DeepMind、国际金融报、36氪、瀚海观察、腾讯研究院、OpenAI 官网);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 97 条;GitHub 推送:成功(commit 567b9abcac)"
+  },
+  {
+    "date": "2026-07-30",
+    "note": "每日自动更新:新增 8 条动态(OpenAI gpt-oss 开源、腾讯混元 AngelSpec、蚂蚁 Ling-3.0-flash、清华 AI 失控预测框架 LoC、中国电信息壤 100EFLOPS、GPU 租赁价下行、百度 OCR 开源、OpenAI Codex Security CLI;信源:腾讯研究院/搜狐、机器之心、量子位、JYGPU、通信世界、OpenAI);GitHub 推送:跳过(连接器未连接);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 89 条"
+  },
+  {
+    "date": "2026-07-30",
+    "note": "模块一重构:分类升级为三级树(一级 政策/行业/技术/厂商 → 二级 原厂/聚合/运营商 → 三级 三大运营商);布局按用户反馈调整——分类与标签换位,分类改为顶部级联筛选条(sticky 冻结、默认只露一级、紧凑),标签移至左侧窄边栏,新闻内容区成为视觉主体;新增 12 条 07-25~30 情报(Kimi K3 开源+定价、DeepSeek V4 Preview、Claude Opus 5、OpenRouter 中国模型前五、运营商 Token 经营、苹果国行选通义、1100+员工联名、25家捍卫开放权重、OpenAI Agent 逃逸、香港全民AI/算力),insights 增至 81 条"
+  },
+  {
+    "date": "2026-07-29",
+    "note": "强制重建:版本升 2026-07-29.4 触发 GitHub Pages 重新构建,确保线上服务含 localStorage 版本门控修复(69 条 + 区域维度)"
+  },
+  {
+    "date": "2026-07-29",
+    "note": "模块一情报批量补强:手动检索官方 blog/新闻中心、AI 媒体、财经媒体、政府监管、研报平台,新增 21 条关键动态(运营商 MoMA2.0/WorkBuddy、清朗整治AI乱象/拟人化办法/988款备案/香港备忘录、千问10亿下载/100亿下载、GPT-5.6/GLM-5.2、硅基流动20亿B轮/OpenRouter卖身、算力全链涨价与算力银行、DeepSeek降价75%/智谱提价/定价分裂、MCP协议栈/智能体爆发、博云融资),insights 增至 45 条"
+  },
+  {
+    "date": "2026-07-29",
+    "note": "模块一升级:新增动态分类树(政策/行业/技术趋势 + 厂商[原厂/聚合/运营商→三大运营商]竖排导航,与标签双维度筛选);情报信源库扩充为 12 类(新增原厂/运营商官方、AI 媒体、财经媒体、政府监管、研报平台),UI 改为折叠展示"
+  },
+  {
+    "date": "2026-07-29",
+    "note": "每日自动更新:新增 6 条动态(Kimi K3 开源/蚂蚁 LLaDA2.2/GPU 租赁涨价/WAIC 2026 闭幕/开放权重公开信/Claude Opus 5;信源:GitHub、Anthropic 官网、量子位、国金证券、人民日报海外版),已备份当日快照"
+  },
+  {
+    "date": "2026-07-27",
+    "note": "V4:新增情报信源库(官网+公众号);天翼云星辰MaaS 加入功能对标;DMXAPI/Novita 加入商业模式;价格矩阵全部采用官网/定价页真实数据(硅基流动/DMXAPI/Together/Novita/CMI/MoMA),新增多模态价格表"
+  },
+  {
+    "date": "2026-07-27",
+    "note": "V3:动态加原文链接、补全 6 月热点;对标拆分 9 家厂商并引入细分指标;价格对标改为矩阵"
+  },
+  {
+    "date": "2026-07-27",
+    "note": "初版上线:四大模块 + 技术架构页"
+  },
+  {
+    "date": "2026-07-29",
+    "note": "修复:localStorage 旧快照覆盖线上最新数据的问题——loadState 改为按数据版本(__ver)校验,版本不符即丢弃本地缓存、以发布数据为准;新增区域维度(8 区域)与 24 条海外/港澳/台/东南亚情报,insights 增至 69 条(版本 2026-07-29.3)"
+  }
+];
