@@ -275,8 +275,8 @@
     <div class="logo"><span class="dot"></span>AI Hub 情报站</div>
     <a class="nl" href="#m1">行业洞察</a>
     <a class="nl" href="#m2">功能对标</a>
-    <a class="nl" href="#m3">价格与模式</a>
-    <a class="nl" href="#m4">差异化定位</a>
+    <a class="nl" href="#m3">差异化定位</a>
+    <a class="nl" href="#m4">价格与模式</a>
     <a class="nl" href="#m5">技术架构</a>
     <button class="navbtn" id="btnHistory">🕘 历史版本</button>
     <button class="navbtn" id="btnEdit">✏️ 编辑模式</button>
@@ -401,42 +401,42 @@
     </div>
   </div>
 </section>
-<!-- ============ 模块三 ============ -->
+<!-- ============ 模块三(紧接模块二:细节对标后总结共性与差异化) ============ -->
 <section id="m3">
   <div class="wrap">
-    <div class="kicker">Module 3 · Pricing & Business Model</div>
-    <h2>模型价格及商业模式对标</h2>
-    <p class="lead">3.1 为各聚合厂商商业模式对比;3.2 按"模型 × 厂商"矩阵对比官方原厂、各原厂平台与聚合平台价格(单位:元/百万 tokens;≈ 为汇率换算或估算,— 为未上架/未公开),可筛选对标对象;3.3 为分厂商对标结论。</p>
-
-    <h3 class="sub">3.1 聚合平台商业模式对比</h3>
-    <div class="vpick" id="bizpick"></div>
-    <div class="tblbox"><table id="bizTable"></table></div>
-
-    <h3 class="sub">3.2 主流模型价格对标矩阵(输入 / 输出,元 / 百万 Tokens)</h3>
-    <div class="vpick" id="pricepick"></div>
-    <div class="tblbox"><table id="priceTable"></table></div>
-    <p class="pnote">注:¥ 为元人民币、$ 为美元(参考汇率 ≈7.2);缓存价格见括号;"透传"表示平台按上游官方价原价转发。原厂平台列已据其官方定价页填充真实价格(原生模型取官方价、开源模型取官方转售价)。</p>
-    <details class="srcdetails"><summary class="srcsummary">价格数据来源(各厂商官方定价 / 文档页)</summary><div class="srcline" id="priceSources"></div></details>
-
-    <h3 class="sub">3.3 多模态模型价格对标(视频 / 图像生成)</h3>
-    <div class="tblbox"><table id="mmTable"></table></div>
-
-    <h3 class="sub">3.4 价格对标结论</h3>
-    <div class="sumgrid" id="priceFindings"></div>
+    <div class="kicker">Module 3 · Differentiation</div>
+    <h2>差异化定位</h2>
+    <p class="lead">紧接模块二「聚合平台功能对标」之后——在完成 16 家细节对标、能力热力矩阵与计费 / 安全 / 订购体验专项对比的基础上,本章自动提炼<b>共性能力基线</b>与<b>差异化优势维度</b>,锚定聚合平台差异化能力图谱与功能优先级,为能力建设提供决策依据。</p>
+    <div class="bench-banner">📊 本模块由 <b>模块二 · 16 家聚合平台对标</b> 结论自动提炼 &nbsp;|&nbsp; 基准线 <b>OpenRouter + Portkey + LiteLLM</b> &nbsp;|&nbsp; 共性能力覆盖度实时取自模块二能力热力矩阵</div>
+    <h3 class="sub">3.1 差异化能力矩阵</h3>
+    <div class="grid g4" id="diffGrid"></div>
+    <h3 class="sub">3.2 平台核心功能优先级图谱</h3>
+    <div class="grid g3" id="prioGrid"></div>
   </div>
 </section>
 
 <!-- ============ 模块四 ============ -->
 <section id="m4" style="background:#edf1f8">
   <div class="wrap">
-    <div class="kicker">Module 4 · Differentiation</div>
-    <h2>差异化定位</h2>
-    <p class="lead">基于模块二 16 家聚合平台对标结论提炼,锚定聚合平台差异化能力维度与功能优先级图谱。</p>
-    <div class="bench-banner">📊 本模块由 <b>模块二 · 16 家聚合平台对标</b> 结论自动提炼 &nbsp;|&nbsp; 基准线 <b>OpenRouter + Portkey + LiteLLM</b> &nbsp;|&nbsp; 共性能力覆盖度实时取自模块二能力热力矩阵</div>
-    <h3 class="sub">4.1 差异化能力矩阵</h3>
-    <div class="grid g4" id="diffGrid"></div>
-    <h3 class="sub">4.2 平台核心功能优先级图谱</h3>
-    <div class="grid g3" id="prioGrid"></div>
+    <div class="kicker">Module 4 · Pricing & Business Model</div>
+    <h2>模型价格及商业模式对标</h2>
+    <p class="lead">4.1 为各聚合厂商商业模式对比;4.2 按"模型 × 厂商"矩阵对比官方原厂、各原厂平台与聚合平台价格(单位:元/百万 tokens;≈ 为汇率换算或估算,— 为未上架/未公开),可筛选对标对象;4.3 为分厂商对标结论。</p>
+
+    <h3 class="sub">4.1 聚合平台商业模式对比</h3>
+    <div class="vpick" id="bizpick"></div>
+    <div class="tblbox"><table id="bizTable"></table></div>
+
+    <h3 class="sub">4.2 主流模型价格对标矩阵(输入 / 输出,元 / 百万 Tokens)</h3>
+    <div class="vpick" id="pricepick"></div>
+    <div class="tblbox"><table id="priceTable"></table></div>
+    <p class="pnote">注:¥ 为元人民币、$ 为美元(参考汇率 ≈7.2);缓存价格见括号;"透传"表示平台按上游官方价原价转发。原厂平台列已据其官方定价页填充真实价格(原生模型取官方价、开源模型取官方转售价)。</p>
+    <details class="srcdetails"><summary class="srcsummary">价格数据来源(各厂商官方定价 / 文档页)</summary><div class="srcline" id="priceSources"></div></details>
+
+    <h3 class="sub">4.3 多模态模型价格对标(视频 / 图像生成)</h3>
+    <div class="tblbox"><table id="mmTable"></table></div>
+
+    <h3 class="sub">4.4 价格对标结论</h3>
+    <div class="sumgrid" id="priceFindings"></div>
   </div>
 </section>
 
