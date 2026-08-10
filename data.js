@@ -1,6 +1,307 @@
 window.AIHUB_DATA = {
   "insights": [
     {
+      "date": "2026-08-10",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI被曝GPT-6(Astra)将于8月发布,因安全风险暂缓",
+      "summary": "传Astra参数达10万亿,OpenAI按关键级管理并暂停未达安全要求的内部活动",
+      "source": "36氪 / 网易",
+      "url": "https://www.163.com/dy/article/L3VCOKAB0519QIKK.html"
+    },
+    {
+      "date": "2026-08-10",
+      "tag": "竞品",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek-V4-Flash登顶OpenRouter调用量,周环比增570%",
+      "summary": "中国大模型连续十五周超美国居首,DeepSeek-V4-Flash正式版调用量居全球第一",
+      "source": "每日经济新闻",
+      "url": "https://www.163.com/dy/article/L3VD22070512B07B.html"
+    },
+    {
+      "date": "2026-08-10",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "hk",
+      "title": "MiniMax(00100.HK)发布全模态生成模型MiniMax H3",
+      "summary": "H3统一理解文本图像视频声音,原生双声道音视频,将开放模型权重",
+      "source": "AASTOCKS",
+      "url": "https://wwwcn.aastocks.com/sc/stocks/news/aafn-con/NOW.1535963/industry-news/HK6"
+    },
+    {
+      "date": "2026-08-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟AI法案透明度义务8月2日起强制执行",
+      "summary": "聊天机器人须明示AI身份,AI生成内容加机器可读标识,GP AI设系统性风险义务",
+      "source": "欧盟委员会 / Reuters",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "date": "2026-08-10",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "云知声(09678.HK)发布U2-Med三医大模型",
+      "summary": "基于U2基座发布医疗医保医药三医专业大模型,嵌入三医数字化协同核心流程",
+      "source": "AASTOCKS",
+      "url": "https://www.aastocks.com/sc/stocks/news/aafn-con/now.1533749/industry-news/source"
+    },
+    {
+      "date": "2026-08-10",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "sea",
+      "title": "软银携手伙伴布局东南亚AI数据中心网络",
+      "summary": "SB Telecom与SC ZEUS、Robust HPC共建AI数据中心,首期覆盖马来泰印尼越南",
+      "source": "nstartup.me",
+      "url": "https://www.nstartup.me/news/47962060-4c11-4c58-b2d8-201b93c24531?lang=zh"
+    },
+    {
+      "date": "2026-08-09",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "MiniMax H3开源登顶Hugging Face热度榜首",
+      "summary": "上线三天登顶全球开源榜，超百家企业实现Day 0全栈适配",
+      "source": "科技日报",
+      "url": "https://www.toutiao.com/article/7672026247177880079/"
+    },
+    {
+      "date": "2026-08-09",
+      "tag": "技术趋势",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI放缓Astra开发，触达关键级网络攻击门槛",
+      "summary": "下一代模型能力触及关键级，已暂停部分研发并强化安全管控",
+      "source": "环球网(引TechCrunch)",
+      "url": "https://www.163.com/dy/article/L3SN21G90514R9OJ.html"
+    },
+    {
+      "date": "2026-08-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek宣布上调API定价，V4-Flash能力大增",
+      "summary": "V4-Flash正式版跻身顶尖，单位成本仅为美系模型约百分之一",
+      "source": "上观新闻",
+      "url": "https://dy.163.com/article/L3SBK14A055040N3.html"
+    },
+    {
+      "date": "2026-08-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里发布Qwen3.8-Max，参数规模达2.4万亿",
+      "summary": "支持百万上下文，编程与长周期任务能力全面提升",
+      "source": "国金证券",
+      "url": "https://t.10jqka.com.cn/pid_672884119.shtml"
+    },
+    {
+      "date": "2026-08-09",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "摩尔线程拟赴港上市，上半年亏损大幅收窄",
+      "summary": "营收同比增147%，完成DeepSeek-V4等大模型适配，GPU底座成型",
+      "source": "财联社(科创板日报)",
+      "url": "https://www.163.com/dy/article/L3U1PBGR05198CJN.html"
+    },
+    {
+      "date": "2026-08-09",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟AI法案正式执法，GPAI透明度义务生效",
+      "summary": "AI Office获罚则权，OpenAI等前沿模型商须提交技术文档与风险措施",
+      "source": "TechNews",
+      "url": "https://finance.technews.tw/2026/08/06/eu-ai-act-enforcement-officially-takes-effect"
+    },
+    {
+      "date": "2026-08-08",
+      "tag": "竞品",
+      "cat": "ind",
+      "region": "cn",
+      "title": "中国大模型八周五连发,海外企业悄然换底座",
+      "summary": "Qwen3.8-Max、Kimi K3等五款旗舰密集亮相,中美差距收窄至2.7%",
+      "source": "21世纪经济报道",
+      "url": "https://www.toutiao.com/article/7671336477162340900"
+    },
+    {
+      "date": "2026-08-08",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI将GPT-5.6 Luna免费开放给所有用户",
+      "summary": "免费档默认换Luna并开放无限文本对话,Sol升级聚焦事实准确率",
+      "source": "网易科技",
+      "url": "https://www.163.com/dy/article/L3P9LHB90550S71U.html"
+    },
+    {
+      "date": "2026-08-08",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟AI法Digital Omnibus生效,高风险义务延期至2027",
+      "summary": "数字综合法案将Annex III高风险义务延至2027年底,第50条透明义务已生效",
+      "source": "zian.ai",
+      "url": "https://zian.ai/eu-ai-act-ai-sales-agents-august-2026"
+    },
+    {
+      "date": "2026-08-08",
+      "tag": "案例",
+      "cat": "tech",
+      "region": "tw",
+      "title": "所罗门以生成式AI视觉抢攻人形机器人大脑",
+      "summary": "台厂所罗门用生成式AI视觉训练模型,NVIDIA机器人生态合作伙伴",
+      "source": "中央社",
+      "url": "https://pchome.megatime.com.tw/news/cat1/20260808/17861537556798022003.html"
+    },
+    {
+      "date": "2026-08-08",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "sea",
+      "title": "腾讯联合南洋理工推出StatePlay游戏世界模型",
+      "summary": "StatePlay让AI生成游戏理解规则而非仅画面,解决不可玩难题",
+      "source": "科技行者",
+      "url": "https://www.toutiao.com/article/7671325971089293859/"
+    },
+    {
+      "date": "2026-08-08",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "MiniMax H3开源登顶视频生成榜",
+      "summary": "H3图生视频在Design Arena三项登顶,团队确认将推2K与Apache 2.0版本",
+      "source": "InfoQ",
+      "url": "https://view.inews.qq.com/a/20260808A017DG00"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI开放GPT-5.6 Luna免费无限聊并升级Sol",
+      "summary": "免费与Go用户可无限文本对话,旗舰Sol新增思考深度滑块",
+      "source": "SegmentFault(引OpenAI公告)",
+      "url": "https://segmentfault.com/a/1190000048131408"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "字节被曝训练10万亿参数超大模型",
+      "summary": "据FT,字节正训练最高10万亿参数模型,规模接近Anthropic Mythos",
+      "source": "凤凰网(引金融时报)",
+      "url": "https://new.qq.com/rain/a/20260807A0BEHW00?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "火山引擎上线豆包Seedance 2.5视频生成模型",
+      "summary": "原生支持30秒视频直出,指令遵循与长叙事能力大幅提升",
+      "source": "快科技",
+      "url": "https://view.inews.qq.com/a/20260807A0B5OA00"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "成都出台全国首部人工智能地方政府规章",
+      "summary": "《促进AI产业发展办法》9月施行,共六章三十六条",
+      "source": "华西都市报/今日头条",
+      "url": "https://www.toutiao.com/article/7671094663952007695/"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta发布首款编程智能体Muse Code",
+      "summary": "由Muse Spark 1.2驱动,长程Agent能力直追Claude Opus 5",
+      "source": "BrightCoast(引Simon Willison)",
+      "url": "https://www.brightcoast.ai/blog/daily-ai-intel-brief-2026-08-07"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟AI法案通用模型条款正式强制执行",
+      "summary": "AI Office可审计模型并罚款,最高全球营收3%或1500万欧元",
+      "source": "Weblifter(引欧盟AI办公室)",
+      "url": "https://weblifter.com.au/resources/ai-news/whats-new-in-ai-week-of-03-august-2026"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "global",
+      "title": "OpenAI发布GPT-5.6八月更新",
+      "summary": "GPT-5.6面向Free/Plus/Pro扩容,新增U18青少年安全评测与可调推理强度",
+      "source": "OpenAI官方(系统卡PDF)",
+      "url": "https://cdn.openai.com/pdf/GPT_5_6_August_Updates.pdf"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里发布Qwen3.8-Max开放权重模型",
+      "summary": "2.4T参数MoE(激活95B),主攻软件工程,开放权重下周登阿里云模型工厂",
+      "source": "Qwen官方博客",
+      "url": "https://qwen.ai/blog?id=qwen3.8"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "竞品",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta推出AI编程智能体Muse Code",
+      "summary": "低价按量付费(输入$1.25/百万token),搭配Muse Spark 1.2挑战Codex",
+      "source": "财联社",
+      "url": "https://www.toutiao.com/article/7670645079773544986/"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "白宫拟推闭源前沿模型监管框架",
+      "summary": "要求闭源前沿模型自愿安全测试、30天提前报备,开源模型被排除在外",
+      "source": "环球时报",
+      "url": "https://www.toutiao.com/w/1872765322191050/"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "《互联网信息服务管理办法》修订拟首设智能信息服务专节",
+      "summary": "拟以行政法规明确智能信息服务提供者,要求算法备案、内容标识与公开透明",
+      "source": "忻州政法/权威媒体",
+      "url": "https://www.toutiao.com/article/7670759541516091938/"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "hk",
+      "title": "香港科技园与恒生银行公布未来银行Living Lab优胜者",
+      "summary": "HKSTP联同恒生银行从26家科企选出两家,加速零售及商业银行AI方案落地",
+      "source": "香港科技园官网",
+      "url": "https://www.hkstp.org/zh-hk/park-life/news-and-events/news/HKSTP-and-Hang-Seng-Bank-Name-Two-Winners-of-Living-Lab-for-the-Bank-of-the-Future"
+    },
+
+    {
       "date": "2026-08-05",
       "tag": "政策",
       "cat": "policy",
@@ -8199,8 +8500,29 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-05.1";
+window.AIHUB_DATA_VERSION = "2026-08-10";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-10",
+    "note": "每日自动更新(补跑):新增 6 条动态(OpenAI被曝GPT-6(Astra)将于8月发布,因安全风险暂缓 / DeepSeek-V4-Flash登顶OpenRouter调用量,周环比增570% / MiniMax(00100.HK)发布全模态生成模型MiniMax H3 / 欧盟AI法案透明度义务8月2日起强制执行 / 云知声(09678.HK)发布U2-Med三医大模型 / 软银携手伙伴布局东南亚AI数据中心网络;信源:36氪 / 网易·每日经济新闻·AASTOCKS·欧盟委员会 / Reuters·nstartup.me);GitHub 推送:成功"
+  },
+  {
+    "date": "2026-08-09",
+    "note": "每日自动更新(补跑):新增 6 条动态(MiniMax H3开源登顶Hugging Face热度榜首 / OpenAI放缓Astra开发，触达关键级网络攻击门槛 / DeepSeek宣布上调API定价，V4-Flash能力大增 / 阿里发布Qwen3.8-Max，参数规模达2.4万亿 / 摩尔线程拟赴港上市，上半年亏损大幅收窄 / 欧盟AI法案正式执法，GPAI透明度义务生效;信源:科技日报·环球网(引TechCrunch)·上观新闻·国金证券·财联社(科创板日报)·TechNews);GitHub 推送:成功"
+  },
+  {
+    "date": "2026-08-08",
+    "note": "每日自动更新(补跑):新增 6 条动态(中国大模型八周五连发,海外企业悄然换底座 / OpenAI将GPT-5.6 Luna免费开放给所有用户 / 欧盟AI法Digital Omnibus生效,高风险义务延期至2027 / 所罗门以生成式AI视觉抢攻人形机器人大脑 / 腾讯联合南洋理工推出StatePlay游戏世界模型 / MiniMax H3开源登顶视频生成榜;信源:21世纪经济报道·网易科技·zian.ai·中央社·科技行者·InfoQ);GitHub 推送:成功"
+  },
+  {
+    "date": "2026-08-07",
+    "note": "每日自动更新(补跑):新增 6 条动态(OpenAI开放GPT-5.6 Luna免费无限聊并升级Sol / 字节被曝训练10万亿参数超大模型 / 火山引擎上线豆包Seedance 2.5视频生成模型 / 成都出台全国首部人工智能地方政府规章 / Meta发布首款编程智能体Muse Code / 欧盟AI法案通用模型条款正式强制执行;信源:SegmentFault(引OpenAI公告)·凤凰网(引金融时报)·快科技·华西都市报/今日头条·BrightCoast(引Simon Willison)·Weblifter(引欧盟AI办公室));GitHub 推送:成功"
+  },
+  {
+    "date": "2026-08-06",
+    "note": "每日自动更新(补跑):新增 6 条动态(OpenAI发布GPT-5.6八月更新 / 阿里发布Qwen3.8-Max开放权重模型 / Meta推出AI编程智能体Muse Code / 白宫拟推闭源前沿模型监管框架 / 《互联网信息服务管理办法》修订拟首设智能信息服务专节 / 香港科技园与恒生银行公布未来银行Living Lab优胜者;信源:OpenAI官方(系统卡PDF)·Qwen官方博客·财联社·环球时报·忻州政法/权威媒体·香港科技园官网);GitHub 推送:成功"
+  },
+
   {
     "date": "2026-08-05",
     "note": "每日自动更新:新增 8 条动态(网信办首发 7 款手机端侧生成式 AI 备案清单/马斯克预告 Grok 4.6 并并入 SpaceX 全量数据/商汤开源 SenseNova U1.5-Lite-Preview 8B 统一多模态/MiniMax H3 开源许可排除美欧英韩/腾讯混元 Hy ASR 3.0 preview 多语种词错率约 3%/全双工语音赛道微软 MAI Realtime 与英伟达开源 VoiceChat/高德 ABot-World-0 世界模型 24 小时连续推理开源/IDC 中国 AI 手机 1.47 亿台与端侧 AI 8000 亿市场;信源:国家网信办·中国经济时报、金融界·SpaceX 财报会、商汤科技·智东西36氪、AIbase·腾讯新闻、IT之家·科技狐、NVIDIA·Hugging Face、高德、IDC·财联社科创板日报);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 123 条"
