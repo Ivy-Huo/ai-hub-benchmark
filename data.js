@@ -8500,7 +8500,7 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-10";
+window.AIHUB_DATA_VERSION = "2026-08-10.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-10",
