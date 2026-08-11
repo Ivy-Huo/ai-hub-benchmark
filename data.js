@@ -1,5 +1,5 @@
 window.AIHUB_DATA = {
-  "insights": [
+    "insights": [
     {
       "date": "2026-08-11",
       "tag": "开源动态",
@@ -70,7 +70,6 @@ window.AIHUB_DATA = {
       "source": "光明网",
       "url": "https://culture.gmw.cn/2026-08/10/content_38934268.htm"
     },
-
     {
       "date": "2026-08-10",
       "tag": "模型更新",
@@ -312,6 +311,16 @@ window.AIHUB_DATA = {
       "url": "https://weblifter.com.au/resources/ai-news/whats-new-in-ai-week-of-03-august-2026"
     },
     {
+      "date": "2026-08-07",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "cn",
+      "title": "火山方舟上线 Seedance 2.5 API:原生30秒视频直出",
+      "summary": "火山引擎8月7日上线Seedance 2.5 API,支持原生30秒视频直出与时间戳级编辑",
+      "source": "AIHub / 火山引擎",
+      "url": "https://www.aihub.cn/news/seedance-2-5-api"
+    },
+    {
       "date": "2026-08-06",
       "tag": "模型更新",
       "cat": "llm",
@@ -371,7 +380,6 @@ window.AIHUB_DATA = {
       "source": "香港科技园官网",
       "url": "https://www.hkstp.org/zh-hk/park-life/news-and-events/news/HKSTP-and-Hang-Seng-Bank-Name-Two-Winners-of-Living-Lab-for-the-Bank-of-the-Future"
     },
-
     {
       "date": "2026-08-05",
       "tag": "政策",
@@ -451,6 +459,36 @@ window.AIHUB_DATA = {
       "source": "IDC / 财联社·科创板日报",
       "url": "https://www.163.com/dy/article/L3I6S6NB0550B1DU.html",
       "summary": "同期全球智能手机出货预计同比降 13%、PC 降 11%,AI 终端逆势上行,AI 手机占中国市场比重超 53%,全球 Gen AI 手机达 4.32 亿台;端侧 AI 正从 L2 助手协同向 L3 任务代理演进。"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "技术趋势",
+      "cat": "agg",
+      "region": "cn",
+      "title": "AI中转站投毒事件升级:恶意代码删除用户 D 盘文件",
+      "summary": "中转站投毒事件升级,恶意代码随机删除用户D盘文件,多名开发者中招",
+      "source": "腾讯新闻 AI开发者日报",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3376a72b45551952"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "na",
+      "title": "RouterBase 统一API接入200+前沿模型(DeepOpen发布)",
+      "summary": "DeepOpen发布RouterBase,单一OpenAI兼容API接入200+文本/图像/视频模型,含自动fallback",
+      "source": "Newsfile Corp / DeepOpen",
+      "url": "https://www.newsfilecorp.com/release/308082/RouterBase-Unified-AI-API-Now-Connects-200-Frontier-Models"
+    },
+    {
+      "date": "2026-08-05",
+      "tag": "算力",
+      "cat": "agg",
+      "region": "global",
+      "title": "DeepSeek V4 Flash 周调用7.22万亿Token登顶 OpenRouter,官方API一度崩溃",
+      "summary": "OpenRouter周榜DeepSeek V4 Flash以7.22万亿Token登顶,8月4日官方API因流量激增崩溃",
+      "source": "界面新闻",
+      "url": "https://www.toutiao.com/article/7670378011832730112/"
     },
     {
       "date": "2026-08-04",
@@ -533,6 +571,26 @@ window.AIHUB_DATA = {
       "summary": "Token 经营进入产能军备期:三家全年算力资本开支合计 809 亿元;电信宁夏'Token 工厂'集采预估 164.51 亿元、息壤纳管算力破 100EFLOPS;移动云-边-端家宽算力案例获国家级创新应用。"
     },
     {
+      "date": "2026-08-04",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "na",
+      "title": "OpenRouter 上线 Qwen3.8-Max(2.4T参数/1M上下文)",
+      "summary": "阿里Qwen3.8-Max登陆OpenRouter,2.4T参数、95B激活、1M上下文,开放权重将发布",
+      "source": "ai-primer / OpenRouter",
+      "url": "https://www.ai-primer.com/engineer/stories/qwen38-max-api-rollout-benchmarks"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "global",
+      "title": "Novita AI 目录新增 DeepSeek V4 Flash 等5款模型",
+      "summary": "Novita AI 8月4日目录刷新,新增DeepSeek V4 Flash、V3.2、DeepSeek-OCR 2等模型",
+      "source": "UsagePricing / Novita AI",
+      "url": "https://www.usagepricing.com/blueprint/activity/novita-ai-2026-08-04-packaging"
+    },
+    {
       "date": "2026-08-03",
       "tag": "模型更新",
       "cat": "llm",
@@ -551,6 +609,16 @@ window.AIHUB_DATA = {
       "source": "香港商报 / 创新科技及工业局",
       "url": "https://hkcd.com/hkcdweb/content/2026/08/03/content_8767867.html",
       "summary": "香港商报谈 AI 定位为'桥梁':整体算力已达 5000 PFLOPS,沙岭数据园 2032 年提供 18 万 PFLOPS(36 倍);'全民 AI'普惠计划联动数码港、科技园、生产力局。"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "算力",
+      "cat": "agg",
+      "region": "cn",
+      "title": "硅基流动上调 DeepSeek V4 Pro 缓存命中价至 1.0 元/百万Token",
+      "summary": "硅基流动通知8月3日起将DeepSeek V4 Pro缓存命中价从0.1元上调至1.0元/百万Token",
+      "source": "aibase",
+      "url": "https://www.aibase.com/news/30047"
     },
     {
       "date": "2026-08-02",
@@ -833,6 +901,16 @@ window.AIHUB_DATA = {
       "summary": "创科局统筹,数码港(基础普及)、香港科技园(专业转化)、生产力局(实务提升)三机构协作,两年办超 200 场活动、惠及约 5 万人次;孙东在 APEC 数字周介绍。"
     },
     {
+      "date": "2026-07-29",
+      "tag": "算力",
+      "cat": "agg",
+      "region": "cn",
+      "title": "硅基流动调整 DeepSeek-V4-Pro 缓存命中单价",
+      "summary": "硅基流动宣布自8月3日起，DeepSeek-V4-Pro 缓存命中输入单价调整为¥1/M Tokens。",
+      "source": "SiliconFlow 官方发布说明",
+      "url": "https://api-docs.siliconflow.cn/docs/release-notes/overview"
+    },
+    {
       "date": "2026-07-28",
       "tag": "开源动态",
       "cat": "llm",
@@ -901,6 +979,16 @@ window.AIHUB_DATA = {
       "source": "人民日报海外版",
       "url": "",
       "summary": "展览超 10 万平米、观众超 40 万人次;中国 AI 从'炫技'转向工厂与生活场景实干;中国移动等央企发布 AI 基座与算力建设路径,智能体规模化落地成焦点。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "央广网调查「Token中转站」合规风险",
+      "summary": "央广网报道Token中转站封号、数据出境与备案风险，草根号池模式正被出清。",
+      "source": "央广网",
+      "url": "https://www.cnr.cn/mspd/jrhm/20260728/t20260728_527733647.shtml"
     },
     {
       "date": "2026-07-27",
@@ -983,6 +1071,16 @@ window.AIHUB_DATA = {
       "summary": "GPT-5.6 Sol/Terra/Luna、Claude Opus 4.8/4.7/4.6、Sonnet 4.6、Haiku 4.5、MiniMax-M2.5、Gemini 3.1 等已在架,美元按量计价与官方同价(如 Claude Opus 4.8 $5.25/$26.25),上下文最高 1050K,另覆盖视频(Veo/Seedance/Wan)与图像模型。"
     },
     {
+      "date": "2026-07-27",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "na",
+      "title": "Novita AI 上线 Ling-3.0-flash 限时免费",
+      "summary": "Novita AI 上架 InclusionAI Ling-3.0-flash（124B MoE），7月27日起限时免费调用。",
+      "source": "Novita AI 官方博客",
+      "url": "https://blogs.novita.ai/ling-3-0-flash-on-novita-ai/"
+    },
+    {
       "date": "2026-07-25",
       "tag": "模型更新",
       "cat": "llm",
@@ -1063,6 +1161,16 @@ window.AIHUB_DATA = {
       "summary": "输入 6.5 元/百万 tokens、输出 27 元,缓存命中 1.1 元;在法律、金融、科研等高严谨场景有公开案例背书,配套联网搜索、Memory、Code-Runner 等开箱工具。"
     },
     {
+      "date": "2026-07-22",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "cn",
+      "title": "白B.AI 首批接入 Kimi K3 统一API",
+      "summary": "白B.AI 成为首批接入月之暗面Kimi K3的聚合平台，开发者可统一API调用。",
+      "source": "北青网",
+      "url": "https://www.163.com/dy/article/L2F5H9M70514R9KQ.html"
+    },
+    {
       "date": "2026-07-21",
       "tag": "政策",
       "cat": "policy",
@@ -1071,6 +1179,16 @@ window.AIHUB_DATA = {
       "source": "欧盟委员会",
       "url": "https://digital-strategy.ec.europa.eu/",
       "summary": "《AI 法案》第 88 条赋予的通用目的 AI(GPAI)提供者执法权将于 8月2日生效,配套指南与 EU SEND 平台上线;出海企业需平台侧提供模型合规信息、数据驻留与审计证据。"
+    },
+    {
+      "date": "2026-07-21",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "na",
+      "title": "OpenRouter 7月密集上新10个模型家族",
+      "summary": "OpenRouter 7月1–21日新增Grok 4.5、GPT-5.6、Kimi K3等10个模型家族。",
+      "source": "OpenRouter 官方 / digitalapplied.com",
+      "url": ""
     },
     {
       "date": "2026-07-20",
@@ -1111,6 +1229,16 @@ window.AIHUB_DATA = {
       "source": "OpenRouter 官网",
       "url": "https://openrouter.ai/",
       "summary": "接入 60+ 供应商、400+ 模型,单 API Key 自动路由与故障转移;充值收 5.5% 手续费。无标准化 SLA、企业功能有限,数据经境外转发是国内企业主要顾虑。"
+    },
+    {
+      "date": "2026-07-20",
+      "tag": "案例",
+      "cat": "op_ct",
+      "region": "cn",
+      "title": "中国电信杭州发布「智云AI Store」聚合平台",
+      "summary": "中国电信杭州发布一站式AI融合平台，聚合主流模型并支持智能路由与用量审计。",
+      "source": "中国电信（人民号）",
+      "url": "https://www.hubpd.com/detail/index.html?contentId=5476377146887814563&appKey=5fd9a205a8f5d20001fc53eb&key=5fd9a205a8f5d20001fc53ec&topId=&interruptId=0"
     },
     {
       "date": "2026-07-18",
@@ -1291,6 +1419,16 @@ window.AIHUB_DATA = {
       "source": "中国电子报/腾讯新闻",
       "url": "https://new.qq.com/rain/a/20260709A08JDO00",
       "summary": "行业呈现涨降价并存:DeepSeek推出峰谷定价(高峰时段价格翻倍),Token计费进入电价化时代;定价单位正从Token转向任务与能力,高价值场景接受可靠性溢价,通用任务强调性价比。"
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "sea",
+      "title": "新加坡 AI.cc 扩展统一多模型平台",
+      "summary": "新加坡AI.cc宣布扩展One API平台，统一接入400+模型并主打智能路由降本。",
+      "source": "Singapore Digital Press / AI.cc",
+      "url": "https://www.singaporedigitalpress.com/agp-article/925444079"
     },
     {
       "date": "2026-07-08",
@@ -8571,8 +8709,17 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-11.1";
+window.AIHUB_DATA_VERSION = "2026-08-11.2";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-11",
+    "note": "AI 中转站专题补回:新增 7 条 8 月(08-01~08-10)AI 中转站/API 聚合动态(硅基流动调价、OpenRouter 上新、Novita 目录扩展、中转站投毒事件等);信源:官方/媒体;GitHub 推送:成功"
+  },
+  {
+    "date": "2026-08-11",
+    "note": "AI 中转站专题补回:新增 7 条 7 月 AI 中转站/API 聚合动态(新加坡 AI.cc、电信智云AI Store、OpenRouter 上新、白B.AI 接 Kimi K3、Novita 限免、Token 中转站合规风险调查、硅基流动缓存价调整);信源:官方/媒体;GitHub 推送:成功"
+  },
+
   {
     "date": "2026-08-11",
     "note": "每日自动更新:新增 7 条动态(Meta发布30B开源本地Agent模型Muse Glimmer / 字节推出SeedRealtime原生音视频全双工模型 / 上海七部门推动算力与基础大模型扩大境外调用 / 英伟达联合华尔街巨头筹5000亿美元押注AI基建 / 阿里云模块化数据中心最快100天完工 / Anthropic取消Sonnet 5涨价并默认启用Claude Code自动模式 / 广电总局《微短剧发展管理办法》9月1日施行规范AI剧集;信源:36氪·AI Lens日报·每日经济新闻·同花顺·腾讯新闻·华尔街见闻·光明网);GitHub 推送:成功"
