@@ -1,6 +1,77 @@
 window.AIHUB_DATA = {
   "insights": [
     {
+      "date": "2026-08-11",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta发布30B开源本地Agent模型Muse Glimmer",
+      "summary": "Apache 2.0开放权重,4bit量化仅需24GB显存,单张消费级GPU即可本地运行Agent任务,端侧AI里程碑",
+      "source": "36氪",
+      "url": "https://www.36kr.com/p/3934265198345348"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "字节推出SeedRealtime原生音视频全双工模型",
+      "summary": "原生支持看听说一体化实时多模态交互,消除传统拼接方案延迟与上下文割裂,适用于实时翻译与虚拟陪伴",
+      "source": "AI Lens 日报",
+      "url": "https://www.ailens.news/"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "上海七部门推动算力与基础大模型扩大境外调用",
+      "summary": "服务贸易创新示范区方案支持智能体、多模态生成等模型产品出口,加快世界人工智能合作组织总部建设",
+      "source": "每日经济新闻",
+      "url": "https://view.inews.qq.com/a/20260810A09HJV00"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "英伟达联合华尔街巨头筹5000亿美元押注AI基建",
+      "summary": "携手Apollo、贝莱德、黑石、博枫、高盛与KKR设独立算力融资平台,覆盖AI芯片采购、电力生产与数据中心建设",
+      "source": "同花顺",
+      "url": "https://news.10jqka.com.cn/20260811/c678846346.shtml"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阿里云模块化数据中心最快100天完工",
+      "summary": "集装箱工厂预制现场拼装,大型AIDC交付由6-12个月缩至100天、成本降超10%,全球模块化产能拟翻两倍",
+      "source": "腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260811A01T0400?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "竞品",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic取消Sonnet 5涨价并默认启用Claude Code自动模式",
+      "summary": "永久锁定Sonnet 5发布价,取消8月底50%涨价;5天后Claude Code默认自动模式,拦截危险命令成功率89%远超人类",
+      "source": "华尔街见闻",
+      "url": "https://new.qq.com/rain/a/20260811A0262O00?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "广电总局《微短剧发展管理办法》9月1日施行规范AI剧集",
+      "summary": "首部微短剧专项规章,将AI技术与算法模型纳入规范,要求AI生成微短剧每集显著位置添加提示标识",
+      "source": "光明网",
+      "url": "https://culture.gmw.cn/2026-08/10/content_38934268.htm"
+    },
+
+    {
       "date": "2026-08-10",
       "tag": "模型更新",
       "cat": "llm",
@@ -8500,8 +8571,12 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-10.1";
+window.AIHUB_DATA_VERSION = "2026-08-11.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-11",
+    "note": "每日自动更新:新增 7 条动态(Meta发布30B开源本地Agent模型Muse Glimmer / 字节推出SeedRealtime原生音视频全双工模型 / 上海七部门推动算力与基础大模型扩大境外调用 / 英伟达联合华尔街巨头筹5000亿美元押注AI基建 / 阿里云模块化数据中心最快100天完工 / Anthropic取消Sonnet 5涨价并默认启用Claude Code自动模式 / 广电总局《微短剧发展管理办法》9月1日施行规范AI剧集;信源:36氪·AI Lens日报·每日经济新闻·同花顺·腾讯新闻·华尔街见闻·光明网);GitHub 推送:成功"
+  },
   {
     "date": "2026-08-10",
     "note": "每日自动更新(补跑):新增 6 条动态(OpenAI被曝GPT-6(Astra)将于8月发布,因安全风险暂缓 / DeepSeek-V4-Flash登顶OpenRouter调用量,周环比增570% / MiniMax(00100.HK)发布全模态生成模型MiniMax H3 / 欧盟AI法案透明度义务8月2日起强制执行 / 云知声(09678.HK)发布U2-Med三医大模型 / 软银携手伙伴布局东南亚AI数据中心网络;信源:36氪 / 网易·每日经济新闻·AASTOCKS·欧盟委员会 / Reuters·nstartup.me);GitHub 推送:成功"
