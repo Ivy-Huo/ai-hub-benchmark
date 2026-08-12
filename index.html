@@ -193,6 +193,64 @@
 
   h3.sub{font-size:17px;margin:28px 0 12px;display:flex;align-items:center;gap:8px}
   h3.sub::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--brand)}
+  .rnote{font-size:11.5px;font-weight:400;color:var(--ink3);margin-left:6px}
+
+  /* ---- 概览卡片 ---- */
+  .ovcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:18px 0 8px}
+  .ovcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);border-top:3px solid var(--brand)}
+  .ovcard .num{font-size:26px;font-weight:800;color:var(--brand);line-height:1.05}
+  .ovcard .lab{font-size:12px;color:var(--ink2);margin-top:6px}
+  .ovcard .dt{font-size:10.5px;color:var(--ink3);margin-top:2px}
+
+  /* ---- 双排行区 ---- */
+  .rankrow{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:6px}
+  .rankcol h3.sub{margin-top:10px}
+  .ranklist{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+  .ritem{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--line2,#f0f2f6);cursor:default}
+  .ritem:last-child{border-bottom:none}
+  .ritem:hover{background:#f6f9ff}
+  .rno{flex:0 0 26px;height:26px;border-radius:8px;background:#eef2fb;color:var(--brand);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .rno.top1{background:#ffd76b;color:#7a5b00}
+  .rno.top2{background:#e7ebf2;color:#5b6577}
+  .rno.top3{background:#f6dfc4;color:#8a5a1f}
+  .rmain{flex:1;min-width:0}
+  .rname{font-size:13.5px;font-weight:700;color:var(--ink)}
+  .rsub{font-size:11px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rbar{flex:0 0 120px;height:7px;border-radius:99px;background:#eef0f4;position:relative;overflow:hidden}
+  .rbar>i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:linear-gradient(90deg,#5b8def,#2b5cff)}
+  .rscore{flex:0 0 40px;text-align:right;font-weight:800;font-size:14px;color:var(--ink)}
+  .rtrend{flex:0 0 16px;font-size:13px}
+  /* 模型榜迷你分项条 */
+  .mdims{display:flex;gap:3px;margin-top:4px}
+  .mdims i{flex:1;height:4px;border-radius:2px;background:#eef0f4;position:relative}
+  .mdims i>b{position:absolute;left:0;top:0;bottom:0;border-radius:2px;background:#7ea6f5}
+  /* 聚合厂商榜分段条 */
+  .aseg{display:flex;height:100%}
+  .aseg i{height:100%}
+  .aseg .s-models{background:#2b5cff}
+  .aseg .s-rich{background:#5b8def}
+  .aseg .s-func{background:#9ec0f7}
+  .aseg .s-stab{background:#c9d8f7}
+  .ranklegend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--ink2);margin-top:8px;padding:0 2px}
+  .ranklegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+
+  /* ---- 大模型厂商差异化能力矩阵 ---- */
+  #vendorMatrix td.mx{font-size:15px;line-height:1}
+  #vendorMatrix .mxv{font-size:10px;color:var(--ink3);display:block;margin-top:1px}
+  #vendorMatrix .vnd{text-align:left;min-width:130px}
+  #vendorMatrix .vnd b{font-size:13px}
+  #vendorMatrix .vnd span{display:block;font-size:10.5px;color:var(--ink3)}
+
+  /* ---- 客户关注重点 ---- */
+  .custfocus{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:6px}
+  .cfcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);border-top:3px solid var(--accent)}
+  .cfcard h4{font-size:13.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+  .cfcard .crow{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--ink2);padding:3px 0;border-bottom:1px dashed var(--line2,#f0f2f6)}
+  .cfcard .crow:last-child{border-bottom:none}
+  .cfcard .crow b{color:var(--ink)}
+  .cfcard .val{text-align:right;color:var(--ink2)}
+
+  @media (max-width:900px){ .rankrow{grid-template-columns:1fr} }
   .pnote{font-size:12px;color:var(--ink3);margin-top:10px}
 
   .grid{display:grid;gap:16px}
@@ -333,9 +391,36 @@
 <!-- ============ 模块二 ============ -->
 <section id="m2" style="background:#edf1f8">
   <div class="wrap">
-    <div class="kicker">Module 2 · Capability Benchmark</div>
-    <h2>聚合平台功能对标</h2>
-    <p class="lead">覆盖运营商系、互联网系、国际网关型与主流 MaaS 共 <b>16</b> 家聚合平台,按 6 大分组 19 项细分指标 + 能力热力矩阵(26 项能力) + 计费 / 安全 / 订购体验专项对标;并引入 <b>OpenRouter + Portkey + LiteLLM</b> 能力集合作为基准线,重点挖掘各平台优势特点,为聚合平台选型与能力建设提供参考。可勾选厂商自定义对比列,切换"热力矩阵 / 计费 / 安全 / 订购与体验 / 雷达"等视图;核心特点卡见各视图内。</p>
+    <div class="kicker">Module 2 · Model &amp; Aggregator Leaderboard</div>
+    <h2>AI 聚合平台与模型能力对比排行榜</h2>
+    <p class="lead">面向客户 / 产品 / 研发的<b>模型与聚合厂商能力排行</b>:下方先给出<b>旗舰模型智能能力榜</b>与<b>聚合厂商对接能力榜</b>、<b>大模型厂商差异化能力矩阵</b>及<b>客户关注重点</b>(对接丰富度、审计报告、上下文是否存储等);再下钻 <b>16</b> 家聚合平台功能对标明细(6 大分组 19 项指标 + 26 项能力热力矩阵 + 计费 / 安全 / 订购体验专项),基准线 <b>OpenRouter + Portkey + LiteLLM</b>。</p>
+
+    <!-- 概览卡片 -->
+    <div class="ovcards" id="ovCards"></div>
+
+    <!-- 双排行区:模型榜 + 聚合厂商榜 -->
+    <div class="rankrow">
+      <div class="rankcol">
+        <h3 class="sub">🧠 模型智能能力排行榜 <span class="rnote">综合公开评测估算 · 截至 2026-08</span></h3>
+        <div class="ranklist" id="rankModel"></div>
+      </div>
+      <div class="rankcol">
+        <h3 class="sub">🔌 聚合厂商能力排行榜 <span class="rnote">对接数 40% · 丰富度 25% · 功能 20% · 稳定 15%</span></h3>
+        <div class="ranklist" id="rankAgg"></div>
+      </div>
+    </div>
+
+    <!-- 大模型厂商差异化能力矩阵 -->
+    <h3 class="sub">🏭 大模型厂商差异化能力矩阵</h3>
+    <div class="tblbox"><table id="vendorMatrix" class="heatTable"></table></div>
+    <p class="pnote">图例:🟩 领先(≥4) · 🟨 中等(3–3.9) · ⬜ 一般(&lt;3)。综合能力取自上方旗舰模型评测,中文 / 开源 / 价格维度为编辑整理(截至 2026-08)。</p>
+
+    <!-- 客户关注重点 -->
+    <h3 class="sub">🎯 客户关注重点(安全 / 合规 / 数据)</h3>
+    <div class="custfocus" id="custFocus"></div>
+
+    <!-- 平台功能对标明细(原有,维持) -->
+    <h3 class="sub" style="margin-top:28px">🔍 平台功能对标明细(16 家)</h3>
     <div class="viewsw">
       <button class="vsw on" data-v="detail">📋 详细对标表</button>
       <button class="vsw" data-v="heat">🔥 能力热力矩阵</button>
@@ -890,6 +975,123 @@ function renderDiffCommon(){
     g.innerHTML+=c;
   });
 }
+
+/* ================= 模块二 · 排行/矩阵/客户关注 ================= */
+var MR_DIMS=[["reasoning","推理"],["coding","代码"],["multimodal","多模态"],["longctx","长上下文"],["knowledge","知识"],["instruct","指令"]];
+function trendSym(t){ return t==="up"?'<span style="color:#16a34a">⬆</span>':(t==="down"?'<span style="color:#dc2626">⬇</span>':'<span style="color:#94a3b8">→</span>'); }
+
+function renderOverview(){
+  var bm=state.benchmark; if(!bm.modelRank) return;
+  var totalModels=0; bm.vendors.forEach(function(v){ var m=bm.aggRankMeta&&bm.aggRankMeta[v]; if(m) totalModels+=(+m.models||0); });
+  var capCount=bm.heat.cats.reduce(function(a,c){return a+c.caps.length;},0);
+  var srcCount=0; for(var k in (bm.sources||{})){ if(bm.sources[k]) srcCount+=bm.sources[k].length; }
+  var cards=[
+    {n:bm.modelRank.length, l:"旗舰模型入榜", d:"智能能力综合评测"},
+    {n:bm.vendors.length, l:"聚合平台对标", d:"运营商/互联网/国际网关"},
+    {n:totalModels.toLocaleString()+"+", l:"对接模型总数(估算)", d:"各平台目录汇总"},
+    {n:capCount, l:"功能能力指标", d:"6 大分组细分能力"},
+    {n:srcCount, l:"官方数据来源", d:"各平台文档/定价页"},
+    {n:(window.AIHUB_DATA_VERSION||"-"), l:"数据版本", d:"截至本版本核验"}
+  ];
+  var el=document.getElementById("ovCards"); if(!el) return;
+  el.innerHTML=cards.map(function(c){ return '<div class="ovcard"><div class="num">'+c.n+'</div><div class="lab">'+c.l+'</div><div class="dt">'+c.d+'</div></div>'; }).join("");
+}
+
+function renderModelRank(){
+  var bm=state.benchmark; var el=document.getElementById("rankModel"); if(!el||!bm.modelRank) return;
+  var html="";
+  bm.modelRank.forEach(function(m){
+    var cls=m.rank===1?"top1":(m.rank===2?"top2":(m.rank===3?"top3":""));
+    var mini=MR_DIMS.map(function(d){ var v=+m[d[0]]||0; return '<i title="'+d[1]+' '+v+'"><b style="width:'+(v/5*100)+'%"></b></i>'; }).join("");
+    html+='<div class="ritem" title="'+esc(m.note||"")+'">'
+      +'<div class="rno '+cls+'">'+m.rank+'</div>'
+      +'<div class="rmain"><div class="rname">'+esc(m.name)+' <span style="font-size:11px;color:var(--ink3);font-weight:400">'+esc(m.vendor)+' · '+esc(m.type)+'</span></div>'
+      +'<div class="mdims">'+mini+'</div></div>'
+      +'<div class="rtrend">'+trendSym(m.trend)+'</div>'
+      +'<div class="rscore">'+m.total+'</div>'
+      +'</div>';
+  });
+  el.innerHTML=html;
+}
+
+function aggComposite(v){
+  var bm=state.benchmark; var meta=bm.aggRankMeta[v]||{};
+  var models=+meta.models||0;
+  var maxModels=1; bm.vendors.forEach(function(x){ var m=+((bm.aggRankMeta[x]||{}).models)||0; if(m>maxModels) maxModels=m; });
+  var modelsScore = models>0 ? (Math.log10(models)/Math.log10(maxModels))*5 : 0;   // 0-5
+  var lv=bm.heat.levels[v]||[]; var capSum=0; lv.forEach(function(x){capSum+=x;});
+  var funcScore = lv.length? (capSum/lv.length)/2*5 : 0;                            // 0-5,数据驱动
+  var richScore = +meta.richness||0, stabScore=+meta.stability||0;
+  var comp = (modelsScore*0.40 + richScore*0.25 + funcScore*0.20 + stabScore*0.15)/5*100;
+  return { comp:Math.round(comp), models:models, modelsScore:modelsScore, rich:richScore, func:funcScore, stab:stabScore, note:meta.note||"", src:meta.src||"" };
+}
+function renderAggRank(){
+  var bm=state.benchmark; var el=document.getElementById("rankAgg"); if(!el||!bm.aggRankMeta) return;
+  var arr=bm.vendors.map(function(v){ var o=aggComposite(v); o.name=v; return o; });
+  arr.sort(function(a,b){ return b.comp-a.comp; });
+  var html="";
+  arr.forEach(function(o,i){
+    var cls=i===0?"top1":(i===1?"top2":(i===2?"top3":""));
+    // 分段条:各分项对总分的贡献(按权重比例折算到条宽)
+    var wM=o.modelsScore*0.40, wR=o.rich*0.25, wF=o.func*0.20, wS=o.stab*0.15;
+    var tot=wM+wR+wF+wS || 1;
+    var seg='<div class="aseg">'
+      +'<i class="s-models" style="width:'+(wM/tot*100)+'%" title="对接模型数"></i>'
+      +'<i class="s-rich" style="width:'+(wR/tot*100)+'%" title="模型丰富度"></i>'
+      +'<i class="s-func" style="width:'+(wF/tot*100)+'%" title="功能完备度"></i>'
+      +'<i class="s-stab" style="width:'+(wS/tot*100)+'%" title="稳定性"></i>'
+      +'</div>';
+    html+='<div class="ritem" title="'+esc(o.note)+(o.src?" · 来源:"+esc(o.src):"")+'">'
+      +'<div class="rno '+cls+'">'+(i+1)+'</div>'
+      +'<div class="rmain"><div class="rname">'+esc(o.name)+'</div>'
+      +'<div class="rsub">对接 '+o.models+' 模型 · 丰富 '+o.rich+' · 功能 '+o.func.toFixed(1)+' · 稳定 '+o.stab+'</div></div>'
+      +'<div class="rbar">'+seg+'</div>'
+      +'<div class="rscore">'+o.comp+'</div>'
+      +'</div>';
+  });
+  html+='<div class="ranklegend"><span><i style="background:#2b5cff"></i>对接模型数</span><span><i style="background:#5b8def"></i>丰富度</span><span><i style="background:#9ec0f7"></i>功能完备度</span><span><i style="background:#c9d8f7"></i>稳定性</span></div>';
+  el.innerHTML=html;
+}
+
+function renderVendorMatrix(){
+  var bm=state.benchmark; var t=document.getElementById("vendorMatrix"); if(!t||!bm.modelVendorMatrix) return;
+  var mx=bm.modelVendorMatrix;
+  function cell(v){ var cls=v>=4?"hm2":(v>=3?"hm1":"hm0"); var sym=v>=4?"🟩":(v>=3?"🟨":"⬜"); return '<td class="mx hm '+cls+'">'+sym+'<span class="mxv">'+v+'</span></td>'; }
+  var html='<thead><tr><th class="vnd">厂商 / 旗舰模型</th>'+mx.dims.map(function(d){return "<th>"+esc(d)+"</th>"}).join("")+"</tr></thead><tbody>";
+  mx.rows.forEach(function(r){
+    html+='<tr><td class="vnd"><b>'+esc(r.vendor)+'</b><span>'+esc(r.model)+'</span></td>'+r.levels.map(cell).join("")+"</tr>";
+  });
+  t.innerHTML=html+"</tbody>";
+}
+
+function renderCustomerFocus(){
+  var bm=state.benchmark; var el=document.getElementById("custFocus"); if(!el) return;
+  // 从 security 行提炼客户关心项
+  function rowByLabel(kw){ var r=null; (bm.security.rows||[]).forEach(function(x){ if(x.label.indexOf(kw)>=0) r=x; }); return r; }
+  function heatLv(id,v){ // 某能力 level
+    var idx=-1,n=0; bm.heat.cats.forEach(function(c){ c.caps.forEach(function(x){ if(x.id===id) idx=n; n++; }); });
+    if(idx<0) return 0; return (bm.heat.levels[v]||[])[idx]||0;
+  }
+  function lvSym(l){ return l===2?"🟩":(l===1?"🟨":"⬜"); }
+  var audit=rowByLabel("审计"), ctx=rowByLabel("上下文"), exit=rowByLabel("出域");
+  var vis=bm.vendors.filter(function(v){return !hiddenBm[v];});
+  function mkCard(icon,title,row,capId){
+    if(!row) return "";
+    var lis=vis.map(function(v){
+      var vi=bm.vendors.indexOf(v);
+      var cellTxt=row.cells[vi]||"—";
+      var lv=capId?heatLv(capId,v):null;
+      var badge=lv!==null?lvSym(lv)+" ":"";
+      return '<div class="crow"><b>'+badge+esc(v)+'</b><span class="val">'+esc(cellTxt)+'</span></div>';
+    }).join("");
+    return '<div class="cfcard"><h4>'+icon+" "+esc(title)+'</h4>'+lis+'</div>';
+  }
+  el.innerHTML =
+    mkCard("🧾","是否有全链路审计 / 审计报告", audit, null) +
+    mkCard("🗄️","历史上下文是否被存储", ctx, null) +
+    mkCard("🛡️","数据不出境 / 出域控制", exit, null);
+}
+
 document.querySelectorAll(".vsw").forEach(function(b){
   b.onclick=function(){
     document.querySelectorAll(".vsw").forEach(function(x){x.classList.remove("on")}); b.classList.add("on");
@@ -1161,6 +1363,7 @@ function renderAll(){
   renderPick("secpick",state.benchmark.vendors,hiddenSec,renderSecurity);
   renderPick("onbpick",state.benchmark.vendors,hiddenOnb,renderOnboarding);
   renderBmTable(); renderHeat(); renderBilling(); renderSecurity(); renderOnboarding(); renderRadars(); renderDiffCommon();
+  renderOverview(); renderModelRank(); renderAggRank(); renderVendorMatrix(); renderCustomerFocus();
   renderPick("bizpick",state.business.vendors,hiddenBiz,renderBiz);
   renderBiz();
   renderPick("pricepick",state.pricing.vendors,hiddenPrice,renderPrice);
