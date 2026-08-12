@@ -4804,6 +4804,542 @@ window.AIHUB_DATA = {
       "n1n": [
         "https://llm-api.apifox.cn/"
       ]
+    },
+    "modelRank": [
+      {
+        "name": "Claude Opus 5",
+        "vendor": "Anthropic",
+        "type": "文本+多模态",
+        "reasoning": 5,
+        "coding": 5,
+        "multimodal": 4.5,
+        "longctx": 4.5,
+        "knowledge": 5,
+        "instruct": 5,
+        "trend": "up",
+        "note": "编码与Agent全球第一,工程可靠",
+        "total": 97,
+        "rank": 1
+      },
+      {
+        "name": "GPT-5.6 Sol",
+        "vendor": "OpenAI",
+        "type": "文本+多模态",
+        "reasoning": 5,
+        "coding": 4.5,
+        "multimodal": 5,
+        "longctx": 4.5,
+        "knowledge": 5,
+        "instruct": 5,
+        "trend": "up",
+        "note": "综合全能榜首,生态最成熟",
+        "total": 97,
+        "rank": 2
+      },
+      {
+        "name": "Gemini 3.1 Pro",
+        "vendor": "Google",
+        "type": "文本+多模态",
+        "reasoning": 5,
+        "coding": 4.5,
+        "multimodal": 5,
+        "longctx": 5,
+        "knowledge": 5,
+        "instruct": 4.5,
+        "trend": "up",
+        "note": "推理与原生多模态领先",
+        "total": 97,
+        "rank": 3
+      },
+      {
+        "name": "Kimi-K3",
+        "vendor": "月之暗面",
+        "type": "开源",
+        "reasoning": 4.5,
+        "coding": 4.5,
+        "multimodal": 4.5,
+        "longctx": 4.5,
+        "knowledge": 4.5,
+        "instruct": 4.5,
+        "trend": "up",
+        "note": "开源榜首,智能体编程称雄",
+        "total": 90,
+        "rank": 4
+      },
+      {
+        "name": "Qwen3.8-Max",
+        "vendor": "阿里通义",
+        "type": "文本",
+        "reasoning": 4.5,
+        "coding": 4.5,
+        "multimodal": 3.5,
+        "longctx": 4.5,
+        "knowledge": 4.5,
+        "instruct": 4.5,
+        "trend": "up",
+        "note": "中文综合第一,幻觉控制佳",
+        "total": 87,
+        "rank": 5
+      },
+      {
+        "name": "GLM-5.2",
+        "vendor": "智谱AI",
+        "type": "开源",
+        "reasoning": 4.5,
+        "coding": 4.5,
+        "multimodal": 3,
+        "longctx": 4.5,
+        "knowledge": 4.5,
+        "instruct": 4.5,
+        "trend": "up",
+        "note": "开源高性价比,AIME近满分",
+        "total": 85,
+        "rank": 6
+      },
+      {
+        "name": "Doubao-Seed-2.1-pro",
+        "vendor": "字节跳动",
+        "type": "文本+多模态",
+        "reasoning": 4,
+        "coding": 4,
+        "multimodal": 4.5,
+        "longctx": 4,
+        "knowledge": 4.5,
+        "instruct": 4.5,
+        "trend": "up",
+        "note": "科学推理强项,多模态均衡",
+        "total": 85,
+        "rank": 7
+      },
+      {
+        "name": "Muse Spark 1.1",
+        "vendor": "Meta",
+        "type": "文本+多模态",
+        "reasoning": 4.5,
+        "coding": 4,
+        "multimodal": 4.5,
+        "longctx": 4,
+        "knowledge": 4,
+        "instruct": 4,
+        "trend": "up",
+        "note": "Meta新旗舰,已转闭源API",
+        "total": 83,
+        "rank": 8
+      },
+      {
+        "name": "DeepSeek-V4-Pro",
+        "vendor": "DeepSeek",
+        "type": "开源",
+        "reasoning": 4.5,
+        "coding": 4,
+        "multimodal": 3,
+        "longctx": 4.5,
+        "knowledge": 4.5,
+        "instruct": 4,
+        "trend": "up",
+        "note": "数学推理顶尖,极致性价比",
+        "total": 82,
+        "rank": 9
+      },
+      {
+        "name": "MiniMax-M3",
+        "vendor": "MiniMax",
+        "type": "开源",
+        "reasoning": 4,
+        "coding": 4,
+        "multimodal": 4,
+        "longctx": 4.5,
+        "knowledge": 4,
+        "instruct": 4,
+        "trend": "up",
+        "note": "开源权重标杆,Agent价优",
+        "total": 82,
+        "rank": 10
+      },
+      {
+        "name": "ERNIE 5.1",
+        "vendor": "百度",
+        "type": "文本+多模态",
+        "reasoning": 3.5,
+        "coding": 3,
+        "multimodal": 4,
+        "longctx": 4,
+        "knowledge": 4.5,
+        "instruct": 3.5,
+        "trend": "flat",
+        "note": "中文知识扎实,编程偏弱",
+        "total": 75,
+        "rank": 11
+      },
+      {
+        "name": "Mistral Large 3",
+        "vendor": "Mistral AI",
+        "type": "开源",
+        "reasoning": 3.5,
+        "coding": 3.5,
+        "multimodal": 3.5,
+        "longctx": 3.5,
+        "knowledge": 4,
+        "instruct": 3.5,
+        "trend": "flat",
+        "note": "欧洲开源通用,推理落后",
+        "total": 72,
+        "rank": 12
+      },
+      {
+        "name": "星火 Spark X2",
+        "vendor": "科大讯飞",
+        "type": "文本+多模态",
+        "reasoning": 3,
+        "coding": 3,
+        "multimodal": 4,
+        "longctx": 3.5,
+        "knowledge": 4,
+        "instruct": 3.5,
+        "trend": "up",
+        "note": "语音多模态见长,中文场景",
+        "total": 70,
+        "rank": 13
+      },
+      {
+        "name": "SenseNova 6",
+        "vendor": "商汤",
+        "type": "文本+多模态",
+        "reasoning": 3,
+        "coding": 3,
+        "multimodal": 4,
+        "longctx": 3.5,
+        "knowledge": 3.5,
+        "instruct": 3,
+        "trend": "up",
+        "note": "视觉多模态见长,通用偏弱",
+        "total": 67,
+        "rank": 14
+      }
+    ],
+    "modelVendorMatrix": {
+      "dims": [
+        "文本理解",
+        "逻辑推理",
+        "代码生成",
+        "多模态",
+        "长上下文",
+        "中文场景",
+        "开源开放",
+        "价格竞争力"
+      ],
+      "rows": [
+        {
+          "vendor": "Anthropic",
+          "model": "Claude Opus 5",
+          "levels": [
+            5,
+            5,
+            5,
+            4.5,
+            4.5,
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "vendor": "OpenAI",
+          "model": "GPT-5.6 Sol",
+          "levels": [
+            5,
+            5,
+            4.5,
+            5,
+            4.5,
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "vendor": "Google",
+          "model": "Gemini 3.1 Pro",
+          "levels": [
+            5,
+            5,
+            4.5,
+            5,
+            5,
+            3.5,
+            2,
+            2.5
+          ]
+        },
+        {
+          "vendor": "月之暗面",
+          "model": "Kimi-K3",
+          "levels": [
+            4.5,
+            4.5,
+            4.5,
+            4.5,
+            4.5,
+            5,
+            5,
+            4
+          ]
+        },
+        {
+          "vendor": "阿里通义",
+          "model": "Qwen3.8-Max",
+          "levels": [
+            4.5,
+            4.5,
+            4.5,
+            3.5,
+            4.5,
+            5,
+            4,
+            4
+          ]
+        },
+        {
+          "vendor": "智谱AI",
+          "model": "GLM-5.2",
+          "levels": [
+            4.5,
+            4.5,
+            4.5,
+            3,
+            4.5,
+            5,
+            5,
+            4.5
+          ]
+        },
+        {
+          "vendor": "字节跳动",
+          "model": "Doubao-Seed-2.1-pro",
+          "levels": [
+            4.5,
+            4,
+            4,
+            4.5,
+            4,
+            4.5,
+            2,
+            3.5
+          ]
+        },
+        {
+          "vendor": "Meta",
+          "model": "Muse Spark 1.1",
+          "levels": [
+            4,
+            4.5,
+            4,
+            4.5,
+            4,
+            2.5,
+            1,
+            2.5
+          ]
+        },
+        {
+          "vendor": "DeepSeek",
+          "model": "DeepSeek-V4-Pro",
+          "levels": [
+            4.5,
+            4.5,
+            4,
+            3,
+            4.5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "vendor": "MiniMax",
+          "model": "MiniMax-M3",
+          "levels": [
+            4,
+            4,
+            4,
+            4,
+            4.5,
+            4.5,
+            5,
+            4.5
+          ]
+        },
+        {
+          "vendor": "百度",
+          "model": "ERNIE 5.1",
+          "levels": [
+            4.5,
+            3.5,
+            3,
+            4,
+            4,
+            5,
+            2,
+            3.5
+          ]
+        },
+        {
+          "vendor": "Mistral AI",
+          "model": "Mistral Large 3",
+          "levels": [
+            4,
+            3.5,
+            3.5,
+            3.5,
+            3.5,
+            2.5,
+            5,
+            4
+          ]
+        },
+        {
+          "vendor": "科大讯飞",
+          "model": "星火 Spark X2",
+          "levels": [
+            4,
+            3,
+            3,
+            4,
+            3.5,
+            5,
+            1.5,
+            3.5
+          ]
+        },
+        {
+          "vendor": "商汤",
+          "model": "SenseNova 6",
+          "levels": [
+            3.5,
+            3,
+            3,
+            4,
+            3.5,
+            4.5,
+            2,
+            3.5
+          ]
+        }
+      ]
+    },
+    "aggRankMeta": {
+      "移动云 MoMA": {
+        "models": 300,
+        "richness": 5,
+        "stability": 4.5,
+        "note": "运营商系模型超市,300+款0Day首发",
+        "src": "ecloud.10086.cn"
+      },
+      "CMI AI Hub": {
+        "models": 140,
+        "richness": 4,
+        "stability": 4,
+        "note": "中移国际出海向,140+全球模型",
+        "src": "cmi.chinamobile.com"
+      },
+      "天翼云星辰MaaS": {
+        "models": 80,
+        "richness": 4,
+        "stability": 4.5,
+        "note": "电信央企系,80+行业大模型",
+        "src": "ctyun.cn"
+      },
+      "阿里云百炼": {
+        "models": 150,
+        "richness": 5,
+        "stability": 5,
+        "note": "Qwen全家桶+三方,生态最全",
+        "src": "aliyun.com/product/bailian"
+      },
+      "百度智能云千帆": {
+        "models": 100,
+        "richness": 4.5,
+        "stability": 4.5,
+        "note": "文心自研+DeepSeek,政企中标王",
+        "src": "qianfan.cloud.baidu.com"
+      },
+      "火山引擎方舟": {
+        "models": 80,
+        "richness": 4.5,
+        "stability": 5,
+        "note": "豆包全家桶,抖音级高并发",
+        "src": "volcengine.com/docs/82379/1263412"
+      },
+      "腾讯云 TokenHub": {
+        "models": 30,
+        "richness": 4,
+        "stability": 4,
+        "note": "一Key调18款语言模型,少而精",
+        "src": "cloud.tencent.com/document/product/1823/130051"
+      },
+      "硅基流动": {
+        "models": 350,
+        "richness": 5,
+        "stability": 4,
+        "note": "开源模型超市350+款,99.95%SLA",
+        "src": "cloud.siliconflow.cn/models"
+      },
+      "七牛云 AI": {
+        "models": 50,
+        "richness": 4,
+        "stability": 3.5,
+        "note": "50+款随心调,Token Plan打包",
+        "src": "qiniu.com"
+      },
+      "秒云": {
+        "models": 40,
+        "richness": 4,
+        "stability": 3.5,
+        "note": "云原生厂商的可观测API网关",
+        "src": "miaoyun.net.cn"
+      },
+      "OpenRouter": {
+        "models": 400,
+        "richness": 5,
+        "stability": 4,
+        "note": "模型最全的国际网关,70+厂商",
+        "src": "openrouter.ai/models"
+      },
+      "Portkey": {
+        "models": 1600,
+        "richness": 5,
+        "stability": 4.5,
+        "note": "网关路由1600+模型,可自托管",
+        "src": "portkey.ai"
+      },
+      "LiteLLM": {
+        "models": 500,
+        "richness": 5,
+        "stability": 3.5,
+        "note": "开源网关接100+厂商,纯自托管",
+        "src": "litellm.ai"
+      },
+      "Together AI": {
+        "models": 200,
+        "richness": 4.5,
+        "stability": 4.5,
+        "note": "开源模型推理云200+款",
+        "src": "together.ai"
+      },
+      "Anyscale": {
+        "models": 15,
+        "richness": 2,
+        "stability": 4,
+        "note": "Endpoints已关停,转向Ray平台",
+        "src": "anyscale.com"
+      },
+      "n1n": {
+        "models": 500,
+        "richness": 4.5,
+        "stability": 3.5,
+        "note": "号称500+模型的全球直连网关",
+        "src": "n1n.ai"
+      }
     }
   },
   "business": {
@@ -8779,7 +9315,7 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-12.1";
+window.AIHUB_DATA_VERSION = "2026-08-12.2";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-12",
