@@ -1,6 +1,76 @@
 window.AIHUB_DATA = {
     "insights": [
     {
+      "date": "2026-08-12",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI推出GPT-5.6-Cyber并扩展Daybreak安全计划",
+      "summary": "专用于漏洞研究与渗透验证的网络安全模型,分Blue/Red两级开放给审核防御方,内部攻防完成率95%",
+      "source": "财联社",
+      "url": "https://www.cls.cn/detail/2451365"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "英伟达发布Nemotron 3.5 Lightning与NeMo Switchyard模型路由器",
+      "summary": "30B MoE轻量执行型模型推理提速约4倍,配套智能体模型路由器按任务自动调度,对标模型聚合路由",
+      "source": "钛媒体",
+      "url": "https://www.163.com/dy/article/L44C87PC05118O92.html"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "北京智源发布AREX自主研究智能体",
+      "summary": "首创研究-验证-再研究双循环递归框架,支持AI在长程任务中持续自我修正逐步逼近正确答案",
+      "source": "腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260812A033I500?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "远景乌兰察布建成全球最大AI算力单体星河基地",
+      "summary": "以超级单体承载百万P算力规模,百万卡汇聚于单体内,旨在提升中国芯片全球竞争力",
+      "source": "腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260812A033I500?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "政策",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic为Claude默认启用AI内容隐形水印",
+      "summary": "文本嵌入隐形水印、图片加数字签名溯源元数据,复制粘贴后仍可追踪,以符合欧盟AI透明度法规",
+      "source": "南方都市报",
+      "url": "https://new.qq.com/rain/a/20260812A033I500?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "智谱宣布ZCode全面升级",
+      "summary": "智谱宣布ZCode全面升级,能力细节随极新早报披露,指向代码与智能体方向",
+      "source": "极新",
+      "url": "https://www.163.com/dy/article/L44975UC05562DGT.html"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "Gartner预估2026年AI推理支出首次超越模型训练",
+      "summary": "AI产业进入分层定价与算力扩张并行阶段,推理侧成本与商业化成为新焦点",
+      "source": "极新",
+      "url": "https://www.163.com/dy/article/L44975UC05562DGT.html"
+    },
+    {
       "date": "2026-08-11",
       "tag": "开源动态",
       "cat": "llm",
@@ -8709,8 +8779,12 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-11.2";
+window.AIHUB_DATA_VERSION = "2026-08-12.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-12",
+    "note": "每日自动更新:新增 7 条动态(OpenAI推出GPT-5.6-Cyber并扩展Daybreak安全计划 / 英伟达发布Nemotron 3.5 Lightning与NeMo Switchyard模型路由器 / 北京智源发布AREX自主研究智能体 / 远景乌兰察布建成全球最大AI算力单体星河基地 / Anthropic为Claude默认启用AI内容隐形水印 / 智谱宣布ZCode全面升级 / Gartner预估2026年AI推理支出首次超越模型训练;信源:财联社·钛媒体·腾讯新闻·南方都市报·极新);GitHub 推送:成功"
+  },
   {
     "date": "2026-08-11",
     "note": "AI 中转站专题补回:新增 7 条 8 月(08-01~08-10)AI 中转站/API 聚合动态(硅基流动调价、OpenRouter 上新、Novita 目录扩展、中转站投毒事件等);信源:官方/媒体;GitHub 推送:成功"
