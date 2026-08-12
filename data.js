@@ -5339,7 +5339,8 @@ window.AIHUB_DATA = {
         "stability": 3.5,
         "note": "号称500+模型的全球直连网关",
         "src": "n1n.ai"
-      }
+      },
+      "aggGap": {}
     }
   },
   "business": {
@@ -9315,7 +9316,7 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-12.2";
+window.AIHUB_DATA_VERSION = "2026-08-12.3";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-12",
