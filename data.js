@@ -1,6 +1,57 @@
 window.AIHUB_DATA = {
     "insights": [
     {
+      "date": "2026-08-12",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "南凌科技发布「智枢 AI 网关」,一站式接入百款大模型",
+      "summary": "依托自建全球骨干网与30年企业级网络运营积淀,智枢AI网关汇聚超100家主流大模型统一接入,提供智能路由、用量看板与精细化Token运营,主打企业大模型接得快、用得稳、算得清",
+      "source": "东方财富",
+      "url": "https://caifuhao.eastmoney.com/news/20260812101401281925070"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "网宿科技边缘AI能力入选2026可信云创新应用实践",
+      "summary": "依托全球3000+边缘节点,网宿打造融合网络+智算+安全的边缘一体化平台,AI网关+MaaS+边缘推理优化方案服务央国企,边缘毫秒级响应使AI服务体验提升75%",
+      "source": "网宿科技",
+      "url": "https://www.wangsu.com/news/content/news/4184"
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "世纪互联牵头编制业界首个《GW-Scale Open AIDC技术报告》",
+      "summary": "在2026开放计算技术大会,OCTC发布由世纪互联牵头编制的GW级AIDC开放参考架构,搭建算力/高速互联/存储/供电/液冷五大支柱,支撑中国AI基础设施标准化与供应链全球化",
+      "source": "世纪互联",
+      "url": "https://vnet.com/portal/article/index/cid/14/id/1086.html"
+    },
+    {
+      "date": "2026-06-05",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "万国数据300亿元投建乌兰察布GW级绿电直连智算集群",
+      "summary": "万国数据与乌兰察布市政府签约,未来五年投资超300亿元打造多个高密度及GW级数据中心园区,绿电直连实现80%以上绿电覆盖,形成规模化零碳AI算力集群",
+      "source": "同花顺",
+      "url": "https://m.10jqka.com.cn/20260605/c677241640.shtml"
+    },
+    {
+      "date": "2026-04-29",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "第一线DYXNET布局AI基础设施,推「一网入多云」算网融合方案",
+      "summary": "聚焦核心云连接能力建设,第一线DYXNET以SD-WAN+SASE构建「云连接+多公有云算力」一体化方案,智能优化跨公有云流量,支撑企业AI规模化落地与全球化运营",
+      "source": "腾讯证券",
+      "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260429155558a485bfe7"
+    },
+
+    {
       "date": "2026-08-13",
       "tag": "模型更新",
       "cat": "llm",
@@ -1941,6 +1992,13 @@ window.AIHUB_DATA = {
               "color": "#2e7d32"
             }
           ]
+        },
+        {
+          "id": "comp",
+          "label": "竞争对手",
+          "icon": "\ud83e\udd42",
+          "color": "#d63384",
+          "items": []
         }
       ]
     }
@@ -9387,8 +9445,12 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-13.1";
+window.AIHUB_DATA_VERSION = "2026-08-13.2";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-13",
+    "note": "手动新增「竞争对手」分类(comp,挂于厂商下)及 5 条国内竞品 AI 动态(南凌科技智枢AI网关 / 网宿科技边缘AI / 世纪互联GW级AIDC / 万国数据乌兰察布300亿绿电智算 / 第一线DYXNET算网融合);竞品下钻含18家国内MSP·IDC与海外网络/运营商竞品关键词;每日自动化已在 ai_hub_sources.md 与 runbook 接入竞品检索;GitHub 推送:成功"
+  },
   {
     "date": "2026-08-13",
     "note": "每日自动更新:新增 7 条动态(DeepSeek V4 Pro正式版发布增强Agent能力 / 马斯克xAI发布Grok 4.6长程智能体 / 阿里云灵骏真武M890超节点上线乌兰察布 / 腾讯Q2资本开支527.84亿同比增176%加码AI算力 / OpenRouter全量上线FLUX 3 Video统一多模态 / 面壁智能启动IPO辅导MiniCPM下载超4300万 / 工业富联半年报净利破237亿AI服务器驱动;信源:TechWeb·猎云网·华尔街见闻·新浪财经·搜狐·AppSo·大众证券报);GitHub 推送:成功"
