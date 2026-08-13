@@ -1,6 +1,77 @@
 window.AIHUB_DATA = {
     "insights": [
     {
+      "date": "2026-08-13",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek V4 Pro正式版发布,增强Agent能力比肩Fable 5",
+      "summary": "DeepSeek-V4-Pro-0813支持1M上下文与384K最大输出,多项Agent评测超Opus 4.8,定价为Flash三倍(输入3元/输出6元每百万token)",
+      "source": "TechWeb",
+      "url": "https://new.qq.com/rain/a/20260813A047OR00?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-13",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "马斯克旗下xAI发布Grok 4.6,主打长程AI智能体",
+      "summary": "针对长程多步任务训练,可连续完成研究、分析代码库、把产品想法转化为可运行成果,经OpenRouter/Vercel/Cloudflare调用,定价$2/$6每百万token",
+      "source": "猎云网",
+      "url": "https://new.qq.com/rain/a/20260813A049G100?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-13",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阿里云灵骏真武M890超节点实例上线乌兰察布",
+      "summary": "64卡高速互联算力单元无需自建机房,可承载十万亿参数级MoE大模型推理,国内首个运行超2万亿参数大模型,Kimi K3与Qwen3.8 Max已对外服务",
+      "source": "华尔街见闻",
+      "url": "https://new.qq.com/rain/a/20260813A03NZH00?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-13",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "腾讯Q2资本开支527.84亿同比增176%,加码AI算力",
+      "summary": "单季营收首破2000亿,资本开支超市场预期创纪录,经营现金流含大额AI预付款用于混元Hy、WorkBuddy及CodeBuddy推理,自由现金流转负",
+      "source": "新浪财经",
+      "url": "https://k.sina.com.cn/article_5953466437_162dab0450670b8sdq.html?loc=7"
+    },
+    {
+      "date": "2026-08-13",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "na",
+      "title": "OpenRouter全量上线FLUX 3 Video统一多模态模型",
+      "summary": "黑森林实验室联合训练架构打通视频/音频/图像/动作预测,文生视频同步生成配乐,多模态Agent开发门槛大降,Runway Aleph 2.0亦已接入",
+      "source": "搜狐",
+      "url": "https://www.sohu.com/a/1059029173_122666747"
+    },
+    {
+      "date": "2026-08-13",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "面壁智能启动IPO辅导,MiniCPM下载超4300万",
+      "summary": "端侧大模型厂商面壁智能已进入上市辅导期,其MiniCPM系列累计下载量突破4300万,端侧AI商业化与资本化进程加速",
+      "source": "AppSo",
+      "url": "https://www.163.com/dy/article/L46RSK5N0511CSAO.html"
+    },
+    {
+      "date": "2026-08-13",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "工业富联半年报净利破237亿,AI服务器驱动增长",
+      "summary": "上半年营收5578.61亿同比增54.63%,归母净利237.40亿同比增95.99%;云服务商AI服务器营收增2.3倍、GPU机柜出货增3.2倍,毛利率仅7.15%",
+      "source": "大众证券报",
+      "url": "http://view.inews.qq.com/a/20260813A00UME00"
+    },
+
+    {
       "date": "2026-08-12",
       "tag": "模型更新",
       "cat": "llm",
@@ -9316,8 +9387,12 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-12.3";
+window.AIHUB_DATA_VERSION = "2026-08-13.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-13",
+    "note": "每日自动更新:新增 7 条动态(DeepSeek V4 Pro正式版发布增强Agent能力 / 马斯克xAI发布Grok 4.6长程智能体 / 阿里云灵骏真武M890超节点上线乌兰察布 / 腾讯Q2资本开支527.84亿同比增176%加码AI算力 / OpenRouter全量上线FLUX 3 Video统一多模态 / 面壁智能启动IPO辅导MiniCPM下载超4300万 / 工业富联半年报净利破237亿AI服务器驱动;信源:TechWeb·猎云网·华尔街见闻·新浪财经·搜狐·AppSo·大众证券报);GitHub 推送:成功"
+  },
   {
     "date": "2026-08-12",
     "note": "每日自动更新:新增 7 条动态(OpenAI推出GPT-5.6-Cyber并扩展Daybreak安全计划 / 英伟达发布Nemotron 3.5 Lightning与NeMo Switchyard模型路由器 / 北京智源发布AREX自主研究智能体 / 远景乌兰察布建成全球最大AI算力单体星河基地 / Anthropic为Claude默认启用AI内容隐形水印 / 智谱宣布ZCode全面升级 / Gartner预估2026年AI推理支出首次超越模型训练;信源:财联社·钛媒体·腾讯新闻·南方都市报·极新);GitHub 推送:成功"
