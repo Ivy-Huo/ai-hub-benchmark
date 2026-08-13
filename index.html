@@ -692,6 +692,43 @@ var VENDOR_KW = {
   v_xai:         {label:"xAI(Grok)", parent:"llm", color:"#c76a15", kw:["xAI","Grok"]},
   v_mistral:     {label:"Mistral", parent:"llm", color:"#c76a15", kw:["Mistral"]}
 };
+/* ---- 竞争对手下钻:与厂商同理,comp 父节点下的竞品名字叶子(单一数据源) ----
+   id 以 c_ 前缀标识;parent 固定 "comp";kw 用于 insights 标题/摘要/来源 子串匹配(不限制 cat)。 */
+var COMP_KW = {
+  c_nanling:   {label:"南凌科技", parent:"comp", color:"#d63384", kw:["南凌科技","南凌"]},
+  c_dyx:       {label:"第一线 DYXNET", parent:"comp", color:"#d63384", kw:["第一线","DYXNET","DYX"]},
+  c_21vianet:  {label:"世纪互联 21Vianet", parent:"comp", color:"#d63384", kw:["世纪互联","21Vianet","21vianet","VNET"]},
+  c_wangsu:    {label:"网宿科技", parent:"comp", color:"#d63384", kw:["网宿科技","网宿","Wangsu","ChinaNetCenter"]},
+  c_tianwei:   {label:"北京天维", parent:"comp", color:"#d63384", kw:["北京天维","天维信通"]},
+  c_263:       {label:"二六三", parent:"comp", color:"#d63384", kw:["二六三","二六三网络"]},
+  c_shuxun:    {label:"数讯", parent:"comp", color:"#d63384", kw:["数讯","数讯信息","上海数讯"]},
+  c_gds:       {label:"万国数据 GDS", parent:"comp", color:"#d63384", kw:["万国数据","GDS","GDS Holdings"]},
+  c_zenlayer:  {label:"Zenlayer", parent:"comp", color:"#d63384", kw:["Zenlayer"]},
+  c_singtel:   {label:"Singtel 新加坡电讯", parent:"comp", color:"#d63384", kw:["Singtel","新加坡电讯","Singapore Telecom"]},
+  c_tata:      {label:"Tata Communications 塔塔通信", parent:"comp", color:"#d63384", kw:["Tata Communications","塔塔通信","Tata"]},
+  c_pccw:      {label:"PCCW Global 电讯盈科国际", parent:"comp", color:"#d63384", kw:["PCCW Global","电讯盈科国际","电讯盈科","PCCW"]},
+  c_telstra:   {label:"Telstra 澳大利亚电讯", parent:"comp", color:"#d63384", kw:["Telstra","澳大利亚电讯"]},
+  c_bt:        {label:"BT Group", parent:"comp", color:"#d63384", kw:["BT Group","British Telecom"]},
+  c_tsystems:  {label:"T-Systems", parent:"comp", color:"#d63384", kw:["T-Systems"]},
+  c_orange:    {label:"Orange Business", parent:"comp", color:"#d63384", kw:["Orange Business","Orange S.A."]},
+  c_vodafone:  {label:"Vodafone", parent:"comp", color:"#d63384", kw:["Vodafone"]},
+  c_colt:      {label:"Colt Technology", parent:"comp", color:"#d63384", kw:["Colt Technology","Colt"]}
+};
+/* 把 COMP_KW 叶子注入到 竞争对手(comp) 节点下,作为第三级;幂等 */
+function injectCompLeaves(){
+  var tree=state.insightCatTree; if(!tree) return;
+  function find(id){ var f=null; (function d(ns){ (ns||[]).forEach(function(n){ if(f)return; if(n.id===id)f=n; else if(n.items)d(n.items); }); })(tree); return f; }
+  var node=find("comp"); if(!node) return;
+  var leaves=[];
+  for(var vid in COMP_KW){ if(COMP_KW[vid].parent==="comp") leaves.push({id:vid,label:COMP_KW[vid].label,color:COMP_KW[vid].color}); }
+  node.items=leaves;
+}
+/* 竞争对手叶子(c_*)用关键词匹配整条动态,而非按 cat 字段 */
+function compMatch(it, cid){
+  var v=COMP_KW[cid]; if(!v||!v.kw||!v.kw.length) return false;
+  var t=((it.title||"")+" "+(it.summary||"")+" "+(it.source||"")).toLowerCase();
+  return v.kw.some(function(k){ return t.indexOf(k.toLowerCase())>=0; });
+}
 /* 把 VENDOR_KW 中的叶子按 parent 注入到分类树(聚合厂商/大模型原厂)下,作为第三级;幂等 */
 function injectVendorLeaves(){
   var tree=state.insightCatTree; if(!tree) return;
@@ -732,7 +769,7 @@ function renderTagnav(){
 /* ---- 分类树:构建 id -> {label,color,leaves} 映射,父节点 leaves 含全部子孙 ---- */
 function buildCatMap(){
   var map={};
-  function leaves(nodes){ var r=[]; nodes.forEach(function(n){ if(n.items&&n.items.length) r=r.concat(leaves(n.items)); else r.push(n.id); }); return r; }
+  function leaves(nodes){ var r=[]; nodes.forEach(function(n){ r.push(n.id); if(n.items&&n.items.length) r=r.concat(leaves(n.items)); }); return r; }
   function walk(nodes){
     nodes.forEach(function(n){
       map[n.id]={label:n.label,icon:n.icon||"",color:n.color||"#888",leaves:n.items?leaves(n.items):[n.id]};
@@ -745,6 +782,7 @@ function buildCatMap(){
 function matchesCat(it, selId){
   if(!selId) return true;                 // 全部
   if(selId.indexOf("v_")===0) return vendorMatch(it, selId); // 厂商叶子:关键词匹配
+  if(selId.indexOf("c_")===0) return compMatch(it, selId);   // 竞争对手叶子:关键词匹配
   if(it.cat===selId) return true;         // 自身
   var set=catMap[selId]; if(!set) return false;
   return set.leaves.indexOf(it.cat)>=0;   // 子孙
@@ -1563,6 +1601,7 @@ document.getElementById("hmodal").addEventListener("click",function(e){ if(e.tar
 /* ================= init ================= */
 function renderAll(){
   injectVendorLeaves();                 // 把聚合/原厂厂商名字注入分类树第三级
+  injectCompLeaves();                   // 把竞争对手名字注入分类树第三级
   catMap=buildCatMap(); regionMap=buildRegionMap();
   renderTagnav(); renderCatbar(); renderNews();
   renderPick("vpick",state.benchmark.vendors,hiddenBm,renderBmTable);
