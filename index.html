@@ -314,6 +314,8 @@
 
   @media (max-width:900px){ .rankrow{grid-template-columns:1fr} }
   .pnote{font-size:12px;color:var(--ink3);margin-top:10px}
+  .m2upd{display:inline-block;font-size:12px;color:#3a4a6b;background:linear-gradient(90deg,#eef3ff,#f4f8ff);border:1px solid #d4e0ff;border-radius:99px;padding:5px 14px;margin:2px 0 18px}
+  .m2upd b{color:var(--brand)}
 
   .grid{display:grid;gap:16px}
   .g4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
@@ -456,6 +458,7 @@
     <div class="kicker">Module 2 · Model &amp; Aggregator Leaderboard</div>
     <h2>AI 聚合平台与模型能力对比排行榜</h2>
     <p class="lead">面向客户 / 产品 / 研发的<b>模型与聚合厂商能力排行</b>:下方先给出<b>旗舰模型智能能力榜</b>与<b>聚合厂商对接能力榜</b>、<b>大模型厂商差异化能力矩阵</b>及<b>客户关注重点</b>(对接丰富度、审计报告、上下文是否存储等);再下钻 <b>16</b> 家聚合平台功能对标明细(6 大分组 19 项指标 + 26 项能力热力矩阵 + 计费 / 安全 / 订购体验专项),基准线 <b>OpenRouter + Portkey + LiteLLM</b>。</p>
+    <div class="m2upd" id="m2Upd"></div>
 
     <!-- 概览卡片 -->
     <div class="ovcards" id="ovCards"></div>
@@ -1117,6 +1120,8 @@ function renderOverview(){
   ];
   var el=document.getElementById("ovCards"); if(!el) return;
   el.innerHTML=cards.map(function(c){ return '<div class="ovcard"><div class="num">'+c.n+'</div><div class="lab">'+c.l+'</div><div class="dt">'+c.d+'</div></div>'; }).join("");
+  var up=document.getElementById("m2Upd");
+  if(up){ var d=(state.benchmark&&state.benchmark.updated)||"-"; up.innerHTML='🗓 榜单数据更新于 <b>'+d+'</b> · 随每日检索滚动刷新(与模块一同源同规则)'; }
 }
 
 function renderModelRank(){
