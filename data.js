@@ -2953,6 +2953,10 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
+    "updated": "2026-08-14",
+    "m2Changelog": [
+      { "day": "2026-08-14", "note": "接入每日自动检索刷新机制(模块二),与模块一同源同规则:检索 16 家聚合平台 + 14 款旗舰模型动态,保守更新模型数/能力/新增模型,refresh_m2.js 重算排名" }
+    ],
     "vendors": [
       "移动云 MoMA",
       "CMI AI Hub",
@@ -9445,8 +9449,12 @@ window.AIHUB_DATA = {
     }
   ]
 };
-window.AIHUB_DATA_VERSION = "2026-08-13.2";
+window.AIHUB_DATA_VERSION = "2026-08-14";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-14",
+    "note": "模块二接入每日自动检索刷新机制(与模块一同源同规则):ai_hub_sources.md 新增模块二检索清单(16 聚合平台 + 14 旗舰模型)、runbook 新增步骤 3-B、新增 refresh_m2.js 重算排名、data.js 新增 benchmark.updated/m2Changelog;Module 2 头部展示榜单更新日期;GitHub 推送:成功"
+  },
   {
     "date": "2026-08-13",
     "note": "手动新增「竞争对手」分类(comp,挂于厂商下)及 5 条国内竞品 AI 动态(南凌科技智枢AI网关 / 网宿科技边缘AI / 世纪互联GW级AIDC / 万国数据乌兰察布300亿绿电智算 / 第一线DYXNET算网融合);竞品下钻含18家国内MSP·IDC与海外网络/运营商竞品关键词;每日自动化已在 ai_hub_sources.md 与 runbook 接入竞品检索;GitHub 推送:成功"
