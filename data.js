@@ -1,8 +1,20 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-14.1";
+window.AIHUB_DATA_VERSION = "2026-08-15.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-15",
+    "note": "insights 触及 200 条上限,裁剪最旧 7 条(2026-01-14 ~ 2026-04-10)至当日 history 快照(history/2026-08-15-data.js 与 2026-08-15-trimmed-insights.json),data.js 保留最新 200 条"
+  },
+  {
+    "date": "2026-08-15",
+    "note": "模块二每日检索刷新:modelRank 新增 GLM-5.3(智谱AI,6 维为公开评测估算,trend=new);aggRankMeta 硅基流动备注前置「上线 DeepSeek V4 Pro(百万上下文/三档推理强度)」;16 家聚合平台模型目录数无可信增减信号故未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+  },
+  {
+    "date": "2026-08-15",
+    "note": "每日自动更新:新增 8 条动态(阿里开源 Qwen3.8-27B/智谱 GLM-5.3 后训练拉升50%+白盒审查登开源第一/DeepSeek Harness v0.1 公测 MIT 开源接入40+模型厂/越南高风险 AI 系统清单今日生效/苹果在阿里支持下训练中国专属大模型/网宿科技边缘AI+AI-Token 推理工厂对标 Cloudflare/谷歌开源 HEIR 加密数据推理编译器/中芯国际 Q2 收入环比增20%);信源:量子位·Qwen官方、AIBase·智谱官方、DeepSeek官方GitHub·36氪、越南科学技术部·LuatVietnam、路透社·IT之家、界面新闻·每日经济新闻、Google开源博客·Hacker News、证券时报·科创板日报;insights 增至 207 条;GitHub 推送:成功"
+  },
   {
     "date": "2026-08-14",
     "note": "每日自动更新:新增 6 条动态(DeepSeek 峰谷定价引争议/谷歌 Gemini 3.7 Flash 发布+价格腰斩/中国移动中期业绩智算增130% AIDC增486%/多款农业大模型集中亮相/OpenAI等签署欧盟AI内容透明度准则/中国电信智算基建密集落地);信源:北京商报·新浪财经、36氪·华尔街见闻、MSCBSC·华尔街见闻、中工网·新浪财经、机器之心·腾讯新闻、MSCBSC;insights 增至 199 条;GitHub 推送:成功"
@@ -131,6 +143,86 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-15",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里开源 Qwen3.8-27B:消费级显卡可跑,编程办公超越 Qwen3.7-Plus",
+      "source": "量子位 / Qwen 官方",
+      "url": "https://www.qbitai.com/2026/08/473379.html",
+      "summary": "Apache 2.0 可免费商用的原生多模态稠密模型,262K 原生上下文经 YaRN 可外推至 1M;新增 reasoning_effort 按难度控制思考深度,量化后消费级显卡可部署。千问累计开源 460+ 模型、下载超 30 亿次。"
+    },
+    {
+      "date": "2026-08-15",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "智谱发布 GLM-5.3:底座不变靠后训练拉升 50%,白盒代码审查登开源第一",
+      "source": "AIBase / 智谱官方",
+      "url": "https://www.aibase.com/news/30353",
+      "summary": "参数维持 7400 亿与 GLM-5.2 同底,纯靠后训练 Scaling 提升约 50%,编程逼近 Claude Fable 5;白盒代码审查得分 84.5%,已在 269 个开源项目中记录 2436 个漏洞,权重约两周后开放。"
+    },
+    {
+      "date": "2026-08-15",
+      "tag": "开源动态",
+      "cat": "agg",
+      "region": "cn",
+      "title": "DeepSeek Harness v0.1 公测并 MIT 开源,默认接入 40 余家模型提供商",
+      "source": "DeepSeek 官方 GitHub / 36氪·腾讯云开发者社区",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "summary": "本地 Agent 工作台以 Cordis「一切皆插件」重构执行层(159 个插件、四种模式),明确不锁自家模型,可接 OpenAI/Anthropic/Google/Kimi 等 40+ 家;append-only 会话日志支持断点续跑,发布 12 小时 GitHub 破 5 万星。"
+    },
+    {
+      "date": "2026-08-15",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "sea",
+      "title": "越南《高风险 AI 系统清单》8 月 15 日生效,46 类系统纳入强监管",
+      "source": "越南科学技术部(MST) / LuatVietnam",
+      "url": "https://english.mst.gov.vn/print/promulgating-the-list-of-high-risk-artificial-intelligence-systems-197260713224338043.htm",
+      "summary": "第 33/2026/QD-TTg 号决定今日生效,覆盖教育/民族宗教/医疗/银行/诉讼/交通六域共 46 类(交通占 31 类),强制人类监督且不得替代法定责任;存量系统医教金融须于 2027/9/1、其余 2027/3/1 前完成合规。"
+    },
+    {
+      "date": "2026-08-15",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "苹果在阿里支持下训练中国专属大模型,或成首家获批自有模型的外企",
+      "source": "路透社 / IT之家·腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260814A07DNG00",
+      "summary": "三名知情人士称苹果已为中国市场训成专属 LLM,由阿里合作研发并提供训练支持,策略从「依赖第三方模型」转向「自研+本土伙伴」双轨;Apple Intelligence 预计数月内随 iOS 更新在华上线,苹果与阿里均未置评。"
+    },
+    {
+      "date": "2026-08-15",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "网宿科技 20CM 涨停:边缘 AI 网关叠加 AI-Token 边缘推理工厂,估值对标 Cloudflare",
+      "source": "界面新闻 / 每日经济新闻",
+      "url": "https://www.163.com/dy/article/L4A3PF7M0534A4SC.html",
+      "summary": "DeepSeek 峰谷定价(8/17 生效)催化边缘推理,公司 2800+ 边缘节点承接分布式推理;已推边缘 AI 网关/边缘模型推理/边缘 AI 应用三大产品并适配百余种大模型,联合趋境科技共建 AI-Token 边缘推理工厂,并拟 3-6 亿注销式回购。"
+    },
+    {
+      "date": "2026-08-15",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "谷歌开源 HEIR 编译器:让预训练模型直接在加密数据上推理",
+      "source": "Google 开源博客 / Hacker News",
+      "url": "https://github.com/google/heir",
+      "summary": "HEIR 将预训练模型编译为可在全同态加密(FHE)数据上运行,演示在不看到用户特征的前提下完成内容推荐,指向「数据不出域」的隐私推理路径;社区质疑其未提及 FHE 长期约千倍的算力开销,商用仍远。"
+    },
+    {
+      "date": "2026-08-15",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "中芯国际二季度收入环比增 20%,AI 配套芯片需求激增拉动产能利用率至 93.7%",
+      "source": "证券时报 / 科创板日报",
+      "url": "",
+      "summary": "2026Q2 单季收入突破 30 亿美元、环比增 20%,出货量环比增 14.4%,晶圆平均单价环比升 5.7%;当季新增 8000 片折合 12 英寸月产能,产能利用率 93.7%,中国区收入环比增 22%,显示订单回流与在地化延续。"
+    },
     {
       "date": "2026-08-14",
       "tag": "模型更新",
@@ -2050,76 +2142,6 @@ window.AIHUB_DATA = {
       "source": "MODA",
       "url": "https://moda.gov.tw/en/press/press-releases/19508.html",
       "summary": "数发部 4月15日公布'AI 算力中心 BOO 民间参与'专案,要求申请人投资逾 3 亿台币、算力至少 15 PFLOPS(FP32),并须拨出一定比例算力供政府/学界优惠使用,补强台湾算力自主。"
-    },
-    {
-      "date": "2026-04-10",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "tw",
-      "title": "台湾主权模型 TAIDE 成熟,主攻繁体中文与文化语域",
-      "source": "台湾行政院",
-      "url": "https://www.cnma.org.tw/page/news/show.aspx",
-      "summary": "台湾可信任生成式 AI'TAIDE'主权模型 2026 年趋于成熟,面向繁体中文(逾1.3万常用字、成语典故)场景,开发者已在台北、高雄、台中广泛构建应用,主打文化语域而非纯基准。"
-    },
-    {
-      "date": "2026-04-10",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "cn",
-      "title": "工信部推算力银行与算力超市,普惠中小企业AI算力",
-      "source": "工业和信息化部",
-      "url": "https://www.miit.gov.cn",
-      "summary": "工信部开展普惠算力赋能中小企业发展专项行动,推出算力银行(闲置算力标准化金融化、跨域调度)与算力超市(商品化比价、开箱即用、算力券结算)两大模式,直击中小企业算力成本痛点。"
-    },
-    {
-      "date": "2026-04-05",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "na",
-      "title": "Meta 发布 Llama 4 Scout/Maverick,上下文扩至 1000 万 token",
-      "source": "Meta AI Blog",
-      "url": "https://ai.meta.com/blog/",
-      "summary": "Llama 4 采用 MoE 架构,Scout 版本支持最高 1000 万 token 上下文,Maverick 主打多模态;延续 Meta 开源领先策略,直接冲击闭源模型长上下文定价。"
-    },
-    {
-      "date": "2026-03-18",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "tw",
-      "title": "台湾健保署携手 Google 推 Gemini 健康助手,覆盖千万民众",
-      "source": "AI in Asia / NHIA",
-      "url": "https://aiinasia.com/north-asia/tsmc-58-percent-profit-jump-taiwan-monetising-ai-cycle-north-asia-2026",
-      "summary": "台湾健保署(NHIA)2026年3月携手 Google 在健保 App 嵌入 Gemini 健康助手'AI-on-DM',服务逾千万民众,糖尿病风险评估由约20分钟缩短至25秒,为全球最大公共 AI 健康部署之一。"
-    },
-    {
-      "date": "2026-03-01",
-      "tag": "模型更新",
-      "cat": "tech",
-      "region": "global",
-      "title": "MCP/A2A/A2UI协议栈收敛,AI Agent从对话迈向执行",
-      "source": "腾讯云开发者",
-      "url": "https://cloud.tencent.com/developer/article/2674824",
-      "summary": "Anthropic的MCP、Google的A2A与A2UI三大开放协议互补收敛:MCP统一工具调用、A2A解决Agent间协作、A2UI定义富交互;MCP月下载超9700万,WebMCP成W3C标准提案,智能体进入生产环境。"
-    },
-    {
-      "date": "2026-01-22",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "sea",
-      "title": "新加坡 IMDA 发布全球首个《生成式 AI 治理框架(智能体 AI)》",
-      "source": "IMDA",
-      "url": "https://www.imda.gov.sg",
-      "summary": "IMDA 于达沃斯发布全球首个面向智能体 AI(Agentic AI)的模型 AI 治理框架,针对自主决策、工具调用与责任归属给出指引,成为亚太治理范式参考。"
-    },
-    {
-      "date": "2026-01-14",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "tw",
-      "title": "台湾《人工智慧基本法》正式施行,设七大原则、两年调适期",
-      "source": "台湾行政院 / MODA",
-      "url": "https://moda.gov.tw",
-      "summary": "《AI 基本法》2025年12月三读、2026年1月14日施行,由国科会(NSTC)主管;采七大原则、将风险分级下放各行业主管机关,不设即时私营义务、给两年调适期,立场接近美日而非欧盟。"
     }
   ],
   "insightCatTree": [
@@ -3142,8 +3164,12 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-14",
+    "updated": "2026-08-15",
     "m2Changelog": [
+      {
+        "day": "2026-08-15",
+        "note": "模块二每日检索刷新:新增 1 款旗舰模型(智谱 GLM-5.3,6 维公开评测估算);更新 1 家聚合平台备注(硅基流动上线 DeepSeek V4 Pro);16 家聚合平台模型目录数本轮无可信增减信号,未调整 models/richness/stability"
+      },
       {
         "day": "2026-08-14",
         "note": "接入每日自动检索刷新机制(模块二),与模块一同源同规则:检索 16 家聚合平台 + 14 款旗舰模型动态,保守更新模型数/能力/新增模型,refresh_m2.js 重算排名"
@@ -5207,6 +5233,21 @@ window.AIHUB_DATA = {
         "rank": 5
       },
       {
+        "name": "GLM-5.3",
+        "vendor": "智谱AI",
+        "type": "开源",
+        "reasoning": 4.5,
+        "coding": 5,
+        "multimodal": 3,
+        "longctx": 4.5,
+        "knowledge": 4.5,
+        "instruct": 4.5,
+        "trend": "new",
+        "note": "2026-08-15 发布:740B 底座不变、后训练 Scaling 提升约 50%,白盒代码审查 84.5% 居开源第一;6 维为公开评测估算(信源:AIBase/智谱官方)",
+        "total": 87,
+        "rank": 6
+      },
+      {
         "name": "GLM-5.2",
         "vendor": "智谱AI",
         "type": "开源",
@@ -5219,7 +5260,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源高性价比,AIME近满分",
         "total": 85,
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "Doubao-Seed-2.1-pro",
@@ -5234,7 +5275,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "科学推理强项,多模态均衡",
         "total": 85,
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "Muse Spark 1.1",
@@ -5249,7 +5290,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "Meta新旗舰,已转闭源API",
         "total": 83,
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "DeepSeek-V4-Pro",
@@ -5264,7 +5305,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "数学推理顶尖,极致性价比",
         "total": 82,
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "MiniMax-M3",
@@ -5279,7 +5320,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源权重标杆,Agent价优",
         "total": 82,
-        "rank": 10
+        "rank": 11
       },
       {
         "name": "ERNIE 5.1",
@@ -5294,7 +5335,7 @@ window.AIHUB_DATA = {
         "trend": "flat",
         "note": "中文知识扎实,编程偏弱",
         "total": 75,
-        "rank": 11
+        "rank": 12
       },
       {
         "name": "Mistral Large 3",
@@ -5309,7 +5350,7 @@ window.AIHUB_DATA = {
         "trend": "flat",
         "note": "欧洲开源通用,推理落后",
         "total": 72,
-        "rank": 12
+        "rank": 13
       },
       {
         "name": "星火 Spark X2",
@@ -5324,7 +5365,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "语音多模态见长,中文场景",
         "total": 70,
-        "rank": 13
+        "rank": 14
       },
       {
         "name": "SenseNova 6",
@@ -5339,7 +5380,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "视觉多模态见长,通用偏弱",
         "total": 67,
-        "rank": 14
+        "rank": 15
       }
     ],
     "modelVendorMatrix": {
@@ -5422,6 +5463,20 @@ window.AIHUB_DATA = {
             5,
             4,
             4
+          ]
+        },
+        {
+          "vendor": "智谱AI",
+          "model": "GLM-5.3",
+          "levels": [
+            4.5,
+            4.5,
+            5,
+            3,
+            4.5,
+            5,
+            5,
+            4.5
           ]
         },
         {
@@ -5606,7 +5661,7 @@ window.AIHUB_DATA = {
         "models": 350,
         "richness": 5,
         "stability": 4,
-        "note": "开源模型超市350+款,99.95%SLA",
+        "note": "2026-08-15 上线 DeepSeek V4 Pro(百万上下文/三档推理强度);开源模型超市350+款,99.95%SLA",
         "src": "cloud.siliconflow.cn/models"
       },
       "七牛云 AI": {
