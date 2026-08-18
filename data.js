@@ -1,8 +1,28 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-15.1";
+window.AIHUB_DATA_VERSION = "2026-08-18.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-18",
+    "note": "insights 触及 200 条上限,裁剪最旧 20 条(至 history/2026-08-18-trimmed-insights.json),data.js 保留最新 200 条"
+  },
+  {
+    "date": "2026-08-18",
+    "note": "模块二每日检索刷新(08-16~08-18):更新 1 家聚合平台备注(OpenRouter 被 Stripe 逾 70 亿美元收购,打通支付+模型分发计费);16 家聚合平台模型目录数无可信增减信号未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+  },
+  {
+    "date": "2026-08-16",
+    "note": "每日自动更新(补跑):新增 6 条动态(美国拟致信 35 国施压 AI 选边站队/贵州「人工智能+制造」方案/瑞金胸外 AI 手术导航首例人体临床/全国首个具身智能人才认证中心杭州发布/上海推动自主芯片与主流大模型深度融合/上半年生成式 AI 新设企业同比增 28%);信源:路透社·亚太风云、贵州省工信厅·看航空、医学界、上观新闻·宇树、上海市经信委·科创板日报、市场监管总局;GitHub 推送:{{PUSH}}"
+  },
+  {
+    "date": "2026-08-17",
+    "note": "每日自动更新:新增 7 条动态(Stripe 逾 70 亿美元收购 OpenRouter/阿里 Qwen 下载破 30 亿登顶 HF/小红书开源 dots3-note 生活大模型/Anthropic Q2 营收增 13 倍冲刺 IPO/华为 Atlas 950 超节点 WAIC/英伟达 CPO 光子交换机量产/DeepSeek V4 Pro 峰谷定价正式生效涨幅最高 1100%);信源:IT之家·界面·新浪·彭博、阿里·Hugging Face·智东西、小红书 dots 实验室、每日经济新闻·彭博、七点科技·华为、英伟达·科创板日报、北京商报·新浪财经;GitHub 推送:{{PUSH}}"
+  },
+  {
+    "date": "2026-08-18",
+    "note": "每日自动更新:新增 7 条动态(腾讯混元 Hy4-V 多模态开源 12 项 SOTA/Hugging Face 中国开源模型下载占比 41% 首超美国/月之暗面 Pre-IPO 估值 500 亿美元/阶跃星辰 25 亿美元 Pre-IPO/智象 HiDream-O1-World 全模态世界模型/OpenAI Codex 开放 GPT-5.6 Sol 百万上下文/上海 AI 实验室牵头 6 项 AI 国标立项);信源:腾讯混元·数智化转型网、Hugging Face·彭博社、财经中国·21 财经、证券时报·新浪财经、腾讯新闻·量子位、AIBase·OpenAI、上海人工智能实验室;GitHub 推送:{{PUSH}}"
+  },
   {
     "date": "2026-08-15",
     "note": "insights 触及 200 条上限,裁剪最旧 7 条(2026-01-14 ~ 2026-04-10)至当日 history 快照(history/2026-08-15-data.js 与 2026-08-15-trimmed-insights.json),data.js 保留最新 200 条"
@@ -143,6 +163,206 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-18",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯混元开源 Hy4-V 多模态大模型,12 项国际基准刷新 SOTA",
+      "source": "腾讯混元官方 / 数智化转型网",
+      "url": "",
+      "summary": "支持图像/文本/音频/视频/3D 五模态融合理解,在 12 项国际权威多模态基准上刷新 SOTA,进一步强化中国多模态开源生态优势。"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "global",
+      "title": "Hugging Face 夏季报告:中国开源模型下载占比 41% 首超美国",
+      "source": "Hugging Face / 彭博社",
+      "url": "",
+      "summary": "全球最大开源社区 Hugging Face 夏季报告显示,中国自研开源模型下载占比达 41% 首超美国;基于 Qwen 衍生模型超 15 万个,远超谷歌与 Meta。"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "月之暗面 Pre-IPO 估值 500 亿美元,预计 8/27 完成交割",
+      "source": "财经中国 / 21 财经 / 新浪财经",
+      "url": "",
+      "summary": "月之暗面 G 轮(Pre-IPO)投前估值锁定约 500 亿美元,正寻求北京监管批准赴港 IPO;若顺利,约 7 个月内估值从 300 亿跃升至 500 亿美元。"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阶跃星辰完成 25 亿美元 Pre-IPO 轮融资,冲刺港股 IPO",
+      "source": "证券时报 / 新浪财经",
+      "url": "",
+      "summary": "华勤技术、龙旗科技、豪威集团、中兴通讯等产业资本及香港投资管理有限公司参投,累计融资超 170 亿元,已拆除红筹架构,将成第三家港股大模型公司。"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "模型更新",
+      "cat": "tech",
+      "region": "cn",
+      "title": "智象未来发布 HiDream-O1-World 全模态交互式世界模型",
+      "source": "腾讯新闻 / 量子位",
+      "url": "",
+      "summary": "全球首款原生全模态交互式世界模型,支持漫游/编辑/交互,自研 UiT 架构统一图像像素/文本/视频信号至共享 Token 空间;WBench 综合 80.9 分登顶。"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI Codex 全面开放 GPT-5.6 Sol 百万上下文,视觉能力登顶",
+      "source": "AIBase / OpenAI",
+      "url": "https://www.aibase.com/news/30389",
+      "summary": "Codex 编程工具全面开放 GPT-5.6 Sol 百万 Token 上下文,普通 ChatGPT 账号亦可用;视觉基准大幅超越前代,可处理超大型代码库整体理解与跨文件重构。"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "上海 AI 实验室牵头 6 项 AI 国家标准立项(大模型/具身/安全)",
+      "source": "上海人工智能实验室 / 央视",
+      "url": "",
+      "summary": "6 项国标覆盖大模型、科学智能、AI 安全、具身智能等前沿领域,落实四部门《加快推动人工智能百项国家标准建设专项行动计划》,治理迈向体系升级。"
+    },
+    {
+      "date": "2026-08-17",
+      "tag": "案例",
+      "cat": "agg",
+      "region": "global",
+      "title": "Stripe 逾 70 亿美元收购 OpenRouter,创 AI 网关并购纪录",
+      "source": "IT之家 / 界面新闻 / 新浪财经 / 彭博社",
+      "url": "",
+      "summary": "支付巨头 Stripe 以逾 70 亿美元收购大模型 API 聚合/路由平台 OpenRouter(接入 400+ 模型、用户超 1000 万),将打通支付与模型分发计费,重塑海外 AI 网关格局。"
+    },
+    {
+      "date": "2026-08-17",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里 Qwen 系列全球下载量破 30 亿,登顶 Hugging Face 第一",
+      "source": "阿里官方 / Hugging Face / 智东西",
+      "url": "",
+      "summary": "Hugging Face《开放模型现状》报告称 Qwen 系列过去半年全球累计下载超 30 亿次,超越 Meta 与谷歌成下载量第一;已开源 460+ 模型、衍生超 30 万。"
+    },
+    {
+      "date": "2026-08-17",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "小红书开源 dots3-note 生活向大模型(MoE 280B/激活 16B/512K)",
+      "source": "小红书 dots 实验室",
+      "url": "",
+      "summary": "dots 实验室开源 dots3-note preview,MoE 总参 280B、激活 16B、支持 512K 上下文,主打模糊生活决策场景,配套生活决策评测基准并完成国产算力全量适配。"
+    },
+    {
+      "date": "2026-08-17",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic Q2 营收暴增 13 倍,冲刺史上最大 IPO(估值或 2 万亿)",
+      "source": "每日经济新闻 / 彭博社",
+      "url": "",
+      "summary": "Anthropic 最近季度营收超 115 亿美元、同比增至少 13 倍,预计 2028 年收入达 1900-2000 亿美元;市场预期 10 月上市、估值或达 2 万亿美元。"
+    },
+    {
+      "date": "2026-08-17",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "华为 Atlas 950 真机将亮相 WAIC,国产算力迈入超节点时代",
+      "source": "七点科技 / 华为",
+      "url": "",
+      "summary": "Atlas 950 定位超节点级 AI 算力设备,瞄准万亿参数大模型训练,互联带宽与液冷工程是关键;标志国产算力从单卡/小集群迈向系统级架构,正面竞争英伟达 DGX。"
+    },
+    {
+      "date": "2026-08-17",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "na",
+      "title": "英伟达 CPO 光子交换机 SN6810/SN6800 量产交付核心云厂商",
+      "source": "英伟达 / 科创板日报",
+      "url": "",
+      "summary": "200G/lane 共封装光学交换机开始量产,激光器件减 4 倍、功耗降 5 倍,可插拔光模块形态面临颠覆;率先交付核心云厂商,利好万卡集群互联效率。"
+    },
+    {
+      "date": "2026-08-17",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek V4 Pro 峰谷定价 8/17 正式生效,涨幅最高达 1100%",
+      "source": "北京商报 / 新浪财经",
+      "url": "",
+      "summary": "8/17 0 时起全面启用峰谷分时定价,高峰时段(9-12、14-18 点)价为闲时两倍;V4-Pro 缓存命中输入由 0.025 元涨至 0.3 元(涨幅 1100%),输出由 6 元涨至 27 元,标志国产低价普惠时代终结。"
+    },
+    {
+      "date": "2026-08-16",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "global",
+      "title": "美国拟致信 35 国施压 AI 选边站队(「硅和平」倡议)",
+      "source": "路透社 / 亚太风云",
+      "url": "",
+      "summary": "路透社曝美国务院起草信件计划发往 35 国,以「硅和平」倡议划定 AI 合作边界、要求排他性政治承诺;导火索为哈萨克斯坦同时加入美方机制与我国发起的 WAICO。"
+    },
+    {
+      "date": "2026-08-16",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "贵州印发「人工智能+制造」实施方案,2028 年成型大模型方案",
+      "source": "贵州省工信厅 / 看航空",
+      "url": "",
+      "summary": "八部门联合发布方案,分阶段推进 AI 嵌入研发/生产/营销核心环节,到 2028 年底打造具贵州特色的大中小模型协同创新,依托全国一体化算力网络贵州枢纽建毫秒用算网络。"
+    },
+    {
+      "date": "2026-08-16",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "瑞金胸外 AI 手术导航完成首例人体临床应用",
+      "source": "医学界 / 第十届瑞金胸外国际论坛",
+      "url": "",
+      "summary": "AI 自主空间配准完成首例人体临床应用,相关临床试验已入组,标志人工智能从影像识别、手术规划进一步推向手术现场操作。"
+    },
+    {
+      "date": "2026-08-16",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "全国首个具身智能人才培养与考试认证中心在杭州发布",
+      "source": "上观新闻 / 宇树科技",
+      "url": "",
+      "summary": "由宇树科技参与共建,课程涵盖人形机器人导览、四足机器人巡检等实操,探索「培训—认证—就业」闭环,输送应用型具身智能人才。"
+    },
+    {
+      "date": "2026-08-16",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "上海推动自主芯片与主流大模型深度融合(「十五五」软件规划)",
+      "source": "上海市经信委 / 科创板日报",
+      "url": "",
+      "summary": "《上海市软件和信息服务业发展「十五五」规划》攻坚非 Transformer 架构、世界模型、量子/类脑智能,围绕 GPU/NPU、CPO、HBM 等提升智算硬件供给、推动自主芯片与主流大模型深度融合。"
+    },
+    {
+      "date": "2026-08-16",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "上半年生成式 AI 新设企业同比增 28%,人形机器人增 9.5%",
+      "source": "市场监管总局 / 看航空",
+      "url": "",
+      "summary": "市场监管总局数据显示上半年生成式人工智能领域新设企业 5.5 万户、同比增 28.0%,人形机器人新设 11.6 万户增 9.5%,新赛道加速成为经济增长点。"
+    },
     {
       "date": "2026-08-15",
       "tag": "开源动态",
@@ -1942,206 +2162,6 @@ window.AIHUB_DATA = {
       "source": "国家网信办",
       "url": "https://www.cac.gov.cn/2026-07/06/c_1785081384384987.htm",
       "summary": "专项行动累计处置违规网站、应用程序、智能体等AI产品1.4万余款,清理违法违规信息600余万条,下架违规AI商品1300余个;聚焦备案登记、安全审核、数据投毒与生成合成内容标识落实不到位等问题。"
-    },
-    {
-      "date": "2026-06-30",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "mo",
-      "title": "澳门科技研发产业园与国际科技产业中心 Q2 2026 落地",
-      "source": "澳门经济及科技发展局",
-      "url": "https://www.dsedt.gov.mo",
-      "summary": "澳门经济及科技发展局推进科技研发产业园与国际科技产业中心建设,2026 年第二季度取得实质进展,旨在承接大湾区 AI 成果与吸引科创企业落户。"
-    },
-    {
-      "date": "2026-06-30",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "DeepSeek-V4 Preview 发布,Agent 推理能力强化",
-      "source": "DeepSeek 官网",
-      "url": "https://platform.deepseek.com/",
-      "summary": "专项强化 Agentic 场景超长上下文效率与推理能力,源头厂商 API 首发;各聚合平台数日内跟进上架,上架速度成为聚合平台竞争力指标。"
-    },
-    {
-      "date": "2026-06-26",
-      "tag": "竞品",
-      "cat": "op",
-      "region": "cn",
-      "title": "MWC上海2026:从卖连接到卖智能,三大运营商竞逐Token",
-      "source": "腾讯新闻",
-      "url": "https://new.qq.com/rain/a/20260626A08WHT00",
-      "summary": "MWC上海展Token成为核心议题:移动MoMA接入超300款模型、电信星辰TokenHub覆盖DeepSeek/Qwen/GLM等100+模型、联通聚焦MaaS与算力调度,运营商从基础管道向数字化综合服务商转型。"
-    },
-    {
-      "date": "2026-06-26",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "火山方舟发布 Doubao-Seed-2.0 系列,多媒体矩阵扩容",
-      "source": "火山引擎官网",
-      "url": "https://www.volcengine.com/product/ark",
-      "summary": "豆包 Seed-2.0 Pro/Lite/Mini/Code 四档齐发,配套 Seedance 视频、Seedream 图像模型;平台宣称可承载 500 万 TPM、30ms 级响应。"
-    },
-    {
-      "date": "2026-06-22",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "Qwen3.5 系列开源扩容,小尺寸模型进入聚合平台",
-      "source": "阿里云官网",
-      "url": "https://bailian.console.aliyun.com/",
-      "summary": "Qwen3.5-4B、35B-A3B 等开源规格上架各聚合平台;移动云 MoMA 定价 4B 仅 0.5/2 元每百万 tokens,低成本场景(分类/摘要)加速普及。"
-    },
-    {
-      "date": "2026-06-20",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "Qwen3.7 旗舰上线百炼,免费额度创行业新高",
-      "source": "阿里云官网",
-      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
-      "summary": "百炼上架 Qwen3.7-Max/Plus 并限时折扣,新增 60 语言实时同传模型;新用户 7,000 万 tokens 免费额度(90 天)为业内最高,显著拉低试用门槛。"
-    },
-    {
-      "date": "2026-06-19",
-      "tag": "竞品",
-      "cat": "ind",
-      "region": "cn",
-      "title": "Token走向零毛利:智谱逆势提价83%后调用量反增400%",
-      "source": "21世纪经济报道",
-      "url": "https://www.21jingji.com/article/20260619/150bd4aa37a2b8bfdb8c1c80b85d14f4.html",
-      "summary": "通用推理Token沿IaaS老路滑向零毛利,智谱选择做企业级AI服务商窄门:2026年一季度API涨价83%后调用量反增400%,摩根大通予增持;行业从卖Token转向卖能力、卖解决方案。"
-    },
-    {
-      "date": "2026-06-16",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "cn",
-      "title": "硅基流动完成超20亿元B轮融资,Token工厂模式加速",
-      "source": "新华财经",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260616/4427586_1.html",
-      "summary": "硅基流动B轮由携程、联通新沃、商汤、蔚来等产业资本参与;日均Token调用达数万亿,服务超1000万用户和1万家企业,营收同比增超10倍,适配160+模型与英伟达/昇腾/沐曦等多元芯片。"
-    },
-    {
-      "date": "2026-06-15",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "cn",
-      "title": "跨境电商借助聚合平台实现多模型成本优化",
-      "source": "公开行业报道",
-      "url": "",
-      "summary": "头部跨境电商将客服、翻译、素材生成按场景路由到不同价位模型,配合缓存与降级策略,整体推理成本下降 40%+;'按效果/成本路由'是核心采购动因。"
-    },
-    {
-      "date": "2026-06-13",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "智谱开源GLM-5.2:744B总参/40B激活,1M上下文",
-      "source": "智谱Z.ai",
-      "url": "https://www.zhipuai.cn",
-      "summary": "GLM-5.2为MIT开源、约744B总参/40B激活、1M上下文,定位coding、reasoning与agentic工作流,官方称以约1/6成本在多项长程coding基准对标GPT-5.5。"
-    },
-    {
-      "date": "2026-06-10",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "eu",
-      "title": "欧盟 AI 法案分阶段实施,出海企业合规需求上升",
-      "source": "欧盟委员会官网",
-      "url": "https://digital-strategy.ec.europa.eu/",
-      "summary": "AI Act 对通用目的大模型的透明度、系统性风险评估要求陆续生效,出海企业需要平台侧提供模型合规信息、数据驻留与审计证据,催生'合规即服务'需求。"
-    },
-    {
-      "date": "2026-06-05",
-      "tag": "竞品",
-      "cat": "op_cmi",
-      "region": "cn",
-      "title": "移动云 MoMA 公布自营模型定价,2500 万 tokens 免费体验",
-      "source": "移动云帮助中心",
-      "url": "https://ecloud.10086.cn/op-help-center/doc/article/91592",
-      "summary": "MoMA 以'五个统一'(认证/调度/SLA/运维/计费)定位,自营模型按量:DeepSeek-V3 2/8 元、R1 4/16 元、GLM-5.1 6/24 元每百万 tokens;2500 万 tokens 限时 1 个月免费。"
-    },
-    {
-      "date": "2026-06-01",
-      "tag": "竞品",
-      "cat": "op",
-      "region": "cn",
-      "title": "三大运营商云全面开战 Token 经营:套餐与 TPM 包落地",
-      "source": "腾讯新闻·一线",
-      "url": "https://new.qq.com/rain/a/20260601A02BVI00",
-      "summary": "天翼云 Coding Plan 49-469 元/月、Token Plan(GLM 39.9-299.9 元/月,DeepSeek 9.9-49.9 元/月),TPM 保障包 DeepSeek-V3 1 万元/月;联通云个人 15-45 元/月、团队 198-1398 元/月;移动云团队版 5000 元/月,并推出机密模型服务(392-56000 元档)。"
-    },
-    {
-      "date": "2026-05-28",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "mo",
-      "title": "BEYOND Expo 2026 聚焦'数实共生',科大讯飞 AI 眼镜亮相",
-      "source": "Macau Business",
-      "url": "https://www.macaubusiness.com",
-      "summary": "BEYOND Expo 2026 以'AI:数实共生'为主题,科大讯飞展示 AI 眼镜等硬件,南光集团发布粤澳跨境数据平台,凸显澳门作为中葡平台与跨境数据枢纽定位。"
-    },
-    {
-      "date": "2026-05-22",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "cn",
-      "title": "DeepSeek V4-Pro API永久降价75%,输出6元/百万Token",
-      "source": "21世纪经济报道",
-      "url": "https://www.21jingji.com/article/20260619/150bd4aa37a2b8bfdb8c1c80b85d14f4.html",
-      "summary": "DeepSeek静默更新将V4-Pro全系API输入降价、输出价降至6元/百万Token,缓存命中输入低至0.025元,砍出全球头部大模型报价历史最低点,引发行业跟进降价潮。"
-    },
-    {
-      "date": "2026-05-20",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "sea",
-      "title": "新加坡更新全国 AI 战略 NAIS 2.0,设 10 大优先领域",
-      "source": "Smart Nation Singapore",
-      "url": "https://www.smartnation.gov.sg",
-      "summary": "新加坡 2026 年 5 月更新全国 AI 战略(NAIS),刷新 10 大优先领域;国家 AI 理事会于 2026 年 2 月改组、由总理黄循财主持,强化跨部门协同。"
-    },
-    {
-      "date": "2026-05-20",
-      "tag": "竞品",
-      "cat": "tech",
-      "region": "cn",
-      "title": "行业智能体大爆发:2027普及率目标超70%,市场规模破430亿",
-      "source": "今日头条/海比研究院",
-      "url": "https://www.toutiao.com/item/7599130854518866447",
-      "summary": "国务院AI+行动意见提出2027年智能体普及率超70%;八部门AI+制造实施意见培育1000个工业智能体;海比研究院预测2026中国企业智能体市场破430亿元、增速300%,资金4-3-3投向基建/平台/场景。"
-    },
-    {
-      "date": "2026-04-20",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "hk",
-      "title": "香港创科局与网信办签合作备忘录,涵盖AI与数据跨境",
-      "source": "香港数字政策办公室",
-      "url": "https://www.digitalpolicy.gov.hk/sc/our_work/data_governance/policies_standards/policy/",
-      "summary": "创科及工业局与国家网信办签署关于创新科技发展的合作备忘录,涵盖推动人工智能、数据跨境、区块链等重点范畴,支持香港建设国际创新科技中心并融入国家发展大局。"
-    },
-    {
-      "date": "2026-04-16",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "global",
-      "title": "算力全链涨价:海外H100年租涨40%,国内云厂商集体调价",
-      "source": "人民邮电报/信通院",
-      "url": "https://www.infoobs.com/article/20260416/71112.html",
-      "summary": "算力进入全链涨价周期:英伟达H100一年期租赁涨近40%、B200国内溢价20%,腾讯云、阿里云、百度、讯飞、商汤、智谱等相继提价;根因为HBM/先进封装紧缺、需求从训练转向推理、商业模式从圈地转向盈利。"
-    },
-    {
-      "date": "2026-04-15",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "tw",
-      "title": "台湾 MODA 推 AI 算力中心 BOO 专案,引资建 15 PFLOPS 以上算力",
-      "source": "MODA",
-      "url": "https://moda.gov.tw/en/press/press-releases/19508.html",
-      "summary": "数发部 4月15日公布'AI 算力中心 BOO 民间参与'专案,要求申请人投资逾 3 亿台币、算力至少 15 PFLOPS(FP32),并须拨出一定比例算力供政府/学界优惠使用,补强台湾算力自主。"
     }
   ],
   "insightCatTree": [
@@ -3164,8 +3184,12 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-15",
+    "updated": "2026-08-18",
     "m2Changelog": [
+      {
+        "day": "2026-08-18",
+        "note": "模块二每日检索刷新(08-16~08-18):更新 1 家聚合平台备注(OpenRouter 被 Stripe 逾 70 亿美元收购,打通支付+模型分发计费);16 家聚合平台模型目录数本轮无可信增减信号未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
       {
         "day": "2026-08-15",
         "note": "模块二每日检索刷新:新增 1 款旗舰模型(智谱 GLM-5.3,6 维公开评测估算);更新 1 家聚合平台备注(硅基流动上线 DeepSeek V4 Pro);16 家聚合平台模型目录数本轮无可信增减信号,未调整 models/richness/stability"
@@ -5682,7 +5706,7 @@ window.AIHUB_DATA = {
         "models": 400,
         "richness": 5,
         "stability": 4,
-        "note": "模型最全的国际网关,70+厂商",
+        "note": "2026-08-17 被支付巨头 Stripe 以逾 70 亿美元收购(创 AI 网关/模型路由并购纪录),将打通支付与模型分发计费、重塑海外 AI 网关商业格局;模型最全的国际网关,70+厂商",
         "src": "openrouter.ai/models"
       },
       "Portkey": {
