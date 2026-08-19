@@ -1,8 +1,20 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-18.1";
+window.AIHUB_DATA_VERSION = "2026-08-19.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-19",
+    "note": "insights 触及 200 条上限,裁剪最旧 7 条(至 history/2026-08-19-trimmed-insights.json),data.js 保留最新 200 条"
+  },
+  {
+    "date": "2026-08-19",
+    "note": "模块二每日检索刷新(2026-08-19):本轮无聚合平台模型目录数可信增减信号、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+  },
+  {
+    "date": "2026-08-19",
+    "note": "每日自动更新:新增 7 条动态(IDC 国产 AI 芯片份额首破 50% 华为昇腾居首/商汤上半年首次合并盈利 5-7 亿/支付宝发布全栈智能体商业底座及 AHA 跨端协议/字节 Seed 清华 CUDA Agent 击败编译器/OpenAI IPO 推迟至 2027 估值超万亿美元/Anthropic 拟 60-70 亿美元收购 Decart/英伟达为 OpenAI 数据中心提供最高 1050 亿美元担保);信源:IDC·快科技·科创板日报、商汤港交所公告·科创板日报、新京报贝壳财经·蚂蚁集团、AIBase·字节Seed·清华AIR、雪球·longbridge·CNBC、彭博·路透·虎嗅、36氪·科创板日报·彭博;GitHub 推送:{{PUSH}}"
+  },
   {
     "date": "2026-08-18",
     "note": "insights 触及 200 条上限,裁剪最旧 20 条(至 history/2026-08-18-trimmed-insights.json),data.js 保留最新 200 条"
@@ -163,6 +175,76 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-19",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "IDC:国产 AI 芯片国内份额首破 50%,华为昇腾占 37% 居首",
+      "source": "IDC / 快科技 / 新浪财经",
+      "url": "https://www.aicrunchx.com/tag/huawei-ascend-950pr-mass-production",
+      "summary": "IDC 数据显示 2026 Q1 国产 AI 芯片国内份额首破 50%(约 52.3%)、华为昇腾占 37% 居首;950PR 量产叠加 DeepSeek V4 全栈适配,国产算力推理侧形成商业闭环。"
+    },
+    {
+      "date": "2026-08-19",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "商汤预计 2026 上半年首次合并盈利 5-7 亿元,上市后首度扭亏",
+      "source": "商汤港交所公告 / 科创板日报",
+      "url": "https://news.qq.com/rain/a/20260817A06STI00",
+      "summary": "商汤 8/16 港交所发盈利预警:预计上半年期内利润 5-7 亿元(上年同期亏 14.89 亿),为上市以来首次合并盈利,主因主业减亏 + AI 生态投资浮盈。"
+    },
+    {
+      "date": "2026-08-19",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "支付宝发布国内首个全栈智能体商业底座及 AHA 跨端互联协议",
+      "source": "新京报贝壳财经 / 蚂蚁集团",
+      "url": "https://www.bjnews.com.cn/detail/1786963295129991.html",
+      "summary": "支付宝 AI 生态大会发布国内首个全栈智能体商业底座与 AHA(AgentHubAccess)多智能体跨端互联协议,联合千问/华为/OPPO/比亚迪等 20 余家共建生态。"
+    },
+    {
+      "date": "2026-08-19",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "字节 Seed 联手清华 AIR 发布 CUDA Agent,AI 写 GPU 内核击败编译器",
+      "source": "AIBase / 字节 Seed / 清华 AIR",
+      "url": "https://www.aibase.com/news/30418",
+      "summary": "字节 Seed 与清华 AIR 发布 CUDA Agent 智能体强化学习系统,250 任务基准 98.8% 通过、96.8% 生成内核快于 torch.compile(2.11×),已开源 CUDA-Agent-Ops-6K 数据集。"
+    },
+    {
+      "date": "2026-08-19",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 将 IPO 推迟至 2027 年,目标估值超 1 万亿美元",
+      "source": "雪球 / longbridge / CNBC / 新浪财经",
+      "url": "https://xueqiu.com/6733925135/405238756",
+      "summary": "多家媒体称 OpenAI 将 IPO 从 2026 秋推迟至 2027、坚持 1 万亿美元估值底线;年化收入已破 400 亿美元,但预计 2026 年仍亏约 140 亿,盈利待 2030 年代。"
+    },
+    {
+      "date": "2026-08-19",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 拟 60-70 亿美元收购以色列 AI 效率公司 Decart",
+      "source": "彭博社 / 路透社 / 虎嗅",
+      "url": "https://www.huxiu.com/article/4883308.html",
+      "summary": "彭博/路透证实 Anthropic 正洽谈以 60-70 亿美元收购以色列 AI 效率优化初创 Decart(跨平台推理加速 DOS),为筹备 IPO 前抢算力效率;交易仍早期未官宣。"
+    },
+    {
+      "date": "2026-08-19",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "na",
+      "title": "英伟达为 OpenAI 俄亥俄数据中心提供最高 1050 亿美元担保",
+      "source": "36氪 / 科创板日报 / 彭博 / CNBC",
+      "url": "https://36kr.com/p/3945761485503618",
+      "summary": "英伟达同意为 OpenAI 俄亥俄 10GW 数据中心(软银 SBEnergy 开发)提供最高 1050 亿美元资产兜底担保,并 15 亿美元入股 SBEnergy、成独家芯片商;标志其从卖芯片转向'造矿场+发债'。"
+    },
     {
       "date": "2026-08-18",
       "tag": "开源动态",
@@ -2092,76 +2174,6 @@ window.AIHUB_DATA = {
       "source": "OpenAI Blog",
       "url": "https://openai.com/blog",
       "summary": "7月9日 OpenAI 发布 GPT-5.6,延续统一架构分 Sol/Terra/Luna 三档,带来更长上下文与更强 agentic 能力;与同期 Anthropic、Google 新模型形成'三巨头密集上新'的迭代节奏。"
-    },
-    {
-      "date": "2026-07-09",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "OpenAI发布GPT-5.6",
-      "source": "OpenAI",
-      "url": "https://openai.com/blog",
-      "summary": "OpenAI于7月9日发布GPT-5.6,延续GPT-5系列统一架构(快速响应+深度推理+自动路由),在终端编程等基准上处于全球第一梯队,进一步加剧前沿模型迭代节奏。"
-    },
-    {
-      "date": "2026-07-09",
-      "tag": "竞品",
-      "cat": "ind",
-      "region": "cn",
-      "title": "大模型定价分裂:从Token计价转向任务与能力,峰谷电价化",
-      "source": "中国电子报/腾讯新闻",
-      "url": "https://new.qq.com/rain/a/20260709A08JDO00",
-      "summary": "行业呈现涨降价并存:DeepSeek推出峰谷定价(高峰时段价格翻倍),Token计费进入电价化时代;定价单位正从Token转向任务与能力,高价值场景接受可靠性溢价,通用任务强调性价比。"
-    },
-    {
-      "date": "2026-07-09",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "sea",
-      "title": "新加坡 AI.cc 扩展统一多模型平台",
-      "summary": "新加坡AI.cc宣布扩展One API平台，统一接入400+模型并主打智能路由降本。",
-      "source": "Singapore Digital Press / AI.cc",
-      "url": "https://www.singaporedigitalpress.com/agp-article/925444079"
-    },
-    {
-      "date": "2026-07-08",
-      "tag": "竞品",
-      "cat": "op",
-      "region": "cn",
-      "title": "三大运营商全面转向『Token 经营』:电信首推 9.9 元 Token 月套餐",
-      "source": "今日头条/财闻",
-      "url": "https://www.toutiao.com/a7660179158793863714",
-      "summary": "互联网大会+WAIC 集体官宣流量经营→Token 经营:电信星辰 Token Hub 覆盖超 100 款大模型、3.7 万客户并发 Token 试商用套餐;移动智算破 100 EFLOPS、首创 A2A-T 协议;联通 45 EFLOPS、元景 MaaS 汇聚 200+ 模型。"
-    },
-    {
-      "date": "2026-07-08",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "mo",
-      "title": "华为澳门科技日 2026:联合 CTM/中国电信澳门组建 AI CITY 城市智能生态联盟",
-      "source": "澳广视 TDM",
-      "url": "https://www.tdm.com.mo",
-      "summary": "华为澳门科技日 2026 联合 CTM、中国电信澳门等成立'AI CITY 城市智能生态联盟',推动智慧城市建设与本地算力生态;澳门科技研发产业园、国际科技产业中心于 Q2 2026 推进。"
-    },
-    {
-      "date": "2026-07-06",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "hk",
-      "title": "PCPD 联合数字办推'保护个人资料 AI 沙盒',优先教育界",
-      "source": "PCPD",
-      "url": "https://www.pcpd.org.hk",
-      "summary": "个人资料私隐专员公署(PCPD)与数字政策办公室推出'保护个人资料 AI 沙盒',7月6日先行面向学校,协助机构在合规框架下试验生成式 AI 应用。"
-    },
-    {
-      "date": "2026-07-06",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "网信办清朗整治AI应用乱象第一阶段处置违规AI产品1.4万余款",
-      "source": "国家网信办",
-      "url": "https://www.cac.gov.cn/2026-07/06/c_1785081384384987.htm",
-      "summary": "专项行动累计处置违规网站、应用程序、智能体等AI产品1.4万余款,清理违法违规信息600余万条,下架违规AI商品1300余个;聚焦备案登记、安全审核、数据投毒与生成合成内容标识落实不到位等问题。"
     }
   ],
   "insightCatTree": [
@@ -3184,8 +3196,12 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-18",
+    "updated": "2026-08-19",
     "m2Changelog": [
+      {
+        "day": "2026-08-19",
+        "note": "模块二每日检索刷新(2026-08-19):本轮无聚合平台模型目录数可信增减信号、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
       {
         "day": "2026-08-18",
         "note": "模块二每日检索刷新(08-16~08-18):更新 1 家聚合平台备注(OpenRouter 被 Stripe 逾 70 亿美元收购,打通支付+模型分发计费);16 家聚合平台模型目录数本轮无可信增减信号未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
