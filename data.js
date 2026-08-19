@@ -13,7 +13,7 @@ window.AIHUB_HISTORY = [
   },
   {
     "date": "2026-08-19",
-    "note": "每日自动更新:新增 7 条动态(IDC 国产 AI 芯片份额首破 50% 华为昇腾居首/商汤上半年首次合并盈利 5-7 亿/支付宝发布全栈智能体商业底座及 AHA 跨端协议/字节 Seed 清华 CUDA Agent 击败编译器/OpenAI IPO 推迟至 2027 估值超万亿美元/Anthropic 拟 60-70 亿美元收购 Decart/英伟达为 OpenAI 数据中心提供最高 1050 亿美元担保);信源:IDC·快科技·科创板日报、商汤港交所公告·科创板日报、新京报贝壳财经·蚂蚁集团、AIBase·字节Seed·清华AIR、雪球·longbridge·CNBC、彭博·路透·虎嗅、36氪·科创板日报·彭博;GitHub 推送:{{PUSH}}"
+    "note": "每日自动更新:新增 7 条动态(IDC 国产 AI 芯片份额首破 50% 华为昇腾居首/商汤上半年首次合并盈利 5-7 亿/支付宝发布全栈智能体商业底座及 AHA 跨端协议/字节 Seed 清华 CUDA Agent 击败编译器/OpenAI IPO 推迟至 2027 估值超万亿美元/Anthropic 拟 60-70 亿美元收购 Decart/英伟达为 OpenAI 数据中心提供最高 1050 亿美元担保);信源:IDC·快科技·科创板日报、商汤港交所公告·科创板日报、新京报贝壳财经·蚂蚁集团、AIBase·字节Seed·清华AIR、雪球·longbridge·CNBC、彭博·路透·虎嗅、36氪·科创板日报·彭博;GitHub 推送:成功"
   },
   {
     "date": "2026-08-18",
