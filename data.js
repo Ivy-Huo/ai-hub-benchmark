@@ -1,7 +1,7 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-19.1";
+window.AIHUB_DATA_VERSION = "2026-08-20.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-19",
@@ -174,7 +174,87 @@ window.AIHUB_HISTORY = [
 ];
 
 window.AIHUB_DATA = {
-  "insights": [
+  "insights":   [
+    {
+      "date": "2026-08-20",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Black Forest Labs 发布 FLUX 3 统一多模态模型,20 秒原生音视频同步生成",
+      "summary": "FLUX 3 基于 Self-Flow 自监督流匹配,将图像/视频/音频/动作预测统一到同一架构;Video 模式单次最长 20 秒并默认输出原生同步音频,Action 方向用于机器人动作预测,先以 Early Access 开放、后续释出开放权重 FLUX 3 Dev。",
+      "source": "Black Forest Labs / AIbase / AI Log",
+      "url": "https://blackforestlabs.ai/"
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "宇树科技登陆科创板成「人形机器人第一股」,开盘涨 629% 市值一度破 4400 亿",
+      "summary": "宇树 8/19 登陆科创板,发行价 150.80 元,开盘大涨 629%、股价报 1100 元,市值一度 4449 亿,创始人王兴兴成 90 后新首富;集邦预估 2026 中国人形机器人市场规模约 150 亿元。",
+      "source": "财经媒体 / 集邦咨询",
+      "url": ""
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "2026 世界机器人大会北京亦庄开幕:373 家企业、311 款新品,49 家央企首组团",
+      "summary": "8/19 世界机器人大会在北京亦庄开幕,373 家国内外企业、3000+ 展品、311 款新品亮相;国资委宣布成立中央企业机器人创新联合体,1-5 月我国机器人规上企业营收破 900 亿、同比增 26.9%。",
+      "source": "科技日报 / 中国工业新闻网",
+      "url": "https://www.stdaily.com/web/gdxw/2026-08/19/content_566478.html"
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "英伟达 Vera Rubin 平台实测每兆瓦 token 吞吐达上代 10 倍,算力经济性拐点",
+      "summary": "基于 CoreWeave 实测,Vera Rubin 平台每兆瓦可生成 token 数达此前约 10 倍,反映 AI 基础设施经济性关键转变:高效将算力转化为 token、将 token 转化为收入,推理侧商业闭环加速。",
+      "source": "NVIDIA / CoreWeave 实测",
+      "url": "https://blogs.nvidia.com/"
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "Cerebras 发布 CS-4 机架系统:单芯片 AI 性能翻倍,单机架 3 倍芯片数",
+      "summary": "Cerebras 推出新一代 CS-4 机架,单芯片 AI 性能翻倍、单机架容纳 3 倍芯片,推理速度最高达 GPU 方案 30 倍、支持 50 万亿参数模型,Q3 出货,加剧与英伟达机架级系统的推理训练硬件竞争。",
+      "source": "The Register / Cerebras",
+      "url": "https://www.theregister.com/"
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "OpenAI 重申零数据留存并预览 Private Safety Processing,安全监控不触碰客户隐私",
+      "summary": "OpenAI 重申对合格 API 客户的零数据留存,并预览 Private Safety Processing:在前沿模型上运行安全监控而不 compromising 客户数据隐私;The Register 称该多层思维链监控给部分负载带来最高约 20% 开销。",
+      "source": "OpenAI / The Register",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟 AI 法案透明度条款生效:聊天机器人须明示 AI 身份、深度伪造须加标识",
+      "summary": "欧盟 AI 法案透明度条款正式生效,要求聊天机器人明确向用户表明 AI 身份,深度伪造内容须添加醒目标识与机器可识别标记,推理/生成式 AI 服务商合规门槛抬升。",
+      "source": "欧盟委员会 digital-strategy / 多家媒体",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "技术趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "Groq 完成 3.5 亿美元 A 轮(英伟达参投),从自研芯片全面转向推理云运营",
+      "summary": "Groq 完成 3.5 亿美元 A 轮、估值 35 亿美元,英伟达参投;公司从自研 LPU 芯片全面转向推理云运营,反映 AI 推理即服务赛道升温、算力供给向高吞吐低延迟演进。",
+      "source": "TechCrunch / Groq",
+      "url": "https://groq.com/"
+    },
     {
       "date": "2026-08-19",
       "tag": "算力",
@@ -2094,86 +2174,6 @@ window.AIHUB_DATA = {
       "source": "国家网信办公开信息",
       "url": "https://beian.cac.gov.cn/",
       "summary": "生成式人工智能服务备案名单持续更新,面向公众服务的模型与平台需完成备案;企业采购时将备案资质、数据跨境合规作为供应商准入硬指标。"
-    },
-    {
-      "date": "2026-07-14",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "sea",
-      "title": "新加坡'国家 AI 影响计划':1 万企业、10 万 AI 双语人才",
-      "source": "IMDA",
-      "url": "https://www.imda.gov.sg",
-      "summary": "新加坡推出 National AI Impact Programme,目标赋能 1 万家企业、培养 10 万名 AI 双语人才;配套 2025–2030 年 10 亿新元 AI 研发投放,全面加速产业 AI 化。"
-    },
-    {
-      "date": "2026-07-12",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "na",
-      "title": "OpenAI GPT-Live 语音模型与 Codex 调用量半年增 5 倍",
-      "source": "OpenAI Blog",
-      "url": "https://openai.com/blog",
-      "summary": "OpenAI 披露 Codex 开发者调用量半年增长 5 倍,GPT-Live 实时语音模型进入公测,标志前沿厂商从'模型能力'转向'实时交互+开发者工作流'的竞争。"
-    },
-    {
-      "date": "2026-07-12",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "cn",
-      "title": "硅基流动以'预留实例+私有化'切入生产级市场",
-      "source": "硅基流动官网",
-      "url": "https://siliconflow.cn/pricing",
-      "summary": "主推推理加速、预留实例独占算力与 BYOC 私有化部署,商用版 99.9% SLA;定价页显示 GLM-5.2 8/28 元、DeepSeek-V4-Pro 12/24 元、V4-Flash 1/2 元每百万 tokens,缓存命中价低至 0.1 折档。"
-    },
-    {
-      "date": "2026-07-10",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "na",
-      "title": "Google 开源 Gemma 4:Apache 2.0 许可,31B/26B MoE",
-      "source": "Google DeepMind Blog",
-      "url": "https://deepmind.google/blog",
-      "summary": "Gemma 4 以 Apache 2.0 完全开放,提供 31B/26B MoE 规格,主打端侧与中小团队可商用,进一步压低开源模型使用门槛。"
-    },
-    {
-      "date": "2026-07-10",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "mo",
-      "title": "澳门教青局 2026/27 学年起设 AI 实验班,预算 1500 万澳门元",
-      "source": "澳门日报",
-      "url": "https://www.macaodaily.com",
-      "summary": "澳门教育及青年发展局自 2026/27 学年起在中小学校试点 AI 实验班(2024/25 学年已投入 1500 万澳门元),推动 AI 素养与编程教育进校园。"
-    },
-    {
-      "date": "2026-07-10",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "网信办:截至6月30日累计988款生成式AI服务完成备案",
-      "source": "央视网",
-      "url": "https://big5.cctv.com/gate/big5/news.cctv.com/2026/07/10/ARTI3JmDKOZhZMnoYQcBYq52260710.shtml",
-      "summary": "2026年5月至6月新增120款生成式AI服务完成备案,新增登记68款;累计988款完成备案、598款应用或功能完成登记,备案资质成为企业采购供应商准入硬指标。"
-    },
-    {
-      "date": "2026-07-10",
-      "tag": "案例",
-      "cat": "op_cmi",
-      "region": "cn",
-      "title": "中国移动联合腾讯推WorkBuddy桌面智能体,设千万用户目标",
-      "source": "凤凰网",
-      "url": "https://i.ifeng.com/c/8tDWLqeT63j",
-      "summary": "中国移动与腾讯云合作推出联名版WorkBuddy桌面智能体,用户通过WorkBuddy消耗中国移动Token,双方设定全年发展千万用户的阶段性目标,以双轮驱动实现Token商业变现。"
-    },
-    {
-      "date": "2026-07-09",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "OpenAI 同日发布 GPT-5.6 三档(Sol/Terra/Luna),三巨头同周上新",
-      "source": "OpenAI Blog",
-      "url": "https://openai.com/blog",
-      "summary": "7月9日 OpenAI 发布 GPT-5.6,延续统一架构分 Sol/Terra/Luna 三档,带来更长上下文与更强 agentic 能力;与同期 Anthropic、Google 新模型形成'三巨头密集上新'的迭代节奏。"
     }
   ],
   "insightCatTree": [
@@ -3196,9 +3196,13 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-19",
+    "updated": "2026-08-20",
     "m2Changelog": [
       {
+        "day": "2026-08-20",
+        "note": "模块二每日检索刷新(2026-08-20):本轮无聚合平台模型目录数可信增减信号(OpenRouter 已为 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
+{
         "day": "2026-08-19",
         "note": "模块二每日检索刷新(2026-08-19):本轮无聚合平台模型目录数可信增减信号、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
       },
@@ -3213,8 +3217,7 @@ window.AIHUB_DATA = {
       {
         "day": "2026-08-14",
         "note": "接入每日自动检索刷新机制(模块二),与模块一同源同规则:检索 16 家聚合平台 + 14 款旗舰模型动态,保守更新模型数/能力/新增模型,refresh_m2.js 重算排名"
-      }
-    ],
+      }],
     "vendors": [
       "移动云 MoMA",
       "CMI AI Hub",
