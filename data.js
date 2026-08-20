@@ -4,6 +4,18 @@
 window.AIHUB_DATA_VERSION = "2026-08-20.1";
 window.AIHUB_HISTORY = [
   {
+    "date": "2026-08-20",
+    "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-09 ~ 2026-07-14)至 history/2026-08-20-trimmed-insights.json,data.js 保留最新 200 条"
+  },
+  {
+    "date": "2026-08-20",
+    "note": "模块二每日检索刷新(2026-08-20):本轮无聚合平台模型目录数可信增减信号(OpenRouter 已为 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+  },
+  {
+    "date": "2026-08-20",
+    "note": "每日自动更新:新增 8 条动态(Black Forest Labs 发布 FLUX 3 统一多模态模型/宇树科技登陆科创板成「人形机器人第一股」/2026 世界机器人大会北京亦庄开幕/英伟达 Vera Rubin 每兆瓦 token 吞吐达上代 10 倍/Cerebras 发布 CS-4 机架系统/OpenAI 重申零数据留存并预览 Private Safety Processing/欧盟 AI 法案透明度条款生效/Groq 完成 3.5 亿美元 A 轮英伟达参投);信源:Black Forest Labs·AIbase·AI Log、财经媒体·集邦咨询、科技日报·中国工业新闻网、NVIDIA·CoreWeave、The Register·Cerebras、OpenAI·The Register、欧盟委员会、TechCrunch·Groq;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
+  },
+{
     "date": "2026-08-19",
     "note": "insights 触及 200 条上限,裁剪最旧 7 条(至 history/2026-08-19-trimmed-insights.json),data.js 保留最新 200 条"
   },
