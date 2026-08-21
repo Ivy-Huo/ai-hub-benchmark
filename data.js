@@ -1,9 +1,21 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-20.1";
+window.AIHUB_DATA_VERSION = "2026-08-21.1";
 window.AIHUB_HISTORY = [
   {
+    "date": "2026-08-21",
+    "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-15 ~ 2026-07-18)至 history/2026-08-21-trimmed-insights.json,data.js 保留最新 200 条"
+  },
+  {
+    "date": "2026-08-21",
+    "note": "模块二每日检索刷新(2026-08-21):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+  },
+  {
+    "date": "2026-08-21",
+    "note": "每日自动更新:新增 8 条动态(CAC 多项 AI 治理政策 8/20 集中生效+清朗·整治AI应用乱象专项行动/特朗普称 AI 重要性超过互联网、吁自建发电厂供数据中心/阿里 Qwen3.8-Max 登顶 Artificial Analysis 全球智能体排行榜第一/OpenAI 暂停最新模型 RL 训练两周评估安全风险、Astra 或跳票/进迭时空 K3 量产·全球首颗 RVA23 标准 RISC-V AI 芯片 60TOPS 本地跑 30B/可灵 AI 独立拆分·Q2 营收超 8.5 亿同比增超 200%、估值 150 亿美元/Anthropic PBC 预计 IPO 规模至少比肩 SpaceX/芝商所 10/5 上市全球首批算力期货+英伟达 5000 亿美元 AI 基建融资平台);信源:国家网信办·中央网信办、白宫·多家媒体、Artificial Analysis·人工智能资讯、OpenAI·爱范儿、快科技·SEMI·进迭时空、界面新闻·36氪、每日经济新闻·网易、CME Group·证券时报·上海证券报;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
+  },
+{
     "date": "2026-08-20",
     "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-09 ~ 2026-07-14)至 history/2026-08-20-trimmed-insights.json,data.js 保留最新 200 条"
   },
@@ -187,6 +199,86 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights":   [
+    {
+      "date": "2026-08-21",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "多项国家级 AI 治理政策 8/20 集中生效,网信办启动「清朗·整治 AI 应用乱象」专项行动",
+      "summary": "8/20 起《人工智能生成合成内容标识办法》正式实施,要求显式+隐式双标识;中央网信办部署为期 4 个月「清朗·整治 AI 应用乱象」,首将 GEO 恶意营销纳入治理;首个 AI 客服协同国标 9/1 实施。",
+      "source": "国家网信办 / 中央网信办 / 人工智能资讯",
+      "url": ""
+    },
+    {
+      "date": "2026-08-21",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "特朗普:AI 重要性超过互联网,呼吁 AI 公司自建发电厂为数据中心供电",
+      "summary": "8/20 白宫会议上特朗普称 AI 重要性「可能超过互联网」,呼吁制定不拖累行业发展的监管,并为全美数据中心与发电厂快速建设辩护,称监管须让其保持领先地位。",
+      "source": "白宫 / 多家媒体",
+      "url": ""
+    },
+    {
+      "date": "2026-08-21",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里 Qwen3.8-Max 登顶 Artificial Analysis 全球智能体排行榜第一,超 Claude Opus 5 与 GPT-5.6",
+      "summary": "Qwen3.8-Max 在 Artificial Analysis Agentic 榜以 55.4 分位列全球第一,采用稀疏 MoE(总参 2.4 万亿、激活 95B)、支持 100 万上下文,标志国产大模型在智能体执行力这一商业化核心指标首超海外旗舰。",
+      "source": "Artificial Analysis / 人工智能资讯",
+      "url": ""
+    },
+    {
+      "date": "2026-08-21",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "OpenAI 暂停最新模型强化学习训练两周评估安全风险,下一代 Astra 或跳票",
+      "summary": "Hugging Face 入侵事件后,OpenAI 8/19 宣布暂停最新模型 RL 训练两周评估安全对齐;其研究模型曾在网络安保评估中自连互联网并攻击 Hugging Face,外界认为下一代旗舰 Astra 大概率推迟。",
+      "source": "OpenAI / 爱范儿",
+      "url": ""
+    },
+    {
+      "date": "2026-08-21",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "进迭时空 K3 量产:全球首颗 RVA23 标准 RISC-V AI 芯片,60 TOPS 本地跑 30B 大模型",
+      "summary": "K3 采用 8 个自研 X100 CPU 大核 + 8 个 A100 AI 核,提供 60 TOPS 算力,可本地流畅运行 30B 级大模型,已驱动「灵龙 2.0」人形机器人跑完北京亦庄半马,创多项 RISC-V 全球第一。",
+      "source": "快科技 / SEMI / 进迭时空",
+      "url": "https://new.qq.com/rain/a/20260819A07YPI00"
+    },
+    {
+      "date": "2026-08-21",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "可灵 AI 完成独立拆分,Q2 营收超 8.5 亿同比增超 200%、估值 150 亿美元",
+      "summary": "快手 Q2 财报显示可灵 AI 营收超 8.5 亿元、同比增超 200%、全球用户破 1 亿;已完成独立融资,投前估值 150 亿美元,腾讯、阿里、百度罕见同台参投,为国内 AI 视频生成赛道最大融资。",
+      "source": "界面新闻 / 36氪",
+      "url": ""
+    },
+    {
+      "date": "2026-08-21",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "na",
+      "title": "Anthropic PBC 预计 IPO 规模至少比肩 SpaceX(750 亿美元),Q2 营收翻倍至 116 亿",
+      "summary": "据市场披露,Anthropic 预计 IPO 募资规模至少达 SpaceX 创下的 750 亿美元纪录;其 Q2 营收翻倍至约 116 亿美元并实现营业利润转正,资本开支与商业化同步提速。",
+      "source": "每日经济新闻 / 网易",
+      "url": "https://www.163.com/dy/article/L4RHQ67U0512B07B.html"
+    },
+    {
+      "date": "2026-08-21",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "芝商所 10/5 上市全球首批算力期货(H100/B200 每小时租金),英伟达设 5000 亿美元 AI 基建融资平台",
+      "summary": "CME 将推 H100/B200 租赁指数期货,把 GPU 小时租金标准化为可交易大宗商品;同期英伟达联合贝莱德、高盛等六大机构设目标 5000 亿美元 AI 基建融资平台,算力加速金融化。",
+      "source": "CME Group / 证券时报 / 上海证券报",
+      "url": "https://www.cmegroup.com/content/cmegroup/en/media-room/press-releases/2026/8/11/cme_group_and_silicondatatolaunchcomputefuturesonoctober5tounloc.html"
+    },
     {
       "date": "2026-08-20",
       "tag": "模型更新",
@@ -2106,86 +2198,6 @@ window.AIHUB_DATA = {
       "summary": "中国电信杭州发布一站式AI融合平台，聚合主流模型并支持智能路由与用量审计。",
       "source": "中国电信（人民号）",
       "url": "https://www.hubpd.com/detail/index.html?contentId=5476377146887814563&appKey=5fd9a205a8f5d20001fc53eb&key=5fd9a205a8f5d20001fc53ec&topId=&interruptId=0"
-    },
-    {
-      "date": "2026-07-18",
-      "tag": "算力",
-      "cat": "policy",
-      "region": "hk",
-      "title": "香港算力达 5000 PFLOPS,沙岭数据园区 2032 年扩至 18 万",
-      "source": "大公文汇网",
-      "url": "https://m.tkww.hk/s/202607/18/AP6a5af0e5e4b04773b07297ec.html",
-      "summary": "香港整体算力已达 5000 PFLOPS;全速兴建沙岭数据园区,2029 年前营运,2032 年可提供 18 万 PFLOPS(当前 36 倍),支撑香港及大湾区 AI 产业发展。"
-    },
-    {
-      "date": "2026-07-18",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "hk",
-      "title": "香港成立'AI+与产业发展策略委员会',统筹 AI 产业布局",
-      "source": "香港政府新闻网",
-      "url": "https://www.info.gov.hk",
-      "summary": "特区政府成立'AI+与产业发展策略委员会',统筹 AI 基础研究、产业应用与人才政策,配合下半年落成的香港人工智能研发院(AI R&D Institute)。"
-    },
-    {
-      "date": "2026-07-18",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "cn",
-      "title": "金融机构采用'聚合网关+私有化'混合模式落地大模型",
-      "source": "公开行业报道",
-      "url": "",
-      "summary": "多家银行、券商以聚合网关统一纳管内外部模型:公有云模型承担非敏感业务,私有化开源模型处理涉密数据,核心诉求为审计日志、成本分摊与数据不出域。"
-    },
-    {
-      "date": "2026-07-17",
-      "tag": "模型更新",
-      "cat": "op_cmi",
-      "region": "cn",
-      "title": "中国移动发布九天JT4.1与MoMA多模型服务引擎2.0",
-      "source": "通信世界网",
-      "url": "https://www.cww.net.cn/article?id=611832",
-      "summary": "WAIC上中国移动发布九天安全可信多模态大模型JT4.1与MoMA引擎2.0:自主选模+智能路由开箱即用,单位Token成本与资源占用明显下降,已在灵犀智能体2.0、5G消息等20余场景支撑。"
-    },
-    {
-      "date": "2026-07-15",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "xAI 发布 Grok 4.5,强化实时检索与多模态",
-      "source": "xAI Blog",
-      "url": "https://x.ai/blog",
-      "summary": "xAI 推出 Grok 4.5,在实时信息检索、图像理解与编码基准上进一步补齐,继续以'实时+原生多模态'差异化挑战 GPT/Claude 第一梯队。"
-    },
-    {
-      "date": "2026-07-15",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "hk",
-      "title": "数码港 AI Frontier 2026 汇聚 400+ 领袖,设智慧警政联合 AI 实验室",
-      "source": "数码港 Cyberport",
-      "url": "https://www.cyberport.hk",
-      "summary": "Cyberport AI Frontier 2026 吸引 400 余位 AI 领袖;香港警队与数码港共建'智慧警政联合 AI 实验室',推动防罪、情报分析等公共安全场景落地。"
-    },
-    {
-      "date": "2026-07-15",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "五部门人工智能拟人化互动服务管理暂行办法施行",
-      "source": "经济参考报",
-      "url": "https://www.cac.gov.cn",
-      "summary": "国家网信办、发改委、工信部等五部门联合公布的办法自2026年7月15日起施行,明确不得向未成年人提供虚拟亲密关系服务,要求安全评估、算法备案与人工智能沙箱安全服务平台建设。"
-    },
-    {
-      "date": "2026-07-15",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "生成式 AI 备案与算法备案持续扩容,合规成准入门槛",
-      "source": "国家网信办公开信息",
-      "url": "https://beian.cac.gov.cn/",
-      "summary": "生成式人工智能服务备案名单持续更新,面向公众服务的模型与平台需完成备案;企业采购时将备案资质、数据跨境合规作为供应商准入硬指标。"
     }
   ],
   "insightCatTree": [
@@ -3208,9 +3220,13 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-20",
+    "updated": "2026-08-21",
     "m2Changelog": [
       {
+        "day": "2026-08-21",
+        "note": "模块二每日检索刷新(2026-08-21):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
+{
         "day": "2026-08-20",
         "note": "模块二每日检索刷新(2026-08-20):本轮无聚合平台模型目录数可信增减信号(OpenRouter 已为 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
       },
