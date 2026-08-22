@@ -1,7 +1,7 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-21.1";
+window.AIHUB_DATA_VERSION = "2026-08-22.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-21",
@@ -199,6 +199,86 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights":   [
+    {
+      "date": "2026-08-22",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek 上线 V4-Flash-Vision-Exp 多模态视觉模型,补齐「看图」能力",
+      "summary": "V4 系列首个支持图片输入的视觉理解模型,视觉 Agent 能力接近 Opus-4.8,沿用 Flash 档定价并同步开放 Files API,国产开源多模态补齐关键拼图。",
+      "source": "财联社 / 36氪 / IT之家 / DeepSeek API",
+      "url": ""
+    },
+    {
+      "date": "2026-08-22",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 以 Apache-2.0 全面开源 Codex Harness,正面回应 DeepSeek",
+      "summary": "将驱动 Codex 的底层 Agent 框架开源,含 Agent Loop/SDK/app-server;实测两项改进让 GPT-5.6 Sol 在 ARC-AGI-3 从 13.3% 跃至 38.3%。",
+      "source": "OpenAI 官方 / 每日极客日报",
+      "url": ""
+    },
+    {
+      "date": "2026-08-22",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 将 GPT-5.6 Sol API 定价下调超 20%,前沿模型价格战升级",
+      "summary": "输入由 $5 降至 $4、输出由 $30 降至 $20(每百万 token),六周三轮全线降价,回应 Anthropic 与中国模型的激烈竞争。",
+      "source": "鞭牛士 / 光明网 / OpenAI 开发者公告",
+      "url": ""
+    },
+    {
+      "date": "2026-08-22",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "na",
+      "title": "Anthropic 正式提交 IPO 注册文件,冲刺史上最大 IPO(剑指 862 亿美元)",
+      "summary": "最快本月底公开,募资规模拟超 SpaceX 862 亿美元纪录;年化营收从 90 亿飙至 650 亿美元,估值逼近 1 万亿,预计早于 OpenAI 上市。",
+      "source": "金十新媒体 / 彭博 / 路透",
+      "url": "https://dy.163.com/article/L4T7TBGJ0531G0IB.html"
+    },
+    {
+      "date": "2026-08-22",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "英伟达 60 亿美元获 Poolside「模型工厂」授权,向上游模型层纵向整合",
+      "summary": "英伟达同意向 AI 编程初创 Poolside 支付 60 亿美元获取非排他授权,并追加 10 亿投资、邀约 109 名员工;继 Groq、Enfabrica 后再锁 AI 核心人才。",
+      "source": "Bloomberg",
+      "url": ""
+    },
+    {
+      "date": "2026-08-22",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里开源 Qwen-UI-Agent:真机 GUI 智能体基座模型,成功率 92.2%",
+      "summary": "覆盖移动/桌面/网页与深度搜索环境,自建 MobileWorld-Real 真机基准成功率 92.2%、WebArena 网页测试第一,支持 100+ 步长轨迹在线强化学习。",
+      "source": "阿里 / AIbase",
+      "url": "https://www.aibase.com/news/30529"
+    },
+    {
+      "date": "2026-08-22",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "商汤开源 8B 原生统一多模态 SenseNova U1.5 Lite,降低端侧门槛",
+      "summary": "8B 参数原生支持 3–4K 上下文、4K 高分辨率输出,复杂布局与文字渲染媲美商用大模型,可在边缘设备部署,已在 GitHub/HuggingFace 开放。",
+      "source": "商汤 / AIbase",
+      "url": "https://www.aibase.com/news/30530"
+    },
+    {
+      "date": "2026-08-22",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "中央网信委行动计划明确加快 AI 立法,《拟人化互动办法》同步施行",
+      "summary": "《促进网信企业高质量发展行动计划(2026—2030)》提出加快推进人工智能、反网暴、数字经济等新兴领域立法;《人工智能拟人化互动服务管理暂行办法》已施行。",
+      "source": "新京报 / 界面新闻 / 光明日报",
+      "url": "https://new.qq.com/rain/a/20260822A0522600?refer=cp_1009"
+    },
     {
       "date": "2026-08-21",
       "tag": "政策",
@@ -2118,86 +2198,6 @@ window.AIHUB_DATA = {
       "source": "Moonshot AI 开放平台",
       "url": "https://platform.moonshot.cn/",
       "summary": "输入 6.5 元/百万 tokens、输出 27 元,缓存命中 1.1 元;在法律、金融、科研等高严谨场景有公开案例背书,配套联网搜索、Memory、Code-Runner 等开箱工具。"
-    },
-    {
-      "date": "2026-07-22",
-      "tag": "模型更新",
-      "cat": "agg",
-      "region": "cn",
-      "title": "白B.AI 首批接入 Kimi K3 统一API",
-      "summary": "白B.AI 成为首批接入月之暗面Kimi K3的聚合平台，开发者可统一API调用。",
-      "source": "北青网",
-      "url": "https://www.163.com/dy/article/L2F5H9M70514R9KQ.html"
-    },
-    {
-      "date": "2026-07-21",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "eu",
-      "title": "欧盟 AI 法案 GPAI 执法权 8 月 2 日生效,设 SEND 合规平台",
-      "source": "欧盟委员会",
-      "url": "https://digital-strategy.ec.europa.eu/",
-      "summary": "《AI 法案》第 88 条赋予的通用目的 AI(GPAI)提供者执法权将于 8月2日生效,配套指南与 EU SEND 平台上线;出海企业需平台侧提供模型合规信息、数据驻留与审计证据。"
-    },
-    {
-      "date": "2026-07-21",
-      "tag": "模型更新",
-      "cat": "agg",
-      "region": "na",
-      "title": "OpenRouter 7月密集上新10个模型家族",
-      "summary": "OpenRouter 7月1–21日新增Grok 4.5、GPT-5.6、Kimi K3等10个模型家族。",
-      "source": "OpenRouter 官方 / digitalapplied.com",
-      "url": ""
-    },
-    {
-      "date": "2026-07-20",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "Meta 发布 Muse Spark 1.1,消费级 AI 助手升级",
-      "source": "Meta AI Blog",
-      "url": "https://ai.meta.com/blog/",
-      "summary": "Meta 推出 Muse Spark 1.1 消费级助手,强化个性化与多语言,配合 Llama 开源生态形成'开源底座+闭源体验'双线打法。"
-    },
-    {
-      "date": "2026-07-20",
-      "tag": "开源动态",
-      "cat": "ind",
-      "region": "cn",
-      "title": "工信部:中国开源大模型全球累计下载量突破100亿次",
-      "source": "人工智能学家/工信部",
-      "url": "https://www.toutiao.com/article/7664581603452092991",
-      "summary": "工信部在半年经济数据发布中确认中国AI开源大模型全球累计下载量已突破100亿次;Hugging Face报告显示过去一年平台41%大模型下载量来自中国,OpenRouter上中国开源模型约占61%的Token消耗。"
-    },
-    {
-      "date": "2026-07-20",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "cn",
-      "title": "博云科技完成数亿元融资,云原生AI算力+行业Agent落地",
-      "source": "苏州工业园区",
-      "url": "https://www.sipac.gov.cn/kjzszx/jqhd/202607/d329e5deb3a44f4a859fcafa09797f64.shtml",
-      "summary": "博云科技完成数亿元战略融资,构建云原生基座-AI平台-AI原生智能体全栈,发布BoClaw/BoAgent/BoCoder,在金融(FICC)、制造(工业垂直大模型)、政务等垂直赛道打造可落地智能体应用。"
-    },
-    {
-      "date": "2026-07-20",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "na",
-      "title": "OpenRouter 在架模型超 400 个,聚合广度继续领先",
-      "source": "OpenRouter 官网",
-      "url": "https://openrouter.ai/",
-      "summary": "接入 60+ 供应商、400+ 模型,单 API Key 自动路由与故障转移;充值收 5.5% 手续费。无标准化 SLA、企业功能有限,数据经境外转发是国内企业主要顾虑。"
-    },
-    {
-      "date": "2026-07-20",
-      "tag": "案例",
-      "cat": "op_ct",
-      "region": "cn",
-      "title": "中国电信杭州发布「智云AI Store」聚合平台",
-      "summary": "中国电信杭州发布一站式AI融合平台，聚合主流模型并支持智能路由与用量审计。",
-      "source": "中国电信（人民号）",
-      "url": "https://www.hubpd.com/detail/index.html?contentId=5476377146887814563&appKey=5fd9a205a8f5d20001fc53eb&key=5fd9a205a8f5d20001fc53ec&topId=&interruptId=0"
     }
   ],
   "insightCatTree": [
@@ -3220,9 +3220,13 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-21",
+    "updated": "2026-08-22",
     "m2Changelog": [
       {
+        "day": "2026-08-22",
+        "note": "模块二每日检索刷新(2026-08-22):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布(DepSeek-V4-Flash-Vision-Exp 为实验性多模态变体、不计入旗舰榜);aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
+{
         "day": "2026-08-21",
         "note": "模块二每日检索刷新(2026-08-21):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
       },
@@ -8354,7 +8358,7 @@ window.AIHUB_DATA = {
         "ctx": "1024K",
         "note": "文本生成视觉理解任务推理代码助手",
         "cells": {
-          "官方原厂": "Terra $2/$12 · Sol $5/$30(Fast $10/$60) · Luna $0.2/$1.2",
+          "官方原厂": "Terra $2/$12 · Sol $4/$20(Fast $10/$60) · Luna $0.2/$1.2",
           "CMI AI Hub": "$2.2 / $13.2 · $4.4 / $26.4 · $0.88 / $5.28",
           "移动云 MoMA": null,
           "硅基流动": null,
