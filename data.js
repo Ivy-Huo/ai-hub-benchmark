@@ -4,6 +4,18 @@
 window.AIHUB_DATA_VERSION = "2026-08-22.1";
 window.AIHUB_HISTORY = [
   {
+    "date": "2026-08-22",
+    "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-22 ~ 2026-07-20)至 history/2026-08-22-trimmed-insights.json,data.js 保留最新 200 条"
+  },
+  {
+    "date": "2026-08-22",
+    "note": "模块二每日检索刷新(2026-08-22):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布(DepSeek-V4-Flash-Vision-Exp 为实验性多模态变体、不计入旗舰榜);aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+  },
+  {
+    "date": "2026-08-22",
+    "note": "每日自动更新:新增 8 条动态(DeepSeek 上线 V4-Flash-Vision-Exp 多模态视觉模型补齐「看图」能力/OpenAI 以 Apache-2.0 全面开源 Codex Harness 正面回应 DeepSeek/OpenAI 将 GPT-5.6 Sol API 定价下调超 20% 前沿模型价格战升级/Anthropic 正式提交 IPO 注册文件冲刺史上最大 IPO(剑指 862 亿美元)/英伟达 60 亿美元获 Poolside「模型工厂」授权向上游模型层纵向整合/阿里开源 Qwen-UI-Agent 真机 GUI 智能体基座模型成功率 92.2%/商汤开源 8B 原生统一多模态 SenseNova U1.5 Lite 降低端侧门槛/中央网信委行动计划明确加快 AI 立法且《拟人化互动办法》同步施行);另 GPT-5.6 Sol 官方 API 价随官方 8/21 降价更新($5/$30→$4/$20);信源:财联社·36氪·IT之家·DeepSeek API、OpenAI 官方·每日极客日报、鞭牛士·光明网·OpenAI 开发者公告、金十新媒体·彭博·路透、Bloomberg、阿里·AIbase、商汤·AIbase、新京报·界面新闻·光明日报;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
+  },
+{
     "date": "2026-08-21",
     "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-15 ~ 2026-07-18)至 history/2026-08-21-trimmed-insights.json,data.js 保留最新 200 条"
   },
