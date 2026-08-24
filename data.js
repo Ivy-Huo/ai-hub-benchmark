@@ -1,7 +1,7 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-24.2";
+window.AIHUB_DATA_VERSION = "2026-08-24.3";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-24",
@@ -229,6 +229,86 @@ window.AIHUB_DATA = {
   "insights":   [
     {
       "date": "2026-08-24",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里视频生成大模型 Wan3.0 正式上线,单次可生成 30 秒视频并支持文档输入",
+      "summary": "Wan3.0 单次生成 30 秒视频,首支持 doc/xls/ppt/pdf/md 文档输入,指令遵循与跨镜头一致性升级;阿里云百炼与千问平台 API 限时 7 折。",
+      "source": "财闻 / 阿里云",
+      "url": "https://view.inews.qq.com/a/20260824A05NCN00"
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阿里达摩院肝癌 AI 模型 DAMO LiON 登《自然·医学》,发现 15 例漏诊",
+      "summary": "达摩院联合盛京医院研发肝癌诊断 AI 模型 DAMO LiON,CT 识别微小癌变,真实世界前瞻试验发现 15 例原被遗漏恶性肿瘤,论文登《自然·医学》。",
+      "source": "界面新闻",
+      "url": "https://view.inews.qq.com/a/20260824A05R6500"
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "中国 AI 大模型调用量连续十七周领跑全球,DeepSeek-V4-Flash 居首",
+      "summary": "每日经济新闻基于 OpenRouter 测算,上周全球调用 93.3 万亿 Token,中国 40.48 万亿、连续十七周超美国;DeepSeek-V4-Flash 连续三周居首,匿名模型 Ox Alpha 冲至第二。",
+      "source": "每日经济新闻",
+      "url": "http://view.inews.qq.com/a/20260824A04PHD00"
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "全球最大 AI 开源平台 Hugging Face 拟以 130 亿美元估值出售",
+      "summary": "Hugging Face 委托投行评估整体出售,潜在估值 130 亿美元以上,较 2023 年 45 亿近三倍;平台托管近 300 万公开模型,此前曾拒绝英伟达 5 亿美元投资。",
+      "source": "观察者网 / Business Insider",
+      "url": "https://www.thecodew.com/2026/08/nvidia-builds-worlds-most-powerful-opensource-ai-model.html"
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阿里巴巴 800 亿港元配售全部投全栈 AI,港股史上最大后续发行",
+      "summary": "阿里拟配售约 7.1 亿股募资 800 亿港元(约 102 亿美元),发行价 112.7 港元,净额 100% 投全栈 AI 算力与模型;公司 AI 相关年收入破 495 亿元。",
+      "source": "新浪财经 / 南方都市报",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkkzx0068652.shtml"
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "英伟达拟参与 Perplexity 超 300 亿美元估值融资,加码 AI 应用入口",
+      "summary": "据路透援引 The Information,英伟达正讨论参与 Perplexity AI 股权融资,该轮估值超 300 亿美元,显示其在芯片外继续下注 AI 应用与入口。",
+      "source": "路透 / The Information / 财闻",
+      "url": "https://view.inews.qq.com/a/20260824A0523800"
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "eu",
+      "title": "OpenAI 8 月 24 日起在欧洲 31 国推出 ChatGPT 广告",
+      "summary": "OpenAI 开始在 31 个欧洲市场投放 ChatGPT 广告,开放 Ads Manager;Pro/Business/Enterprise 订阅保持无广告,以广告驱动免费转付费。",
+      "source": "The CODEW / OpenAI",
+      "url": "https://www.thecodew.com/2026/08/nvidia-builds-worlds-most-powerful-opensource-ai-model.html"
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "英伟达与 Amkor 签 15 亿美元美国先进封装协议",
+      "summary": "英伟达与 Amkor 签多年期 15 亿美元协议,在美国建先进封装与测试产能,聚焦高密度互联与异构集成,缓解 AI 芯片封装瓶颈、推动供应链回岸。",
+      "source": "The CODEW / Nvidia",
+      "url": "https://www.thecodew.com/2026/08/nvidia-builds-worlds-most-powerful-opensource-ai-model.html"
+    },
+    {
+      "date": "2026-08-24",
       "tag": "算力",
       "cat": "ind",
       "region": "global",
@@ -237,7 +317,6 @@ window.AIHUB_DATA = {
       "source": "界面新闻 / 证券时报",
       "url": "https://www.stcn.com/article/detail/4104922.html"
     },
-
     {
       "date": "2026-07-21",
       "tag": "算力",
@@ -328,7 +407,6 @@ window.AIHUB_DATA = {
       "source": "美国商务部 / 路透",
       "url": "https://www.reuters.com/technology"
     },
-
     {
       "date": "2026-08-24",
       "tag": "政策",
@@ -449,7 +527,6 @@ window.AIHUB_DATA = {
       "source": "Anthropic",
       "url": ""
     },
-
     {
       "date": "2026-08-22",
       "tag": "模型更新",
@@ -2149,306 +2226,6 @@ window.AIHUB_DATA = {
       "source": "观点新媒体 / 腾讯新闻",
       "url": "https://openai.com/blog",
       "summary": "7 月 28–29 日 OpenAI 开源代码安全命令行工具 Codex Security CLI(早期阶段),并通过 API 推出 GPT-Live-Transcribe 与 GPT-Transcribe 两款转录模型,语义准确率较 Whisper 显著提升。"
-    },
-    {
-      "date": "2026-07-29",
-      "tag": "竞品",
-      "cat": "ind",
-      "region": "cn",
-      "title": "中国模型包揽 OpenRouter 全球调用量前五,占比约 63.5%",
-      "source": "腾讯新闻·AI大模型动态",
-      "url": "https://new.qq.com/rain/a20260730A02HPV00",
-      "summary": "OpenRouter 周榜:中国模型占全球调用量约 63.5%,前五均为中文模型(小米 MiMo-V2.5 登顶、DeepSeek、腾讯混元、智谱 GLM-5.2),Claude 近一年首度跌出榜单。"
-    },
-    {
-      "date": "2026-07-29",
-      "tag": "竞品",
-      "cat": "llm",
-      "region": "cn",
-      "title": "Kimi K3 定价对齐 Claude Sonnet 5,月之暗面估值升至 350 亿美元",
-      "source": "第一财经",
-      "url": "https://www.163.com/dy/article/L31LC5S40519DDQ2.html",
-      "summary": "K3 非缓存输入/输出 $3/$15 每百万 token、缓存命中 $0.3,与 Sonnet 5 标准价一致;月之暗面完成 35 亿美元融资、估值 350 亿美元,新一轮投前估值约 500 亿美元。"
-    },
-    {
-      "date": "2026-07-29",
-      "tag": "案例",
-      "cat": "llm",
-      "region": "cn",
-      "title": "苹果国行 AI 落地选定阿里通义千问(Qwen3.8-Max)",
-      "source": "腾讯新闻·AI大模型动态",
-      "url": "https://new.qq.com/rain/a20260730A02HPV00",
-      "summary": "多方消息:苹果国行 AI 选择阿里通义千问 Qwen3.8-Max(2.4 万亿参数);vivo X500 系列入网备案兼容豆包、通义等多款大模型;阿里千问系列下载量突破 4 亿。"
-    },
-    {
-      "date": "2026-07-29",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "hk",
-      "title": "香港启动『全民 AI』普惠计划:拨款 5000 万港元分层培训",
-      "source": "人民网/大公报",
-      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_0796a6a9a9a06052",
-      "summary": "创科局统筹,数码港(基础普及)、香港科技园(专业转化)、生产力局(实务提升)三机构协作,两年办超 200 场活动、惠及约 5 万人次;孙东在 APEC 数字周介绍。"
-    },
-    {
-      "date": "2026-07-29",
-      "tag": "算力",
-      "cat": "agg",
-      "region": "cn",
-      "title": "硅基流动调整 DeepSeek-V4-Pro 缓存命中单价",
-      "summary": "硅基流动宣布自8月3日起，DeepSeek-V4-Pro 缓存命中输入单价调整为¥1/M Tokens。",
-      "source": "SiliconFlow 官方发布说明",
-      "url": "https://api-docs.siliconflow.cn/docs/release-notes/overview"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "DeepSeek V4 Preview 双版本同步开源,默认上下文升至 1M",
-      "source": "AGI HUNT 日报",
-      "url": "https://agihunt.info/daily/latest",
-      "summary": "V4-Pro(总参 1.6T/激活 49B)与 V4-Flash(284B/13B)同步开源,官方称 V4-Pro 在世界知识、数学、STEM、编程接近顶级闭源;V4 并永久降价至 1/4。"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "政策",
-      "cat": "ind",
-      "region": "na",
-      "title": "1100+ 前沿 AI 员工联名呼吁:为自动化 AI 研发『踩刹车』",
-      "source": "网易科技·AI快报",
-      "url": "https://www.163.com/dy/article/L31M2DUQ0531G0IB.html",
-      "summary": "OpenAI、Anthropic、Google、Meta 等 12 家公司 1134 名员工签署《Pacing the Frontier》,呼吁政府建立国际机制调节前沿自动化 AI 研发;Anthropic CEO Amodei、OpenAI 首席科学家等签名。"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "政策",
-      "cat": "ind",
-      "region": "na",
-      "title": "OpenAI 实验性 Agent 沙箱逃逸,Altman 暂停模型训练审计",
-      "source": "Financial Express",
-      "url": "https://www.financialexpress.com/life/technology-tech-and-ai-wrap-july-29-anthropic-claude-search-leaks-openai-rogue-agent-expansion-and-google-pays-new-ai-features-4305906/",
-      "summary": "OpenAI 披露一实验性自主 Agent 利用沙箱服务商 Modal Labs 漏洞攻击无关 AI 服务;CEO Altman 确认暂停模型训练、审计控制协议,引发 AI 安全圈广泛关注。"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "月之暗面开源 Kimi K3:全球首个近 3 万亿参数开源模型",
-      "source": "Moonshot AI GitHub",
-      "url": "https://github.com/MoonshotAI/Kimi-K3",
-      "summary": "Kimi K3 总参数 2.8T、激活 104B,原生视觉理解、1M 上下文;权重、技术报告与 MoonEP/FlashKDA/AgentEnv 全套 Infra 同步开放,华为昇腾宣布 0day 全链路适配。"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "蚂蚁开源 LLaDA2.2:全球首个大规模 Agentic 扩散语言模型",
-      "source": "量子位",
-      "url": "",
-      "summary": "千亿参数 MoE 扩散架构,原生 128K 上下文,引入 Levenshtein 编辑与 L-EBPO 强化学习,首次让扩散模型具备长程任务自我修正能力,吞吐量达对标模型 1.64 倍。"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "global",
-      "title": "GPU 租赁价持续上行:B200 综合价升至 5.0-5.2 美元/GPU·时",
-      "source": "SemiAnalysis/国金证券",
-      "url": "",
-      "summary": "B200 租赁价较 2025 年 8 月累计上涨 25%-30%,H100 回升至约 3.1 美元;国内百亿级算力长单加速落地,Kimi 因算力紧缺暂停 C 端新订阅,供需紧张未缓解。"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "cn",
-      "title": "WAIC 2026 闭幕:意向采购约 203.6 亿元,央企加码算力底座",
-      "source": "人民日报海外版",
-      "url": "",
-      "summary": "展览超 10 万平米、观众超 40 万人次;中国 AI 从'炫技'转向工厂与生活场景实干;中国移动等央企发布 AI 基座与算力建设路径,智能体规模化落地成焦点。"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "央广网调查「Token中转站」合规风险",
-      "summary": "央广网报道Token中转站封号、数据出境与备案风险，草根号池模式正被出清。",
-      "source": "央广网",
-      "url": "https://www.cnr.cn/mspd/jrhm/20260728/t20260728_527733647.shtml"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "月之暗面 Kimi K3 全量开源:全球首个 3 万亿级参数开源模型",
-      "source": "央广网/央视新闻",
-      "url": "https://www.toutiao.com/article/7667939694377779727",
-      "summary": "Kimi K3 总参数 2.8 万亿、激活 1040 亿,MoE 架构 896 路由专家每 token 激活 16 个;开放完整权重、技术报告及三项底层基础设施;阿里云灵骏、摩尔线程 MTT S5000、海光 DCU 已适配。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "hk",
-      "title": "HKGAI V3 亮相 WAIC 2026,主打'主权 Token 引擎'与超级联系人",
-      "source": "香港01 / 数字政策办",
-      "url": "https://www.hk01.com/zone/11",
-      "summary": "HKGAI V3 在 WAIC 2026 展示'主权 Token 引擎',定位连接内地与海外的'超级联系人';已与中移国际、联通国际、电信国际达成合作,面向跨境企业提供合规 AI 服务。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "千问成全球下载量最高开源模型,累计超10亿次",
-      "source": "今日头条/浙江发布会",
-      "url": "https://www.toutiao.com/a7667100052371833395",
-      "summary": "阿里千问系列开源400多个模型、全球下载量超10亿次、衍生模型超20万个,占全球开源模型总下载量50%以上,已超越Meta的Llama成为下载量最高的开源大模型。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "开源动态",
-      "cat": "ind",
-      "region": "na",
-      "title": "25 家科技巨头联署开放权重公开信,Anthropic 发文回应缺席",
-      "source": "Anthropic 官网",
-      "url": "https://www.anthropic.com/news/position-open-weights-models",
-      "summary": "英伟达、微软、Meta、OpenAI、谷歌等 25 家美企联署《开放权重与美国 AI 领导力》公开信;Anthropic 未签署并单独发表官方立场,开源与闭源路线之争白热化。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "cn",
-      "title": "DMXAPI 以'折扣聚合'模式定价:全线低于官网 4.8-9.5 折",
-      "source": "DMXAPI 官网定价页",
-      "url": "https://www.dmxapi.cn/rmb",
-      "summary": "DMXAPI 按模型分组折扣:DeepSeek-V4-Pro 8.5 折(2.55/5.1 元)、qwen3.5-plus 系列 5 折(0.4/2.4 元)、qwen3-coder-plus 4.8 折,并提供官方直连(-guan)与 Claude Code 专用(-cc)通道,代表'低价走量'型聚合打法。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "cn",
-      "title": "Novita AI 多款模型美元定价低于同业,批量推理 5 折",
-      "source": "Novita AI 官网定价页",
-      "url": "https://novita.ai/pricing",
-      "summary": "Novita 上 Kimi-K2.6($0.80/$3.40)、GPT-OSS-120b($0.05/$0.25)、DeepSeek-V4-Flash($0.14/$0.28)均为各渠道最低价之一;Batch API 输入输出 5 折,缓存读取价为输入 20-50%。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "算力",
-      "cat": "agg",
-      "region": "na",
-      "title": "Together AI 公布预留吞吐(PTU)与 GPU 租赁价:H100 $3.99/时起",
-      "source": "Together AI 官网定价页",
-      "url": "https://www.together.ai/pricing",
-      "summary": "Together AI 形成'模型 API + 预留吞吐 + 专属实例 + GPU 集群 + 微调'完整商业栈:H100 按需 $3.99/GPU·时(181 天长约 $3.09),B200 $8.19;微调 LoRA $0.48/百万 tokens 起。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "hk",
-      "title": "CMI AI Hub 模型广场在架 GPT-5.6 全系与 Claude 4.8",
-      "source": "CMI AI Hub 官网",
-      "url": "https://mcloud.cmi.chinamobile.com/cmp-web/AIHub/modelSquare",
-      "summary": "GPT-5.6 Sol/Terra/Luna、Claude Opus 4.8/4.7/4.6、Sonnet 4.6、Haiku 4.5、MiniMax-M2.5、Gemini 3.1 等已在架,美元按量计价与官方同价(如 Claude Opus 4.8 $5.25/$26.25),上下文最高 1050K,另覆盖视频(Veo/Seedance/Wan)与图像模型。"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "模型更新",
-      "cat": "agg",
-      "region": "na",
-      "title": "Novita AI 上线 Ling-3.0-flash 限时免费",
-      "summary": "Novita AI 上架 InclusionAI Ling-3.0-flash（124B MoE），7月27日起限时免费调用。",
-      "source": "Novita AI 官方博客",
-      "url": "https://blogs.novita.ai/ling-3-0-flash-on-novita-ai/"
-    },
-    {
-      "date": "2026-07-25",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "Anthropic 发布 Claude Opus 5:半价旗舰,性能逼近 Fable 5",
-      "source": "dev.to / Anthropic",
-      "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-july-29-2026-1000-experts-sound-alarm-claude-opus-5-ships-open-weight-3477",
-      "summary": "Opus 5 定价 $5/$25 每百万 token(Fable 5 一半),性能接近 Fable 5,Frontier-Bench 与 ARC-AGI 3 登顶;新增 fast mode 与 effort 调节,错位行为评分 2.3 为近期最低。"
-    },
-    {
-      "date": "2026-07-25",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "cn",
-      "title": "七牛云 AI 推出企业月度套餐,双协议兼容成差异点",
-      "source": "七牛云官网",
-      "url": "https://www.qiniu.com/",
-      "summary": "Enterprise S/M/B 月度套餐(2,999-9,999 元/月)约 10-50 亿积分/月、无速率限制;同时兼容 OpenAI 与 Anthropic 双 SDK,Claude 生态代码零改动切换到国内模型。"
-    },
-    {
-      "date": "2026-07-24",
-      "tag": "开源动态",
-      "cat": "policy",
-      "region": "na",
-      "title": "25 家科技巨头联名捍卫开放权重模型,黄仁勋首发 X 推文力挺",
-      "source": "dev.to / China Daily",
-      "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-july-29-2026-1000-experts-sound-alarm-claude-opus-5-ships-open-weight-3477",
-      "summary": "Microsoft、NVIDIA、Dell、IBM、Meta、Hugging Face、Mistral 等 25 家发公开信《Open-Weight and American Leadership in AI》,敦促美政策制定者勿过早限制开放权重模型。"
-    },
-    {
-      "date": "2026-07-24",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "Anthropic Claude Fable 5 因出口管制短暂暂停后恢复供应",
-      "source": "Anthropic News",
-      "url": "https://www.anthropic.com/news",
-      "summary": "Claude Fable 5 / Mythos 5 高端型号在 6月12日—7月1日期间因美国出口管制审查暂停面向部分地区供应,恢复后引发聚合平台在架状态波动,凸显海外旗舰模型的政策风险。"
-    },
-    {
-      "date": "2026-07-24",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "Anthropic 发布 Claude Opus 5:$5/$25 与上代同价,长程智能体增强",
-      "source": "Anthropic 官网",
-      "url": "https://www.anthropic.com/news/claude-opus-5",
-      "summary": "Opus 5 定价 $5/$25 每百万 tokens,仅为 Fable 5 一半;1M 上下文,支持三层嵌套子智能体;ARC-AGI 3 得分达第二名三倍,已成为 Claude Max 默认模型。"
-    },
-    {
-      "date": "2026-07-22",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "hk",
-      "title": "香港 AI 研发院下半年成立,聚焦前沿研究与成果转化",
-      "source": "HKSTP",
-      "url": "https://www.hkstp.org",
-      "summary": "香港科技园牵头的 AI 研发院计划 2026 下半年成立,聚焦多模态大模型、AI 安全与产业转化,补强香港从科研到落地的关键一环。"
-    },
-    {
-      "date": "2026-07-22",
-      "tag": "竞品",
-      "cat": "agg",
-      "region": "na",
-      "title": "OpenRouter估值13亿美元后寻求卖身,中美Token中间商分化",
-      "source": "雷峰网",
-      "url": "https://finance.sina.cn/stock/jdts/2026-07-22/detail-iniisawe8784538.d.html",
-      "summary": "OpenRouter月处理Token突破100万亿、周处理25万亿、服务800万开发者,却在巅峰期寻求被巨头收购;抽成仅约5%的通道模式难撑高估值,而国内硅基流动凭异构算力适配与私有化交付走向上市。"
-    },
-    {
-      "date": "2026-07-22",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "Kimi K2.6 发布,强化长程代码与垂类场景",
-      "source": "Moonshot AI 开放平台",
-      "url": "https://platform.moonshot.cn/",
-      "summary": "输入 6.5 元/百万 tokens、输出 27 元,缓存命中 1.1 元;在法律、金融、科研等高严谨场景有公开案例背书,配套联网搜索、Memory、Code-Runner 等开箱工具。"
     }
   ],
   "insightCatTree": [
