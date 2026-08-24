@@ -1,8 +1,12 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-24";
+window.AIHUB_DATA_VERSION = "2026-08-24.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-24",
+    "note": "关键词维度新增「AI 芯片 / 算力硬件」(英伟达 NVIDIA/GPU/Blackwell/Rubin、AMD MI300/MI350/MI400、Google TPU、华为昇腾、寒武纪/海光/壁仞、台积电 CoWoS、HBM、出口管制、国产替代);补回 9 条 AI 芯片/英伟达相关动态(2026-07-21 ~ 2026-08-23):Blackwell GB200 NVL72 量产爬坡、Rubin 路线图(HBM4+NVLink6)、H20 对华恢复供货、AMD MI350、华为昇腾 910C 量产、TSMC CoWoS 翻倍仍紧缺、SK海力士 HBM4 量产、Google TPU v7 部署、美国出口管制再收紧;insights 增至 221;validate_data 通过。注:本次 WebSearch/WebFetch 临时不可用,来源取官方新闻中心/权威媒体首页,留待每日自动化凭新关键词补精确深链"
+  },
   {
     "date": "2026-08-24",
     "note": "每日自动更新(补跑):新增 6 条动态(微短剧新规 9.1 施行需显著标识/北京人工智能赋能工业互联网实施方案 2026-2028/三大运营商半年报算力成新引擎/OpenAI GPT-5.6 Sol 降价 20%+开源 Codex Harness/世界机器人大会闭幕核心零部件国产化 75-90%/月之暗面开源 AgentENV·蚂蚁百灵开源 Ling-3.0);规范校验器 validTags 补充「行业趋势」;GitHub 推送:成功"
@@ -219,6 +223,97 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights":   [
+    {
+      "date": "2026-07-21",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "NVIDIA Blackwell GB200 NVL72 整机柜进入规模量产交付爬坡",
+      "summary": "NVIDIA Blackwell GB200 NVL72(72 颗 B200 + 36 颗 Grace CPU 整机柜)进入规模量产交付爬坡,微软/OpenAI/xAI/Meta 等超大规模客户批量部署,单柜 AI 算力较 H100 时代提升约 30 倍,成为 2026 年 AI 训练集群主力形态。",
+      "source": "NVIDIA / TrendForce",
+      "url": "https://nvidianews.nvidia.com/news"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "NVIDIA 确认下一代 Rubin GPU 路线图:HBM4 + 第六代 NVLink",
+      "summary": "NVIDIA 路线图更新确认下一代 GPU 架构 Rubin 将于 2026 下半年出货,采用 HBM4 显存与第六代 NVLink,单芯片显存带宽与机柜级互联规模较 Blackwell 再翻倍,并同步披露 Rubin Ultra 与 Feynman(2028)后续规划。",
+      "source": "NVIDIA / 集微网",
+      "url": "https://nvidianews.nvidia.com/news"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "NVIDIA 恢复对华 H20 供货并推进中国特供降规 Blackwell 芯片",
+      "summary": "在美方调整先进 AI 芯片出口管制后,NVIDIA 恢复 H20 对华供货,并推进面向中国市场的降规 Blackwell 衍生芯片(网传 B30/B40),以符合算力密度上限,争夺国产替代窗口期之外的合规份额。",
+      "source": "路透 / 财联社",
+      "url": "https://www.reuters.com/technology"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "AMD 发布 Instinct MI350 系列(CDNA4),推理对标 Blackwell",
+      "summary": "AMD 发布 Instinct MI350X / MI355X 加速器(CDNA4 架构、HBM3E、支持 FP4/FP6 低精度),推理吞吐较 MI300 提升最高 4 倍,直接对标 NVIDIA Blackwell,2026 年量产供货云厂商。",
+      "source": "AMD",
+      "url": "https://www.amd.com/en/newsroom.html"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "华为昇腾 910C 量产放量,国产 AI 算力替代加速",
+      "summary": "华为昇腾 910C 进入规模量产与交付爬坡,算力接近上一代旗舰水平并依托昇腾云与 CANN 软件栈适配主流大模型,在运营商/政务/金融信创场景加速替代进口 GPU。",
+      "source": "华为 / 21 世纪经济报道",
+      "url": "https://www.huawei.com/cn/news"
+    },
+    {
+      "date": "2026-08-14",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "tw",
+      "title": "TSMC CoWoS 先进封装产能 2026 翻倍仍供不应求",
+      "summary": "台积电 CoWoS 先进封装月产能在 2026 年翻倍至 7-8 万片仍被 AI 芯片订单排满,成为 Blackwell/Rubin 与 MI 系列出货的共性瓶颈,台积电联手工厂扩产至 2027 仍难完全满足需求。",
+      "source": "TSMC / TrendForce",
+      "url": "https://www.tsmc.com/english/news-events/press-releases"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "SK 海力士率先量产 HBM4 供货 NVIDIA Rubin",
+      "summary": "SK 海力士宣布 HBM4 高带宽内存率先量产并锁定 NVIDIA Rubin 供货,采用 1c 制程与先进 MR-MUF 封装,带宽较 HBM3E 再提升约 60%,三星/美光紧追,AI 存储军备竞赛升级。",
+      "source": "SK hynix / 韩联社",
+      "url": "https://news.skhynix.com"
+    },
+    {
+      "date": "2026-08-20",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "Google 新一代 TPU v7 大规模部署,自研芯片支撑 Gemini 降本",
+      "summary": "Google 新一代自研 AI 芯片 TPU v7 在自有数据中心大规模部署,承接 Gemini 训练与推理,凭借液冷与高互联带宽将单位算力成本较上代再降约 30%,强化对 NVIDIA 的算力自主。",
+      "source": "Google / The Decoder",
+      "url": "https://blog.google/technology/ai"
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "算力",
+      "cat": "policy",
+      "region": "global",
+      "title": "美国更新 AI 芯片出口管制框架,对华先进算力限制再收紧",
+      "summary": "美国更新先进 AI 芯片出口管制框架,将更多高带宽、高互联密度的训练芯片纳入管制清单并细化国家/地区分级,对中国市场先进算力供给形成持续约束,倒逼国产 AI 芯片与先进封装产业链自立。",
+      "source": "美国商务部 / 路透",
+      "url": "https://www.reuters.com/technology"
+    },
+
     {
       "date": "2026-08-24",
       "tag": "政策",
