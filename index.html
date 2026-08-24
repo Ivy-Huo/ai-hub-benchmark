@@ -693,7 +693,39 @@ var VENDOR_KW = {
   v_doubao:      {label:"字节豆包(Doubao)", parent:"llm", color:"#c76a15", kw:["豆包","Doubao","字节豆包"]},
   v_hunyuan:     {label:"腾讯混元(Hunyuan)", parent:"llm", color:"#c76a15", kw:["混元","Hunyuan","腾讯混元"]},
   v_xai:         {label:"xAI(Grok)", parent:"llm", color:"#c76a15", kw:["xAI","Grok"]},
-  v_mistral:     {label:"Mistral", parent:"llm", color:"#c76a15", kw:["Mistral"]}
+  v_mistral:     {label:"Mistral", parent:"llm", color:"#c76a15", kw:["Mistral"]},
+  /* ---- 其他 AI 厂商 / 大模型实验室(补,parent=llm) ---- */
+  v_shangtang:   {label:"商汤(SenseNova)", parent:"llm", color:"#c76a15", kw:["商汤","SenseNova","日日新"]},
+  v_baichuan:    {label:"百川智能", parent:"llm", color:"#c76a15", kw:["百川智能","Baichuan","百川"]},
+  v_stepfun:     {label:"阶跃星辰", parent:"llm", color:"#c76a15", kw:["阶跃星辰","StepFun","Step"]},
+  v_01ai:        {label:"零一万物", parent:"llm", color:"#c76a15", kw:["零一万物","01.AI","01AI","Yi"]},
+  v_baa:         {label:"智源研究院 BAAI", parent:"llm", color:"#c76a15", kw:["智源研究院","BAAI","FlagEval","悟道"]},
+  v_perplexity:  {label:"Perplexity", parent:"llm", color:"#c76a15", kw:["Perplexity"]},
+  v_cohere:      {label:"Cohere", parent:"llm", color:"#c76a15", kw:["Cohere"]},
+  v_databricks:  {label:"Databricks", parent:"llm", color:"#c76a15", kw:["Databricks","MosaicML"]},
+  v_miying:      {label:"面壁智能", parent:"llm", color:"#c76a15", kw:["面壁智能","ModelBest","MiniCPM"]},
+  /* ---- 芯片与硬件提供商(parent=chip,统一在「厂商 → 芯片与硬件」下钻,关键词跨分类捞全) ---- */
+  v_nvidia:      {label:"英伟达 NVIDIA", parent:"chip", color:"#f2994a", kw:["英伟达","NVIDIA","GPU","Blackwell","Rubin","H200","B200","GB200","GB300","H20","H100","CUDA","NVLink","Vera Rubin","Grace Blackwell"]},
+  v_amd:         {label:"AMD(Instinct)", parent:"chip", color:"#f2994a", kw:["AMD","Instinct","MI300","MI350","MI400","CDNA"]},
+  v_ascend:      {label:"华为昇腾 Ascend", parent:"chip", color:"#f2994a", kw:["华为昇腾","昇腾","Ascend","910B","910C","910D","Atlas"]},
+  v_cambricon:   {label:"寒武纪", parent:"chip", color:"#f2994a", kw:["寒武纪","Cambricon","思元"]},
+  v_hygon:       {label:"海光", parent:"chip", color:"#f2994a", kw:["海光","Hygon","DCU"]},
+  v_biren:       {label:"壁仞", parent:"chip", color:"#f2994a", kw:["壁仞","Biren","BR100","BR104"]},
+  v_mthreads:    {label:"摩尔线程", parent:"chip", color:"#f2994a", kw:["摩尔线程","Mthreads","MTT"]},
+  v_verisilicon: {label:"芯原", parent:"chip", color:"#f2994a", kw:["芯原","VeriSilicon"]},
+  v_enflame:     {label:"燧原", parent:"chip", color:"#f2994a", kw:["燧原","Enflame","邃思"]},
+  v_tsmc:        {label:"台积电 TSMC", parent:"chip", color:"#f2994a", kw:["台积电","TSMC","CoWoS","先进封装"]},
+  v_skhynix:     {label:"SK 海力士", parent:"chip", color:"#f2994a", kw:["SK 海力士","SK Hynix","HBM"]},
+  v_samsung_sem: {label:"三星电子", parent:"chip", color:"#f2994a", kw:["三星电子","Samsung","HBM"]},
+  v_google_tpu:  {label:"Google TPU", parent:"chip", color:"#f2994a", kw:["Google TPU","TPU v6","TPU v7","Trillium","Tensor Processing Unit"]},
+  v_cerebras:    {label:"Cerebras", parent:"chip", color:"#f2994a", kw:["Cerebras"]},
+  v_groq:        {label:"Groq", parent:"chip", color:"#f2994a", kw:["Groq"]},
+  v_dawning:     {label:"中科曙光", parent:"chip", color:"#f2994a", kw:["中科曙光","曙光","Dawning"]},
+  v_inspur:      {label:"浪潮", parent:"chip", color:"#f2994a", kw:["浪潮","Inspur"]},
+  v_fii:         {label:"工业富联", parent:"chip", color:"#f2994a", kw:["工业富联","Foxconn","FII"]},
+  v_h3c:         {label:"新华三", parent:"chip", color:"#f2994a", kw:["新华三","H3C"]},
+  v_lenovo:      {label:"联想", parent:"chip", color:"#f2994a", kw:["联想","Lenovo"]},
+  v_ziguang:     {label:"紫光股份", parent:"chip", color:"#f2994a", kw:["紫光股份","紫光","Unisplendour"]}
 };
 /* ---- 竞争对手下钻:与厂商同理,comp 父节点下的竞品名字叶子(单一数据源) ----
    id 以 c_ 前缀标识;parent 固定 "comp";kw 用于 insights 标题/摘要/来源 子串匹配(不限制 cat)。 */
@@ -736,7 +768,7 @@ function compMatch(it, cid){
 function injectVendorLeaves(){
   var tree=state.insightCatTree; if(!tree) return;
   function find(id){ var f=null; (function d(ns){ (ns||[]).forEach(function(n){ if(f)return; if(n.id===id)f=n; else if(n.items)d(n.items); }); })(tree); return f; }
-  ["llm","agg"].forEach(function(pid){
+  ["llm","agg","chip"].forEach(function(pid){
     var node=find(pid); if(!node) return;
     var leaves=[];
     for(var vid in VENDOR_KW){ if(VENDOR_KW[vid].parent===pid) leaves.push({id:vid,label:VENDOR_KW[vid].label,color:VENDOR_KW[vid].color}); }
@@ -786,6 +818,10 @@ function matchesCat(it, selId){
   if(!selId) return true;                 // 全部
   if(selId.indexOf("v_")===0) return vendorMatch(it, selId); // 厂商叶子:关键词匹配
   if(selId.indexOf("c_")===0) return compMatch(it, selId);   // 竞争对手叶子:关键词匹配
+  /* 厂商分组父节点(llm/agg/chip):名下所有 v_ 叶子关键词做 OR 匹配(跨分类捞全),
+     这样「芯片与硬件」等父节点即便下挂动态 cat 不是 chip 也能被汇总命中 */
+  var grp=[]; for(var _k in VENDOR_KW){ if(VENDOR_KW[_k].parent===selId) grp.push(_k); }
+  if(grp.length){ return grp.some(function(_v){ return vendorMatch(it,_v); }); }
   if(it.cat===selId) return true;         // 自身
   var set=catMap[selId]; if(!set) return false;
   return set.leaves.indexOf(it.cat)>=0;   // 子孙
