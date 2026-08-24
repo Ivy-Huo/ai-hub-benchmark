@@ -1,8 +1,12 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-24.1";
+window.AIHUB_DATA_VERSION = "2026-08-24.2";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-24",
+    "note": "补入证券时报/界面新闻 2026-08-24 报道「英伟达 AI 相关产品被曝涨价超 15%」(内存/HBM 成本飙升,Vera Rubin 与 Grace Blackwell 系统受影响);insights 增至 222;回应「为何此前未收录」——该文为今日(08-24)报道,超出上一轮 AI 芯片补回窗口(07-21~08-23),且彼时 WebSearch 不可用未做实时检索,关键词维度本已覆盖英伟达/Blackwell/Rubin/HBM。validate_data 通过"
+  },
   {
     "date": "2026-08-24",
     "note": "关键词维度新增「AI 芯片 / 算力硬件」(英伟达 NVIDIA/GPU/Blackwell/Rubin、AMD MI300/MI350/MI400、Google TPU、华为昇腾、寒武纪/海光/壁仞、台积电 CoWoS、HBM、出口管制、国产替代);补回 9 条 AI 芯片/英伟达相关动态(2026-07-21 ~ 2026-08-23):Blackwell GB200 NVL72 量产爬坡、Rubin 路线图(HBM4+NVLink6)、H20 对华恢复供货、AMD MI350、华为昇腾 910C 量产、TSMC CoWoS 翻倍仍紧缺、SK海力士 HBM4 量产、Google TPU v7 部署、美国出口管制再收紧;insights 增至 221;validate_data 通过。注:本次 WebSearch/WebFetch 临时不可用,来源取官方新闻中心/权威媒体首页,留待每日自动化凭新关键词补精确深链"
@@ -223,6 +227,17 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights":   [
+    {
+      "date": "2026-08-24",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "英伟达 AI 相关产品被曝涨价超 15%,Vera Rubin 与 Grace Blackwell 系统受影响",
+      "summary": "据界面新闻,英伟达部分最大客户已被告知:受内存芯片(高带宽显存 HBM)成本飙升影响,搭载英伟达 AI 芯片的服务器普遍将涨价逾 15%。此轮涨价适用于明年年初交付的系统,涵盖搭载旗舰级 Vera Rubin 与 Grace Blackwell 芯片的机型,具体涨幅取决于芯片代际与内存配置;为微软、谷歌、甲骨文等代工组装服务器的厂商近期已通知客户。",
+      "source": "界面新闻 / 证券时报",
+      "url": "https://www.stcn.com/article/detail/4104922.html"
+    },
+
     {
       "date": "2026-07-21",
       "tag": "算力",
