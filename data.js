@@ -2,228 +2,232 @@
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
 window.AIHUB_DATA_VERSION = "2026-08-24.3";
-window.AIHUB_HISTORY = [
-  {
-    "date": "2026-08-24",
-    "note": "补入证券时报/界面新闻 2026-08-24 报道「英伟达 AI 相关产品被曝涨价超 15%」(内存/HBM 成本飙升,Vera Rubin 与 Grace Blackwell 系统受影响);insights 增至 222;回应「为何此前未收录」——该文为今日(08-24)报道,超出上一轮 AI 芯片补回窗口(07-21~08-23),且彼时 WebSearch 不可用未做实时检索,关键词维度本已覆盖英伟达/Blackwell/Rubin/HBM。validate_data 通过"
-  },
-  {
-    "date": "2026-08-24",
-    "note": "关键词维度新增「AI 芯片 / 算力硬件」(英伟达 NVIDIA/GPU/Blackwell/Rubin、AMD MI300/MI350/MI400、Google TPU、华为昇腾、寒武纪/海光/壁仞、台积电 CoWoS、HBM、出口管制、国产替代);补回 9 条 AI 芯片/英伟达相关动态(2026-07-21 ~ 2026-08-23):Blackwell GB200 NVL72 量产爬坡、Rubin 路线图(HBM4+NVLink6)、H20 对华恢复供货、AMD MI350、华为昇腾 910C 量产、TSMC CoWoS 翻倍仍紧缺、SK海力士 HBM4 量产、Google TPU v7 部署、美国出口管制再收紧;insights 增至 221;validate_data 通过。注:本次 WebSearch/WebFetch 临时不可用,来源取官方新闻中心/权威媒体首页,留待每日自动化凭新关键词补精确深链"
-  },
-  {
-    "date": "2026-08-24",
-    "note": "每日自动更新(补跑):新增 6 条动态(微短剧新规 9.1 施行需显著标识/北京人工智能赋能工业互联网实施方案 2026-2028/三大运营商半年报算力成新引擎/OpenAI GPT-5.6 Sol 降价 20%+开源 Codex Harness/世界机器人大会闭幕核心零部件国产化 75-90%/月之暗面开源 AgentENV·蚂蚁百灵开源 Ling-3.0);规范校验器 validTags 补充「行业趋势」;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-23",
-    "note": "每日自动更新(补跑):新增 6 条动态(DeepSeek V4-Flash-Vision-Exp 多模态实验模型/小红书 dots3-note 开源/Stripe 以超 80 亿美元收购 OpenRouter/阿里 800 亿港元配售全投 AI 基建/英伟达 AVO 满分通关 ARC-AGI-3/Anthropic 全面开放 Claude 平台 API 三件套);信源:网易/爱范儿/南方财经/TechCrunch/Anthropic;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-22",
-    "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-22 ~ 2026-07-20)至 history/2026-08-22-trimmed-insights.json,data.js 保留最新 200 条"
-  },
-  {
-    "date": "2026-08-22",
-    "note": "模块二每日检索刷新(2026-08-22):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布(DepSeek-V4-Flash-Vision-Exp 为实验性多模态变体、不计入旗舰榜);aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
-  },
-  {
-    "date": "2026-08-22",
-    "note": "每日自动更新:新增 8 条动态(DeepSeek 上线 V4-Flash-Vision-Exp 多模态视觉模型补齐「看图」能力/OpenAI 以 Apache-2.0 全面开源 Codex Harness 正面回应 DeepSeek/OpenAI 将 GPT-5.6 Sol API 定价下调超 20% 前沿模型价格战升级/Anthropic 正式提交 IPO 注册文件冲刺史上最大 IPO(剑指 862 亿美元)/英伟达 60 亿美元获 Poolside「模型工厂」授权向上游模型层纵向整合/阿里开源 Qwen-UI-Agent 真机 GUI 智能体基座模型成功率 92.2%/商汤开源 8B 原生统一多模态 SenseNova U1.5 Lite 降低端侧门槛/中央网信委行动计划明确加快 AI 立法且《拟人化互动办法》同步施行);另 GPT-5.6 Sol 官方 API 价随官方 8/21 降价更新($5/$30→$4/$20);信源:财联社·36氪·IT之家·DeepSeek API、OpenAI 官方·每日极客日报、鞭牛士·光明网·OpenAI 开发者公告、金十新媒体·彭博·路透、Bloomberg、阿里·AIbase、商汤·AIbase、新京报·界面新闻·光明日报;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
-  },
-{
-    "date": "2026-08-21",
-    "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-15 ~ 2026-07-18)至 history/2026-08-21-trimmed-insights.json,data.js 保留最新 200 条"
-  },
-  {
-    "date": "2026-08-21",
-    "note": "模块二每日检索刷新(2026-08-21):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
-  },
-  {
-    "date": "2026-08-21",
-    "note": "每日自动更新:新增 8 条动态(CAC 多项 AI 治理政策 8/20 集中生效+清朗·整治AI应用乱象专项行动/特朗普称 AI 重要性超过互联网、吁自建发电厂供数据中心/阿里 Qwen3.8-Max 登顶 Artificial Analysis 全球智能体排行榜第一/OpenAI 暂停最新模型 RL 训练两周评估安全风险、Astra 或跳票/进迭时空 K3 量产·全球首颗 RVA23 标准 RISC-V AI 芯片 60TOPS 本地跑 30B/可灵 AI 独立拆分·Q2 营收超 8.5 亿同比增超 200%、估值 150 亿美元/Anthropic PBC 预计 IPO 规模至少比肩 SpaceX/芝商所 10/5 上市全球首批算力期货+英伟达 5000 亿美元 AI 基建融资平台);信源:国家网信办·中央网信办、白宫·多家媒体、Artificial Analysis·人工智能资讯、OpenAI·爱范儿、快科技·SEMI·进迭时空、界面新闻·36氪、每日经济新闻·网易、CME Group·证券时报·上海证券报;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
-  },
-{
-    "date": "2026-08-20",
-    "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-09 ~ 2026-07-14)至 history/2026-08-20-trimmed-insights.json,data.js 保留最新 200 条"
-  },
-  {
-    "date": "2026-08-20",
-    "note": "模块二每日检索刷新(2026-08-20):本轮无聚合平台模型目录数可信增减信号(OpenRouter 已为 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
-  },
-  {
-    "date": "2026-08-20",
-    "note": "每日自动更新:新增 8 条动态(Black Forest Labs 发布 FLUX 3 统一多模态模型/宇树科技登陆科创板成「人形机器人第一股」/2026 世界机器人大会北京亦庄开幕/英伟达 Vera Rubin 每兆瓦 token 吞吐达上代 10 倍/Cerebras 发布 CS-4 机架系统/OpenAI 重申零数据留存并预览 Private Safety Processing/欧盟 AI 法案透明度条款生效/Groq 完成 3.5 亿美元 A 轮英伟达参投);信源:Black Forest Labs·AIbase·AI Log、财经媒体·集邦咨询、科技日报·中国工业新闻网、NVIDIA·CoreWeave、The Register·Cerebras、OpenAI·The Register、欧盟委员会、TechCrunch·Groq;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
-  },
-{
-    "date": "2026-08-19",
-    "note": "insights 触及 200 条上限,裁剪最旧 7 条(至 history/2026-08-19-trimmed-insights.json),data.js 保留最新 200 条"
-  },
-  {
-    "date": "2026-08-19",
-    "note": "模块二每日检索刷新(2026-08-19):本轮无聚合平台模型目录数可信增减信号、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
-  },
-  {
-    "date": "2026-08-19",
-    "note": "每日自动更新:新增 7 条动态(IDC 国产 AI 芯片份额首破 50% 华为昇腾居首/商汤上半年首次合并盈利 5-7 亿/支付宝发布全栈智能体商业底座及 AHA 跨端协议/字节 Seed 清华 CUDA Agent 击败编译器/OpenAI IPO 推迟至 2027 估值超万亿美元/Anthropic 拟 60-70 亿美元收购 Decart/英伟达为 OpenAI 数据中心提供最高 1050 亿美元担保);信源:IDC·快科技·科创板日报、商汤港交所公告·科创板日报、新京报贝壳财经·蚂蚁集团、AIBase·字节Seed·清华AIR、雪球·longbridge·CNBC、彭博·路透·虎嗅、36氪·科创板日报·彭博;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-18",
-    "note": "insights 触及 200 条上限,裁剪最旧 20 条(至 history/2026-08-18-trimmed-insights.json),data.js 保留最新 200 条"
-  },
-  {
-    "date": "2026-08-18",
-    "note": "模块二每日检索刷新(08-16~08-18):更新 1 家聚合平台备注(OpenRouter 被 Stripe 逾 70 亿美元收购,打通支付+模型分发计费);16 家聚合平台模型目录数无可信增减信号未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
-  },
-  {
-    "date": "2026-08-16",
-    "note": "每日自动更新(补跑):新增 6 条动态(美国拟致信 35 国施压 AI 选边站队/贵州「人工智能+制造」方案/瑞金胸外 AI 手术导航首例人体临床/全国首个具身智能人才认证中心杭州发布/上海推动自主芯片与主流大模型深度融合/上半年生成式 AI 新设企业同比增 28%);信源:路透社·亚太风云、贵州省工信厅·看航空、医学界、上观新闻·宇树、上海市经信委·科创板日报、市场监管总局;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-17",
-    "note": "每日自动更新:新增 7 条动态(Stripe 逾 70 亿美元收购 OpenRouter/阿里 Qwen 下载破 30 亿登顶 HF/小红书开源 dots3-note 生活大模型/Anthropic Q2 营收增 13 倍冲刺 IPO/华为 Atlas 950 超节点 WAIC/英伟达 CPO 光子交换机量产/DeepSeek V4 Pro 峰谷定价正式生效涨幅最高 1100%);信源:IT之家·界面·新浪·彭博、阿里·Hugging Face·智东西、小红书 dots 实验室、每日经济新闻·彭博、七点科技·华为、英伟达·科创板日报、北京商报·新浪财经;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-18",
-    "note": "每日自动更新:新增 7 条动态(腾讯混元 Hy4-V 多模态开源 12 项 SOTA/Hugging Face 中国开源模型下载占比 41% 首超美国/月之暗面 Pre-IPO 估值 500 亿美元/阶跃星辰 25 亿美元 Pre-IPO/智象 HiDream-O1-World 全模态世界模型/OpenAI Codex 开放 GPT-5.6 Sol 百万上下文/上海 AI 实验室牵头 6 项 AI 国标立项);信源:腾讯混元·数智化转型网、Hugging Face·彭博社、财经中国·21 财经、证券时报·新浪财经、腾讯新闻·量子位、AIBase·OpenAI、上海人工智能实验室;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-15",
-    "note": "insights 触及 200 条上限,裁剪最旧 7 条(2026-01-14 ~ 2026-04-10)至当日 history 快照(history/2026-08-15-data.js 与 2026-08-15-trimmed-insights.json),data.js 保留最新 200 条"
-  },
-  {
-    "date": "2026-08-15",
-    "note": "模块二每日检索刷新:modelRank 新增 GLM-5.3(智谱AI,6 维为公开评测估算,trend=new);aggRankMeta 硅基流动备注前置「上线 DeepSeek V4 Pro(百万上下文/三档推理强度)」;16 家聚合平台模型目录数无可信增减信号故未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
-  },
-  {
-    "date": "2026-08-15",
-    "note": "每日自动更新:新增 8 条动态(阿里开源 Qwen3.8-27B/智谱 GLM-5.3 后训练拉升50%+白盒审查登开源第一/DeepSeek Harness v0.1 公测 MIT 开源接入40+模型厂/越南高风险 AI 系统清单今日生效/苹果在阿里支持下训练中国专属大模型/网宿科技边缘AI+AI-Token 推理工厂对标 Cloudflare/谷歌开源 HEIR 加密数据推理编译器/中芯国际 Q2 收入环比增20%);信源:量子位·Qwen官方、AIBase·智谱官方、DeepSeek官方GitHub·36氪、越南科学技术部·LuatVietnam、路透社·IT之家、界面新闻·每日经济新闻、Google开源博客·Hacker News、证券时报·科创板日报;insights 增至 207 条;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-14",
-    "note": "每日自动更新:新增 6 条动态(DeepSeek 峰谷定价引争议/谷歌 Gemini 3.7 Flash 发布+价格腰斩/中国移动中期业绩智算增130% AIDC增486%/多款农业大模型集中亮相/OpenAI等签署欧盟AI内容透明度准则/中国电信智算基建密集落地);信源:北京商报·新浪财经、36氪·华尔街见闻、MSCBSC·华尔街见闻、中工网·新浪财经、机器之心·腾讯新闻、MSCBSC;insights 增至 199 条;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-14",
-    "note": "模块二接入每日自动检索刷新机制(与模块一同源同规则):ai_hub_sources.md 新增模块二检索清单(16 聚合平台 + 14 旗舰模型)、runbook 新增步骤 3-B、新增 refresh_m2.js 重算排名、data.js 新增 benchmark.updated/m2Changelog;Module 2 头部展示榜单更新日期;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-13",
-    "note": "手动新增「竞争对手」分类(comp,挂于厂商下)及 5 条国内竞品 AI 动态(南凌科技智枢AI网关 / 网宿科技边缘AI / 世纪互联GW级AIDC / 万国数据乌兰察布300亿绿电智算 / 第一线DYXNET算网融合);竞品下钻含18家国内MSP·IDC与海外网络/运营商竞品关键词;每日自动化已在 ai_hub_sources.md 与 runbook 接入竞品检索;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-13",
-    "note": "每日自动更新:新增 7 条动态(DeepSeek V4 Pro正式版发布增强Agent能力 / 马斯克xAI发布Grok 4.6长程智能体 / 阿里云灵骏真武M890超节点上线乌兰察布 / 腾讯Q2资本开支527.84亿同比增176%加码AI算力 / OpenRouter全量上线FLUX 3 Video统一多模态 / 面壁智能启动IPO辅导MiniCPM下载超4300万 / 工业富联半年报净利破237亿AI服务器驱动;信源:TechWeb·猎云网·华尔街见闻·新浪财经·搜狐·AppSo·大众证券报);GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-12",
-    "note": "每日自动更新:新增 7 条动态(OpenAI推出GPT-5.6-Cyber并扩展Daybreak安全计划 / 英伟达发布Nemotron 3.5 Lightning与NeMo Switchyard模型路由器 / 北京智源发布AREX自主研究智能体 / 远景乌兰察布建成全球最大AI算力单体星河基地 / Anthropic为Claude默认启用AI内容隐形水印 / 智谱宣布ZCode全面升级 / Gartner预估2026年AI推理支出首次超越模型训练;信源:财联社·钛媒体·腾讯新闻·南方都市报·极新);GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-11",
-    "note": "AI 中转站专题补回:新增 7 条 8 月(08-01~08-10)AI 中转站/API 聚合动态(硅基流动调价、OpenRouter 上新、Novita 目录扩展、中转站投毒事件等);信源:官方/媒体;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-11",
-    "note": "AI 中转站专题补回:新增 7 条 7 月 AI 中转站/API 聚合动态(新加坡 AI.cc、电信智云AI Store、OpenRouter 上新、白B.AI 接 Kimi K3、Novita 限免、Token 中转站合规风险调查、硅基流动缓存价调整);信源:官方/媒体;GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-11",
-    "note": "每日自动更新:新增 7 条动态(Meta发布30B开源本地Agent模型Muse Glimmer / 字节推出SeedRealtime原生音视频全双工模型 / 上海七部门推动算力与基础大模型扩大境外调用 / 英伟达联合华尔街巨头筹5000亿美元押注AI基建 / 阿里云模块化数据中心最快100天完工 / Anthropic取消Sonnet 5涨价并默认启用Claude Code自动模式 / 广电总局《微短剧发展管理办法》9月1日施行规范AI剧集;信源:36氪·AI Lens日报·每日经济新闻·同花顺·腾讯新闻·华尔街见闻·光明网);GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-10",
-    "note": "每日自动更新(补跑):新增 6 条动态(OpenAI被曝GPT-6(Astra)将于8月发布,因安全风险暂缓 / DeepSeek-V4-Flash登顶OpenRouter调用量,周环比增570% / MiniMax(00100.HK)发布全模态生成模型MiniMax H3 / 欧盟AI法案透明度义务8月2日起强制执行 / 云知声(09678.HK)发布U2-Med三医大模型 / 软银携手伙伴布局东南亚AI数据中心网络;信源:36氪 / 网易·每日经济新闻·AASTOCKS·欧盟委员会 / Reuters·nstartup.me);GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-09",
-    "note": "每日自动更新(补跑):新增 6 条动态(MiniMax H3开源登顶Hugging Face热度榜首 / OpenAI放缓Astra开发，触达关键级网络攻击门槛 / DeepSeek宣布上调API定价，V4-Flash能力大增 / 阿里发布Qwen3.8-Max，参数规模达2.4万亿 / 摩尔线程拟赴港上市，上半年亏损大幅收窄 / 欧盟AI法案正式执法，GPAI透明度义务生效;信源:科技日报·环球网(引TechCrunch)·上观新闻·国金证券·财联社(科创板日报)·TechNews);GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-08",
-    "note": "每日自动更新(补跑):新增 6 条动态(中国大模型八周五连发,海外企业悄然换底座 / OpenAI将GPT-5.6 Luna免费开放给所有用户 / 欧盟AI法Digital Omnibus生效,高风险义务延期至2027 / 所罗门以生成式AI视觉抢攻人形机器人大脑 / 腾讯联合南洋理工推出StatePlay游戏世界模型 / MiniMax H3开源登顶视频生成榜;信源:21世纪经济报道·网易科技·zian.ai·中央社·科技行者·InfoQ);GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-07",
-    "note": "每日自动更新(补跑):新增 6 条动态(OpenAI开放GPT-5.6 Luna免费无限聊并升级Sol / 字节被曝训练10万亿参数超大模型 / 火山引擎上线豆包Seedance 2.5视频生成模型 / 成都出台全国首部人工智能地方政府规章 / Meta发布首款编程智能体Muse Code / 欧盟AI法案通用模型条款正式强制执行;信源:SegmentFault(引OpenAI公告)·凤凰网(引金融时报)·快科技·华西都市报/今日头条·BrightCoast(引Simon Willison)·Weblifter(引欧盟AI办公室));GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-06",
-    "note": "每日自动更新(补跑):新增 6 条动态(OpenAI发布GPT-5.6八月更新 / 阿里发布Qwen3.8-Max开放权重模型 / Meta推出AI编程智能体Muse Code / 白宫拟推闭源前沿模型监管框架 / 《互联网信息服务管理办法》修订拟首设智能信息服务专节 / 香港科技园与恒生银行公布未来银行Living Lab优胜者;信源:OpenAI官方(系统卡PDF)·Qwen官方博客·财联社·环球时报·忻州政法/权威媒体·香港科技园官网);GitHub 推送:成功"
-  },
-  {
-    "date": "2026-08-05",
-    "note": "每日自动更新:新增 8 条动态(网信办首发 7 款手机端侧生成式 AI 备案清单/马斯克预告 Grok 4.6 并并入 SpaceX 全量数据/商汤开源 SenseNova U1.5-Lite-Preview 8B 统一多模态/MiniMax H3 开源许可排除美欧英韩/腾讯混元 Hy ASR 3.0 preview 多语种词错率约 3%/全双工语音赛道微软 MAI Realtime 与英伟达开源 VoiceChat/高德 ABot-World-0 世界模型 24 小时连续推理开源/IDC 中国 AI 手机 1.47 亿台与端侧 AI 8000 亿市场;信源:国家网信办·中国经济时报、金融界·SpaceX 财报会、商汤科技·智东西36氪、AIbase·腾讯新闻、IT之家·科技狐、NVIDIA·Hugging Face、高德、IDC·财联社科创板日报);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 123 条"
-  },
-  {
-    "date": "2026-08-04",
-    "note": "工具链修复:本机 Python 运行时已不可用(.workbuddy/binaries/python/versions 为空),将 build_standalone.py / autopush.py 移植为等价的 build_standalone.js / autopush.js(Node 22),自动化手册常量与步骤 5/7 同步改用 NODE;推送链路恢复正常"
-  },
-  {
-    "date": "2026-08-04",
-    "note": "每日自动更新:新增 8 条动态(MiniMax H3 视频模型开源登顶视频编辑榜/OpenAI GPT-5.6 Luna 降价 80%/DeepSeek 开放 Harness 代理框架内测/AI Coding 价格战与单任务成本 3 美分/阿里千问办公 QwenWork 公测/白宫召集头部实验室敲定模型安全自愿框架/Hugging Face CEO 称中国开源年底或追平/三大运营商 809 亿算力资本开支;信源:MiniMax 官方·中国经营报、IT之家·财联社科创板日报、南华早报·赛迪网、驱动中国·界面新闻、极客公园、CNBC、腾讯新闻);价格变动:据 OpenAI 7/30 官方降价更新 pricing 中 GPT-5.6 官方原厂价(Terra $2/$12、Luna $0.2/$1.2、Sol Fast 新增 $10/$60);insights 增至 115 条"
-  },
-  {
-    "date": "2026-08-02",
-    "note": "每日自动更新(补跑周末周日):新增 5 条动态(DeepSeek-V4-Flash 正式版公测/字节 Seedance 2.5 视频模型/欧盟 AI 内容强制标注新规生效/OpenRouter 周调用榜前五均中国模型/蚂蚁 Agentar 2.0 商业智能体平台;信源:第一财经·IT之家/AGI HUNT/央视财经/WAIC 2026);insights 增至 107 条;GitHub 推送成功"
-  },
-  {
-    "date": "2026-08-03",
-    "note": "每日自动更新:新增 5 条动态(阿里 Qwen3.8-Max 发布/香港 AI 桥梁定位与沙岭算力/OpenAI Astra 多智能体模型曝光/发改委等多部门密集部署 AI 并加速人工智能法立法/三大运营商停运第三方号卡渠道提速边缘合规;信源:凤凰网科技·界面新闻/香港商报/华尔街见闻·The Information/央视新闻/运营商联合公告);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 102 条;修复 validate_data.js 对带引号键(insights/date)的识别盲区后校验通过"
-  },
-  {
-    "date": "2026-07-31",
-    "note": "模块三原厂价格落地:为阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax 填充真实原厂价格(原生取官方原厂价、开源取各原厂官方转售价,来源各原厂定价页),新增科大讯飞并补星火 X2/Ultra/Pro/Lite 原生行;模块二取消 CMI '我方'特殊高亮(ours 置空)改为中立行业对标,模块四差异化定位同步去 CMI 化"
-  },
-  {
-    "date": "2026-07-31",
-    "note": "模块二真实数据溯源:新增 n1n(国内直连型 LLM 聚合网关,来源 llm-api.apifox.cn)为第16家对标厂商;据官方文档修正天翼云星辰TokenHub、移动云MoMA、OpenRouter 的模型数量/计费/路由/合规字段;新增 benchmark.sources 标注各家官方数据来源链接"
-  },
-  {
-    "date": "2026-07-31",
-    "note": "每日自动更新:新增 8 条动态(谷歌 Gemini Robotics 2 全身控制、OpenAI 失控智能体入侵 Hugging Face 事件升级、微软据报拟开放权重发布 MAI、360 纳米Work 企业智能体平台、腾讯 WorkBuddy V5.3.5 人机双写、腾讯 WorkSolo AIGC 内测、OpenAI 10 万学者免费前沿模型、OpenAI GPT Transcribe 转录模型;信源:华尔街见闻/DeepMind、国际金融报、36氪、瀚海观察、腾讯研究院、OpenAI 官网);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 97 条;GitHub 推送:成功(commit 567b9abcac)"
-  },
-  {
-    "date": "2026-07-30",
-    "note": "每日自动更新:新增 8 条动态(OpenAI gpt-oss 开源、腾讯混元 AngelSpec、蚂蚁 Ling-3.0-flash、清华 AI 失控预测框架 LoC、中国电信息壤 100EFLOPS、GPU 租赁价下行、百度 OCR 开源、OpenAI Codex Security CLI;信源:腾讯研究院/搜狐、机器之心、量子位、JYGPU、通信世界、OpenAI);GitHub 推送:跳过(连接器未连接);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 89 条"
-  },
-  {
-    "date": "2026-07-30",
-    "note": "模块一重构:分类升级为三级树(一级 政策/行业/技术/厂商 → 二级 原厂/聚合/运营商 → 三级 三大运营商);布局按用户反馈调整——分类与标签换位,分类改为顶部级联筛选条(sticky 冻结、默认只露一级、紧凑),标签移至左侧窄边栏,新闻内容区成为视觉主体;新增 12 条 07-25~30 情报(Kimi K3 开源+定价、DeepSeek V4 Preview、Claude Opus 5、OpenRouter 中国模型前五、运营商 Token 经营、苹果国行选通义、1100+员工联名、25家捍卫开放权重、OpenAI Agent 逃逸、香港全民AI/算力),insights 增至 81 条"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "强制重建:版本升 2026-07-29.4 触发 GitHub Pages 重新构建,确保线上服务含 localStorage 版本门控修复(69 条 + 区域维度)"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "模块一情报批量补强:手动检索官方 blog/新闻中心、AI 媒体、财经媒体、政府监管、研报平台,新增 21 条关键动态(运营商 MoMA2.0/WorkBuddy、清朗整治AI乱象/拟人化办法/988款备案/香港备忘录、千问10亿下载/100亿下载、GPT-5.6/GLM-5.2、硅基流动20亿B轮/OpenRouter卖身、算力全链涨价与算力银行、DeepSeek降价75%/智谱提价/定价分裂、MCP协议栈/智能体爆发、博云融资),insights 增至 45 条"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "模块一升级:新增动态分类树(政策/行业/技术趋势 + 厂商[原厂/聚合/运营商→三大运营商]竖排导航,与标签双维度筛选);情报信源库扩充为 12 类(新增原厂/运营商官方、AI 媒体、财经媒体、政府监管、研报平台),UI 改为折叠展示"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "每日自动更新:新增 6 条动态(Kimi K3 开源/蚂蚁 LLaDA2.2/GPU 租赁涨价/WAIC 2026 闭幕/开放权重公开信/Claude Opus 5;信源:GitHub、Anthropic 官网、量子位、国金证券、人民日报海外版),已备份当日快照"
-  },
-  {
-    "date": "2026-07-27",
-    "note": "V4:新增情报信源库(官网+公众号);天翼云星辰MaaS 加入功能对标;DMXAPI/Novita 加入商业模式;价格矩阵全部采用官网/定价页真实数据(硅基流动/DMXAPI/Together/Novita/CMI/MoMA),新增多模态价格表"
-  },
-  {
-    "date": "2026-07-27",
-    "note": "V3:动态加原文链接、补全 6 月热点;对标拆分 9 家厂商并引入细分指标;价格对标改为矩阵"
-  },
-  {
-    "date": "2026-07-27",
-    "note": "初版上线:四大模块 + 技术架构页"
-  },
-  {
-    "date": "2026-07-29",
-    "note": "修复:localStorage 旧快照覆盖线上最新数据的问题——loadState 改为按数据版本(__ver)校验,版本不符即丢弃本地缓存、以发布数据为准;新增区域维度(8 区域)与 24 条海外/港澳/台/东南亚情报,insights 增至 69 条(版本 2026-07-29.3)"
-  }
-];
+window.AIHUB_HISTORY =   [
+    {
+      "date": "2026-08-24",
+      "note": "时间窗口 2026-08-24 00:00 ~ 16:13 增量补采:新增 8 条动态(阿里 Wan3.0 视频模型上线/达摩院 DAMO LiON 肝癌 AI 登 Nature Medicine/中国大模型调用量连续十七周全球第一/Hugging Face 拟 130 亿美元出售/阿里 800 亿港元配售投 AI/英伟达拟参投 Perplexity/OpenAI 欧洲推 ChatGPT 广告/英伟达与 Amkor 15 亿美元封装协议);超 200 上限裁剪最旧 30 条至 history/2026-08-24-trimmed-insights.json;模块二无跟踪厂商变化(refresh_m2+verify 通过);信源:财闻·界面新闻·每日经济新闻·The CODEW·新浪财经·路透;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-24",
+      "note": "补入证券时报/界面新闻 2026-08-24 报道「英伟达 AI 相关产品被曝涨价超 15%」(内存/HBM 成本飙升,Vera Rubin 与 Grace Blackwell 系统受影响);insights 增至 222;回应「为何此前未收录」——该文为今日(08-24)报道,超出上一轮 AI 芯片补回窗口(07-21~08-23),且彼时 WebSearch 不可用未做实时检索,关键词维度本已覆盖英伟达/Blackwell/Rubin/HBM。validate_data 通过"
+    },
+    {
+      "date": "2026-08-24",
+      "note": "关键词维度新增「AI 芯片 / 算力硬件」(英伟达 NVIDIA/GPU/Blackwell/Rubin、AMD MI300/MI350/MI400、Google TPU、华为昇腾、寒武纪/海光/壁仞、台积电 CoWoS、HBM、出口管制、国产替代);补回 9 条 AI 芯片/英伟达相关动态(2026-07-21 ~ 2026-08-23):Blackwell GB200 NVL72 量产爬坡、Rubin 路线图(HBM4+NVLink6)、H20 对华恢复供货、AMD MI350、华为昇腾 910C 量产、TSMC CoWoS 翻倍仍紧缺、SK海力士 HBM4 量产、Google TPU v7 部署、美国出口管制再收紧;insights 增至 221;validate_data 通过。注:本次 WebSearch/WebFetch 临时不可用,来源取官方新闻中心/权威媒体首页,留待每日自动化凭新关键词补精确深链"
+    },
+    {
+      "date": "2026-08-24",
+      "note": "每日自动更新(补跑):新增 6 条动态(微短剧新规 9.1 施行需显著标识/北京人工智能赋能工业互联网实施方案 2026-2028/三大运营商半年报算力成新引擎/OpenAI GPT-5.6 Sol 降价 20%+开源 Codex Harness/世界机器人大会闭幕核心零部件国产化 75-90%/月之暗面开源 AgentENV·蚂蚁百灵开源 Ling-3.0);规范校验器 validTags 补充「行业趋势」;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-23",
+      "note": "每日自动更新(补跑):新增 6 条动态(DeepSeek V4-Flash-Vision-Exp 多模态实验模型/小红书 dots3-note 开源/Stripe 以超 80 亿美元收购 OpenRouter/阿里 800 亿港元配售全投 AI 基建/英伟达 AVO 满分通关 ARC-AGI-3/Anthropic 全面开放 Claude 平台 API 三件套);信源:网易/爱范儿/南方财经/TechCrunch/Anthropic;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-22",
+      "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-22 ~ 2026-07-20)至 history/2026-08-22-trimmed-insights.json,data.js 保留最新 200 条"
+    },
+    {
+      "date": "2026-08-22",
+      "note": "模块二每日检索刷新(2026-08-22):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布(DepSeek-V4-Flash-Vision-Exp 为实验性多模态变体、不计入旗舰榜);aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+    },
+    {
+      "date": "2026-08-22",
+      "note": "每日自动更新:新增 8 条动态(DeepSeek 上线 V4-Flash-Vision-Exp 多模态视觉模型补齐「看图」能力/OpenAI 以 Apache-2.0 全面开源 Codex Harness 正面回应 DeepSeek/OpenAI 将 GPT-5.6 Sol API 定价下调超 20% 前沿模型价格战升级/Anthropic 正式提交 IPO 注册文件冲刺史上最大 IPO(剑指 862 亿美元)/英伟达 60 亿美元获 Poolside「模型工厂」授权向上游模型层纵向整合/阿里开源 Qwen-UI-Agent 真机 GUI 智能体基座模型成功率 92.2%/商汤开源 8B 原生统一多模态 SenseNova U1.5 Lite 降低端侧门槛/中央网信委行动计划明确加快 AI 立法且《拟人化互动办法》同步施行);另 GPT-5.6 Sol 官方 API 价随官方 8/21 降价更新($5/$30→$4/$20);信源:财联社·36氪·IT之家·DeepSeek API、OpenAI 官方·每日极客日报、鞭牛士·光明网·OpenAI 开发者公告、金十新媒体·彭博·路透、Bloomberg、阿里·AIbase、商汤·AIbase、新京报·界面新闻·光明日报;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-21",
+      "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-15 ~ 2026-07-18)至 history/2026-08-21-trimmed-insights.json,data.js 保留最新 200 条"
+    },
+    {
+      "date": "2026-08-21",
+      "note": "模块二每日检索刷新(2026-08-21):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+    },
+    {
+      "date": "2026-08-21",
+      "note": "每日自动更新:新增 8 条动态(CAC 多项 AI 治理政策 8/20 集中生效+清朗·整治AI应用乱象专项行动/特朗普称 AI 重要性超过互联网、吁自建发电厂供数据中心/阿里 Qwen3.8-Max 登顶 Artificial Analysis 全球智能体排行榜第一/OpenAI 暂停最新模型 RL 训练两周评估安全风险、Astra 或跳票/进迭时空 K3 量产·全球首颗 RVA23 标准 RISC-V AI 芯片 60TOPS 本地跑 30B/可灵 AI 独立拆分·Q2 营收超 8.5 亿同比增超 200%、估值 150 亿美元/Anthropic PBC 预计 IPO 规模至少比肩 SpaceX/芝商所 10/5 上市全球首批算力期货+英伟达 5000 亿美元 AI 基建融资平台);信源:国家网信办·中央网信办、白宫·多家媒体、Artificial Analysis·人工智能资讯、OpenAI·爱范儿、快科技·SEMI·进迭时空、界面新闻·36氪、每日经济新闻·网易、CME Group·证券时报·上海证券报;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-20",
+      "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-09 ~ 2026-07-14)至 history/2026-08-20-trimmed-insights.json,data.js 保留最新 200 条"
+    },
+    {
+      "date": "2026-08-20",
+      "note": "模块二每日检索刷新(2026-08-20):本轮无聚合平台模型目录数可信增减信号(OpenRouter 已为 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+    },
+    {
+      "date": "2026-08-20",
+      "note": "每日自动更新:新增 8 条动态(Black Forest Labs 发布 FLUX 3 统一多模态模型/宇树科技登陆科创板成「人形机器人第一股」/2026 世界机器人大会北京亦庄开幕/英伟达 Vera Rubin 每兆瓦 token 吞吐达上代 10 倍/Cerebras 发布 CS-4 机架系统/OpenAI 重申零数据留存并预览 Private Safety Processing/欧盟 AI 法案透明度条款生效/Groq 完成 3.5 亿美元 A 轮英伟达参投);信源:Black Forest Labs·AIbase·AI Log、财经媒体·集邦咨询、科技日报·中国工业新闻网、NVIDIA·CoreWeave、The Register·Cerebras、OpenAI·The Register、欧盟委员会、TechCrunch·Groq;insights 增至 208 条(触发 200 上限裁剪最旧 8 条);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-19",
+      "note": "insights 触及 200 条上限,裁剪最旧 7 条(至 history/2026-08-19-trimmed-insights.json),data.js 保留最新 200 条"
+    },
+    {
+      "date": "2026-08-19",
+      "note": "模块二每日检索刷新(2026-08-19):本轮无聚合平台模型目录数可信增减信号、无跟踪厂商新旗舰模型发布;aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+    },
+    {
+      "date": "2026-08-19",
+      "note": "每日自动更新:新增 7 条动态(IDC 国产 AI 芯片份额首破 50% 华为昇腾居首/商汤上半年首次合并盈利 5-7 亿/支付宝发布全栈智能体商业底座及 AHA 跨端协议/字节 Seed 清华 CUDA Agent 击败编译器/OpenAI IPO 推迟至 2027 估值超万亿美元/Anthropic 拟 60-70 亿美元收购 Decart/英伟达为 OpenAI 数据中心提供最高 1050 亿美元担保);信源:IDC·快科技·科创板日报、商汤港交所公告·科创板日报、新京报贝壳财经·蚂蚁集团、AIBase·字节Seed·清华AIR、雪球·longbridge·CNBC、彭博·路透·虎嗅、36氪·科创板日报·彭博;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-18",
+      "note": "insights 触及 200 条上限,裁剪最旧 20 条(至 history/2026-08-18-trimmed-insights.json),data.js 保留最新 200 条"
+    },
+    {
+      "date": "2026-08-18",
+      "note": "模块二每日检索刷新(08-16~08-18):更新 1 家聚合平台备注(OpenRouter 被 Stripe 逾 70 亿美元收购,打通支付+模型分发计费);16 家聚合平台模型目录数无可信增减信号未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+    },
+    {
+      "date": "2026-08-16",
+      "note": "每日自动更新(补跑):新增 6 条动态(美国拟致信 35 国施压 AI 选边站队/贵州「人工智能+制造」方案/瑞金胸外 AI 手术导航首例人体临床/全国首个具身智能人才认证中心杭州发布/上海推动自主芯片与主流大模型深度融合/上半年生成式 AI 新设企业同比增 28%);信源:路透社·亚太风云、贵州省工信厅·看航空、医学界、上观新闻·宇树、上海市经信委·科创板日报、市场监管总局;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-17",
+      "note": "每日自动更新:新增 7 条动态(Stripe 逾 70 亿美元收购 OpenRouter/阿里 Qwen 下载破 30 亿登顶 HF/小红书开源 dots3-note 生活大模型/Anthropic Q2 营收增 13 倍冲刺 IPO/华为 Atlas 950 超节点 WAIC/英伟达 CPO 光子交换机量产/DeepSeek V4 Pro 峰谷定价正式生效涨幅最高 1100%);信源:IT之家·界面·新浪·彭博、阿里·Hugging Face·智东西、小红书 dots 实验室、每日经济新闻·彭博、七点科技·华为、英伟达·科创板日报、北京商报·新浪财经;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-18",
+      "note": "每日自动更新:新增 7 条动态(腾讯混元 Hy4-V 多模态开源 12 项 SOTA/Hugging Face 中国开源模型下载占比 41% 首超美国/月之暗面 Pre-IPO 估值 500 亿美元/阶跃星辰 25 亿美元 Pre-IPO/智象 HiDream-O1-World 全模态世界模型/OpenAI Codex 开放 GPT-5.6 Sol 百万上下文/上海 AI 实验室牵头 6 项 AI 国标立项);信源:腾讯混元·数智化转型网、Hugging Face·彭博社、财经中国·21 财经、证券时报·新浪财经、腾讯新闻·量子位、AIBase·OpenAI、上海人工智能实验室;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-15",
+      "note": "insights 触及 200 条上限,裁剪最旧 7 条(2026-01-14 ~ 2026-04-10)至当日 history 快照(history/2026-08-15-data.js 与 2026-08-15-trimmed-insights.json),data.js 保留最新 200 条"
+    },
+    {
+      "date": "2026-08-15",
+      "note": "模块二每日检索刷新:modelRank 新增 GLM-5.3(智谱AI,6 维为公开评测估算,trend=new);aggRankMeta 硅基流动备注前置「上线 DeepSeek V4 Pro(百万上下文/三档推理强度)」;16 家聚合平台模型目录数无可信增减信号故未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+    },
+    {
+      "date": "2026-08-15",
+      "note": "每日自动更新:新增 8 条动态(阿里开源 Qwen3.8-27B/智谱 GLM-5.3 后训练拉升50%+白盒审查登开源第一/DeepSeek Harness v0.1 公测 MIT 开源接入40+模型厂/越南高风险 AI 系统清单今日生效/苹果在阿里支持下训练中国专属大模型/网宿科技边缘AI+AI-Token 推理工厂对标 Cloudflare/谷歌开源 HEIR 加密数据推理编译器/中芯国际 Q2 收入环比增20%);信源:量子位·Qwen官方、AIBase·智谱官方、DeepSeek官方GitHub·36氪、越南科学技术部·LuatVietnam、路透社·IT之家、界面新闻·每日经济新闻、Google开源博客·Hacker News、证券时报·科创板日报;insights 增至 207 条;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-14",
+      "note": "每日自动更新:新增 6 条动态(DeepSeek 峰谷定价引争议/谷歌 Gemini 3.7 Flash 发布+价格腰斩/中国移动中期业绩智算增130% AIDC增486%/多款农业大模型集中亮相/OpenAI等签署欧盟AI内容透明度准则/中国电信智算基建密集落地);信源:北京商报·新浪财经、36氪·华尔街见闻、MSCBSC·华尔街见闻、中工网·新浪财经、机器之心·腾讯新闻、MSCBSC;insights 增至 199 条;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-14",
+      "note": "模块二接入每日自动检索刷新机制(与模块一同源同规则):ai_hub_sources.md 新增模块二检索清单(16 聚合平台 + 14 旗舰模型)、runbook 新增步骤 3-B、新增 refresh_m2.js 重算排名、data.js 新增 benchmark.updated/m2Changelog;Module 2 头部展示榜单更新日期;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-13",
+      "note": "手动新增「竞争对手」分类(comp,挂于厂商下)及 5 条国内竞品 AI 动态(南凌科技智枢AI网关 / 网宿科技边缘AI / 世纪互联GW级AIDC / 万国数据乌兰察布300亿绿电智算 / 第一线DYXNET算网融合);竞品下钻含18家国内MSP·IDC与海外网络/运营商竞品关键词;每日自动化已在 ai_hub_sources.md 与 runbook 接入竞品检索;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-13",
+      "note": "每日自动更新:新增 7 条动态(DeepSeek V4 Pro正式版发布增强Agent能力 / 马斯克xAI发布Grok 4.6长程智能体 / 阿里云灵骏真武M890超节点上线乌兰察布 / 腾讯Q2资本开支527.84亿同比增176%加码AI算力 / OpenRouter全量上线FLUX 3 Video统一多模态 / 面壁智能启动IPO辅导MiniCPM下载超4300万 / 工业富联半年报净利破237亿AI服务器驱动;信源:TechWeb·猎云网·华尔街见闻·新浪财经·搜狐·AppSo·大众证券报);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-12",
+      "note": "每日自动更新:新增 7 条动态(OpenAI推出GPT-5.6-Cyber并扩展Daybreak安全计划 / 英伟达发布Nemotron 3.5 Lightning与NeMo Switchyard模型路由器 / 北京智源发布AREX自主研究智能体 / 远景乌兰察布建成全球最大AI算力单体星河基地 / Anthropic为Claude默认启用AI内容隐形水印 / 智谱宣布ZCode全面升级 / Gartner预估2026年AI推理支出首次超越模型训练;信源:财联社·钛媒体·腾讯新闻·南方都市报·极新);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-11",
+      "note": "AI 中转站专题补回:新增 7 条 8 月(08-01~08-10)AI 中转站/API 聚合动态(硅基流动调价、OpenRouter 上新、Novita 目录扩展、中转站投毒事件等);信源:官方/媒体;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-11",
+      "note": "AI 中转站专题补回:新增 7 条 7 月 AI 中转站/API 聚合动态(新加坡 AI.cc、电信智云AI Store、OpenRouter 上新、白B.AI 接 Kimi K3、Novita 限免、Token 中转站合规风险调查、硅基流动缓存价调整);信源:官方/媒体;GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-11",
+      "note": "每日自动更新:新增 7 条动态(Meta发布30B开源本地Agent模型Muse Glimmer / 字节推出SeedRealtime原生音视频全双工模型 / 上海七部门推动算力与基础大模型扩大境外调用 / 英伟达联合华尔街巨头筹5000亿美元押注AI基建 / 阿里云模块化数据中心最快100天完工 / Anthropic取消Sonnet 5涨价并默认启用Claude Code自动模式 / 广电总局《微短剧发展管理办法》9月1日施行规范AI剧集;信源:36氪·AI Lens日报·每日经济新闻·同花顺·腾讯新闻·华尔街见闻·光明网);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-10",
+      "note": "每日自动更新(补跑):新增 6 条动态(OpenAI被曝GPT-6(Astra)将于8月发布,因安全风险暂缓 / DeepSeek-V4-Flash登顶OpenRouter调用量,周环比增570% / MiniMax(00100.HK)发布全模态生成模型MiniMax H3 / 欧盟AI法案透明度义务8月2日起强制执行 / 云知声(09678.HK)发布U2-Med三医大模型 / 软银携手伙伴布局东南亚AI数据中心网络;信源:36氪 / 网易·每日经济新闻·AASTOCKS·欧盟委员会 / Reuters·nstartup.me);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-09",
+      "note": "每日自动更新(补跑):新增 6 条动态(MiniMax H3开源登顶Hugging Face热度榜首 / OpenAI放缓Astra开发，触达关键级网络攻击门槛 / DeepSeek宣布上调API定价，V4-Flash能力大增 / 阿里发布Qwen3.8-Max，参数规模达2.4万亿 / 摩尔线程拟赴港上市，上半年亏损大幅收窄 / 欧盟AI法案正式执法，GPAI透明度义务生效;信源:科技日报·环球网(引TechCrunch)·上观新闻·国金证券·财联社(科创板日报)·TechNews);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-08",
+      "note": "每日自动更新(补跑):新增 6 条动态(中国大模型八周五连发,海外企业悄然换底座 / OpenAI将GPT-5.6 Luna免费开放给所有用户 / 欧盟AI法Digital Omnibus生效,高风险义务延期至2027 / 所罗门以生成式AI视觉抢攻人形机器人大脑 / 腾讯联合南洋理工推出StatePlay游戏世界模型 / MiniMax H3开源登顶视频生成榜;信源:21世纪经济报道·网易科技·zian.ai·中央社·科技行者·InfoQ);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-07",
+      "note": "每日自动更新(补跑):新增 6 条动态(OpenAI开放GPT-5.6 Luna免费无限聊并升级Sol / 字节被曝训练10万亿参数超大模型 / 火山引擎上线豆包Seedance 2.5视频生成模型 / 成都出台全国首部人工智能地方政府规章 / Meta发布首款编程智能体Muse Code / 欧盟AI法案通用模型条款正式强制执行;信源:SegmentFault(引OpenAI公告)·凤凰网(引金融时报)·快科技·华西都市报/今日头条·BrightCoast(引Simon Willison)·Weblifter(引欧盟AI办公室));GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-06",
+      "note": "每日自动更新(补跑):新增 6 条动态(OpenAI发布GPT-5.6八月更新 / 阿里发布Qwen3.8-Max开放权重模型 / Meta推出AI编程智能体Muse Code / 白宫拟推闭源前沿模型监管框架 / 《互联网信息服务管理办法》修订拟首设智能信息服务专节 / 香港科技园与恒生银行公布未来银行Living Lab优胜者;信源:OpenAI官方(系统卡PDF)·Qwen官方博客·财联社·环球时报·忻州政法/权威媒体·香港科技园官网);GitHub 推送:成功"
+    },
+    {
+      "date": "2026-08-05",
+      "note": "每日自动更新:新增 8 条动态(网信办首发 7 款手机端侧生成式 AI 备案清单/马斯克预告 Grok 4.6 并并入 SpaceX 全量数据/商汤开源 SenseNova U1.5-Lite-Preview 8B 统一多模态/MiniMax H3 开源许可排除美欧英韩/腾讯混元 Hy ASR 3.0 preview 多语种词错率约 3%/全双工语音赛道微软 MAI Realtime 与英伟达开源 VoiceChat/高德 ABot-World-0 世界模型 24 小时连续推理开源/IDC 中国 AI 手机 1.47 亿台与端侧 AI 8000 亿市场;信源:国家网信办·中国经济时报、金融界·SpaceX 财报会、商汤科技·智东西36氪、AIbase·腾讯新闻、IT之家·科技狐、NVIDIA·Hugging Face、高德、IDC·财联社科创板日报);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 123 条"
+    },
+    {
+      "date": "2026-08-04",
+      "note": "工具链修复:本机 Python 运行时已不可用(.workbuddy/binaries/python/versions 为空),将 build_standalone.py / autopush.py 移植为等价的 build_standalone.js / autopush.js(Node 22),自动化手册常量与步骤 5/7 同步改用 NODE;推送链路恢复正常"
+    },
+    {
+      "date": "2026-08-04",
+      "note": "每日自动更新:新增 8 条动态(MiniMax H3 视频模型开源登顶视频编辑榜/OpenAI GPT-5.6 Luna 降价 80%/DeepSeek 开放 Harness 代理框架内测/AI Coding 价格战与单任务成本 3 美分/阿里千问办公 QwenWork 公测/白宫召集头部实验室敲定模型安全自愿框架/Hugging Face CEO 称中国开源年底或追平/三大运营商 809 亿算力资本开支;信源:MiniMax 官方·中国经营报、IT之家·财联社科创板日报、南华早报·赛迪网、驱动中国·界面新闻、极客公园、CNBC、腾讯新闻);价格变动:据 OpenAI 7/30 官方降价更新 pricing 中 GPT-5.6 官方原厂价(Terra $2/$12、Luna $0.2/$1.2、Sol Fast 新增 $10/$60);insights 增至 115 条"
+    },
+    {
+      "date": "2026-08-02",
+      "note": "每日自动更新(补跑周末周日):新增 5 条动态(DeepSeek-V4-Flash 正式版公测/字节 Seedance 2.5 视频模型/欧盟 AI 内容强制标注新规生效/OpenRouter 周调用榜前五均中国模型/蚂蚁 Agentar 2.0 商业智能体平台;信源:第一财经·IT之家/AGI HUNT/央视财经/WAIC 2026);insights 增至 107 条;GitHub 推送成功"
+    },
+    {
+      "date": "2026-08-03",
+      "note": "每日自动更新:新增 5 条动态(阿里 Qwen3.8-Max 发布/香港 AI 桥梁定位与沙岭算力/OpenAI Astra 多智能体模型曝光/发改委等多部门密集部署 AI 并加速人工智能法立法/三大运营商停运第三方号卡渠道提速边缘合规;信源:凤凰网科技·界面新闻/香港商报/华尔街见闻·The Information/央视新闻/运营商联合公告);未发现 pricing 矩阵内模型 API 价格变动;insights 增至 102 条;修复 validate_data.js 对带引号键(insights/date)的识别盲区后校验通过"
+    },
+    {
+      "date": "2026-07-31",
+      "note": "模块三原厂价格落地:为阿里云百炼/百度千帆/火山引擎方舟/腾讯云/DeepSeek/智谱/Kimi/MiniMax 填充真实原厂价格(原生取官方原厂价、开源取各原厂官方转售价,来源各原厂定价页),新增科大讯飞并补星火 X2/Ultra/Pro/Lite 原生行;模块二取消 CMI '我方'特殊高亮(ours 置空)改为中立行业对标,模块四差异化定位同步去 CMI 化"
+    },
+    {
+      "date": "2026-07-31",
+      "note": "模块二真实数据溯源:新增 n1n(国内直连型 LLM 聚合网关,来源 llm-api.apifox.cn)为第16家对标厂商;据官方文档修正天翼云星辰TokenHub、移动云MoMA、OpenRouter 的模型数量/计费/路由/合规字段;新增 benchmark.sources 标注各家官方数据来源链接"
+    },
+    {
+      "date": "2026-07-31",
+      "note": "每日自动更新:新增 8 条动态(谷歌 Gemini Robotics 2 全身控制、OpenAI 失控智能体入侵 Hugging Face 事件升级、微软据报拟开放权重发布 MAI、360 纳米Work 企业智能体平台、腾讯 WorkBuddy V5.3.5 人机双写、腾讯 WorkSolo AIGC 内测、OpenAI 10 万学者免费前沿模型、OpenAI GPT Transcribe 转录模型;信源:华尔街见闻/DeepMind、国际金融报、36氪、瀚海观察、腾讯研究院、OpenAI 官网);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 97 条;GitHub 推送:成功(commit 567b9abcac)"
+    },
+    {
+      "date": "2026-07-30",
+      "note": "每日自动更新:新增 8 条动态(OpenAI gpt-oss 开源、腾讯混元 AngelSpec、蚂蚁 Ling-3.0-flash、清华 AI 失控预测框架 LoC、中国电信息壤 100EFLOPS、GPU 租赁价下行、百度 OCR 开源、OpenAI Codex Security CLI;信源:腾讯研究院/搜狐、机器之心、量子位、JYGPU、通信世界、OpenAI);GitHub 推送:跳过(连接器未连接);未发现 pricing 矩阵内模型 API 价格变化;insights 增至 89 条"
+    },
+    {
+      "date": "2026-07-30",
+      "note": "模块一重构:分类升级为三级树(一级 政策/行业/技术/厂商 → 二级 原厂/聚合/运营商 → 三级 三大运营商);布局按用户反馈调整——分类与标签换位,分类改为顶部级联筛选条(sticky 冻结、默认只露一级、紧凑),标签移至左侧窄边栏,新闻内容区成为视觉主体;新增 12 条 07-25~30 情报(Kimi K3 开源+定价、DeepSeek V4 Preview、Claude Opus 5、OpenRouter 中国模型前五、运营商 Token 经营、苹果国行选通义、1100+员工联名、25家捍卫开放权重、OpenAI Agent 逃逸、香港全民AI/算力),insights 增至 81 条"
+    },
+    {
+      "date": "2026-07-29",
+      "note": "强制重建:版本升 2026-07-29.4 触发 GitHub Pages 重新构建,确保线上服务含 localStorage 版本门控修复(69 条 + 区域维度)"
+    },
+    {
+      "date": "2026-07-29",
+      "note": "模块一情报批量补强:手动检索官方 blog/新闻中心、AI 媒体、财经媒体、政府监管、研报平台,新增 21 条关键动态(运营商 MoMA2.0/WorkBuddy、清朗整治AI乱象/拟人化办法/988款备案/香港备忘录、千问10亿下载/100亿下载、GPT-5.6/GLM-5.2、硅基流动20亿B轮/OpenRouter卖身、算力全链涨价与算力银行、DeepSeek降价75%/智谱提价/定价分裂、MCP协议栈/智能体爆发、博云融资),insights 增至 45 条"
+    },
+    {
+      "date": "2026-07-29",
+      "note": "模块一升级:新增动态分类树(政策/行业/技术趋势 + 厂商[原厂/聚合/运营商→三大运营商]竖排导航,与标签双维度筛选);情报信源库扩充为 12 类(新增原厂/运营商官方、AI 媒体、财经媒体、政府监管、研报平台),UI 改为折叠展示"
+    },
+    {
+      "date": "2026-07-29",
+      "note": "每日自动更新:新增 6 条动态(Kimi K3 开源/蚂蚁 LLaDA2.2/GPU 租赁涨价/WAIC 2026 闭幕/开放权重公开信/Claude Opus 5;信源:GitHub、Anthropic 官网、量子位、国金证券、人民日报海外版),已备份当日快照"
+    },
+    {
+      "date": "2026-07-27",
+      "note": "V4:新增情报信源库(官网+公众号);天翼云星辰MaaS 加入功能对标;DMXAPI/Novita 加入商业模式;价格矩阵全部采用官网/定价页真实数据(硅基流动/DMXAPI/Together/Novita/CMI/MoMA),新增多模态价格表"
+    },
+    {
+      "date": "2026-07-27",
+      "note": "V3:动态加原文链接、补全 6 月热点;对标拆分 9 家厂商并引入细分指标;价格对标改为矩阵"
+    },
+    {
+      "date": "2026-07-27",
+      "note": "初版上线:四大模块 + 技术架构页"
+    },
+    {
+      "date": "2026-07-29",
+      "note": "修复:localStorage 旧快照覆盖线上最新数据的问题——loadState 改为按数据版本(__ver)校验,版本不符即丢弃本地缓存、以发布数据为准;新增区域维度(8 区域)与 24 条海外/港澳/台/东南亚情报,insights 增至 69 条(版本 2026-07-29.3)"
+    }
+  ];
 
 window.AIHUB_DATA = {
   "insights":   [
