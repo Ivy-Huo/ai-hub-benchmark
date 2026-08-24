@@ -1,8 +1,16 @@
 /* AI Hub 对标情报站 · 数据层
    名义展示时间 每日 10:00;实际由自动化灵活触发(每 2 小时周期 + 打开 WorkBuddy 即补回遗漏日,含周末),幂等且可补跑;
    页面端手动编辑保存于浏览器 localStorage,不影响本文件。 */
-window.AIHUB_DATA_VERSION = "2026-08-22.1";
+window.AIHUB_DATA_VERSION = "2026-08-24";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-24",
+    "note": "每日自动更新(补跑):新增 6 条动态(微短剧新规 9.1 施行需显著标识/北京人工智能赋能工业互联网实施方案 2026-2028/三大运营商半年报算力成新引擎/OpenAI GPT-5.6 Sol 降价 20%+开源 Codex Harness/世界机器人大会闭幕核心零部件国产化 75-90%/月之暗面开源 AgentENV·蚂蚁百灵开源 Ling-3.0);规范校验器 validTags 补充「行业趋势」;GitHub 推送:成功"
+  },
+  {
+    "date": "2026-08-23",
+    "note": "每日自动更新(补跑):新增 6 条动态(DeepSeek V4-Flash-Vision-Exp 多模态实验模型/小红书 dots3-note 开源/Stripe 以超 80 亿美元收购 OpenRouter/阿里 800 亿港元配售全投 AI 基建/英伟达 AVO 满分通关 ARC-AGI-3/Anthropic 全面开放 Claude 平台 API 三件套);信源:网易/爱范儿/南方财经/TechCrunch/Anthropic;GitHub 推送:成功"
+  },
   {
     "date": "2026-08-22",
     "note": "insights 触及 200 条上限,裁剪最旧 8 条(2026-07-22 ~ 2026-07-20)至 history/2026-08-22-trimmed-insights.json,data.js 保留最新 200 条"
@@ -211,6 +219,127 @@ window.AIHUB_HISTORY = [
 
 window.AIHUB_DATA = {
   "insights":   [
+    {
+      "date": "2026-08-24",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "《微短剧发展管理办法》9 月 1 日施行,AI 生成须显著标识",
+      "summary": "国家广电总局新规要求 AI 生成微短剧每集明显位置添加提示标识,实行分级分类审核并划定 11 条内容红线,规范生成式 AI 内容。",
+      "source": "国家广电总局",
+      "url": ""
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "北京发布人工智能赋能工业互联网实施方案(2026—2028)",
+      "summary": "提出到 2028 年打造 100 个工业高质量数据集、培育 50 家智能化方案商、推出 100 个高水平工业智能体,聚焦集成电路/汽车/生物医药等高精尖行业。",
+      "source": "北京市经信局",
+      "url": ""
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "行业趋势",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商半年报:算力服务成新增长引擎",
+      "summary": "中国移动算力服务收入 529 亿(+14%)、AIDC 收入同比+486%;中国电信智算收入+95%、利用率 94%;中国联通算力收入 419 亿(+13%),加速从管道向智能服务商转型。",
+      "source": "新浪财经",
+      "url": ""
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 将 GPT-5.6 Sol 降价超 20% 并开源 Codex Harness",
+      "summary": "GPT-5.6 Sol 开发者端基准价下调逾 20%(输入 5→4、输出 30→20 美元/百万),优惠期三个月;同期以 Apache-2.0 全面开源 Codex 执行框架,ARC-AGI-3 仅改 Harness 即 13.3%→38.3%。",
+      "source": "OpenAI",
+      "url": ""
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "2026 世界机器人大会闭幕,核心零部件国产化率 75%-90%",
+      "summary": "373 家企业、3000 件展品、150+ 首发新品;减速器/伺服/控制器三大核心零部件国产化率升至 75%-90%,央企成立机器人创新联合体。",
+      "source": "IT之家",
+      "url": ""
+    },
+    {
+      "date": "2026-08-24",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "月之暗面开源 AgentENV、蚂蚁百灵开源 Ling-3.0",
+      "summary": "Moonshot AI 联合 kvcache-ai 开源基于 Firecracker 的电脑操控训练环境 AgentENV;蚂蚁百灵开源 Ling-3.0 tiny/flash Base 模型并开放训练关键节点。",
+      "source": "网易/极新早报",
+      "url": ""
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek 发布 V4-Flash-Vision-Exp 多模态实验模型",
+      "summary": "基于 284B MoE(激活 13B),新增视觉理解与工具调用,多模态 Agent 基准 ApexBench 36.5 逼近 Claude Opus 4.8 的 39.4,同步开启 API 并自 8-23 起周末统一低谷价计费。",
+      "source": "网易/极新早报",
+      "url": ""
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "小红书 dots 实验室开源 dots3-note 多模态大模型",
+      "summary": "280B 参数/16B 激活 MoE,支持 512K 上下文与文本/视觉/语音多模态,Apache 2.0 开源;发布当天华为昇腾 Atlas 800A3/900A3 即完成 0 日适配。",
+      "source": "AI Base/腾讯新闻",
+      "url": ""
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "行业趋势",
+      "cat": "agg",
+      "region": "global",
+      "title": "Stripe 宣布收购全球最大 AI 中转站 OpenRouter",
+      "summary": "支付基础设施公司 Stripe 以超 80 亿美元收购模型聚合/路由平台 OpenRouter(接入 400+ 模型、日处理 10 万亿 Token),收购后保持中立多模型路由与现有路线图。",
+      "source": "网易/爱范儿/路透",
+      "url": ""
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阿里巴巴 800 亿港元配售全部投入全栈 AI 基建",
+      "summary": "2019 年港股上市以来首次新股配售,募资约 800 亿港元 100% 用于全栈 AI 能力与基础设施;AI 相关 ARR 突破 495 亿元,管理层预计 Capex 2.5-3 年收回。",
+      "source": "南方财经/科创板日报",
+      "url": ""
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "NVIDIA AVO 系统满分通关 ARC-AGI-3",
+      "summary": "NVIDIA 通用编程 Agent 系统 AVO 在 ARC-AGI-3 公开集 183 关全部达成 100% RHAE 满分,靠持久记忆+监督循环+变异算子架构,验证框架层比模型更重要。",
+      "source": "TechCrunch/机器之心",
+      "url": ""
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 全面开放 Claude 平台 API 三件套",
+      "summary": "ComputerUse、Skills API、Files API 正式 GA 并配套浏览器工具,医疗/保险理赔工作流任务时间从 32 分钟降至 13 分钟,标志 Anthropic 向 Agent 平台公司跃迁。",
+      "source": "Anthropic",
+      "url": ""
+    },
+
     {
       "date": "2026-08-22",
       "tag": "模型更新",
@@ -3232,7 +3361,7 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-22",
+    "updated": "2026-08-24",
     "m2Changelog": [
       {
         "day": "2026-08-22",
