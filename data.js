@@ -1,6 +1,11 @@
 window.AIHUB_DATA_VERSION = "2026-08-26.1";
 window.AIHUB_HISTORY = [
   {
+    "date": "2026-08-26",
+    "note": "每日自动更新(时间窗口 2026-08-24T16:21 ~ 2026-08-26T09:18):新增 13 条动态(08-25 全天 8 条 + 08-26 截至 09:18 前 5 条;08-24 16:21 后无新增重大动态已跳过)——主题:字节「豆包工作」发布/华为昇腾 950 发布/英伟达 Groq 3 LPX 量产与 Vera Rubin 每兆瓦吞吐 30 倍实测/小米玄戒 O100 端侧大模型加速芯片/小鹏机器人 9 亿美元融资/ Meta Hatch 消费者 AI 智能体平台/OpenAI 因未发布模型 Astra 触及网络能力阈值暂停训练并警告 AI 已能策划网络攻击/摩根士丹利称五大云巨头与英伟达等 AI 表外承诺超 3.1 万亿美元;08-26:阿里千问预告开源 Qwen3.8-Flash-Next/中国开源模型在美国平台使用率首超闭源(62%)/人民日报谈 AI 全球治理/苹果 M6 2nm 与 M5 Ultra/OpenAI Jalapeño 自研推理芯片优于 Blackwell;信源:凤凰网·财联社·新浪财经·21 世纪经济报道·每日经济新闻·钛媒体·IT 之家·南华早报·SemiAnalysis·人民日报;模块二无跟踪厂商变化(refresh_m2+verify 通过);GitHub 推送:成功"
+  },
+
+  {
     "date": "2026-08-24",
     "note": "模块一厂商下钻扩展:新增「芯片与硬件」分类(insightCatTree 加 chip 节点);VENDOR_KW 由 33 → 63 个 v_ 叶子,新增英伟达 NVIDIA/AMD/华为昇腾/寒武纪/海光/壁仞/摩尔线程/芯原/燧原/台积电/SK海力士/三星/Google TPU/Cerebras/Groq/中科曙光/浪潮/工业富联/新华三/联想/紫光 等芯片硬件厂商(parent=chip),及商汤/百川/阶跃星辰/零一万物/智源/面壁/Perplexity/Cohere/Databricks 等其他 AI 厂商(parent=llm);matchesCat 厂商分组父节点(llm/agg/chip)改用名下 v_ 叶子关键词 OR 匹配,使「芯片与硬件」可跨分类汇总;ai_hub_sources.md 新增「AI 硬件/服务器/智算中心」「其他 AI 厂商/大模型实验室」两维度;补 2 条今日实时新闻(英伟达否认中国特供芯片/SK海力士回应赴日设厂),超 200 裁剪最旧 2 条。validate_data 通过"
   },
