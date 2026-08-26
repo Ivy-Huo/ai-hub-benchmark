@@ -1,10 +1,13 @@
-window.AIHUB_DATA_VERSION = "2026-08-26.1";
+window.AIHUB_DATA_VERSION = "2026-08-26.2";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-26",
+    "note": "补回重要政策信息:中国信通院发布 AIIA/T 0310-2026《人工智能词元(Token)计量计费管理能力要求》(cat:policy, tag:政策, 2026-08-19);根因=ai_hub_sources.md 此前缺少「信通院/CAICT/AIIA/词元计量计费规范」关键词维度,导致每日检索漏抓——已在 md「检索关键词维度」新增该政策标准维度(关联本站价格与模式模块);insights 200 上限裁剪最旧 1 条入 history/2026-08-26-trimmed-insights.json。validate_data 通过"
+  },
   {
     "date": "2026-08-26",
     "note": "每日自动更新(时间窗口 2026-08-24T16:21 ~ 2026-08-26T09:18):新增 13 条动态(08-25 全天 8 条 + 08-26 截至 09:18 前 5 条;08-24 16:21 后无新增重大动态已跳过)——主题:字节「豆包工作」发布/华为昇腾 950 发布/英伟达 Groq 3 LPX 量产与 Vera Rubin 每兆瓦吞吐 30 倍实测/小米玄戒 O100 端侧大模型加速芯片/小鹏机器人 9 亿美元融资/ Meta Hatch 消费者 AI 智能体平台/OpenAI 因未发布模型 Astra 触及网络能力阈值暂停训练并警告 AI 已能策划网络攻击/摩根士丹利称五大云巨头与英伟达等 AI 表外承诺超 3.1 万亿美元;08-26:阿里千问预告开源 Qwen3.8-Flash-Next/中国开源模型在美国平台使用率首超闭源(62%)/人民日报谈 AI 全球治理/苹果 M6 2nm 与 M5 Ultra/OpenAI Jalapeño 自研推理芯片优于 Blackwell;信源:凤凰网·财联社·新浪财经·21 世纪经济报道·每日经济新闻·钛媒体·IT 之家·南华早报·SemiAnalysis·人民日报;模块二无跟踪厂商变化(refresh_m2+verify 通过);GitHub 推送:成功"
   },
-
   {
     "date": "2026-08-24",
     "note": "模块一厂商下钻扩展:新增「芯片与硬件」分类(insightCatTree 加 chip 节点);VENDOR_KW 由 33 → 63 个 v_ 叶子,新增英伟达 NVIDIA/AMD/华为昇腾/寒武纪/海光/壁仞/摩尔线程/芯原/燧原/台积电/SK海力士/三星/Google TPU/Cerebras/Groq/中科曙光/浪潮/工业富联/新华三/联想/紫光 等芯片硬件厂商(parent=chip),及商汤/百川/阶跃星辰/零一万物/智源/面壁/Perplexity/Cohere/Databricks 等其他 AI 厂商(parent=llm);matchesCat 厂商分组父节点(llm/agg/chip)改用名下 v_ 叶子关键词 OR 匹配,使「芯片与硬件」可跨分类汇总;ai_hub_sources.md 新增「AI 硬件/服务器/智算中心」「其他 AI 厂商/大模型实验室」两维度;补 2 条今日实时新闻(英伟达否认中国特供芯片/SK海力士回应赴日设厂),超 200 裁剪最旧 2 条。validate_data 通过"
@@ -235,7 +238,17 @@ window.AIHUB_HISTORY = [
   }
 ];
 window.AIHUB_DATA = {
-  "insights":   [
+  "insights": [
+    {
+      "date": "2026-08-19",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "中国信通院正式发布《人工智能词元(Token)计量计费管理能力要求》",
+      "summary": "中国信通院人工智能研究所依托中国人工智能产业发展联盟(AIIA)高质量词元服务工作组,联合华为云、百度智能云、联通数科、中移九天、中电信人工智能、阿里云、蚂蚁集团、中兴通讯等编制的技术规范 AIIA/T 0310-2026《人工智能词元(Token)计量计费管理能力要求》正式发布。规范聚焦计量管理、计费管理、用量管理、账单管理、账户管理、交易审计六大方向,旨在破解 Token 种类多、计量计费规则不统一、调用行为不可溯源等行业痛点,推动 AI 服务计费透明化、标准化、可追溯,直接关联本站「价格与模式」模块主题。",
+      "source": "中国信通院 CAICT / 科技日报",
+      "url": "https://www.caict.ac.cn/"
+    },
     {
       "date": "2026-08-26",
       "tag": "开源动态",
@@ -2225,16 +2238,6 @@ window.AIHUB_DATA = {
       "source": "运营商联合公告 / 腾讯新闻",
       "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7946a6e04f276752",
       "summary": "三大运营商 8 月 1 日起全面停运第三方号卡订购渠道,仅限官方办理;叠加实名与白名单,抬高 PCDN/边缘计算入网门槛,加速行业合规化与可追溯。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "na",
-      "title": "谷歌 DeepMind 推出 Gemini Robotics 2,实现人形机器人全身控制",
-      "source": "华尔街见闻 / DeepMind",
-      "url": "https://wallstreetcn.com/articles/3778348",
-      "summary": "DeepMind 发布新一代机器人模型 Gemini Robotics 2,可实现人形机器人从头到脚全身控制,同步推出 ER 2 与 On-Device 2,支持多步骤任务规划与多机协同。"
     }
   ],
   "insightCatTree": [
@@ -3269,7 +3272,6 @@ window.AIHUB_DATA = {
         "day": "2026-08-26",
         "note": "模块二每日检索刷新(2026-08-26):本轮窗口内无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型正式发布(阿里 Qwen3.8-Flash-Next 为 8/26 23:00 开源预告、Meta Watermelon 与 OpenAI GPT-6 均属未来发布,不计入旗舰榜);aggRankMeta/modelRank 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
       },
-
       {
         "day": "2026-08-22",
         "note": "模块二每日检索刷新(2026-08-22):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布(DepSeek-V4-Flash-Vision-Exp 为实验性多模态变体、不计入旗舰榜);aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
