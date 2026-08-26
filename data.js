@@ -1,5 +1,9 @@
-window.AIHUB_DATA_VERSION = "2026-08-26.2";
+window.AIHUB_DATA_VERSION = "2026-08-26.3";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-26",
+    "note": "审计补回 11 条遗漏重要政策/标准动态(均因 ai_hub_sources.md 关键词维度缺位导致每日检索漏抓,已在 md「检索关键词维度」新增「监管/标准/信通院」综合维度):国家网信办《生成式AI服务管理细则》修订版(08-07)、工信部8项AI行业标准含具身智能数据集质量标准(08-12)、《AI终端智能化分级》国标 GB/Z 177-2026(08-12)、科技伦理审查先导计划(08-10)、市场监管总局338项国标含AI医疗器械与自动驾驶安全强制国标(08-11)、《AI可信赖通则》GB/T 47507-2026 实施(08-01)、《智能体应用安全基本要求》强制国标立项(08-07)、《工业智能体参考架构》等24项指导性技术文件(08-03)、国资委第二批60项央企AI场景+70数据集+焕新社区2.0(07-27)、新一代AI国家科技重大专项申报指南(07-31)、NIST AI RMF v1.1(08-15)。insights 200 上限裁剪最旧 11 条入 history/2026-08-26-trimmed-insights.json。validate_data 通过"
+  },
   {
     "date": "2026-08-26",
     "note": "补回重要政策信息:中国信通院发布 AIIA/T 0310-2026《人工智能词元(Token)计量计费管理能力要求》(cat:policy, tag:政策, 2026-08-19);根因=ai_hub_sources.md 此前缺少「信通院/CAICT/AIIA/词元计量计费规范」关键词维度,导致每日检索漏抓——已在 md「检索关键词维度」新增该政策标准维度(关联本站价格与模式模块);insights 200 上限裁剪最旧 1 条入 history/2026-08-26-trimmed-insights.json。validate_data 通过"
@@ -239,6 +243,116 @@ window.AIHUB_HISTORY = [
 ];
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-15",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "NIST 发布 AI 风险管理框架 v1.1,新增智能体(Agentic AI)治理指引",
+      "summary": "美国 NIST 在 AI 风险管理框架(AI RMF)更新中新增面向智能体系统的专项指引,覆盖多智能体编排风险、长周期自主任务治理,以及无需逐动作人工审阅的 AI 系统文档要求,呼应白宫 AI 行动计划对联邦 AI 风险治理架构的重塑。",
+      "source": "NIST",
+      "url": "https://www.nist.gov/artificial-intelligence"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "工信部批准发布 8 项人工智能行业标准(含国内首个具身智能数据集质量标准)",
+      "summary": "工信部 2026 年第 18 号公告批准《人工智能 基础共性 人工智能企业认定》《人工智能产业边界界定》等 8 项 AI 行业标准,覆盖产业测算、数据集、具身智能、大模型等核心领域;其中《具身智能数据集质量要求及评价方法》为国内首个具身智能数据集质量标准,由信通院联合 40 余家单位起草,标志具身智能数据建设从规模导向转向质量导向。",
+      "source": "工业和信息化部",
+      "url": "https://www.miit.gov.cn/"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "《人工智能终端智能化分级》系列国家标准发布",
+      "summary": "工信部、商务部、市场监管总局联合启动《人工智能终端智能化分级》(GB/Z 177-2026)系列国家标准,采用 2+N 架构(L1 响应级至 L4 协同级),首批覆盖手机、电脑、电视、眼镜、汽车座舱、音箱、耳机等 7 类终端,明确智能化概念、等级划分与测试方法。",
+      "source": "工业和信息化部",
+      "url": "https://www.miit.gov.cn/xwfb/gxdt/sjdt/art/2026/art_9fd39c053e484ba4bec7863849213092.html"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "市场监管总局批准发布 338 项国家标准,含 AI 医疗器械与自动驾驶安全强制国标",
+      "summary": "市场监管总局(国家标准委)批准发布 338 项重要国家标准(强制性 15 项、推荐性 323 项),高新技术领域含《人工智能医疗器械质量要求和评价术语》国家标准(构建 AI 医疗器械国标体系)与《智能网联汽车 自动驾驶系统安全要求》强制性国家标准,规范自动驾驶系统设计、开发与测试。",
+      "source": "市场监管总局 / 人民网",
+      "url": "https://finance.people.com.cn/BIG5/n1/2026/0812/c1004-40777825.html"
+    },
+    {
+      "date": "2026-08-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "工信部实施人工智能科技伦理审查与服务先导计划",
+      "summary": "工信部办公厅印发通知(工信厅科函〔2026〕199 号),依托国家 AI 产业创新应用先导区所在省份,在基础底座及制造/医疗/金融等垂直领域率先开展 AI 科技伦理审查,验证制定 5 项以上标准、建设风险案例库、研发技术工具,健全负责任创新治理机制。",
+      "source": "工业和信息化部",
+      "url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_353d0d2a06ab4cebbfd53f97aec4ae24.html"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国家网信办发布《生成式人工智能服务管理细则》修订版",
+      "summary": "国家网信办发布修订后的《生成式人工智能服务管理细则》,细化生成内容标识、算法备案、未成年人保护等要求,明确端侧 AI 产品合规边界,建立分级分类动态监管机制,在保障安全的同时支持技术创新与产业发展。",
+      "source": "国家网信办 CAC",
+      "url": "https://www.cac.gov.cn/"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "全球首部《智能体应用安全基本要求》强制性国家标准立项",
+      "summary": "国家标准化管理委员会下达《智能体应用安全基本要求》强制性国家标准计划(计划号 20263116-Q-252),由中央网信办归口、中国移动与电子标准院等牵头,聚焦面向公众的智能体产品与服务,将安全治理红线转化为可落地可检测的技术合规要求,填补公众服务领域智能体安全强制标准国际空白。",
+      "source": "国家标准化管理委员会",
+      "url": "https://std.samr.gov.cn/"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "《人工智能 工业智能体参考架构》等 24 项国家标准化指导性技术文件发布",
+      "summary": "国家市场监管总局(国家标准委)批准《人工智能 工业智能体参考架构》等 24 项国家标准化指导性技术文件(2026 年第 32 号公告),为工业智能体的架构设计、能力界定与系统集成提供统一参考,加速 AI+制造落地。",
+      "source": "国家标准化管理委员会",
+      "url": "https://std.samr.gov.cn/"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国内首个可信赖人工智能国家标准《人工智能 可信赖 通则》正式实施",
+      "summary": "市场监管总局、国家标准委发布《人工智能 可信赖 通则》(GB/T 47507-2026)并于 8 月 1 日起实施,为我国首个可信赖 AI 基础性、通用性国家标准,确立 AI 系统可信赖核心要素与通用要求,规范全生命周期应用与评估,填补行业统一规范空白。",
+      "source": "国家市场监督管理总局 / 国家标准委",
+      "url": "https://std.samr.gov.cn/"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国务院国资委发布第二批 60 项央企 AI 高价值场景与 70 个行业数据集,上线焕新社区 2.0",
+      "summary": "国务院国资委在「智赋新质 全域焕新」论坛上发布第二批 60 项央企人工智能战略性高价值场景、70 个行业高质量数据集,同步上线 AI 开源焕新社区 2.0、启动智能软件工厂联合筑基工程,标志央企以 AI 赋能实体经济进入体系化推进新阶段(覆盖工业制造、能源、交通、医疗、信息通信等领域)。",
+      "source": "国务院国资委 / 新浪财经",
+      "url": "https://finance.sina.com.cn/jjxw/2026-07-27/doc-inikhisw9715806.shtml"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "新一代人工智能国家科技重大专项 2026 年度「以赛代评」申报指南发布",
+      "summary": "新一代人工智能国家科技重大专项专项办公室发布 2026 年度「以赛代评」公开项目申报指南,网上填报受理时间为 2026-08-10 至 09-04,聚焦 AI 基础前沿与关键核心技术攻关,采用以赛代评新机制遴选立项,强化青年与女性科研人员担纲。",
+      "source": "科技部 / 国家科技管理信息系统",
+      "url": "https://service.most.gov.cn/"
+    },
     {
       "date": "2026-08-19",
       "tag": "政策",
@@ -2128,116 +2242,6 @@ window.AIHUB_DATA = {
       "summary": "Novita AI 8月4日目录刷新,新增DeepSeek V4 Flash、V3.2、DeepSeek-OCR 2等模型",
       "source": "UsagePricing / Novita AI",
       "url": "https://www.usagepricing.com/blueprint/activity/novita-ai-2026-08-04-packaging"
-    },
-    {
-      "date": "2026-08-03",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "阿里发布 Qwen3.8-Max:2.4 万亿参数,主打长程编程与办公,下周开源",
-      "source": "凤凰网科技 / 界面新闻",
-      "url": "https://dy.163.com/article/L3DDU57E0556I485.html",
-      "summary": "阿里云发布 Qwen3.8-Max(2.4T 总参/95B 激活/MoE/1M 上下文),主打自主编程与长程任务,国内 API 12/36 元每百万 tokens,宣布下周开源权重。"
-    },
-    {
-      "date": "2026-08-03",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "hk",
-      "title": "香港 AI 定位为'桥梁':算力 5000 PFLOPS,沙岭园将达 18 万 PFLOPS",
-      "source": "香港商报 / 创新科技及工业局",
-      "url": "https://hkcd.com/hkcdweb/content/2026/08/03/content_8767867.html",
-      "summary": "香港商报谈 AI 定位为'桥梁':整体算力已达 5000 PFLOPS,沙岭数据园 2032 年提供 18 万 PFLOPS(36 倍);'全民 AI'普惠计划联动数码港、科技园、生产力局。"
-    },
-    {
-      "date": "2026-08-03",
-      "tag": "算力",
-      "cat": "agg",
-      "region": "cn",
-      "title": "硅基流动上调 DeepSeek V4 Pro 缓存命中价至 1.0 元/百万Token",
-      "summary": "硅基流动通知8月3日起将DeepSeek V4 Pro缓存命中价从0.1元上调至1.0元/百万Token",
-      "source": "aibase",
-      "url": "https://www.aibase.com/news/30047"
-    },
-    {
-      "date": "2026-08-02",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "DeepSeek-V4-Flash 正式版上线公测,智能指数 50 逼近顶级闭源",
-      "source": "第一财经 / IT之家",
-      "url": "https://www.163.com/dy/article/L3ALO4UV0519DDQ2.html",
-      "summary": "DeepSeek 于 7/31 通过 API 文档发布 V4-Flash 正式版公测;Artificial Analysis 智能指数 50 分(较 4 月 Flash +10),单任务成本较 OpenAI GPT-5.6 Luna 低约 60%,提供约 98% 缓存命中折扣。"
-    },
-    {
-      "date": "2026-08-02",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "字节跳动发布 Seedance 2.5 视频模型,单次生成 30 秒",
-      "source": "IT之家 / AGI HUNT",
-      "url": "https://agihunt.info/daily/2026-08-02",
-      "summary": "字节 Dreamina 全球首发 Seedance 2.5,支持 50 个多模态参考图、单次生成 30 秒视频,主打自由度与控制力兼顾,即将登陆 Higgsfield 平台。"
-    },
-    {
-      "date": "2026-08-02",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "eu",
-      "title": "欧盟 AI 内容强制标注新规 8 月 2 日生效",
-      "source": "AGI HUNT / 欧盟官方",
-      "url": "https://agihunt.info/daily/2026-08-02",
-      "summary": "欧盟要求对高度逼真的 AI 生成内容进行强制标注与打标签,以应对生成式 AI 虚假信息风险、提升数字内容透明度,合规义务在多法域同步收紧。"
-    },
-    {
-      "date": "2026-08-02",
-      "cat": "ind",
-      "region": "global",
-      "title": "OpenRouter 周调用量榜单前五均为中国模型",
-      "source": "央视财经 / 今日头条",
-      "url": "https://www.toutiao.com/article/7669457614316519945/",
-      "summary": "OpenRouter 最新一周调用量榜前五全为中国企业模型(小米 MiMo-V2.5 登顶 10.5 万亿 Token),HuggingFace 中国开源模型累计下载量居首,国产开源在第三方渠道领先。",
-      "tag": "开源动态"
-    },
-    {
-      "date": "2026-08-02",
-      "tag": "案例",
-      "cat": "ind",
-      "region": "cn",
-      "title": "蚂蚁数科发布商业智能体平台 Agentar 2.0",
-      "source": "探寻智讯 / WAIC 2026",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDk4NjU3MQ==&mid=2247483773",
-      "summary": "蚂蚁数科在 WAIC 2026 发布商业智能体平台 Agentar 2.0,首批预置近 200 个岗位级数字专家模板与数百个可订阅智能体工具,标志大模型加速转化为企业生产力。"
-    },
-    {
-      "date": "2026-08-01",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "OpenAI 新模型家族 Astra 曝光,主打多智能体长周期协同",
-      "source": "The Information / 华尔街见闻",
-      "url": "https://www.163.com/dy/article/L396PKPB05198NMR.html",
-      "summary": "OpenAI 新模型家族 Astra 曝光,主打多智能体长周期协同,Altman 已赴白宫演示并或成特朗普政府新框架首批审查模型;据报以约 2000 美元算力破解 10 道数学难题。"
-    },
-    {
-      "date": "2026-08-01",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "发改委、工信部等多部门密集部署 AI 发展:加快人工智能法立法",
-      "source": "央视新闻 / 国家发改委",
-      "url": "https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&t=1785512162796&item_id=10855399071019797650&channelId=1119",
-      "summary": "发改委、工信部等密集部署 AI 发展:加快人工智能法立法、推进'模芯云用'协同、统筹智算集群与算电协同、印发算力标准、普惠算力赋能中小企业。"
-    },
-    {
-      "date": "2026-08-01",
-      "tag": "政策",
-      "cat": "op",
-      "region": "cn",
-      "title": "三大运营商 8 月 1 日起停运第三方号卡渠道,边缘计算合规化提速",
-      "source": "运营商联合公告 / 腾讯新闻",
-      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7946a6e04f276752",
-      "summary": "三大运营商 8 月 1 日起全面停运第三方号卡订购渠道,仅限官方办理;叠加实名与白名单,抬高 PCDN/边缘计算入网门槛,加速行业合规化与可追溯。"
     }
   ],
   "insightCatTree": [
