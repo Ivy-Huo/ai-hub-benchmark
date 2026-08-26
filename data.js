@@ -1,5 +1,9 @@
-window.AIHUB_DATA_VERSION = "2026-08-26.3";
+window.AIHUB_DATA_VERSION = "2026-08-26.4";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-26",
+    "note": "补回遗漏:AIIA 第十八次全会(2026-08-18/19)密集发布的智能体/AI Infra 技术规范(因 ai_hub_sources.md 此前缺「中国人工智能产业发展联盟(AIIA)」关键词维度导致每日检索漏抓;已在 md「检索关键词维度」新增「标准规范/信通院/AIIA/词元计量计费」综合维度,覆盖全会/工作组/技术规范等关键词,治本)。insights 200 上限裁剪最旧 1 条入 history/2026-08-26-aiia-trimmed-insights.json。validate_data 通过"
+  },
   {
     "date": "2026-08-26",
     "note": "审计补回 11 条遗漏重要政策/标准动态(均因 ai_hub_sources.md 关键词维度缺位导致每日检索漏抓,已在 md「检索关键词维度」新增「监管/标准/信通院」综合维度):国家网信办《生成式AI服务管理细则》修订版(08-07)、工信部8项AI行业标准含具身智能数据集质量标准(08-12)、《AI终端智能化分级》国标 GB/Z 177-2026(08-12)、科技伦理审查先导计划(08-10)、市场监管总局338项国标含AI医疗器械与自动驾驶安全强制国标(08-11)、《AI可信赖通则》GB/T 47507-2026 实施(08-01)、《智能体应用安全基本要求》强制国标立项(08-07)、《工业智能体参考架构》等24项指导性技术文件(08-03)、国资委第二批60项央企AI场景+70数据集+焕新社区2.0(07-27)、新一代AI国家科技重大专项申报指南(07-31)、NIST AI RMF v1.1(08-15)。insights 200 上限裁剪最旧 11 条入 history/2026-08-26-trimmed-insights.json。validate_data 通过"
@@ -243,6 +247,16 @@ window.AIHUB_HISTORY = [
 ];
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-19",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "中国人工智能产业发展联盟(AIIA)第十八次全会在京召开,13 个工作组密集发布智能体 / AI Infra 技术规范",
+      "summary": "2026 年 8 月 18—19 日,中国人工智能产业发展联盟(AIIA)第十八次全会在北京召开,近千名成员单位代表参会,下设端侧智能、安全治理、投融资、智能原生、智能体创新与应用、科学智能、AI Infra、基础软硬件与生态、国际合作、能源、科技伦理、具身智能等 13 个工作组/委员会并行召开小组会议。会议密集产出一系列联盟标准与技术文件:安全治理委员会启动「智赋安全行动」并发布《代码安全审计智能体能力要求与评估方法》《智能体数据安全技术要求与评估方法》;智能体创新与应用委员会发布智能体产业图谱 2.0、可信 AI 智能体最新评估结果及工业智能体技术规范;智能原生工作组发布《人工智能一人公司分类分级评估方法》;科学智能工作组发布《科学大模型基准测试》并启动 IEEE P3933《材料科研智能体技术要求》国际标准;AI Infra 工作组发布《人工智能中台应用成熟度评估方法》并启动大模型推理测试床;基础软硬件与生态工作组推进 AISHPerf 基准。全会集中呈现智能体从单体能力向系统能力演进、AI 与网安双向赋能、国产算力生态协同等产业主线,直接关联本站「价格与模式」(Token/中台)与「差异化」模块。",
+      "source": "中国人工智能产业发展联盟 AIIA",
+      "url": "https://www.aiiaorg.cn/"
+    },
     {
       "date": "2026-08-15",
       "tag": "政策",
@@ -2232,16 +2246,6 @@ window.AIHUB_DATA = {
       "summary": "阿里Qwen3.8-Max登陆OpenRouter,2.4T参数、95B激活、1M上下文,开放权重将发布",
       "source": "ai-primer / OpenRouter",
       "url": "https://www.ai-primer.com/engineer/stories/qwen38-max-api-rollout-benchmarks"
-    },
-    {
-      "date": "2026-08-04",
-      "tag": "模型更新",
-      "cat": "agg",
-      "region": "global",
-      "title": "Novita AI 目录新增 DeepSeek V4 Flash 等5款模型",
-      "summary": "Novita AI 8月4日目录刷新,新增DeepSeek V4 Flash、V3.2、DeepSeek-OCR 2等模型",
-      "source": "UsagePricing / Novita AI",
-      "url": "https://www.usagepricing.com/blueprint/activity/novita-ai-2026-08-04-packaging"
     }
   ],
   "insightCatTree": [
