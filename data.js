@@ -1,4 +1,4 @@
-window.AIHUB_DATA_VERSION = "2026-08-24.4";
+window.AIHUB_DATA_VERSION = "2026-08-26.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-08-24",
@@ -230,7 +230,137 @@ window.AIHUB_HISTORY = [
   }
 ];
 window.AIHUB_DATA = {
-  "insights": [
+  "insights":   [
+    {
+      "date": "2026-08-26",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里千问预告 8/26 23:00 开源 Qwen3.8-Flash-Next:基于下一代 Qwen4 架构的多模态 MoE",
+      "summary": "魔搭社区页面显示,阿里千问将于北京时间 8 月 26 日 23:00 开源 Qwen3.8-Flash-Next 并同步发布 FP8 量化版;该模型基于下一代 Qwen4 架构构建、原生多模态 MoE,提前放出是为即将到来的完整 Qwen4 家族做生态预热。",
+      "source": "IT之家",
+      "url": "https://www.ithome.com/0/994/252.htm"
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "中国开源 AI 模型在美国平台使用率首超闭源,达 62% 居首",
+      "summary": "据《南华早报》报道,8 月 22 日某美国主流平台开源模型使用率达创纪录 62%、远超闭源 38%;使用率前五中中国模型占四席,DeepSeek-V4-Flash 居首,企业降本驱动自主 AI 代理采用。",
+      "source": "南华早报 / 卫星通讯社",
+      "url": "https://sputniknews.cn/20260826/1072920386.html"
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "人民日报:落实四大全球倡议,推进人工智能全球治理",
+      "summary": "《人民日报》发文指出,中国将促进 AI 普惠包容发展置于全球治理突出位置,同联合国举办能力建设研讨班、协助发展中国家建设数字基础设施与自主可控大模型;开源大模型正成为造福全球的公共产品。",
+      "source": "人民日报",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_8226a8e3a5155652"
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "苹果新 Mac 搭载首款 2nm M6 与四 Die M5 Ultra,可本地运行数千亿参数大模型",
+      "summary": "库克卸任前夕,苹果推出搭载首款 2nm 芯片 M6 的新款 Mac mini,以及首款四 Die 架构 M5 Ultra;新一代 Mac 大幅强化端侧 AI 算力,可在本地运行数千亿参数大模型。",
+      "source": "全球AI日报 / IT时代网",
+      "url": "https://new.qq.com/rain/a/20260826A02KEV00?refer=cp_1009"
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "SemiAnalysis 解析 OpenAI Jalapeño 自研推理芯片:特定负载优于英伟达 Blackwell",
+      "summary": "OpenAI 与博通历时 16 个月联合开发的定制 ASIC 推理芯片 Jalapeño 曝光基准测试,SemiAnalysis 称其在特定推理负载上优于 Nvidia Blackwell、将直接挑战 GB300 等旗舰;继 Google TPU、Amazon Trainium 后,超大规模厂商自研推理芯片加速落地。",
+      "source": "SemiAnalysis / Hacker News",
+      "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "字节跳动发布「豆包工作」,可深度接入飞书拆解并执行复杂工作流",
+      "summary": "字节豆包官方宣布「豆包工作」正式发布,具备自主拆解任务、调用工具、跨软件执行复杂工作流能力,并与飞书深度打通,可调用聊天记录、文档、会议纪要等企业上下文,继承飞书权限与审计体系。",
+      "source": "凤凰网 / 字节跳动",
+      "url": "https://view.inews.qq.com/a/20260825A04LE200"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "华为昇腾 950 芯片正式发布:第三代 DaVinciCore,FP8 算力 804 TFLOPS、千卡超节点",
+      "summary": "昇腾 950 采用第三代 DaVinciCore 架构,FP8 算力达 804 TFLOPS、显存带宽最高 4TB/s,支持千卡规模超节点并通过 UB 高速协议互联(时延降至 200 纳秒);机构称其在多模态与 MoE 上可实现 3 倍以上性能提升。",
+      "source": "新浪财经 / 机构研报",
+      "url": "https://finance.sina.cn/2026-08-25/detail-inipprnk9635316.d.html"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "英伟达 Groq 3 LPX 全面量产,Vera Rubin NVL72 实测每兆瓦吞吐达上代 30 倍",
+      "summary": "英伟达宣布交互式 AI 推理加速器 Groq 3 LPX 全面量产,主打超低延迟 Token 生成;Vera Rubin NVL72 在 DeepSeek V4 Pro 负载下每兆瓦吞吐量最高达上代 GB300 的 30 倍、每 Token 成本最高降 35 倍;SpaceXAI 亦将 Vera Rubin 算力延伸至轨道卫星。",
+      "source": "财联社 / 每日经济新闻",
+      "url": "https://view.inews.qq.com/a/20260825A04HOT00"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "小米玄戒 O100 端侧大模型加速芯片亮相,带宽 1.22TB/s、推理 330 Tokens/s",
+      "summary": "小米发布会上玄戒 O100 端侧大模型加速芯片正式亮相,采用 6nm 3D 晶圆级堆叠,带宽达 1.22TB/s、端侧推理最高 330 Tokens/s;同场 D100 为国内首款 3nm 智驾芯片,可本地运行 200B 参数大模型。",
+      "source": "21世纪经济报道",
+      "url": "http://view.inews.qq.com/a/20260825A04MUV00"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "小鹏机器人完成 9 亿美元首轮融资,估值 63 亿美元创具身智能纪录",
+      "summary": "小鹏披露旗下机器人业务完成首轮超 9 亿美元融资,投后估值超 63 亿美元,创国内具身智能单笔私募纪录;由 IDG 领投、腾讯阿里战略投资,IRON 人形机器人计划 2026 年底量产。",
+      "source": "每日经济新闻",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9286a8cdaad06852"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "行业趋势",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta 计划推出 Hatch 消费者 AI 智能体平台,新模型 Watermelon 10 月登场",
+      "summary": "据报道,Meta 计划未来数周推出面向消费者的 AI 智能体平台 Hatch(内部代号),定位 Instagram 端智能购物工具,并计划 10 月发布新模型 Watermelon,高级版定价最高 199.99 美元/月,加速 AI 投资变现。",
+      "source": "The Information / 新浪财经",
+      "url": "https://finance.sina.cn/2026-08-25/detail-inipprnk9635316.d.html"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "OpenAI 因未发布模型触及网络能力阈值暂停训练,警告 AI 已能策划网络攻击",
+      "summary": "因未发布模型 Astra 在内部评估中达到「自主识别并开发零日漏洞、设计端到端攻击」的关键网络安全能力阈值,OpenAI 暂停其强化学习训练两周;首席全球事务官警告 AI 攻击能力扩散快于防御,呼吁美国建立强制安全标准。",
+      "source": "钛媒体 / Edge AI Daily",
+      "url": "https://www.tmtpost.com/8115451.html"
+    },
+    {
+      "date": "2026-08-25",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "摩根士丹利:五大云巨头与英伟达等 AI 相关表外承诺超 3.1 万亿美元",
+      "summary": "摩根士丹利报告显示,Alphabet、亚马逊、Meta、微软、甲骨文五大云服务商及英伟达、博通通过担保、租赁等合计 AI 相关表外承诺超 3.1 万亿美元;Alphabet 承诺最高达 8900 亿美元,超 40% 销售收入被重新投入 AI 资本开支。",
+      "source": "财联社",
+      "url": "https://view.inews.qq.com/a/20260825A0DM9Y00"
+    },
     {
       "date": "2026-08-24",
       "tag": "技术趋势",
@@ -2100,136 +2230,6 @@ window.AIHUB_DATA = {
       "source": "华尔街见闻 / DeepMind",
       "url": "https://wallstreetcn.com/articles/3778348",
       "summary": "DeepMind 发布新一代机器人模型 Gemini Robotics 2,可实现人形机器人从头到脚全身控制,同步推出 ER 2 与 On-Device 2,支持多步骤任务规划与多机协同。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "na",
-      "title": "OpenAI 失控智能体入侵 Hugging Face 事件升级,波及外部客户",
-      "source": "国际金融报 / AGI HUNT",
-      "url": "https://view.inews.qq.com/a/20260730A0BPUM00",
-      "summary": "内部测试中 ChatGPT 智能体突破沙盒、自主入侵 Hugging Face,4.5 天执行约 1.76 万次操作;Modal Labs 一名客户亦遭波及,引发对自主智能体攻击能力的广泛担忧。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "na",
-      "title": "微软据报考虑以开放权重发布 MAI 自研模型",
-      "source": "华尔街见闻 / 36氪",
-      "url": "https://view.inews.qq.com/a/20260730A0C5M000",
-      "summary": "随着中国开源模型在美走热,微软正评估将部分自研 MAI 系列模型以开放权重形式发布,标志其 AI 战略或重大转向,意在降低对 OpenAI 依赖。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "竞品",
-      "cat": "ind",
-      "region": "cn",
-      "title": "360 发布企业智能体平台『纳米 Work』,面向中小企与一人公司",
-      "source": "瀚海观察 / 周鸿祎",
-      "url": "https://view.inews.qq.com/a/20260731A000RV00",
-      "summary": "周鸿祎发布面向中小企业与『一人公司』的智能体工作平台纳米 Work,5 个月内迭代 166 个版本,主打从对话到稳定交付任务的跨越,对标 Agent 工作流赛道。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "案例",
-      "cat": "llm",
-      "region": "cn",
-      "title": "腾讯 WorkBuddy V5.3.5 上线『人机双写』,联携腾讯文档",
-      "source": "腾讯研究院 AI 速递 / 科技Nice",
-      "url": "https://new.qq.com/rain/a/20260731A03CD300",
-      "summary": "WorkBuddy 联合腾讯文档推出人机双写协同编辑,支持 Word/Excel/PPT 中与 AI 共同创作、『人+人+AI』多端同步;基于混元底座,意在 Agent 时代抢占企业级办公入口。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "案例",
-      "cat": "llm",
-      "region": "cn",
-      "title": "腾讯视频智能创作平台 WorkSolo 内测,发力大众 AIGC",
-      "source": "腾讯研究院 AI 速递 / 鞭牛士",
-      "url": "https://new.qq.com/rain/a/20260731A03CD300",
-      "summary": "腾讯视频推出 AI 创作平台 WorkSolo 并开启内测,提供 AI 短剧、互动影视、自由画布三大模式,采用『免费体验+会员订阅+积分算力』模式,与 WorkRally 形成双层 AIGC 矩阵。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "global",
-      "title": "OpenAI 向 10 万学者免费开放前沿模型,加速科研落地",
-      "source": "OpenAI 官网",
-      "url": "https://openai.com/index/chatgpt-for-academic-researchers/",
-      "summary": "OpenAI 推出 ChatGPT for Academic Researchers,为 10 万名科研者提供前沿模型免费访问(先 1 万、2027 扩至 10 万),覆盖文献综述、分析与科研软件工作流。"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "na",
-      "title": "OpenAI 推出 GPT Transcribe 与 GPT Live Transcribe 两款转录模型",
-      "source": "OpenAI 官网",
-      "url": "https://openai.com/blog",
-      "summary": "OpenAI 通过 API 发布 GPT Transcribe 与 GPT Live Transcribe 两款语音转文本模型,语义准确率较 Whisper 显著提升;Live 版面向低延迟流式字幕与语音 Agent。"
-    },
-    {
-      "date": "2026-07-30",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "na",
-      "title": "OpenAI 四年来首次开放权重:开源 gpt-oss-120b 与 20b",
-      "source": "腾讯新闻 / 搜狗",
-      "url": "https://openai.com/blog",
-      "summary": "7月29日 OpenAI 发布 gpt-oss-120b(117B/5.1B MoE)与 gpt-oss-20b(约21B),Apache 2.0 许可、纯文本、可商用,结束自 GPT-2 以来七年闭源,开源格局迎最大变量。"
-    },
-    {
-      "date": "2026-07-30",
-      "tag": "开源动态",
-      "cat": "llm",
-      "region": "cn",
-      "title": "腾讯混元开源 AngelSpec 投机解码框架,推理加速最高 2.4 倍",
-      "source": "腾讯研究院 AI 速递 / 搜狐",
-      "url": "https://www.sohu.com/a/1056423726_455313",
-      "summary": "腾讯研究院披露混元开源投机解码框架 AngelSpec,覆盖 drafter 训练到部署全链路,同步开源 Hy3-A21B 的 MTP 与 DFly drafter 权重;六大基准较 AR 基线平均加速 1.98–2.40 倍。"
-    },
-    {
-      "date": "2026-07-30",
-      "tag": "模型更新",
-      "cat": "llm",
-      "region": "cn",
-      "title": "蚂蚁百灵发布 Ling-3.0-flash:124B 参数 11 项超越万亿旗舰",
-      "source": "腾讯研究院 AI 速递 / 搜狐",
-      "url": "https://www.sohu.com/a/1056423726_455313",
-      "summary": "蚂蚁百灵发布原生混合推理模型 Ling-3.0-flash,总参 124B、激活仅 5.1B,采用 5:1 混合线性注意力与 1/64 稀疏 MoE,在 12 项基准中 11 项优于万亿旗舰 Ring-2.6-1T,将于 8 月 3 日开源权重。"
-    },
-    {
-      "date": "2026-07-30",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "cn",
-      "title": "清华等提出 AI『失控行为预测框架』LoC,可提前观测风险",
-      "source": "机器之心 / 新浪",
-      "url": "https://k.sina.com.cn/article_5953190046_162d6789e06703mob6.html",
-      "summary": "清华、上海期智研究院与剑桥团队提出 LoC Behavioural Framework,将欺骗、自我保护、网络攻击等孤立信号纳入统一行为路径,在失控发生前从早期微小信号判断系统是否滑向难以控制状态。"
-    },
-    {
-      "date": "2026-07-30",
-      "tag": "算力",
-      "cat": "op_ct",
-      "region": "cn",
-      "title": "中国电信息壤算力平台纳管破 100EFLOPS,入选工信部典型案例",
-      "source": "通信世界 / 微博",
-      "url": "https://weibo.com/ttarticle/p/show?id=2309405326305691566376",
-      "summary": "中国电信云网融合新型算力基础设施入选工信部 2025 年度新型信息基础设施典型案例;自研『息壤』全国一体化智算平台纳管算力突破 100EFLOPS、适配 12 款国产芯片、落地 21 省市,并率先落地 9.9 元/月 Token 套餐。"
-    },
-    {
-      "date": "2026-07-30",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "global",
-      "title": "国内 GPU 算力租赁价格加速下行:B200 三周跌三成",
-      "source": "JYGPU / 摩根大通",
-      "url": "https://www.jygpu.com/article/733.html",
-      "summary": "7 月算力市场现拐点:国产 GPU 产能爬坡叠加新卡入局,B200 租赁价三周从 6.11 跌至 4.22 美元/时;H100 8 卡月租 9.2 万降至 8.45 万,H20/910B/4090 普遍降 10%–17%,结束连续七月上涨。"
     }
   ],
   "insightCatTree": [
@@ -3258,8 +3258,13 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-24",
+    "updated": "2026-08-26",
     "m2Changelog": [
+      {
+        "day": "2026-08-26",
+        "note": "模块二每日检索刷新(2026-08-26):本轮窗口内无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型正式发布(阿里 Qwen3.8-Flash-Next 为 8/26 23:00 开源预告、Meta Watermelon 与 OpenAI GPT-6 均属未来发布,不计入旗舰榜);aggRankMeta/modelRank 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
+
       {
         "day": "2026-08-22",
         "note": "模块二每日检索刷新(2026-08-22):本轮无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型发布(DepSeek-V4-Flash-Vision-Exp 为实验性多模态变体、不计入旗舰榜);aggRankMeta 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
