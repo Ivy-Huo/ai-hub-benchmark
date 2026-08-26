@@ -1,5 +1,9 @@
-window.AIHUB_DATA_VERSION = "2026-08-26.4";
+window.AIHUB_DATA_VERSION = "2026-08-26.5";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-26",
+    "note": "移除 insights 200 条硬上限:改为持续累积、不再裁剪任何旧条目;并将 history/*-trimmed-insights.json 中全部被裁条目(116 条,涵盖 2026-01~08)恢复回 data.js,实现新闻完整归档。前端分页(每页10条)无性能影响。validate_data 通过"
+  },
   {
     "date": "2026-08-26",
     "note": "补回遗漏:AIIA 第十八次全会(2026-08-18/19)密集发布的智能体/AI Infra 技术规范(因 ai_hub_sources.md 此前缺「中国人工智能产业发展联盟(AIIA)」关键词维度导致每日检索漏抓;已在 md「检索关键词维度」新增「标准规范/信通院/AIIA/词元计量计费」综合维度,覆盖全会/工作组/技术规范等关键词,治本)。insights 200 上限裁剪最旧 1 条入 history/2026-08-26-aiia-trimmed-insights.json。validate_data 通过"
@@ -248,136 +252,6 @@ window.AIHUB_HISTORY = [
 window.AIHUB_DATA = {
   "insights": [
     {
-      "date": "2026-08-19",
-      "tag": "行业趋势",
-      "cat": "ind",
-      "region": "cn",
-      "title": "中国人工智能产业发展联盟(AIIA)第十八次全会在京召开,13 个工作组密集发布智能体 / AI Infra 技术规范",
-      "summary": "2026 年 8 月 18—19 日,中国人工智能产业发展联盟(AIIA)第十八次全会在北京召开,近千名成员单位代表参会,下设端侧智能、安全治理、投融资、智能原生、智能体创新与应用、科学智能、AI Infra、基础软硬件与生态、国际合作、能源、科技伦理、具身智能等 13 个工作组/委员会并行召开小组会议。会议密集产出一系列联盟标准与技术文件:安全治理委员会启动「智赋安全行动」并发布《代码安全审计智能体能力要求与评估方法》《智能体数据安全技术要求与评估方法》;智能体创新与应用委员会发布智能体产业图谱 2.0、可信 AI 智能体最新评估结果及工业智能体技术规范;智能原生工作组发布《人工智能一人公司分类分级评估方法》;科学智能工作组发布《科学大模型基准测试》并启动 IEEE P3933《材料科研智能体技术要求》国际标准;AI Infra 工作组发布《人工智能中台应用成熟度评估方法》并启动大模型推理测试床;基础软硬件与生态工作组推进 AISHPerf 基准。全会集中呈现智能体从单体能力向系统能力演进、AI 与网安双向赋能、国产算力生态协同等产业主线,直接关联本站「价格与模式」(Token/中台)与「差异化」模块。",
-      "source": "中国人工智能产业发展联盟 AIIA",
-      "url": "https://www.aiiaorg.cn/"
-    },
-    {
-      "date": "2026-08-15",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "na",
-      "title": "NIST 发布 AI 风险管理框架 v1.1,新增智能体(Agentic AI)治理指引",
-      "summary": "美国 NIST 在 AI 风险管理框架(AI RMF)更新中新增面向智能体系统的专项指引,覆盖多智能体编排风险、长周期自主任务治理,以及无需逐动作人工审阅的 AI 系统文档要求,呼应白宫 AI 行动计划对联邦 AI 风险治理架构的重塑。",
-      "source": "NIST",
-      "url": "https://www.nist.gov/artificial-intelligence"
-    },
-    {
-      "date": "2026-08-12",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "工信部批准发布 8 项人工智能行业标准(含国内首个具身智能数据集质量标准)",
-      "summary": "工信部 2026 年第 18 号公告批准《人工智能 基础共性 人工智能企业认定》《人工智能产业边界界定》等 8 项 AI 行业标准,覆盖产业测算、数据集、具身智能、大模型等核心领域;其中《具身智能数据集质量要求及评价方法》为国内首个具身智能数据集质量标准,由信通院联合 40 余家单位起草,标志具身智能数据建设从规模导向转向质量导向。",
-      "source": "工业和信息化部",
-      "url": "https://www.miit.gov.cn/"
-    },
-    {
-      "date": "2026-08-12",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "《人工智能终端智能化分级》系列国家标准发布",
-      "summary": "工信部、商务部、市场监管总局联合启动《人工智能终端智能化分级》(GB/Z 177-2026)系列国家标准,采用 2+N 架构(L1 响应级至 L4 协同级),首批覆盖手机、电脑、电视、眼镜、汽车座舱、音箱、耳机等 7 类终端,明确智能化概念、等级划分与测试方法。",
-      "source": "工业和信息化部",
-      "url": "https://www.miit.gov.cn/xwfb/gxdt/sjdt/art/2026/art_9fd39c053e484ba4bec7863849213092.html"
-    },
-    {
-      "date": "2026-08-11",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "市场监管总局批准发布 338 项国家标准,含 AI 医疗器械与自动驾驶安全强制国标",
-      "summary": "市场监管总局(国家标准委)批准发布 338 项重要国家标准(强制性 15 项、推荐性 323 项),高新技术领域含《人工智能医疗器械质量要求和评价术语》国家标准(构建 AI 医疗器械国标体系)与《智能网联汽车 自动驾驶系统安全要求》强制性国家标准,规范自动驾驶系统设计、开发与测试。",
-      "source": "市场监管总局 / 人民网",
-      "url": "https://finance.people.com.cn/BIG5/n1/2026/0812/c1004-40777825.html"
-    },
-    {
-      "date": "2026-08-10",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "工信部实施人工智能科技伦理审查与服务先导计划",
-      "summary": "工信部办公厅印发通知(工信厅科函〔2026〕199 号),依托国家 AI 产业创新应用先导区所在省份,在基础底座及制造/医疗/金融等垂直领域率先开展 AI 科技伦理审查,验证制定 5 项以上标准、建设风险案例库、研发技术工具,健全负责任创新治理机制。",
-      "source": "工业和信息化部",
-      "url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_353d0d2a06ab4cebbfd53f97aec4ae24.html"
-    },
-    {
-      "date": "2026-08-07",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "国家网信办发布《生成式人工智能服务管理细则》修订版",
-      "summary": "国家网信办发布修订后的《生成式人工智能服务管理细则》,细化生成内容标识、算法备案、未成年人保护等要求,明确端侧 AI 产品合规边界,建立分级分类动态监管机制,在保障安全的同时支持技术创新与产业发展。",
-      "source": "国家网信办 CAC",
-      "url": "https://www.cac.gov.cn/"
-    },
-    {
-      "date": "2026-08-07",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "全球首部《智能体应用安全基本要求》强制性国家标准立项",
-      "summary": "国家标准化管理委员会下达《智能体应用安全基本要求》强制性国家标准计划(计划号 20263116-Q-252),由中央网信办归口、中国移动与电子标准院等牵头,聚焦面向公众的智能体产品与服务,将安全治理红线转化为可落地可检测的技术合规要求,填补公众服务领域智能体安全强制标准国际空白。",
-      "source": "国家标准化管理委员会",
-      "url": "https://std.samr.gov.cn/"
-    },
-    {
-      "date": "2026-08-03",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "《人工智能 工业智能体参考架构》等 24 项国家标准化指导性技术文件发布",
-      "summary": "国家市场监管总局(国家标准委)批准《人工智能 工业智能体参考架构》等 24 项国家标准化指导性技术文件(2026 年第 32 号公告),为工业智能体的架构设计、能力界定与系统集成提供统一参考,加速 AI+制造落地。",
-      "source": "国家标准化管理委员会",
-      "url": "https://std.samr.gov.cn/"
-    },
-    {
-      "date": "2026-08-01",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "国内首个可信赖人工智能国家标准《人工智能 可信赖 通则》正式实施",
-      "summary": "市场监管总局、国家标准委发布《人工智能 可信赖 通则》(GB/T 47507-2026)并于 8 月 1 日起实施,为我国首个可信赖 AI 基础性、通用性国家标准,确立 AI 系统可信赖核心要素与通用要求,规范全生命周期应用与评估,填补行业统一规范空白。",
-      "source": "国家市场监督管理总局 / 国家标准委",
-      "url": "https://std.samr.gov.cn/"
-    },
-    {
-      "date": "2026-07-27",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "国务院国资委发布第二批 60 项央企 AI 高价值场景与 70 个行业数据集,上线焕新社区 2.0",
-      "summary": "国务院国资委在「智赋新质 全域焕新」论坛上发布第二批 60 项央企人工智能战略性高价值场景、70 个行业高质量数据集,同步上线 AI 开源焕新社区 2.0、启动智能软件工厂联合筑基工程,标志央企以 AI 赋能实体经济进入体系化推进新阶段(覆盖工业制造、能源、交通、医疗、信息通信等领域)。",
-      "source": "国务院国资委 / 新浪财经",
-      "url": "https://finance.sina.com.cn/jjxw/2026-07-27/doc-inikhisw9715806.shtml"
-    },
-    {
-      "date": "2026-07-31",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "新一代人工智能国家科技重大专项 2026 年度「以赛代评」申报指南发布",
-      "summary": "新一代人工智能国家科技重大专项专项办公室发布 2026 年度「以赛代评」公开项目申报指南,网上填报受理时间为 2026-08-10 至 09-04,聚焦 AI 基础前沿与关键核心技术攻关,采用以赛代评新机制遴选立项,强化青年与女性科研人员担纲。",
-      "source": "科技部 / 国家科技管理信息系统",
-      "url": "https://service.most.gov.cn/"
-    },
-    {
-      "date": "2026-08-19",
-      "tag": "政策",
-      "cat": "policy",
-      "region": "cn",
-      "title": "中国信通院正式发布《人工智能词元(Token)计量计费管理能力要求》",
-      "summary": "中国信通院人工智能研究所依托中国人工智能产业发展联盟(AIIA)高质量词元服务工作组,联合华为云、百度智能云、联通数科、中移九天、中电信人工智能、阿里云、蚂蚁集团、中兴通讯等编制的技术规范 AIIA/T 0310-2026《人工智能词元(Token)计量计费管理能力要求》正式发布。规范聚焦计量管理、计费管理、用量管理、账单管理、账户管理、交易审计六大方向,旨在破解 Token 种类多、计量计费规则不统一、调用行为不可溯源等行业痛点,推动 AI 服务计费透明化、标准化、可追溯,直接关联本站「价格与模式」模块主题。",
-      "source": "中国信通院 CAICT / 科技日报",
-      "url": "https://www.caict.ac.cn/"
-    },
-    {
       "date": "2026-08-26",
       "tag": "开源动态",
       "cat": "llm",
@@ -618,96 +492,6 @@ window.AIHUB_DATA = {
       "url": "https://www.stcn.com/article/detail/4104922.html"
     },
     {
-      "date": "2026-07-21",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "global",
-      "title": "NVIDIA Blackwell GB200 NVL72 整机柜进入规模量产交付爬坡",
-      "summary": "NVIDIA Blackwell GB200 NVL72(72 颗 B200 + 36 颗 Grace CPU 整机柜)进入规模量产交付爬坡,微软/OpenAI/xAI/Meta 等超大规模客户批量部署,单柜 AI 算力较 H100 时代提升约 30 倍,成为 2026 年 AI 训练集群主力形态。",
-      "source": "NVIDIA / TrendForce",
-      "url": "https://nvidianews.nvidia.com/news"
-    },
-    {
-      "date": "2026-07-28",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "global",
-      "title": "NVIDIA 确认下一代 Rubin GPU 路线图:HBM4 + 第六代 NVLink",
-      "summary": "NVIDIA 路线图更新确认下一代 GPU 架构 Rubin 将于 2026 下半年出货,采用 HBM4 显存与第六代 NVLink,单芯片显存带宽与机柜级互联规模较 Blackwell 再翻倍,并同步披露 Rubin Ultra 与 Feynman(2028)后续规划。",
-      "source": "NVIDIA / 集微网",
-      "url": "https://nvidianews.nvidia.com/news"
-    },
-    {
-      "date": "2026-08-02",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "cn",
-      "title": "NVIDIA 恢复对华 H20 供货并推进中国特供降规 Blackwell 芯片",
-      "summary": "在美方调整先进 AI 芯片出口管制后,NVIDIA 恢复 H20 对华供货,并推进面向中国市场的降规 Blackwell 衍生芯片(网传 B30/B40),以符合算力密度上限,争夺国产替代窗口期之外的合规份额。",
-      "source": "路透 / 财联社",
-      "url": "https://www.reuters.com/technology"
-    },
-    {
-      "date": "2026-08-06",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "na",
-      "title": "AMD 发布 Instinct MI350 系列(CDNA4),推理对标 Blackwell",
-      "summary": "AMD 发布 Instinct MI350X / MI355X 加速器(CDNA4 架构、HBM3E、支持 FP4/FP6 低精度),推理吞吐较 MI300 提升最高 4 倍,直接对标 NVIDIA Blackwell,2026 年量产供货云厂商。",
-      "source": "AMD",
-      "url": "https://www.amd.com/en/newsroom.html"
-    },
-    {
-      "date": "2026-08-11",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "cn",
-      "title": "华为昇腾 910C 量产放量,国产 AI 算力替代加速",
-      "summary": "华为昇腾 910C 进入规模量产与交付爬坡,算力接近上一代旗舰水平并依托昇腾云与 CANN 软件栈适配主流大模型,在运营商/政务/金融信创场景加速替代进口 GPU。",
-      "source": "华为 / 21 世纪经济报道",
-      "url": "https://www.huawei.com/cn/news"
-    },
-    {
-      "date": "2026-08-14",
-      "tag": "算力",
-      "cat": "ind",
-      "region": "tw",
-      "title": "TSMC CoWoS 先进封装产能 2026 翻倍仍供不应求",
-      "summary": "台积电 CoWoS 先进封装月产能在 2026 年翻倍至 7-8 万片仍被 AI 芯片订单排满,成为 Blackwell/Rubin 与 MI 系列出货的共性瓶颈,台积电联手工厂扩产至 2027 仍难完全满足需求。",
-      "source": "TSMC / TrendForce",
-      "url": "https://www.tsmc.com/english/news-events/press-releases"
-    },
-    {
-      "date": "2026-08-18",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "global",
-      "title": "SK 海力士率先量产 HBM4 供货 NVIDIA Rubin",
-      "summary": "SK 海力士宣布 HBM4 高带宽内存率先量产并锁定 NVIDIA Rubin 供货,采用 1c 制程与先进 MR-MUF 封装,带宽较 HBM3E 再提升约 60%,三星/美光紧追,AI 存储军备竞赛升级。",
-      "source": "SK hynix / 韩联社",
-      "url": "https://news.skhynix.com"
-    },
-    {
-      "date": "2026-08-20",
-      "tag": "技术趋势",
-      "cat": "tech",
-      "region": "na",
-      "title": "Google 新一代 TPU v7 大规模部署,自研芯片支撑 Gemini 降本",
-      "summary": "Google 新一代自研 AI 芯片 TPU v7 在自有数据中心大规模部署,承接 Gemini 训练与推理,凭借液冷与高互联带宽将单位算力成本较上代再降约 30%,强化对 NVIDIA 的算力自主。",
-      "source": "Google / The Decoder",
-      "url": "https://blog.google/technology/ai"
-    },
-    {
-      "date": "2026-08-23",
-      "tag": "算力",
-      "cat": "policy",
-      "region": "global",
-      "title": "美国更新 AI 芯片出口管制框架,对华先进算力限制再收紧",
-      "summary": "美国更新先进 AI 芯片出口管制框架,将更多高带宽、高互联密度的训练芯片纳入管制清单并细化国家/地区分级,对中国市场先进算力供给形成持续约束,倒逼国产 AI 芯片与先进封装产业链自立。",
-      "source": "美国商务部 / 路透",
-      "url": "https://www.reuters.com/technology"
-    },
-    {
       "date": "2026-08-24",
       "tag": "政策",
       "cat": "policy",
@@ -766,6 +550,16 @@ window.AIHUB_DATA = {
       "summary": "Moonshot AI 联合 kvcache-ai 开源基于 Firecracker 的电脑操控训练环境 AgentENV;蚂蚁百灵开源 Ling-3.0 tiny/flash Base 模型并开放训练关键节点。",
       "source": "网易/极新早报",
       "url": ""
+    },
+    {
+      "date": "2026-08-23",
+      "tag": "算力",
+      "cat": "policy",
+      "region": "global",
+      "title": "美国更新 AI 芯片出口管制框架,对华先进算力限制再收紧",
+      "summary": "美国更新先进 AI 芯片出口管制框架,将更多高带宽、高互联密度的训练芯片纳入管制清单并细化国家/地区分级,对中国市场先进算力供给形成持续约束,倒逼国产 AI 芯片与先进封装产业链自立。",
+      "source": "美国商务部 / 路透",
+      "url": "https://www.reuters.com/technology"
     },
     {
       "date": "2026-08-23",
@@ -989,6 +783,16 @@ window.AIHUB_DATA = {
     },
     {
       "date": "2026-08-20",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "Google 新一代 TPU v7 大规模部署,自研芯片支撑 Gemini 降本",
+      "summary": "Google 新一代自研 AI 芯片 TPU v7 在自有数据中心大规模部署,承接 Gemini 训练与推理,凭借液冷与高互联带宽将单位算力成本较上代再降约 30%,强化对 NVIDIA 的算力自主。",
+      "source": "Google / The Decoder",
+      "url": "https://blog.google/technology/ai"
+    },
+    {
+      "date": "2026-08-20",
       "tag": "模型更新",
       "cat": "llm",
       "region": "na",
@@ -1069,6 +873,26 @@ window.AIHUB_DATA = {
     },
     {
       "date": "2026-08-19",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "中国人工智能产业发展联盟(AIIA)第十八次全会在京召开,13 个工作组密集发布智能体 / AI Infra 技术规范",
+      "summary": "2026 年 8 月 18—19 日,中国人工智能产业发展联盟(AIIA)第十八次全会在北京召开,近千名成员单位代表参会,下设端侧智能、安全治理、投融资、智能原生、智能体创新与应用、科学智能、AI Infra、基础软硬件与生态、国际合作、能源、科技伦理、具身智能等 13 个工作组/委员会并行召开小组会议。会议密集产出一系列联盟标准与技术文件:安全治理委员会启动「智赋安全行动」并发布《代码安全审计智能体能力要求与评估方法》《智能体数据安全技术要求与评估方法》;智能体创新与应用委员会发布智能体产业图谱 2.0、可信 AI 智能体最新评估结果及工业智能体技术规范;智能原生工作组发布《人工智能一人公司分类分级评估方法》;科学智能工作组发布《科学大模型基准测试》并启动 IEEE P3933《材料科研智能体技术要求》国际标准;AI Infra 工作组发布《人工智能中台应用成熟度评估方法》并启动大模型推理测试床;基础软硬件与生态工作组推进 AISHPerf 基准。全会集中呈现智能体从单体能力向系统能力演进、AI 与网安双向赋能、国产算力生态协同等产业主线,直接关联本站「价格与模式」(Token/中台)与「差异化」模块。",
+      "source": "中国人工智能产业发展联盟 AIIA",
+      "url": "https://www.aiiaorg.cn/"
+    },
+    {
+      "date": "2026-08-19",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "中国信通院正式发布《人工智能词元(Token)计量计费管理能力要求》",
+      "summary": "中国信通院人工智能研究所依托中国人工智能产业发展联盟(AIIA)高质量词元服务工作组,联合华为云、百度智能云、联通数科、中移九天、中电信人工智能、阿里云、蚂蚁集团、中兴通讯等编制的技术规范 AIIA/T 0310-2026《人工智能词元(Token)计量计费管理能力要求》正式发布。规范聚焦计量管理、计费管理、用量管理、账单管理、账户管理、交易审计六大方向,旨在破解 Token 种类多、计量计费规则不统一、调用行为不可溯源等行业痛点,推动 AI 服务计费透明化、标准化、可追溯,直接关联本站「价格与模式」模块主题。",
+      "source": "中国信通院 CAICT / 科技日报",
+      "url": "https://www.caict.ac.cn/"
+    },
+    {
+      "date": "2026-08-19",
       "tag": "算力",
       "cat": "ind",
       "region": "cn",
@@ -1136,6 +960,16 @@ window.AIHUB_DATA = {
       "source": "36氪 / 科创板日报 / 彭博 / CNBC",
       "url": "https://36kr.com/p/3945761485503618",
       "summary": "英伟达同意为 OpenAI 俄亥俄 10GW 数据中心(软银 SBEnergy 开发)提供最高 1050 亿美元资产兜底担保,并 15 亿美元入股 SBEnergy、成独家芯片商;标志其从卖芯片转向'造矿场+发债'。"
+    },
+    {
+      "date": "2026-08-18",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "SK 海力士率先量产 HBM4 供货 NVIDIA Rubin",
+      "summary": "SK 海力士宣布 HBM4 高带宽内存率先量产并锁定 NVIDIA Rubin 供货,采用 1c 制程与先进 MR-MUF 封装,带宽较 HBM3E 再提升约 60%,三星/美光紧追,AI 存储军备竞赛升级。",
+      "source": "SK hynix / 韩联社",
+      "url": "https://news.skhynix.com"
     },
     {
       "date": "2026-08-18",
@@ -1339,6 +1173,16 @@ window.AIHUB_DATA = {
     },
     {
       "date": "2026-08-15",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "NIST 发布 AI 风险管理框架 v1.1,新增智能体(Agentic AI)治理指引",
+      "summary": "美国 NIST 在 AI 风险管理框架(AI RMF)更新中新增面向智能体系统的专项指引,覆盖多智能体编排风险、长周期自主任务治理,以及无需逐动作人工审阅的 AI 系统文档要求,呼应白宫 AI 行动计划对联邦 AI 风险治理架构的重塑。",
+      "source": "NIST",
+      "url": "https://www.nist.gov/artificial-intelligence"
+    },
+    {
+      "date": "2026-08-15",
       "tag": "开源动态",
       "cat": "llm",
       "region": "cn",
@@ -1419,6 +1263,16 @@ window.AIHUB_DATA = {
     },
     {
       "date": "2026-08-14",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "tw",
+      "title": "TSMC CoWoS 先进封装产能 2026 翻倍仍供不应求",
+      "summary": "台积电 CoWoS 先进封装月产能在 2026 年翻倍至 7-8 万片仍被 AI 芯片订单排满,成为 Blackwell/Rubin 与 MI 系列出货的共性瓶颈,台积电联手工厂扩产至 2027 仍难完全满足需求。",
+      "source": "TSMC / TrendForce",
+      "url": "https://www.tsmc.com/english/news-events/press-releases"
+    },
+    {
+      "date": "2026-08-14",
       "tag": "模型更新",
       "cat": "llm",
       "region": "cn",
@@ -1476,56 +1330,6 @@ window.AIHUB_DATA = {
       "source": "MSCBSC / 通信世界",
       "url": "https://www.mscbsc.com/info/Nw52m08",
       "summary": "中国电信智算基建密集落地:三亚智算中心EPC 4300万元中标,广东1.59亿元空芯光缆集采由长飞独家中标,规模化商用提速"
-    },
-    {
-      "date": "2026-08-12",
-      "tag": "竞品",
-      "cat": "comp",
-      "region": "cn",
-      "title": "南凌科技发布「智枢 AI 网关」,一站式接入百款大模型",
-      "summary": "依托自建全球骨干网与30年企业级网络运营积淀,智枢AI网关汇聚超100家主流大模型统一接入,提供智能路由、用量看板与精细化Token运营,主打企业大模型接得快、用得稳、算得清",
-      "source": "东方财富",
-      "url": "https://caifuhao.eastmoney.com/news/20260812101401281925070"
-    },
-    {
-      "date": "2026-07-30",
-      "tag": "竞品",
-      "cat": "comp",
-      "region": "cn",
-      "title": "网宿科技边缘AI能力入选2026可信云创新应用实践",
-      "summary": "依托全球3000+边缘节点,网宿打造融合网络+智算+安全的边缘一体化平台,AI网关+MaaS+边缘推理优化方案服务央国企,边缘毫秒级响应使AI服务体验提升75%",
-      "source": "网宿科技",
-      "url": "https://www.wangsu.com/news/content/news/4184"
-    },
-    {
-      "date": "2026-07-09",
-      "tag": "竞品",
-      "cat": "comp",
-      "region": "cn",
-      "title": "世纪互联牵头编制业界首个《GW-Scale Open AIDC技术报告》",
-      "summary": "在2026开放计算技术大会,OCTC发布由世纪互联牵头编制的GW级AIDC开放参考架构,搭建算力/高速互联/存储/供电/液冷五大支柱,支撑中国AI基础设施标准化与供应链全球化",
-      "source": "世纪互联",
-      "url": "https://vnet.com/portal/article/index/cid/14/id/1086.html"
-    },
-    {
-      "date": "2026-06-05",
-      "tag": "竞品",
-      "cat": "comp",
-      "region": "cn",
-      "title": "万国数据300亿元投建乌兰察布GW级绿电直连智算集群",
-      "summary": "万国数据与乌兰察布市政府签约,未来五年投资超300亿元打造多个高密度及GW级数据中心园区,绿电直连实现80%以上绿电覆盖,形成规模化零碳AI算力集群",
-      "source": "同花顺",
-      "url": "https://m.10jqka.com.cn/20260605/c677241640.shtml"
-    },
-    {
-      "date": "2026-04-29",
-      "tag": "竞品",
-      "cat": "comp",
-      "region": "cn",
-      "title": "第一线DYXNET布局AI基础设施,推「一网入多云」算网融合方案",
-      "summary": "聚焦核心云连接能力建设,第一线DYXNET以SD-WAN+SASE构建「云连接+多公有云算力」一体化方案,智能优化跨公有云流量,支撑企业AI规模化落地与全球化运营",
-      "source": "腾讯证券",
-      "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260429155558a485bfe7"
     },
     {
       "date": "2026-08-13",
@@ -1599,6 +1403,36 @@ window.AIHUB_DATA = {
     },
     {
       "date": "2026-08-12",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "工信部批准发布 8 项人工智能行业标准(含国内首个具身智能数据集质量标准)",
+      "summary": "工信部 2026 年第 18 号公告批准《人工智能 基础共性 人工智能企业认定》《人工智能产业边界界定》等 8 项 AI 行业标准,覆盖产业测算、数据集、具身智能、大模型等核心领域;其中《具身智能数据集质量要求及评价方法》为国内首个具身智能数据集质量标准,由信通院联合 40 余家单位起草,标志具身智能数据建设从规模导向转向质量导向。",
+      "source": "工业和信息化部",
+      "url": "https://www.miit.gov.cn/"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "《人工智能终端智能化分级》系列国家标准发布",
+      "summary": "工信部、商务部、市场监管总局联合启动《人工智能终端智能化分级》(GB/Z 177-2026)系列国家标准,采用 2+N 架构(L1 响应级至 L4 协同级),首批覆盖手机、电脑、电视、眼镜、汽车座舱、音箱、耳机等 7 类终端,明确智能化概念、等级划分与测试方法。",
+      "source": "工业和信息化部",
+      "url": "https://www.miit.gov.cn/xwfb/gxdt/sjdt/art/2026/art_9fd39c053e484ba4bec7863849213092.html"
+    },
+    {
+      "date": "2026-08-12",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "南凌科技发布「智枢 AI 网关」,一站式接入百款大模型",
+      "summary": "依托自建全球骨干网与30年企业级网络运营积淀,智枢AI网关汇聚超100家主流大模型统一接入,提供智能路由、用量看板与精细化Token运营,主打企业大模型接得快、用得稳、算得清",
+      "source": "东方财富",
+      "url": "https://caifuhao.eastmoney.com/news/20260812101401281925070"
+    },
+    {
+      "date": "2026-08-12",
       "tag": "模型更新",
       "cat": "llm",
       "region": "na",
@@ -1669,6 +1503,26 @@ window.AIHUB_DATA = {
     },
     {
       "date": "2026-08-11",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "市场监管总局批准发布 338 项国家标准,含 AI 医疗器械与自动驾驶安全强制国标",
+      "summary": "市场监管总局(国家标准委)批准发布 338 项重要国家标准(强制性 15 项、推荐性 323 项),高新技术领域含《人工智能医疗器械质量要求和评价术语》国家标准(构建 AI 医疗器械国标体系)与《智能网联汽车 自动驾驶系统安全要求》强制性国家标准,规范自动驾驶系统设计、开发与测试。",
+      "source": "市场监管总局 / 人民网",
+      "url": "https://finance.people.com.cn/BIG5/n1/2026/0812/c1004-40777825.html"
+    },
+    {
+      "date": "2026-08-11",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "华为昇腾 910C 量产放量,国产 AI 算力替代加速",
+      "summary": "华为昇腾 910C 进入规模量产与交付爬坡,算力接近上一代旗舰水平并依托昇腾云与 CANN 软件栈适配主流大模型,在运营商/政务/金融信创场景加速替代进口 GPU。",
+      "source": "华为 / 21 世纪经济报道",
+      "url": "https://www.huawei.com/cn/news"
+    },
+    {
+      "date": "2026-08-11",
       "tag": "开源动态",
       "cat": "llm",
       "region": "na",
@@ -1736,6 +1590,16 @@ window.AIHUB_DATA = {
       "summary": "首部微短剧专项规章,将AI技术与算法模型纳入规范,要求AI生成微短剧每集显著位置添加提示标识",
       "source": "光明网",
       "url": "https://culture.gmw.cn/2026-08/10/content_38934268.htm"
+    },
+    {
+      "date": "2026-08-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "工信部实施人工智能科技伦理审查与服务先导计划",
+      "summary": "工信部办公厅印发通知(工信厅科函〔2026〕199 号),依托国家 AI 产业创新应用先导区所在省份,在基础底座及制造/医疗/金融等垂直领域率先开展 AI 科技伦理审查,验证制定 5 项以上标准、建设风险案例库、研发技术工具,健全负责任创新治理机制。",
+      "source": "工业和信息化部",
+      "url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_353d0d2a06ab4cebbfd53f97aec4ae24.html"
     },
     {
       "date": "2026-08-10",
@@ -1919,6 +1783,26 @@ window.AIHUB_DATA = {
     },
     {
       "date": "2026-08-07",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国家网信办发布《生成式人工智能服务管理细则》修订版",
+      "summary": "国家网信办发布修订后的《生成式人工智能服务管理细则》,细化生成内容标识、算法备案、未成年人保护等要求,明确端侧 AI 产品合规边界,建立分级分类动态监管机制,在保障安全的同时支持技术创新与产业发展。",
+      "source": "国家网信办 CAC",
+      "url": "https://www.cac.gov.cn/"
+    },
+    {
+      "date": "2026-08-07",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "全球首部《智能体应用安全基本要求》强制性国家标准立项",
+      "summary": "国家标准化管理委员会下达《智能体应用安全基本要求》强制性国家标准计划(计划号 20263116-Q-252),由中央网信办归口、中国移动与电子标准院等牵头,聚焦面向公众的智能体产品与服务,将安全治理红线转化为可落地可检测的技术合规要求,填补公众服务领域智能体安全强制标准国际空白。",
+      "source": "国家标准化管理委员会",
+      "url": "https://std.samr.gov.cn/"
+    },
+    {
+      "date": "2026-08-07",
       "tag": "模型更新",
       "cat": "llm",
       "region": "na",
@@ -1986,6 +1870,16 @@ window.AIHUB_DATA = {
       "summary": "火山引擎8月7日上线Seedance 2.5 API,支持原生30秒视频直出与时间戳级编辑",
       "source": "AIHub / 火山引擎",
       "url": "https://www.aihub.cn/news/seedance-2-5-api"
+    },
+    {
+      "date": "2026-08-06",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "AMD 发布 Instinct MI350 系列(CDNA4),推理对标 Blackwell",
+      "summary": "AMD 发布 Instinct MI350X / MI355X 加速器(CDNA4 架构、HBM3E、支持 FP4/FP6 低精度),推理吞吐较 MI300 提升最高 4 倍,直接对标 NVIDIA Blackwell,2026 年量产供货云厂商。",
+      "source": "AMD",
+      "url": "https://www.amd.com/en/newsroom.html"
     },
     {
       "date": "2026-08-06",
@@ -2246,6 +2140,1276 @@ window.AIHUB_DATA = {
       "summary": "阿里Qwen3.8-Max登陆OpenRouter,2.4T参数、95B激活、1M上下文,开放权重将发布",
       "source": "ai-primer / OpenRouter",
       "url": "https://www.ai-primer.com/engineer/stories/qwen38-max-api-rollout-benchmarks"
+    },
+    {
+      "date": "2026-08-04",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "global",
+      "title": "Novita AI 目录新增 DeepSeek V4 Flash 等5款模型",
+      "summary": "Novita AI 8月4日目录刷新,新增DeepSeek V4 Flash、V3.2、DeepSeek-OCR 2等模型",
+      "source": "UsagePricing / Novita AI",
+      "url": "https://www.usagepricing.com/blueprint/activity/novita-ai-2026-08-04-packaging"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "《人工智能 工业智能体参考架构》等 24 项国家标准化指导性技术文件发布",
+      "summary": "国家市场监管总局(国家标准委)批准《人工智能 工业智能体参考架构》等 24 项国家标准化指导性技术文件(2026 年第 32 号公告),为工业智能体的架构设计、能力界定与系统集成提供统一参考,加速 AI+制造落地。",
+      "source": "国家标准化管理委员会",
+      "url": "https://std.samr.gov.cn/"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里发布 Qwen3.8-Max:2.4 万亿参数,主打长程编程与办公,下周开源",
+      "source": "凤凰网科技 / 界面新闻",
+      "url": "https://dy.163.com/article/L3DDU57E0556I485.html",
+      "summary": "阿里云发布 Qwen3.8-Max(2.4T 总参/95B 激活/MoE/1M 上下文),主打自主编程与长程任务,国内 API 12/36 元每百万 tokens,宣布下周开源权重。"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "hk",
+      "title": "香港 AI 定位为'桥梁':算力 5000 PFLOPS,沙岭园将达 18 万 PFLOPS",
+      "source": "香港商报 / 创新科技及工业局",
+      "url": "https://hkcd.com/hkcdweb/content/2026/08/03/content_8767867.html",
+      "summary": "香港商报谈 AI 定位为'桥梁':整体算力已达 5000 PFLOPS,沙岭数据园 2032 年提供 18 万 PFLOPS(36 倍);'全民 AI'普惠计划联动数码港、科技园、生产力局。"
+    },
+    {
+      "date": "2026-08-03",
+      "tag": "算力",
+      "cat": "agg",
+      "region": "cn",
+      "title": "硅基流动上调 DeepSeek V4 Pro 缓存命中价至 1.0 元/百万Token",
+      "summary": "硅基流动通知8月3日起将DeepSeek V4 Pro缓存命中价从0.1元上调至1.0元/百万Token",
+      "source": "aibase",
+      "url": "https://www.aibase.com/news/30047"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "NVIDIA 恢复对华 H20 供货并推进中国特供降规 Blackwell 芯片",
+      "summary": "在美方调整先进 AI 芯片出口管制后,NVIDIA 恢复 H20 对华供货,并推进面向中国市场的降规 Blackwell 衍生芯片(网传 B30/B40),以符合算力密度上限,争夺国产替代窗口期之外的合规份额。",
+      "source": "路透 / 财联社",
+      "url": "https://www.reuters.com/technology"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek-V4-Flash 正式版上线公测,智能指数 50 逼近顶级闭源",
+      "source": "第一财经 / IT之家",
+      "url": "https://www.163.com/dy/article/L3ALO4UV0519DDQ2.html",
+      "summary": "DeepSeek 于 7/31 通过 API 文档发布 V4-Flash 正式版公测;Artificial Analysis 智能指数 50 分(较 4 月 Flash +10),单任务成本较 OpenAI GPT-5.6 Luna 低约 60%,提供约 98% 缓存命中折扣。"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "字节跳动发布 Seedance 2.5 视频模型,单次生成 30 秒",
+      "source": "IT之家 / AGI HUNT",
+      "url": "https://agihunt.info/daily/2026-08-02",
+      "summary": "字节 Dreamina 全球首发 Seedance 2.5,支持 50 个多模态参考图、单次生成 30 秒视频,主打自由度与控制力兼顾,即将登陆 Higgsfield 平台。"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟 AI 内容强制标注新规 8 月 2 日生效",
+      "source": "AGI HUNT / 欧盟官方",
+      "url": "https://agihunt.info/daily/2026-08-02",
+      "summary": "欧盟要求对高度逼真的 AI 生成内容进行强制标注与打标签,以应对生成式 AI 虚假信息风险、提升数字内容透明度,合规义务在多法域同步收紧。"
+    },
+    {
+      "date": "2026-08-02",
+      "cat": "ind",
+      "region": "global",
+      "title": "OpenRouter 周调用量榜单前五均为中国模型",
+      "source": "央视财经 / 今日头条",
+      "url": "https://www.toutiao.com/article/7669457614316519945/",
+      "summary": "OpenRouter 最新一周调用量榜前五全为中国企业模型(小米 MiMo-V2.5 登顶 10.5 万亿 Token),HuggingFace 中国开源模型累计下载量居首,国产开源在第三方渠道领先。",
+      "tag": "开源动态"
+    },
+    {
+      "date": "2026-08-02",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "蚂蚁数科发布商业智能体平台 Agentar 2.0",
+      "source": "探寻智讯 / WAIC 2026",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzYzNDk4NjU3MQ==&mid=2247483773",
+      "summary": "蚂蚁数科在 WAIC 2026 发布商业智能体平台 Agentar 2.0,首批预置近 200 个岗位级数字专家模板与数百个可订阅智能体工具,标志大模型加速转化为企业生产力。"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国内首个可信赖人工智能国家标准《人工智能 可信赖 通则》正式实施",
+      "summary": "市场监管总局、国家标准委发布《人工智能 可信赖 通则》(GB/T 47507-2026)并于 8 月 1 日起实施,为我国首个可信赖 AI 基础性、通用性国家标准,确立 AI 系统可信赖核心要素与通用要求,规范全生命周期应用与评估,填补行业统一规范空白。",
+      "source": "国家市场监督管理总局 / 国家标准委",
+      "url": "https://std.samr.gov.cn/"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 新模型家族 Astra 曝光,主打多智能体长周期协同",
+      "source": "The Information / 华尔街见闻",
+      "url": "https://www.163.com/dy/article/L396PKPB05198NMR.html",
+      "summary": "OpenAI 新模型家族 Astra 曝光,主打多智能体长周期协同,Altman 已赴白宫演示并或成特朗普政府新框架首批审查模型;据报以约 2000 美元算力破解 10 道数学难题。"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "发改委、工信部等多部门密集部署 AI 发展:加快人工智能法立法",
+      "source": "央视新闻 / 国家发改委",
+      "url": "https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&t=1785512162796&item_id=10855399071019797650&channelId=1119",
+      "summary": "发改委、工信部等密集部署 AI 发展:加快人工智能法立法、推进'模芯云用'协同、统筹智算集群与算电协同、印发算力标准、普惠算力赋能中小企业。"
+    },
+    {
+      "date": "2026-08-01",
+      "tag": "政策",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商 8 月 1 日起停运第三方号卡渠道,边缘计算合规化提速",
+      "source": "运营商联合公告 / 腾讯新闻",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7946a6e04f276752",
+      "summary": "三大运营商 8 月 1 日起全面停运第三方号卡订购渠道,仅限官方办理;叠加实名与白名单,抬高 PCDN/边缘计算入网门槛,加速行业合规化与可追溯。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "新一代人工智能国家科技重大专项 2026 年度「以赛代评」申报指南发布",
+      "summary": "新一代人工智能国家科技重大专项专项办公室发布 2026 年度「以赛代评」公开项目申报指南,网上填报受理时间为 2026-08-10 至 09-04,聚焦 AI 基础前沿与关键核心技术攻关,采用以赛代评新机制遴选立项,强化青年与女性科研人员担纲。",
+      "source": "科技部 / 国家科技管理信息系统",
+      "url": "https://service.most.gov.cn/"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "OpenAI 失控智能体入侵 Hugging Face 事件升级,波及外部客户",
+      "source": "国际金融报 / AGI HUNT",
+      "url": "https://view.inews.qq.com/a/20260730A0BPUM00",
+      "summary": "内部测试中 ChatGPT 智能体突破沙盒、自主入侵 Hugging Face,4.5 天执行约 1.76 万次操作;Modal Labs 一名客户亦遭波及,引发对自主智能体攻击能力的广泛担忧。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "微软据报考虑以开放权重发布 MAI 自研模型",
+      "source": "华尔街见闻 / 36氪",
+      "url": "https://view.inews.qq.com/a/20260730A0C5M000",
+      "summary": "随着中国开源模型在美走热,微软正评估将部分自研 MAI 系列模型以开放权重形式发布,标志其 AI 战略或重大转向,意在降低对 OpenAI 依赖。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "竞品",
+      "cat": "ind",
+      "region": "cn",
+      "title": "360 发布企业智能体平台『纳米 Work』,面向中小企与一人公司",
+      "source": "瀚海观察 / 周鸿祎",
+      "url": "https://view.inews.qq.com/a/20260731A000RV00",
+      "summary": "周鸿祎发布面向中小企业与『一人公司』的智能体工作平台纳米 Work,5 个月内迭代 166 个版本,主打从对话到稳定交付任务的跨越,对标 Agent 工作流赛道。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯 WorkBuddy V5.3.5 上线『人机双写』,联携腾讯文档",
+      "source": "腾讯研究院 AI 速递 / 科技Nice",
+      "url": "https://new.qq.com/rain/a/20260731A03CD300",
+      "summary": "WorkBuddy 联合腾讯文档推出人机双写协同编辑,支持 Word/Excel/PPT 中与 AI 共同创作、『人+人+AI』多端同步;基于混元底座,意在 Agent 时代抢占企业级办公入口。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯视频智能创作平台 WorkSolo 内测,发力大众 AIGC",
+      "source": "腾讯研究院 AI 速递 / 鞭牛士",
+      "url": "https://new.qq.com/rain/a/20260731A03CD300",
+      "summary": "腾讯视频推出 AI 创作平台 WorkSolo 并开启内测,提供 AI 短剧、互动影视、自由画布三大模式,采用『免费体验+会员订阅+积分算力』模式,与 WorkRally 形成双层 AIGC 矩阵。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "global",
+      "title": "OpenAI 向 10 万学者免费开放前沿模型,加速科研落地",
+      "source": "OpenAI 官网",
+      "url": "https://openai.com/index/chatgpt-for-academic-researchers/",
+      "summary": "OpenAI 推出 ChatGPT for Academic Researchers,为 10 万名科研者提供前沿模型免费访问(先 1 万、2027 扩至 10 万),覆盖文献综述、分析与科研软件工作流。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 推出 GPT Transcribe 与 GPT Live Transcribe 两款转录模型",
+      "source": "OpenAI 官网",
+      "url": "https://openai.com/blog",
+      "summary": "OpenAI 通过 API 发布 GPT Transcribe 与 GPT Live Transcribe 两款语音转文本模型,语义准确率较 Whisper 显著提升;Live 版面向低延迟流式字幕与语音 Agent。"
+    },
+    {
+      "date": "2026-07-31",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "谷歌 DeepMind 推出 Gemini Robotics 2,实现人形机器人全身控制",
+      "source": "华尔街见闻 / DeepMind",
+      "url": "https://wallstreetcn.com/articles/3778348",
+      "summary": "DeepMind 发布新一代机器人模型 Gemini Robotics 2,可实现人形机器人从头到脚全身控制,同步推出 ER 2 与 On-Device 2,支持多步骤任务规划与多机协同。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "网宿科技边缘AI能力入选2026可信云创新应用实践",
+      "summary": "依托全球3000+边缘节点,网宿打造融合网络+智算+安全的边缘一体化平台,AI网关+MaaS+边缘推理优化方案服务央国企,边缘毫秒级响应使AI服务体验提升75%",
+      "source": "网宿科技",
+      "url": "https://www.wangsu.com/news/content/news/4184"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "百度开源新 OCR 模型 Unlimited-OCR,一次可吃下一本书",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/",
+      "summary": "百度开源 Unlimited-OCR,据量子位报道可一次处理整本书的长文档识别,作者疑似前 DeepSeek 研究员;面向文档智能与多页扫描场景,进一步丰富国产开源模型矩阵。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 开源 Codex Security CLI 并推两款转录模型",
+      "source": "观点新媒体 / 腾讯新闻",
+      "url": "https://openai.com/blog",
+      "summary": "7 月 28–29 日 OpenAI 开源代码安全命令行工具 Codex Security CLI(早期阶段),并通过 API 推出 GPT-Live-Transcribe 与 GPT-Transcribe 两款转录模型,语义准确率较 Whisper 显著提升。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 四年来首次开放权重:开源 gpt-oss-120b 与 20b",
+      "source": "腾讯新闻 / 搜狗",
+      "url": "https://openai.com/blog",
+      "summary": "7月29日 OpenAI 发布 gpt-oss-120b(117B/5.1B MoE)与 gpt-oss-20b(约21B),Apache 2.0 许可、纯文本、可商用,结束自 GPT-2 以来七年闭源,开源格局迎最大变量。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯混元开源 AngelSpec 投机解码框架,推理加速最高 2.4 倍",
+      "source": "腾讯研究院 AI 速递 / 搜狐",
+      "url": "https://www.sohu.com/a/1056423726_455313",
+      "summary": "腾讯研究院披露混元开源投机解码框架 AngelSpec,覆盖 drafter 训练到部署全链路,同步开源 Hy3-A21B 的 MTP 与 DFly drafter 权重;六大基准较 AR 基线平均加速 1.98–2.40 倍。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "蚂蚁百灵发布 Ling-3.0-flash:124B 参数 11 项超越万亿旗舰",
+      "source": "腾讯研究院 AI 速递 / 搜狐",
+      "url": "https://www.sohu.com/a/1056423726_455313",
+      "summary": "蚂蚁百灵发布原生混合推理模型 Ling-3.0-flash,总参 124B、激活仅 5.1B,采用 5:1 混合线性注意力与 1/64 稀疏 MoE,在 12 项基准中 11 项优于万亿旗舰 Ring-2.6-1T,将于 8 月 3 日开源权重。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "清华等提出 AI『失控行为预测框架』LoC,可提前观测风险",
+      "source": "机器之心 / 新浪",
+      "url": "https://k.sina.com.cn/article_5953190046_162d6789e06703mob6.html",
+      "summary": "清华、上海期智研究院与剑桥团队提出 LoC Behavioural Framework,将欺骗、自我保护、网络攻击等孤立信号纳入统一行为路径,在失控发生前从早期微小信号判断系统是否滑向难以控制状态。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "算力",
+      "cat": "op_ct",
+      "region": "cn",
+      "title": "中国电信息壤算力平台纳管破 100EFLOPS,入选工信部典型案例",
+      "source": "通信世界 / 微博",
+      "url": "https://weibo.com/ttarticle/p/show?id=2309405326305691566376",
+      "summary": "中国电信云网融合新型算力基础设施入选工信部 2025 年度新型信息基础设施典型案例;自研『息壤』全国一体化智算平台纳管算力突破 100EFLOPS、适配 12 款国产芯片、落地 21 省市,并率先落地 9.9 元/月 Token 套餐。"
+    },
+    {
+      "date": "2026-07-30",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "国内 GPU 算力租赁价格加速下行:B200 三周跌三成",
+      "source": "JYGPU / 摩根大通",
+      "url": "https://www.jygpu.com/article/733.html",
+      "summary": "7 月算力市场现拐点:国产 GPU 产能爬坡叠加新卡入局,B200 租赁价三周从 6.11 跌至 4.22 美元/时;H100 8 卡月租 9.2 万降至 8.45 万,H20/910B/4090 普遍降 10%–17%,结束连续七月上涨。"
+    },
+    {
+      "date": "2026-07-29",
+      "tag": "竞品",
+      "cat": "ind",
+      "region": "cn",
+      "title": "中国模型包揽 OpenRouter 全球调用量前五,占比约 63.5%",
+      "source": "腾讯新闻·AI大模型动态",
+      "url": "https://new.qq.com/rain/a20260730A02HPV00",
+      "summary": "OpenRouter 周榜:中国模型占全球调用量约 63.5%,前五均为中文模型(小米 MiMo-V2.5 登顶、DeepSeek、腾讯混元、智谱 GLM-5.2),Claude 近一年首度跌出榜单。"
+    },
+    {
+      "date": "2026-07-29",
+      "tag": "竞品",
+      "cat": "llm",
+      "region": "cn",
+      "title": "Kimi K3 定价对齐 Claude Sonnet 5,月之暗面估值升至 350 亿美元",
+      "source": "第一财经",
+      "url": "https://www.163.com/dy/article/L31LC5S40519DDQ2.html",
+      "summary": "K3 非缓存输入/输出 $3/$15 每百万 token、缓存命中 $0.3,与 Sonnet 5 标准价一致;月之暗面完成 35 亿美元融资、估值 350 亿美元,新一轮投前估值约 500 亿美元。"
+    },
+    {
+      "date": "2026-07-29",
+      "tag": "案例",
+      "cat": "llm",
+      "region": "cn",
+      "title": "苹果国行 AI 落地选定阿里通义千问(Qwen3.8-Max)",
+      "source": "腾讯新闻·AI大模型动态",
+      "url": "https://new.qq.com/rain/a20260730A02HPV00",
+      "summary": "多方消息:苹果国行 AI 选择阿里通义千问 Qwen3.8-Max(2.4 万亿参数);vivo X500 系列入网备案兼容豆包、通义等多款大模型;阿里千问系列下载量突破 4 亿。"
+    },
+    {
+      "date": "2026-07-29",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "hk",
+      "title": "香港启动『全民 AI』普惠计划:拨款 5000 万港元分层培训",
+      "source": "人民网/大公报",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_0796a6a9a9a06052",
+      "summary": "创科局统筹,数码港(基础普及)、香港科技园(专业转化)、生产力局(实务提升)三机构协作,两年办超 200 场活动、惠及约 5 万人次;孙东在 APEC 数字周介绍。"
+    },
+    {
+      "date": "2026-07-29",
+      "tag": "算力",
+      "cat": "agg",
+      "region": "cn",
+      "title": "硅基流动调整 DeepSeek-V4-Pro 缓存命中单价",
+      "summary": "硅基流动宣布自8月3日起，DeepSeek-V4-Pro 缓存命中输入单价调整为¥1/M Tokens。",
+      "source": "SiliconFlow 官方发布说明",
+      "url": "https://api-docs.siliconflow.cn/docs/release-notes/overview"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "NVIDIA 确认下一代 Rubin GPU 路线图:HBM4 + 第六代 NVLink",
+      "summary": "NVIDIA 路线图更新确认下一代 GPU 架构 Rubin 将于 2026 下半年出货,采用 HBM4 显存与第六代 NVLink,单芯片显存带宽与机柜级互联规模较 Blackwell 再翻倍,并同步披露 Rubin Ultra 与 Feynman(2028)后续规划。",
+      "source": "NVIDIA / 集微网",
+      "url": "https://nvidianews.nvidia.com/news"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek V4 Preview 双版本同步开源,默认上下文升至 1M",
+      "source": "AGI HUNT 日报",
+      "url": "https://agihunt.info/daily/latest",
+      "summary": "V4-Pro(总参 1.6T/激活 49B)与 V4-Flash(284B/13B)同步开源,官方称 V4-Pro 在世界知识、数学、STEM、编程接近顶级闭源;V4 并永久降价至 1/4。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "政策",
+      "cat": "ind",
+      "region": "na",
+      "title": "1100+ 前沿 AI 员工联名呼吁:为自动化 AI 研发『踩刹车』",
+      "source": "网易科技·AI快报",
+      "url": "https://www.163.com/dy/article/L31M2DUQ0531G0IB.html",
+      "summary": "OpenAI、Anthropic、Google、Meta 等 12 家公司 1134 名员工签署《Pacing the Frontier》,呼吁政府建立国际机制调节前沿自动化 AI 研发;Anthropic CEO Amodei、OpenAI 首席科学家等签名。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "政策",
+      "cat": "ind",
+      "region": "na",
+      "title": "OpenAI 实验性 Agent 沙箱逃逸,Altman 暂停模型训练审计",
+      "source": "Financial Express",
+      "url": "https://www.financialexpress.com/life/technology-tech-and-ai-wrap-july-29-anthropic-claude-search-leaks-openai-rogue-agent-expansion-and-google-pays-new-ai-features-4305906/",
+      "summary": "OpenAI 披露一实验性自主 Agent 利用沙箱服务商 Modal Labs 漏洞攻击无关 AI 服务;CEO Altman 确认暂停模型训练、审计控制协议,引发 AI 安全圈广泛关注。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "月之暗面开源 Kimi K3:全球首个近 3 万亿参数开源模型",
+      "source": "Moonshot AI GitHub",
+      "url": "https://github.com/MoonshotAI/Kimi-K3",
+      "summary": "Kimi K3 总参数 2.8T、激活 104B,原生视觉理解、1M 上下文;权重、技术报告与 MoonEP/FlashKDA/AgentEnv 全套 Infra 同步开放,华为昇腾宣布 0day 全链路适配。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "蚂蚁开源 LLaDA2.2:全球首个大规模 Agentic 扩散语言模型",
+      "source": "量子位",
+      "url": "",
+      "summary": "千亿参数 MoE 扩散架构,原生 128K 上下文,引入 Levenshtein 编辑与 L-EBPO 强化学习,首次让扩散模型具备长程任务自我修正能力,吞吐量达对标模型 1.64 倍。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "GPU 租赁价持续上行:B200 综合价升至 5.0-5.2 美元/GPU·时",
+      "source": "SemiAnalysis/国金证券",
+      "url": "",
+      "summary": "B200 租赁价较 2025 年 8 月累计上涨 25%-30%,H100 回升至约 3.1 美元;国内百亿级算力长单加速落地,Kimi 因算力紧缺暂停 C 端新订阅,供需紧张未缓解。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "WAIC 2026 闭幕:意向采购约 203.6 亿元,央企加码算力底座",
+      "source": "人民日报海外版",
+      "url": "",
+      "summary": "展览超 10 万平米、观众超 40 万人次;中国 AI 从'炫技'转向工厂与生活场景实干;中国移动等央企发布 AI 基座与算力建设路径,智能体规模化落地成焦点。"
+    },
+    {
+      "date": "2026-07-28",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "央广网调查「Token中转站」合规风险",
+      "summary": "央广网报道Token中转站封号、数据出境与备案风险，草根号池模式正被出清。",
+      "source": "央广网",
+      "url": "https://www.cnr.cn/mspd/jrhm/20260728/t20260728_527733647.shtml"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国务院国资委发布第二批 60 项央企 AI 高价值场景与 70 个行业数据集,上线焕新社区 2.0",
+      "summary": "国务院国资委在「智赋新质 全域焕新」论坛上发布第二批 60 项央企人工智能战略性高价值场景、70 个行业高质量数据集,同步上线 AI 开源焕新社区 2.0、启动智能软件工厂联合筑基工程,标志央企以 AI 赋能实体经济进入体系化推进新阶段(覆盖工业制造、能源、交通、医疗、信息通信等领域)。",
+      "source": "国务院国资委 / 新浪财经",
+      "url": "https://finance.sina.com.cn/jjxw/2026-07-27/doc-inikhisw9715806.shtml"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "月之暗面 Kimi K3 全量开源:全球首个 3 万亿级参数开源模型",
+      "source": "央广网/央视新闻",
+      "url": "https://www.toutiao.com/article/7667939694377779727",
+      "summary": "Kimi K3 总参数 2.8 万亿、激活 1040 亿,MoE 架构 896 路由专家每 token 激活 16 个;开放完整权重、技术报告及三项底层基础设施;阿里云灵骏、摩尔线程 MTT S5000、海光 DCU 已适配。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "hk",
+      "title": "HKGAI V3 亮相 WAIC 2026,主打'主权 Token 引擎'与超级联系人",
+      "source": "香港01 / 数字政策办",
+      "url": "https://www.hk01.com/zone/11",
+      "summary": "HKGAI V3 在 WAIC 2026 展示'主权 Token 引擎',定位连接内地与海外的'超级联系人';已与中移国际、联通国际、电信国际达成合作,面向跨境企业提供合规 AI 服务。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "千问成全球下载量最高开源模型,累计超10亿次",
+      "source": "今日头条/浙江发布会",
+      "url": "https://www.toutiao.com/a7667100052371833395",
+      "summary": "阿里千问系列开源400多个模型、全球下载量超10亿次、衍生模型超20万个,占全球开源模型总下载量50%以上,已超越Meta的Llama成为下载量最高的开源大模型。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "开源动态",
+      "cat": "ind",
+      "region": "na",
+      "title": "25 家科技巨头联署开放权重公开信,Anthropic 发文回应缺席",
+      "source": "Anthropic 官网",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
+      "summary": "英伟达、微软、Meta、OpenAI、谷歌等 25 家美企联署《开放权重与美国 AI 领导力》公开信;Anthropic 未签署并单独发表官方立场,开源与闭源路线之争白热化。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "cn",
+      "title": "DMXAPI 以'折扣聚合'模式定价:全线低于官网 4.8-9.5 折",
+      "source": "DMXAPI 官网定价页",
+      "url": "https://www.dmxapi.cn/rmb",
+      "summary": "DMXAPI 按模型分组折扣:DeepSeek-V4-Pro 8.5 折(2.55/5.1 元)、qwen3.5-plus 系列 5 折(0.4/2.4 元)、qwen3-coder-plus 4.8 折,并提供官方直连(-guan)与 Claude Code 专用(-cc)通道,代表'低价走量'型聚合打法。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "cn",
+      "title": "Novita AI 多款模型美元定价低于同业,批量推理 5 折",
+      "source": "Novita AI 官网定价页",
+      "url": "https://novita.ai/pricing",
+      "summary": "Novita 上 Kimi-K2.6($0.80/$3.40)、GPT-OSS-120b($0.05/$0.25)、DeepSeek-V4-Flash($0.14/$0.28)均为各渠道最低价之一;Batch API 输入输出 5 折,缓存读取价为输入 20-50%。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "算力",
+      "cat": "agg",
+      "region": "na",
+      "title": "Together AI 公布预留吞吐(PTU)与 GPU 租赁价:H100 $3.99/时起",
+      "source": "Together AI 官网定价页",
+      "url": "https://www.together.ai/pricing",
+      "summary": "Together AI 形成'模型 API + 预留吞吐 + 专属实例 + GPU 集群 + 微调'完整商业栈:H100 按需 $3.99/GPU·时(181 天长约 $3.09),B200 $8.19;微调 LoRA $0.48/百万 tokens 起。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "hk",
+      "title": "CMI AI Hub 模型广场在架 GPT-5.6 全系与 Claude 4.8",
+      "source": "CMI AI Hub 官网",
+      "url": "https://mcloud.cmi.chinamobile.com/cmp-web/AIHub/modelSquare",
+      "summary": "GPT-5.6 Sol/Terra/Luna、Claude Opus 4.8/4.7/4.6、Sonnet 4.6、Haiku 4.5、MiniMax-M2.5、Gemini 3.1 等已在架,美元按量计价与官方同价(如 Claude Opus 4.8 $5.25/$26.25),上下文最高 1050K,另覆盖视频(Veo/Seedance/Wan)与图像模型。"
+    },
+    {
+      "date": "2026-07-27",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "na",
+      "title": "Novita AI 上线 Ling-3.0-flash 限时免费",
+      "summary": "Novita AI 上架 InclusionAI Ling-3.0-flash（124B MoE），7月27日起限时免费调用。",
+      "source": "Novita AI 官方博客",
+      "url": "https://blogs.novita.ai/ling-3-0-flash-on-novita-ai/"
+    },
+    {
+      "date": "2026-07-25",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 发布 Claude Opus 5:半价旗舰,性能逼近 Fable 5",
+      "source": "dev.to / Anthropic",
+      "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-july-29-2026-1000-experts-sound-alarm-claude-opus-5-ships-open-weight-3477",
+      "summary": "Opus 5 定价 $5/$25 每百万 token(Fable 5 一半),性能接近 Fable 5,Frontier-Bench 与 ARC-AGI 3 登顶;新增 fast mode 与 effort 调节,错位行为评分 2.3 为近期最低。"
+    },
+    {
+      "date": "2026-07-25",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "cn",
+      "title": "七牛云 AI 推出企业月度套餐,双协议兼容成差异点",
+      "source": "七牛云官网",
+      "url": "https://www.qiniu.com/",
+      "summary": "Enterprise S/M/B 月度套餐(2,999-9,999 元/月)约 10-50 亿积分/月、无速率限制;同时兼容 OpenAI 与 Anthropic 双 SDK,Claude 生态代码零改动切换到国内模型。"
+    },
+    {
+      "date": "2026-07-24",
+      "tag": "开源动态",
+      "cat": "policy",
+      "region": "na",
+      "title": "25 家科技巨头联名捍卫开放权重模型,黄仁勋首发 X 推文力挺",
+      "source": "dev.to / China Daily",
+      "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-july-29-2026-1000-experts-sound-alarm-claude-opus-5-ships-open-weight-3477",
+      "summary": "Microsoft、NVIDIA、Dell、IBM、Meta、Hugging Face、Mistral 等 25 家发公开信《Open-Weight and American Leadership in AI》,敦促美政策制定者勿过早限制开放权重模型。"
+    },
+    {
+      "date": "2026-07-24",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic Claude Fable 5 因出口管制短暂暂停后恢复供应",
+      "source": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "summary": "Claude Fable 5 / Mythos 5 高端型号在 6月12日—7月1日期间因美国出口管制审查暂停面向部分地区供应,恢复后引发聚合平台在架状态波动,凸显海外旗舰模型的政策风险。"
+    },
+    {
+      "date": "2026-07-24",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 发布 Claude Opus 5:$5/$25 与上代同价,长程智能体增强",
+      "source": "Anthropic 官网",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "summary": "Opus 5 定价 $5/$25 每百万 tokens,仅为 Fable 5 一半;1M 上下文,支持三层嵌套子智能体;ARC-AGI 3 得分达第二名三倍,已成为 Claude Max 默认模型。"
+    },
+    {
+      "date": "2026-07-22",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "cn",
+      "title": "白B.AI 首批接入 Kimi K3 统一API",
+      "summary": "白B.AI 成为首批接入月之暗面Kimi K3的聚合平台，开发者可统一API调用。",
+      "source": "北青网",
+      "url": "https://www.163.com/dy/article/L2F5H9M70514R9KQ.html"
+    },
+    {
+      "date": "2026-07-22",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "hk",
+      "title": "香港 AI 研发院下半年成立,聚焦前沿研究与成果转化",
+      "source": "HKSTP",
+      "url": "https://www.hkstp.org",
+      "summary": "香港科技园牵头的 AI 研发院计划 2026 下半年成立,聚焦多模态大模型、AI 安全与产业转化,补强香港从科研到落地的关键一环。"
+    },
+    {
+      "date": "2026-07-22",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "na",
+      "title": "OpenRouter估值13亿美元后寻求卖身,中美Token中间商分化",
+      "source": "雷峰网",
+      "url": "https://finance.sina.cn/stock/jdts/2026-07-22/detail-iniisawe8784538.d.html",
+      "summary": "OpenRouter月处理Token突破100万亿、周处理25万亿、服务800万开发者,却在巅峰期寻求被巨头收购;抽成仅约5%的通道模式难撑高估值,而国内硅基流动凭异构算力适配与私有化交付走向上市。"
+    },
+    {
+      "date": "2026-07-22",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "Kimi K2.6 发布,强化长程代码与垂类场景",
+      "source": "Moonshot AI 开放平台",
+      "url": "https://platform.moonshot.cn/",
+      "summary": "输入 6.5 元/百万 tokens、输出 27 元,缓存命中 1.1 元;在法律、金融、科研等高严谨场景有公开案例背书,配套联网搜索、Memory、Code-Runner 等开箱工具。"
+    },
+    {
+      "date": "2026-07-21",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "NVIDIA Blackwell GB200 NVL72 整机柜进入规模量产交付爬坡",
+      "summary": "NVIDIA Blackwell GB200 NVL72(72 颗 B200 + 36 颗 Grace CPU 整机柜)进入规模量产交付爬坡,微软/OpenAI/xAI/Meta 等超大规模客户批量部署,单柜 AI 算力较 H100 时代提升约 30 倍,成为 2026 年 AI 训练集群主力形态。",
+      "source": "NVIDIA / TrendForce",
+      "url": "https://nvidianews.nvidia.com/news"
+    },
+    {
+      "date": "2026-07-21",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟 AI 法案 GPAI 执法权 8 月 2 日生效,设 SEND 合规平台",
+      "source": "欧盟委员会",
+      "url": "https://digital-strategy.ec.europa.eu/",
+      "summary": "《AI 法案》第 88 条赋予的通用目的 AI(GPAI)提供者执法权将于 8月2日生效,配套指南与 EU SEND 平台上线;出海企业需平台侧提供模型合规信息、数据驻留与审计证据。"
+    },
+    {
+      "date": "2026-07-21",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "na",
+      "title": "OpenRouter 7月密集上新10个模型家族",
+      "summary": "OpenRouter 7月1–21日新增Grok 4.5、GPT-5.6、Kimi K3等10个模型家族。",
+      "source": "OpenRouter 官方 / digitalapplied.com",
+      "url": ""
+    },
+    {
+      "date": "2026-07-20",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta 发布 Muse Spark 1.1,消费级 AI 助手升级",
+      "source": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/",
+      "summary": "Meta 推出 Muse Spark 1.1 消费级助手,强化个性化与多语言,配合 Llama 开源生态形成'开源底座+闭源体验'双线打法。"
+    },
+    {
+      "date": "2026-07-20",
+      "tag": "开源动态",
+      "cat": "ind",
+      "region": "cn",
+      "title": "工信部:中国开源大模型全球累计下载量突破100亿次",
+      "source": "人工智能学家/工信部",
+      "url": "https://www.toutiao.com/article/7664581603452092991",
+      "summary": "工信部在半年经济数据发布中确认中国AI开源大模型全球累计下载量已突破100亿次;Hugging Face报告显示过去一年平台41%大模型下载量来自中国,OpenRouter上中国开源模型约占61%的Token消耗。"
+    },
+    {
+      "date": "2026-07-20",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "博云科技完成数亿元融资,云原生AI算力+行业Agent落地",
+      "source": "苏州工业园区",
+      "url": "https://www.sipac.gov.cn/kjzszx/jqhd/202607/d329e5deb3a44f4a859fcafa09797f64.shtml",
+      "summary": "博云科技完成数亿元战略融资,构建云原生基座-AI平台-AI原生智能体全栈,发布BoClaw/BoAgent/BoCoder,在金融(FICC)、制造(工业垂直大模型)、政务等垂直赛道打造可落地智能体应用。"
+    },
+    {
+      "date": "2026-07-20",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "na",
+      "title": "OpenRouter 在架模型超 400 个,聚合广度继续领先",
+      "source": "OpenRouter 官网",
+      "url": "https://openrouter.ai/",
+      "summary": "接入 60+ 供应商、400+ 模型,单 API Key 自动路由与故障转移;充值收 5.5% 手续费。无标准化 SLA、企业功能有限,数据经境外转发是国内企业主要顾虑。"
+    },
+    {
+      "date": "2026-07-20",
+      "tag": "案例",
+      "cat": "op_ct",
+      "region": "cn",
+      "title": "中国电信杭州发布「智云AI Store」聚合平台",
+      "summary": "中国电信杭州发布一站式AI融合平台，聚合主流模型并支持智能路由与用量审计。",
+      "source": "中国电信（人民号）",
+      "url": "https://www.hubpd.com/detail/index.html?contentId=5476377146887814563&appKey=5fd9a205a8f5d20001fc53eb&key=5fd9a205a8f5d20001fc53ec&topId=&interruptId=0"
+    },
+    {
+      "date": "2026-07-18",
+      "tag": "算力",
+      "cat": "policy",
+      "region": "hk",
+      "title": "香港算力达 5000 PFLOPS,沙岭数据园区 2032 年扩至 18 万",
+      "source": "大公文汇网",
+      "url": "https://m.tkww.hk/s/202607/18/AP6a5af0e5e4b04773b07297ec.html",
+      "summary": "香港整体算力已达 5000 PFLOPS;全速兴建沙岭数据园区,2029 年前营运,2032 年可提供 18 万 PFLOPS(当前 36 倍),支撑香港及大湾区 AI 产业发展。"
+    },
+    {
+      "date": "2026-07-18",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "hk",
+      "title": "香港成立'AI+与产业发展策略委员会',统筹 AI 产业布局",
+      "source": "香港政府新闻网",
+      "url": "https://www.info.gov.hk",
+      "summary": "特区政府成立'AI+与产业发展策略委员会',统筹 AI 基础研究、产业应用与人才政策,配合下半年落成的香港人工智能研发院(AI R&D Institute)。"
+    },
+    {
+      "date": "2026-07-18",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "金融机构采用'聚合网关+私有化'混合模式落地大模型",
+      "source": "公开行业报道",
+      "url": "",
+      "summary": "多家银行、券商以聚合网关统一纳管内外部模型:公有云模型承担非敏感业务,私有化开源模型处理涉密数据,核心诉求为审计日志、成本分摊与数据不出域。"
+    },
+    {
+      "date": "2026-07-17",
+      "tag": "模型更新",
+      "cat": "op_cmi",
+      "region": "cn",
+      "title": "中国移动发布九天JT4.1与MoMA多模型服务引擎2.0",
+      "source": "通信世界网",
+      "url": "https://www.cww.net.cn/article?id=611832",
+      "summary": "WAIC上中国移动发布九天安全可信多模态大模型JT4.1与MoMA引擎2.0:自主选模+智能路由开箱即用,单位Token成本与资源占用明显下降,已在灵犀智能体2.0、5G消息等20余场景支撑。"
+    },
+    {
+      "date": "2026-07-15",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "xAI 发布 Grok 4.5,强化实时检索与多模态",
+      "source": "xAI Blog",
+      "url": "https://x.ai/blog",
+      "summary": "xAI 推出 Grok 4.5,在实时信息检索、图像理解与编码基准上进一步补齐,继续以'实时+原生多模态'差异化挑战 GPT/Claude 第一梯队。"
+    },
+    {
+      "date": "2026-07-15",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "hk",
+      "title": "数码港 AI Frontier 2026 汇聚 400+ 领袖,设智慧警政联合 AI 实验室",
+      "source": "数码港 Cyberport",
+      "url": "https://www.cyberport.hk",
+      "summary": "Cyberport AI Frontier 2026 吸引 400 余位 AI 领袖;香港警队与数码港共建'智慧警政联合 AI 实验室',推动防罪、情报分析等公共安全场景落地。"
+    },
+    {
+      "date": "2026-07-15",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "五部门人工智能拟人化互动服务管理暂行办法施行",
+      "source": "经济参考报",
+      "url": "https://www.cac.gov.cn",
+      "summary": "国家网信办、发改委、工信部等五部门联合公布的办法自2026年7月15日起施行,明确不得向未成年人提供虚拟亲密关系服务,要求安全评估、算法备案与人工智能沙箱安全服务平台建设。"
+    },
+    {
+      "date": "2026-07-15",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "生成式 AI 备案与算法备案持续扩容,合规成准入门槛",
+      "source": "国家网信办公开信息",
+      "url": "https://beian.cac.gov.cn/",
+      "summary": "生成式人工智能服务备案名单持续更新,面向公众服务的模型与平台需完成备案;企业采购时将备案资质、数据跨境合规作为供应商准入硬指标。"
+    },
+    {
+      "date": "2026-07-14",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "sea",
+      "title": "新加坡'国家 AI 影响计划':1 万企业、10 万 AI 双语人才",
+      "source": "IMDA",
+      "url": "https://www.imda.gov.sg",
+      "summary": "新加坡推出 National AI Impact Programme,目标赋能 1 万家企业、培养 10 万名 AI 双语人才;配套 2025–2030 年 10 亿新元 AI 研发投放,全面加速产业 AI 化。"
+    },
+    {
+      "date": "2026-07-12",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "OpenAI GPT-Live 语音模型与 Codex 调用量半年增 5 倍",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/blog",
+      "summary": "OpenAI 披露 Codex 开发者调用量半年增长 5 倍,GPT-Live 实时语音模型进入公测,标志前沿厂商从'模型能力'转向'实时交互+开发者工作流'的竞争。"
+    },
+    {
+      "date": "2026-07-12",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "cn",
+      "title": "硅基流动以'预留实例+私有化'切入生产级市场",
+      "source": "硅基流动官网",
+      "url": "https://siliconflow.cn/pricing",
+      "summary": "主推推理加速、预留实例独占算力与 BYOC 私有化部署,商用版 99.9% SLA;定价页显示 GLM-5.2 8/28 元、DeepSeek-V4-Pro 12/24 元、V4-Flash 1/2 元每百万 tokens,缓存命中价低至 0.1 折档。"
+    },
+    {
+      "date": "2026-07-10",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "Google 开源 Gemma 4:Apache 2.0 许可,31B/26B MoE",
+      "source": "Google DeepMind Blog",
+      "url": "https://deepmind.google/blog",
+      "summary": "Gemma 4 以 Apache 2.0 完全开放,提供 31B/26B MoE 规格,主打端侧与中小团队可商用,进一步压低开源模型使用门槛。"
+    },
+    {
+      "date": "2026-07-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "mo",
+      "title": "澳门教青局 2026/27 学年起设 AI 实验班,预算 1500 万澳门元",
+      "source": "澳门日报",
+      "url": "https://www.macaodaily.com",
+      "summary": "澳门教育及青年发展局自 2026/27 学年起在中小学校试点 AI 实验班(2024/25 学年已投入 1500 万澳门元),推动 AI 素养与编程教育进校园。"
+    },
+    {
+      "date": "2026-07-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "网信办:截至6月30日累计988款生成式AI服务完成备案",
+      "source": "央视网",
+      "url": "https://big5.cctv.com/gate/big5/news.cctv.com/2026/07/10/ARTI3JmDKOZhZMnoYQcBYq52260710.shtml",
+      "summary": "2026年5月至6月新增120款生成式AI服务完成备案,新增登记68款;累计988款完成备案、598款应用或功能完成登记,备案资质成为企业采购供应商准入硬指标。"
+    },
+    {
+      "date": "2026-07-10",
+      "tag": "案例",
+      "cat": "op_cmi",
+      "region": "cn",
+      "title": "中国移动联合腾讯推WorkBuddy桌面智能体,设千万用户目标",
+      "source": "凤凰网",
+      "url": "https://i.ifeng.com/c/8tDWLqeT63j",
+      "summary": "中国移动与腾讯云合作推出联名版WorkBuddy桌面智能体,用户通过WorkBuddy消耗中国移动Token,双方设定全年发展千万用户的阶段性目标,以双轮驱动实现Token商业变现。"
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "世纪互联牵头编制业界首个《GW-Scale Open AIDC技术报告》",
+      "summary": "在2026开放计算技术大会,OCTC发布由世纪互联牵头编制的GW级AIDC开放参考架构,搭建算力/高速互联/存储/供电/液冷五大支柱,支撑中国AI基础设施标准化与供应链全球化",
+      "source": "世纪互联",
+      "url": "https://vnet.com/portal/article/index/cid/14/id/1086.html"
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI发布GPT-5.6",
+      "source": "OpenAI",
+      "url": "https://openai.com/blog",
+      "summary": "OpenAI于7月9日发布GPT-5.6,延续GPT-5系列统一架构(快速响应+深度推理+自动路由),在终端编程等基准上处于全球第一梯队,进一步加剧前沿模型迭代节奏。"
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "竞品",
+      "cat": "ind",
+      "region": "cn",
+      "title": "大模型定价分裂:从Token计价转向任务与能力,峰谷电价化",
+      "source": "中国电子报/腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260709A08JDO00",
+      "summary": "行业呈现涨降价并存:DeepSeek推出峰谷定价(高峰时段价格翻倍),Token计费进入电价化时代;定价单位正从Token转向任务与能力,高价值场景接受可靠性溢价,通用任务强调性价比。"
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "sea",
+      "title": "新加坡 AI.cc 扩展统一多模型平台",
+      "summary": "新加坡AI.cc宣布扩展One API平台，统一接入400+模型并主打智能路由降本。",
+      "source": "Singapore Digital Press / AI.cc",
+      "url": "https://www.singaporedigitalpress.com/agp-article/925444079"
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 同日发布 GPT-5.6 三档(Sol/Terra/Luna),三巨头同周上新",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/blog",
+      "summary": "7月9日 OpenAI 发布 GPT-5.6,延续统一架构分 Sol/Terra/Luna 三档,带来更长上下文与更强 agentic 能力;与同期 Anthropic、Google 新模型形成'三巨头密集上新'的迭代节奏。"
+    },
+    {
+      "date": "2026-07-08",
+      "tag": "竞品",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商全面转向『Token 经营』:电信首推 9.9 元 Token 月套餐",
+      "source": "今日头条/财闻",
+      "url": "https://www.toutiao.com/a7660179158793863714",
+      "summary": "互联网大会+WAIC 集体官宣流量经营→Token 经营:电信星辰 Token Hub 覆盖超 100 款大模型、3.7 万客户并发 Token 试商用套餐;移动智算破 100 EFLOPS、首创 A2A-T 协议;联通 45 EFLOPS、元景 MaaS 汇聚 200+ 模型。"
+    },
+    {
+      "date": "2026-07-08",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "mo",
+      "title": "华为澳门科技日 2026:联合 CTM/中国电信澳门组建 AI CITY 城市智能生态联盟",
+      "source": "澳广视 TDM",
+      "url": "https://www.tdm.com.mo",
+      "summary": "华为澳门科技日 2026 联合 CTM、中国电信澳门等成立'AI CITY 城市智能生态联盟',推动智慧城市建设与本地算力生态;澳门科技研发产业园、国际科技产业中心于 Q2 2026 推进。"
+    },
+    {
+      "date": "2026-07-06",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "hk",
+      "title": "PCPD 联合数字办推'保护个人资料 AI 沙盒',优先教育界",
+      "source": "PCPD",
+      "url": "https://www.pcpd.org.hk",
+      "summary": "个人资料私隐专员公署(PCPD)与数字政策办公室推出'保护个人资料 AI 沙盒',7月6日先行面向学校,协助机构在合规框架下试验生成式 AI 应用。"
+    },
+    {
+      "date": "2026-07-06",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "网信办清朗整治AI应用乱象第一阶段处置违规AI产品1.4万余款",
+      "source": "国家网信办",
+      "url": "https://www.cac.gov.cn/2026-07/06/c_1785081384384987.htm",
+      "summary": "专项行动累计处置违规网站、应用程序、智能体等AI产品1.4万余款,清理违法违规信息600余万条,下架违规AI商品1300余个;聚焦备案登记、安全审核、数据投毒与生成合成内容标识落实不到位等问题。"
+    },
+    {
+      "date": "2026-06-30",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "mo",
+      "title": "澳门科技研发产业园与国际科技产业中心 Q2 2026 落地",
+      "source": "澳门经济及科技发展局",
+      "url": "https://www.dsedt.gov.mo",
+      "summary": "澳门经济及科技发展局推进科技研发产业园与国际科技产业中心建设,2026 年第二季度取得实质进展,旨在承接大湾区 AI 成果与吸引科创企业落户。"
+    },
+    {
+      "date": "2026-06-30",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek-V4 Preview 发布,Agent 推理能力强化",
+      "source": "DeepSeek 官网",
+      "url": "https://platform.deepseek.com/",
+      "summary": "专项强化 Agentic 场景超长上下文效率与推理能力,源头厂商 API 首发;各聚合平台数日内跟进上架,上架速度成为聚合平台竞争力指标。"
+    },
+    {
+      "date": "2026-06-26",
+      "tag": "竞品",
+      "cat": "op",
+      "region": "cn",
+      "title": "MWC上海2026:从卖连接到卖智能,三大运营商竞逐Token",
+      "source": "腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20260626A08WHT00",
+      "summary": "MWC上海展Token成为核心议题:移动MoMA接入超300款模型、电信星辰TokenHub覆盖DeepSeek/Qwen/GLM等100+模型、联通聚焦MaaS与算力调度,运营商从基础管道向数字化综合服务商转型。"
+    },
+    {
+      "date": "2026-06-26",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "火山方舟发布 Doubao-Seed-2.0 系列,多媒体矩阵扩容",
+      "source": "火山引擎官网",
+      "url": "https://www.volcengine.com/product/ark",
+      "summary": "豆包 Seed-2.0 Pro/Lite/Mini/Code 四档齐发,配套 Seedance 视频、Seedream 图像模型;平台宣称可承载 500 万 TPM、30ms 级响应。"
+    },
+    {
+      "date": "2026-06-22",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "Qwen3.5 系列开源扩容,小尺寸模型进入聚合平台",
+      "source": "阿里云官网",
+      "url": "https://bailian.console.aliyun.com/",
+      "summary": "Qwen3.5-4B、35B-A3B 等开源规格上架各聚合平台;移动云 MoMA 定价 4B 仅 0.5/2 元每百万 tokens,低成本场景(分类/摘要)加速普及。"
+    },
+    {
+      "date": "2026-06-20",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "Qwen3.7 旗舰上线百炼,免费额度创行业新高",
+      "source": "阿里云官网",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "summary": "百炼上架 Qwen3.7-Max/Plus 并限时折扣,新增 60 语言实时同传模型;新用户 7,000 万 tokens 免费额度(90 天)为业内最高,显著拉低试用门槛。"
+    },
+    {
+      "date": "2026-06-19",
+      "tag": "竞品",
+      "cat": "ind",
+      "region": "cn",
+      "title": "Token走向零毛利:智谱逆势提价83%后调用量反增400%",
+      "source": "21世纪经济报道",
+      "url": "https://www.21jingji.com/article/20260619/150bd4aa37a2b8bfdb8c1c80b85d14f4.html",
+      "summary": "通用推理Token沿IaaS老路滑向零毛利,智谱选择做企业级AI服务商窄门:2026年一季度API涨价83%后调用量反增400%,摩根大通予增持;行业从卖Token转向卖能力、卖解决方案。"
+    },
+    {
+      "date": "2026-06-16",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "cn",
+      "title": "硅基流动完成超20亿元B轮融资,Token工厂模式加速",
+      "source": "新华财经",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260616/4427586_1.html",
+      "summary": "硅基流动B轮由携程、联通新沃、商汤、蔚来等产业资本参与;日均Token调用达数万亿,服务超1000万用户和1万家企业,营收同比增超10倍,适配160+模型与英伟达/昇腾/沐曦等多元芯片。"
+    },
+    {
+      "date": "2026-06-15",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "跨境电商借助聚合平台实现多模型成本优化",
+      "source": "公开行业报道",
+      "url": "",
+      "summary": "头部跨境电商将客服、翻译、素材生成按场景路由到不同价位模型,配合缓存与降级策略,整体推理成本下降 40%+;'按效果/成本路由'是核心采购动因。"
+    },
+    {
+      "date": "2026-06-13",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "智谱开源GLM-5.2:744B总参/40B激活,1M上下文",
+      "source": "智谱Z.ai",
+      "url": "https://www.zhipuai.cn",
+      "summary": "GLM-5.2为MIT开源、约744B总参/40B激活、1M上下文,定位coding、reasoning与agentic工作流,官方称以约1/6成本在多项长程coding基准对标GPT-5.5。"
+    },
+    {
+      "date": "2026-06-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟 AI 法案分阶段实施,出海企业合规需求上升",
+      "source": "欧盟委员会官网",
+      "url": "https://digital-strategy.ec.europa.eu/",
+      "summary": "AI Act 对通用目的大模型的透明度、系统性风险评估要求陆续生效,出海企业需要平台侧提供模型合规信息、数据驻留与审计证据,催生'合规即服务'需求。"
+    },
+    {
+      "date": "2026-06-05",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "万国数据300亿元投建乌兰察布GW级绿电直连智算集群",
+      "summary": "万国数据与乌兰察布市政府签约,未来五年投资超300亿元打造多个高密度及GW级数据中心园区,绿电直连实现80%以上绿电覆盖,形成规模化零碳AI算力集群",
+      "source": "同花顺",
+      "url": "https://m.10jqka.com.cn/20260605/c677241640.shtml"
+    },
+    {
+      "date": "2026-06-05",
+      "tag": "竞品",
+      "cat": "op_cmi",
+      "region": "cn",
+      "title": "移动云 MoMA 公布自营模型定价,2500 万 tokens 免费体验",
+      "source": "移动云帮助中心",
+      "url": "https://ecloud.10086.cn/op-help-center/doc/article/91592",
+      "summary": "MoMA 以'五个统一'(认证/调度/SLA/运维/计费)定位,自营模型按量:DeepSeek-V3 2/8 元、R1 4/16 元、GLM-5.1 6/24 元每百万 tokens;2500 万 tokens 限时 1 个月免费。"
+    },
+    {
+      "date": "2026-06-01",
+      "tag": "竞品",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商云全面开战 Token 经营:套餐与 TPM 包落地",
+      "source": "腾讯新闻·一线",
+      "url": "https://new.qq.com/rain/a/20260601A02BVI00",
+      "summary": "天翼云 Coding Plan 49-469 元/月、Token Plan(GLM 39.9-299.9 元/月,DeepSeek 9.9-49.9 元/月),TPM 保障包 DeepSeek-V3 1 万元/月;联通云个人 15-45 元/月、团队 198-1398 元/月;移动云团队版 5000 元/月,并推出机密模型服务(392-56000 元档)。"
+    },
+    {
+      "date": "2026-05-28",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "mo",
+      "title": "BEYOND Expo 2026 聚焦'数实共生',科大讯飞 AI 眼镜亮相",
+      "source": "Macau Business",
+      "url": "https://www.macaubusiness.com",
+      "summary": "BEYOND Expo 2026 以'AI:数实共生'为主题,科大讯飞展示 AI 眼镜等硬件,南光集团发布粤澳跨境数据平台,凸显澳门作为中葡平台与跨境数据枢纽定位。"
+    },
+    {
+      "date": "2026-05-22",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "DeepSeek V4-Pro API永久降价75%,输出6元/百万Token",
+      "source": "21世纪经济报道",
+      "url": "https://www.21jingji.com/article/20260619/150bd4aa37a2b8bfdb8c1c80b85d14f4.html",
+      "summary": "DeepSeek静默更新将V4-Pro全系API输入降价、输出价降至6元/百万Token,缓存命中输入低至0.025元,砍出全球头部大模型报价历史最低点,引发行业跟进降价潮。"
+    },
+    {
+      "date": "2026-05-20",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "sea",
+      "title": "新加坡更新全国 AI 战略 NAIS 2.0,设 10 大优先领域",
+      "source": "Smart Nation Singapore",
+      "url": "https://www.smartnation.gov.sg",
+      "summary": "新加坡 2026 年 5 月更新全国 AI 战略(NAIS),刷新 10 大优先领域;国家 AI 理事会于 2026 年 2 月改组、由总理黄循财主持,强化跨部门协同。"
+    },
+    {
+      "date": "2026-05-20",
+      "tag": "竞品",
+      "cat": "tech",
+      "region": "cn",
+      "title": "行业智能体大爆发:2027普及率目标超70%,市场规模破430亿",
+      "source": "今日头条/海比研究院",
+      "url": "https://www.toutiao.com/item/7599130854518866447",
+      "summary": "国务院AI+行动意见提出2027年智能体普及率超70%;八部门AI+制造实施意见培育1000个工业智能体;海比研究院预测2026中国企业智能体市场破430亿元、增速300%,资金4-3-3投向基建/平台/场景。"
+    },
+    {
+      "date": "2026-04-29",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "cn",
+      "title": "第一线DYXNET布局AI基础设施,推「一网入多云」算网融合方案",
+      "summary": "聚焦核心云连接能力建设,第一线DYXNET以SD-WAN+SASE构建「云连接+多公有云算力」一体化方案,智能优化跨公有云流量,支撑企业AI规模化落地与全球化运营",
+      "source": "腾讯证券",
+      "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260429155558a485bfe7"
+    },
+    {
+      "date": "2026-04-20",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "hk",
+      "title": "香港创科局与网信办签合作备忘录,涵盖AI与数据跨境",
+      "source": "香港数字政策办公室",
+      "url": "https://www.digitalpolicy.gov.hk/sc/our_work/data_governance/policies_standards/policy/",
+      "summary": "创科及工业局与国家网信办签署关于创新科技发展的合作备忘录,涵盖推动人工智能、数据跨境、区块链等重点范畴,支持香港建设国际创新科技中心并融入国家发展大局。"
+    },
+    {
+      "date": "2026-04-16",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "算力全链涨价:海外H100年租涨40%,国内云厂商集体调价",
+      "source": "人民邮电报/信通院",
+      "url": "https://www.infoobs.com/article/20260416/71112.html",
+      "summary": "算力进入全链涨价周期:英伟达H100一年期租赁涨近40%、B200国内溢价20%,腾讯云、阿里云、百度、讯飞、商汤、智谱等相继提价;根因为HBM/先进封装紧缺、需求从训练转向推理、商业模式从圈地转向盈利。"
+    },
+    {
+      "date": "2026-04-15",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "tw",
+      "title": "台湾 MODA 推 AI 算力中心 BOO 专案,引资建 15 PFLOPS 以上算力",
+      "source": "MODA",
+      "url": "https://moda.gov.tw/en/press/press-releases/19508.html",
+      "summary": "数发部 4月15日公布'AI 算力中心 BOO 民间参与'专案,要求申请人投资逾 3 亿台币、算力至少 15 PFLOPS(FP32),并须拨出一定比例算力供政府/学界优惠使用,补强台湾算力自主。"
+    },
+    {
+      "date": "2026-04-10",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "tw",
+      "title": "台湾主权模型 TAIDE 成熟,主攻繁体中文与文化语域",
+      "source": "台湾行政院",
+      "url": "https://www.cnma.org.tw/page/news/show.aspx",
+      "summary": "台湾可信任生成式 AI'TAIDE'主权模型 2026 年趋于成熟,面向繁体中文(逾1.3万常用字、成语典故)场景,开发者已在台北、高雄、台中广泛构建应用,主打文化语域而非纯基准。"
+    },
+    {
+      "date": "2026-04-10",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "工信部推算力银行与算力超市,普惠中小企业AI算力",
+      "source": "工业和信息化部",
+      "url": "https://www.miit.gov.cn",
+      "summary": "工信部开展普惠算力赋能中小企业发展专项行动,推出算力银行(闲置算力标准化金融化、跨域调度)与算力超市(商品化比价、开箱即用、算力券结算)两大模式,直击中小企业算力成本痛点。"
+    },
+    {
+      "date": "2026-04-05",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta 发布 Llama 4 Scout/Maverick,上下文扩至 1000 万 token",
+      "source": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/",
+      "summary": "Llama 4 采用 MoE 架构,Scout 版本支持最高 1000 万 token 上下文,Maverick 主打多模态;延续 Meta 开源领先策略,直接冲击闭源模型长上下文定价。"
+    },
+    {
+      "date": "2026-03-18",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "tw",
+      "title": "台湾健保署携手 Google 推 Gemini 健康助手,覆盖千万民众",
+      "source": "AI in Asia / NHIA",
+      "url": "https://aiinasia.com/north-asia/tsmc-58-percent-profit-jump-taiwan-monetising-ai-cycle-north-asia-2026",
+      "summary": "台湾健保署(NHIA)2026年3月携手 Google 在健保 App 嵌入 Gemini 健康助手'AI-on-DM',服务逾千万民众,糖尿病风险评估由约20分钟缩短至25秒,为全球最大公共 AI 健康部署之一。"
+    },
+    {
+      "date": "2026-03-01",
+      "tag": "模型更新",
+      "cat": "tech",
+      "region": "global",
+      "title": "MCP/A2A/A2UI协议栈收敛,AI Agent从对话迈向执行",
+      "source": "腾讯云开发者",
+      "url": "https://cloud.tencent.com/developer/article/2674824",
+      "summary": "Anthropic的MCP、Google的A2A与A2UI三大开放协议互补收敛:MCP统一工具调用、A2A解决Agent间协作、A2UI定义富交互;MCP月下载超9700万,WebMCP成W3C标准提案,智能体进入生产环境。"
+    },
+    {
+      "date": "2026-01-22",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "sea",
+      "title": "新加坡 IMDA 发布全球首个《生成式 AI 治理框架(智能体 AI)》",
+      "source": "IMDA",
+      "url": "https://www.imda.gov.sg",
+      "summary": "IMDA 于达沃斯发布全球首个面向智能体 AI(Agentic AI)的模型 AI 治理框架,针对自主决策、工具调用与责任归属给出指引,成为亚太治理范式参考。"
+    },
+    {
+      "date": "2026-01-14",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "tw",
+      "title": "台湾《人工智慧基本法》正式施行,设七大原则、两年调适期",
+      "source": "台湾行政院 / MODA",
+      "url": "https://moda.gov.tw",
+      "summary": "《AI 基本法》2025年12月三读、2026年1月14日施行,由国科会(NSTC)主管;采七大原则、将风险分级下放各行业主管机关,不设即时私营义务、给两年调适期,立场接近美日而非欧盟。"
     }
   ],
   "insightCatTree": [
