@@ -1,5 +1,9 @@
-window.AIHUB_DATA_VERSION = "2026-08-26.5";
+window.AIHUB_DATA_VERSION = "2026-08-27.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-08-27",
+    "note": "每日自动更新(时间窗口 2026-08-26T09:30 ~ 2026-08-27T09:11):新增 8 条动态(均 08-26 下午/晚间发布;08-27 早间多为前日事件回顾、无新增重大动态)——主题:英伟达 FY27 Q2 营收 962 亿美元创纪录+亚马逊追加 200 万颗 GPU 大单/智谱开源 GLM-5.3-Flash 原生多模态(价格仅 Opus 4.8 的 1/40)/工信部「十五五」AI 路线图(智能算力 2185 EFLOPS、开源大模型下载破 100 亿次)/国家标准委发布《人工智能 智能体互联》GB/Z 185-2026 等新国标/DeepSeek 新一轮 500 亿元融资接近完成并启动科创板 IPO/Anthropic 拟 2 万亿美元估值冲刺 IPO(披露 30 万亿 TAM)/谷歌发布 Gemini 3.5 Transcribe 语音模型(85+ 语言 WER 2.6%)/天工 Ultra 百米 8.86 秒再破世界纪录;信源:财联社·东方财富·新华网·彭博·南华早报·华尔街日报·界面新闻·北京日报·市场监管总局;模块二无跟踪厂商变化(refresh_m2+verify 通过);GitHub 推送:成功"
+  },
   {
     "date": "2026-08-26",
     "note": "移除 insights 200 条硬上限:改为持续累积、不再裁剪任何旧条目;并将 history/*-trimmed-insights.json 中全部被裁条目(116 条,涵盖 2026-01~08)恢复回 data.js,实现新闻完整归档。前端分页(每页10条)无性能影响。validate_data 通过"
@@ -251,6 +255,87 @@ window.AIHUB_HISTORY = [
 ];
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-08-26",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "英伟达 FY27 Q2 营收 962 亿美元创纪录,亚马逊追加 200 万颗 GPU 大单",
+      "summary": "英伟达 8/26 盘后发布 FY27 Q2:营收 962 亿美元同比+106%、数据中心 890 亿(+117%)、毛利率 75%;CFO 指引 FY2028 营收增约 70%,Vera Rubin NVL72 全面投产。同期 AWS 宣布 2027–2028 年额外部署 200 万颗英伟达 GPU(Blackwell Ultra/Rubin/Rubin Ultra),累计达 300 万颗,首次引入 Vera CPU,其中 10 万颗投向美国政府「AI 工厂」。",
+      "source": "财联社 / 东方财富 / 智通财经",
+      "url": "https://www.toutiao.com/article/7678507346296930842/"
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "智谱开源 GLM-5.3-Flash:320B 原生多模态,定价仅 Opus 4.8 的 1/40",
+      "summary": "8/26 晚智谱上线并开源 GLM-5.3-Flash(320B 总参/18B 激活 MoE,代号「牛来」Ox Alpha),为 GLM-5 系列首个原生多模态模型,AA 综合智能指数 57 分持平 Claude Opus 4.8;推理算力全部由超 10 万张国产芯片承载,定价仅 Opus 4.8 约 1/40,MIT 协议开源,匿名期调用量达 DeepSeek 两倍以上。",
+      "source": "智谱 / 彭博 / AIbase",
+      "url": ""
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "工信部「十五五」AI 路线图:智能算力 2185 EFLOPS,开源大模型下载破 100 亿次",
+      "summary": "8/26 国新办「十五五」系列发布会,工信部副部长辛国斌称 AI 已贯穿研发设计制造质检运维全链条,已制定近 200 项 AI 关键标准;全国开源 AI 社区用户超 1100 万,国内开源大模型全球累计下载量破 100 亿次,智能算力达 2185 EFLOPS,70+ 高速算力通道。「十五五」将支持高端训练芯片、多模态算法、脑机接口、世界模型等。",
+      "source": "新华网 / 国新办",
+      "url": "https://english.news.cn/20260826/9bf89fd4eea3478481bb72ebe6d648cc/c.html"
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国家标准委发布 1400+ 新兴产业国标,含《人工智能 智能体互联》GB/Z 185-2026",
+      "summary": "市场监管总局(国家标准委)今年以来发布国标 2800 余项,其中新兴产业国标超 1400 项占比过半;人工智能、低空经济、脑机接口等迎来制度供给。新发布的《人工智能 智能体互联》(GB/Z 185—2026)系列国标为智能体建立统一身份码与「互联+治理」方案,打破跨平台智能体协作壁垒,为 AI 智能体支付与协同提供标准底座。",
+      "source": "央广网 / 市场监管总局",
+      "url": ""
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "行业趋势",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek 新一轮 500 亿元融资接近完成,投前估值约 5000 亿元并启动科创板 IPO",
+      "summary": "据《南华早报》等报道,DeepSeek 新一轮约 500 亿元(≈70 亿美元)融资进入尾声,投前估值约 5000 亿元(≈740 亿美元),较首轮提升约 43%;宁德时代、长鑫科技关联基金等参投。公司 2026 前 7 个月营收 4.75 亿元同比增 10 倍、API 毛利率 82.9%,已启动上海科创板 IPO 筹备。",
+      "source": "南华早报 / 财联社",
+      "url": ""
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "行业趋势",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 拟 2 万亿美元估值冲刺 IPO,披露 30 万亿美元 TAM",
+      "summary": "据《华尔街日报》报道,Anthropic 准备向 IPO 投资者披露潜在市场总规模(TAM)超 30 万亿美元,超过 SpaceX 披露的 28.5 万亿;目标 IPO 估值约 2 万亿美元、最高募资 1000 亿美元,预计 9–10 月挂牌。公司 Q2 营收约 116 亿美元、首次实现调整后营业利润转正,并拟斥 450 亿美元与 Nscale 签六年 Vera Rubin 算力大单。",
+      "source": "华尔街日报 / 界面新闻",
+      "url": "https://www.163.com/dy/article/L5AV5HOL0534A4SC.html"
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "global",
+      "title": "谷歌发布 Gemini 3.5 Transcribe 语音模型:WER 2.6%、支持 85+ 语言",
+      "summary": "Google 8/26 发布 Gemini 3.5 Transcribe 语音转文本模型,非流式词错误率 2.6%、流式 4.0%(Artificial Analysis 指标),支持 85+ 语言、最多 3 名说话人多说话人归因,可处理背景噪声与填充词并通过函数调用接入业务流程;模型已进入 Gemini API 及 Google 相关产品。",
+      "source": "Google / Artificial Analysis",
+      "url": ""
+    },
+    {
+      "date": "2026-08-26",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "天工 Ultra 百米跑出 8.86 秒再破世界纪录,第二届世界人形机器人运动会闭幕",
+      "summary": "8/26 第二届世界人形机器人运动会在北京「冰丝带」闭幕,16 国 666 队 2056 台机器人参赛。北京人形机器人创新中心天工 Ultra 在 100 米大型组复赛跑出 8.86 秒,较人类博尔特世界纪录快 0.72 秒;400 米 38.15 秒、原地跳高 2.8843 米亦破人类极限,标志具身智能运动能力进入新阶段。",
+      "source": "北京日报 / 21 世纪经济报道",
+      "url": ""
+    },
+
     {
       "date": "2026-08-26",
       "tag": "开源动态",
@@ -4438,8 +4523,12 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-26",
+    "updated": "2026-08-27",
     "m2Changelog": [
+      {
+        "day": "2026-08-27",
+        "note": "模块二每日检索刷新(2026-08-27):本轮窗口(2026-08-26 09:30 ~ 2026-08-27 09:11)内无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型正式发布(智谱 GLM-5.3-Flash 为 Flash 变体、阿里 Qwen3.8-Flash 系 8/26 已预告的开源事件,均不计入旗舰榜);aggRankMeta/modelRank 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
       {
         "day": "2026-08-26",
         "note": "模块二每日检索刷新(2026-08-26):本轮窗口内无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型正式发布(阿里 Qwen3.8-Flash-Next 为 8/26 23:00 开源预告、Meta Watermelon 与 OpenAI GPT-6 均属未来发布,不计入旗舰榜);aggRankMeta/modelRank 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
