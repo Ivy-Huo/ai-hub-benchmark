@@ -1,5 +1,9 @@
-window.AIHUB_DATA_VERSION = "2026-08-27.1";
+window.AIHUB_DATA_VERSION = "2026-09-01.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-09-01",
+    "note": "每日自动更新(时间窗口 2026-08-27T09:18 ~ 2026-09-01T09:17):新增 36 条动态——08-27 英伟达拟129亿美元收购Hugging Face(报道)/08-28 Anthropic发布硬件标准MHS(硬件版MCP)、DeepMind首做前沿模型双盲评测、Gemini Omni 1.1 Flash视频模型、Anthropic开放1万Claude科研席位、Meta拟租Anthropic百亿算力、METR披露千余智能体协同攻击HF/08-29 腾讯开源混元Hy4 preview 770B、蚂蚁Ling-3.0-flash-Fin、阿里Qoder、xAI Grok Code Fast 1、三大运营商半年报首披露Token经营、算力紧缺推升Token单价/08-30 116家机构联署警示AI网络攻击、Claude Code额度争议、国家数据局日均Token破500万亿、Anthropic AAR超越人类安全专家/08-31 工信部AI服务商培育行动、信通院牵头大模型平台系列标准发布、湖南电信Token工厂、智谱中报API收入增27倍、Meta测试机器人自动化数据中心/09-01 OpenClaw 2.0最大更新、OpenAI采购Mac做强化学习、MiniMax H3 Max接入平台、谷歌内测Gemini 3.8 Flash、OpenAI Daybreak硬件密钥生效;信源:网易/科创板日报/人民网/通信产业网/央广网/南方都市报/IT之家/Indian Express/AIbars/The Automated Daily/腾讯研究院/经济观察报等;模块二无跟踪厂商模型目录数可信增减、无新旗舰正式发布(refresh_m2+verify通过);GitHub 推送:成功"
+  },
   {
     "date": "2026-08-27",
     "note": "每日自动更新(时间窗口 2026-08-26T09:30 ~ 2026-08-27T09:11):新增 8 条动态(均 08-26 下午/晚间发布;08-27 早间多为前日事件回顾、无新增重大动态)——主题:英伟达 FY27 Q2 营收 962 亿美元创纪录+亚马逊追加 200 万颗 GPU 大单/智谱开源 GLM-5.3-Flash 原生多模态(价格仅 Opus 4.8 的 1/40)/工信部「十五五」AI 路线图(智能算力 2185 EFLOPS、开源大模型下载破 100 亿次)/国家标准委发布《人工智能 智能体互联》GB/Z 185-2026 等新国标/DeepSeek 新一轮 500 亿元融资接近完成并启动科创板 IPO/Anthropic 拟 2 万亿美元估值冲刺 IPO(披露 30 万亿 TAM)/谷歌发布 Gemini 3.5 Transcribe 语音模型(85+ 语言 WER 2.6%)/天工 Ultra 百米 8.86 秒再破世界纪录;信源:财联社·东方财富·新华网·彭博·南华早报·华尔街日报·界面新闻·北京日报·市场监管总局;模块二无跟踪厂商变化(refresh_m2+verify 通过);GitHub 推送:成功"
@@ -256,6 +260,366 @@ window.AIHUB_HISTORY = [
 window.AIHUB_DATA = {
   "insights": [
     {
+      "date": "2026-09-01",
+      "tag": "开源动态",
+      "cat": "tech",
+      "region": "global",
+      "title": "OpenClaw 发布 2.0 史上最大更新,933 贡献者提交超 1.6 万 PR",
+      "summary": "OpenClaw v2026.8.1 重构安装/浏览器/Memory/Skills/权限体系,Session 可跨本地与云端迁移并支持多人协作;九个月获 38.8 万 GitHub 星标。",
+      "source": "腾讯研究院",
+      "url": "https://www.sohu.com/a/1070192038_455313"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "行业趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "OpenAI 采购数万台 Mac 专用于强化学习训练智能体",
+      "summary": "OpenAI 购入数以万计 Mac mini/Studio 训练可自主操作电脑的智能体,Anthropic 亦通过 AWS 租用 Mac;上季 Mac 营收同比增近 29%。",
+      "source": "腾讯研究院",
+      "url": "https://www.sohu.com/a/1070192038_455313"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "MiniMax H3 Max 接入开放平台,3 秒生成支撑 24 小时 AI 直播",
+      "summary": "MiniMax 与 fal 后训练的 H3 Max 768P/480P 接入开放平台,生成 5 秒 768p 音视频不到 3 秒,海外开发者已搭出 24 小时 AI 直播网站。",
+      "source": "腾讯研究院",
+      "url": "https://www.sohu.com/a/1070192038_455313"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "模型更新",
+      "cat": "tech",
+      "region": "na",
+      "title": "谷歌员工内测下一代 Gemini 3.8 Flash,押注廉价高速工作模型",
+      "summary": "Business Insider 称谷歌员工已在内部编码平台测试 Gemini 3.8 Flash,距 3.7 仅数周;旗舰 3.5 Pro 仍未发布,谷歌转向高频 Flash 级迭代。",
+      "source": "Business Insider / ReadAboutAI",
+      "url": "https://www.readaboutai.com/september-1-2026"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "OpenAI Daybreak 9 月 1 日起要求硬件安全密钥(网络安全研究者)",
+      "summary": "OpenAI 8 月 Daybreak 扩展规定,个人 Daybreak 账户自 2026-09-01 起需硬件安全密钥,区分 Blue(防御者降护栏)与 Red(网络模型高门槛)通路。",
+      "source": "Brocker",
+      "url": "https://www.brocker.org/september-2026-ai-watch-confirmed-deadlines-open-threads"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "开源动态",
+      "cat": "ind",
+      "region": "global",
+      "title": "NVIDIA 释 Nemotron-CC-v2 数据集;美团 LongCat MoE、Perplexity 接入 Comet",
+      "summary": "NVIDIA 发布 Nemotron-CC-v2 预训练数据集;美团 LongCat-Flash/Chat(560B MoE)对标 Meta;Perplexity 与 Comet 浏览器整合加速 AI 搜索。",
+      "source": "AI News Daily",
+      "url": "https://ainews.buzzsprout.com/2507996/episodes/17765386-1st-september-ai-news-daily"
+    },
+    {
+      "date": "2026-08-31",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "工信部启动 AI 服务商培育行动,加大 Token 等服务采购",
+      "summary": "工信部 8/31 发文探索首购首用、风险补偿等模式,加大大模型/智能体/Token 服务采购,目标 2026 年底服务商资源池破 2000 家、2027 破 3000 家。",
+      "source": "中新经纬",
+      "url": "http://view.inews.qq.com/a/20260831A08SUY00"
+    },
+    {
+      "date": "2026-08-31",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "信通院牵头大模型平台系列行业标准获工信部发布(11/1 实施)",
+      "summary": "工信部 2026 第 18 号公告批准信通院牵头的大模型数据处理/训练/推理/算力调度/运维系列行业标准,4 项 11/1 实施,填补系统性空白。",
+      "source": "央广网 / 证券时报",
+      "url": "https://www.stcn.com/article/detail/4165874.html"
+    },
+    {
+      "date": "2026-08-31",
+      "tag": "案例",
+      "cat": "op_ct",
+      "region": "cn",
+      "title": "湖南电信在长沙发布 Token 工厂及星辰 TeleAgent,转向 Token 经营",
+      "summary": "湖南电信 8/31 在长沙发布 Token 工厂平台与星辰 TeleAgent,个人版永久免费,支持按量/套餐/阶梯计费,标志从流量经营迈入 Token 经营。",
+      "source": "潇湘晨报",
+      "url": "http://view.inews.qq.com/a/20260831A0CUKR00"
+    },
+    {
+      "date": "2026-08-31",
+      "tag": "技术趋势",
+      "cat": "llm",
+      "region": "global",
+      "title": "Claude 遭大规模盗号,黑客窃取会话 Token 与算力",
+      "summary": "8 月起多位 Claude 用户账号被信息窃取木马入侵,黑客盗取会话凭证消耗 Token 并造成财产损失;Anthropic 已强制下线问题账号,暴露 Token 资产安全短板。",
+      "source": "南方都市报",
+      "url": "http://view.inews.qq.com/a/20260831A0C9YD00"
+    },
+    {
+      "date": "2026-08-31",
+      "tag": "行业趋势",
+      "cat": "llm",
+      "region": "cn",
+      "title": "智谱中报验证 Token 经济:开放平台及 API 收入增 2735%",
+      "summary": "智谱 8/31 发布中期业绩,开放平台及 API 收入 8.25 亿元同比增 2735.7%,占总收入 86.5%,印证国内 Token 经济商业模式跑通。",
+      "source": "腾讯 / 智谱中报",
+      "url": "https://new.qq.com/rain/a/20260901A02DFB00"
+    },
+    {
+      "date": "2026-08-31",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "Meta 测试三家机器人厂商自动化其 AI 数据中心运维",
+      "summary": "Meta 在 Altoona、New Albany 数据中心试点 Watney Robotics、Kinova、ABB 的机械臂与移动平台,承接线缆更换、服务器上下电等运维,应对人力短缺。",
+      "source": "AIbars",
+      "url": "https://aibars.net/en/library/ai-news/list"
+    },
+    {
+      "date": "2026-08-31",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "中国大模型加速全球化,周调用量连续 14 周超美国",
+      "summary": "2026 年中国大模型从技术跟随转向全球竞争一极:字节 Seed 在美研发布局、阿里推 Qwen Cloud、腾讯 Hy3 国际开放、华为海外发 MaaS,开源模型下载占全球 41%。",
+      "source": "趋势互联",
+      "url": "http://view.inews.qq.com/a/20260831A04QOK00"
+    },
+    {
+      "date": "2026-08-30",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "global",
+      "title": "OpenAI 等 116 家机构联署公开信,警示 AI 网络攻击风险加剧",
+      "summary": "继 OpenAI 8/27 公开信后,OpenAI、Anthropic、微软、谷歌、亚马逊、IBM 等 116 家机构联合警告 AI 辅助网络攻击未来数月将更普遍复杂,呼吁协同防御。",
+      "source": "人民网",
+      "url": "https://view.inews.qq.com/a/20260830A06MVA00"
+    },
+    {
+      "date": "2026-08-30",
+      "tag": "行业趋势",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 调整 Claude Code 额度惹争议,被指「明升暗降」",
+      "summary": "Anthropic 称 9/14 起将 Claude Code 标准周限制提高 25%,但用户计算后认为存在明升暗降,围绕 AI 编程工具定价与可用性的争论升温。",
+      "source": "AI普瑞斯Pro",
+      "url": "https://view.inews.qq.com/a/20260830A04XKI00"
+    },
+    {
+      "date": "2026-08-30",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "谷歌测试将搜索 AI 概览默认扩展为更长 AI 回答",
+      "summary": "谷歌正测试把搜索 AI 概览默认扩展为更长 AI 回答并下移传统蓝色链接,或改变用户信息获取路径,加剧 AI 搜索与传统搜索流量之争。",
+      "source": "IT时代网",
+      "url": "https://new.qq.com/rain/a/20260830A08HKY00"
+    },
+    {
+      "date": "2026-08-30",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "AI neocloud Lambda 再获 10 亿美元债务融资采购英伟达 GPU",
+      "summary": "Lambda 获 JPMorgan 安排约 10 亿美元短期债务采购英伟达 GPU 租赁给微软,为四个月来第三笔大额债务,并寻求最高 30 亿美元 Pre-IPO 股权。",
+      "source": "AIbars",
+      "url": "https://aibars.net/en/library/ai-news/list"
+    },
+    {
+      "date": "2026-08-30",
+      "tag": "政策",
+      "cat": "llm",
+      "region": "na",
+      "title": "Sony Music 与 Warner Chappell 起诉 Anthropic 抓取歌词训练 Claude",
+      "summary": "Sony Music Publishing 与 Warner Chappell 8/28 起诉 Anthropic,指控其通过 torrent 抓取数万首版权歌词训练 Claude,每首侵权作品索赔最高 15 万美元。",
+      "source": "AIbars",
+      "url": "https://aibars.net/en/library/ai-news/list"
+    },
+    {
+      "date": "2026-08-30",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "国家数据局:我国日均词元(Token)调用量突破 500 万亿",
+      "summary": "国家数据局披露大模型加速落地带动词元调用爆发,我国日均词元调用量突破 500 万亿、两年增超 5000 倍;北京「词元工厂」峰值每小时产出超 10 亿词元。",
+      "source": "北京青年报",
+      "url": "https://view.inews.qq.com/a/20260830A0749400"
+    },
+    {
+      "date": "2026-08-30",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "Anthropic 自动化对齐研究员(AAR)超越人类 AI 安全专家",
+      "summary": "Anthropic 研究显示其 Automated Alignment Researcher 在 10 项对齐基准上全面提升,最优方法 6 小时内以约 4 美元/小时成本胜过资深人类研究者(人工约 150 美元/小时)。",
+      "source": "Indian Express / Anthropic",
+      "url": "https://indianexpress.com/section/technology/artificial-intelligence"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯开源混元 Hy4 preview:770B MoE、1M 上下文",
+      "summary": "腾讯发布开源旗舰模型 Hy4 preview,总参数 770B(49B 活跃)、上下文 1M,内部盲测优于 GLM-5.3 与 Kimi K3,面向软件工程/科研等生产力场景。",
+      "source": "网易 AI日报",
+      "url": "https://www.163.com/dy/article/L5F7T2QM05561FZP.html"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "蚂蚁集团推出金融增强大模型 Ling-3.0-flash-Fin(计划开源)",
+      "summary": "蚂蚁推出基于 Gemma 4 微调的金融增强模型 Ling-3.0-flash-Fin,在信息检索、图表理解、数值计算与文本生成四项能力突出,并计划开源。",
+      "source": "网易 AI日报",
+      "url": "https://www.163.com/dy/article/L5F7T2QM05561FZP.html"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "行业趋势",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里 Qoder 从 AI 编程工具升级为面向所有人的智能体工作台",
+      "summary": "阿里将 Qoder 从代码工程工具升级为智能体工作台,工作对象转向「智能体任务」,支持读-改-验证-迭代自主闭环,提供编程与通用两种模式。",
+      "source": "网易 AI日报",
+      "url": "https://www.163.com/dy/article/L5F7T2QM05561FZP.html"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "xAI 推出高效编程模型 Grok Code Fast 1,多平台限时免费",
+      "summary": "xAI 8/29 推出高效推理模型 Grok Code Fast 1,擅长智能编程,将在 Cursor、GitHub Copilot、Cline、Windsurf、Roo Code、Kilo Code 等平台限时免费。",
+      "source": "腾讯新闻 AI早报",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_00468b243d775152"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阿里吴泳铭:未来三年投入 AI+云科技平台与大消费平台",
+      "summary": "阿里 2026 财年 Q1 财报会上,CEO 吴泳铭称以 AI+云为核心的科技平台与购物生活融合的大消费平台是两大历史机遇,未来三年以创业心态再出发。",
+      "source": "界面新闻 / AI早报",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_00468b243d775152"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "sea",
+      "title": "韩国 SK 蔚山人工智能数据中心奠基(非首都圈最大)",
+      "summary": "8/29 SK 蔚山 AI 数据中心举行奠基,为韩国非首都圈最大规模;含 SK 与亚马逊云科技投资,预计 30 年创造 7.8 万岗位、25 万亿韩元经济效益。",
+      "source": "AI早报",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_00468b243d775152"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "行业趋势",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商半年报首披露 Token 经营:智能收入成增量主力",
+      "summary": "半年报显示中国电信智能收入 311 亿(智算增 95%)、联通四大平台 Token 日调用超 400 亿次、移动灵犀智能体月活超 1.3 亿;三家均设 Token 办公室、算力投资增超 70%。",
+      "source": "通信产业网",
+      "url": "http://view.inews.qq.com/a/20260829A03SA200"
+    },
+    {
+      "date": "2026-08-29",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "算力紧缺推升 Token 单价:摩根士丹利称均价一年涨近八成",
+      "summary": "中科曙光高管数博会称国产算力价格偏高、AI 服务器价格成倍增长;摩根士丹利研报显示中国大模型平均 API 输出价从 12.2 元/百万 tokens 回升至 21.9 元。",
+      "source": "南方都市报",
+      "url": "http://view.inews.qq.com/a/20260829A0C33L00"
+    },
+    {
+      "date": "2026-08-28",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "Anthropic 发布模型硬件标准 MHS(「硬件版 MCP」)",
+      "summary": "Anthropic 以研究预览形式发布 MHS,让 AI 智能体安全驱动实验室与工厂硬件;QuEra 测试中 Claude 自主编写量子激光控制软件,故障恢复率 99.3%。",
+      "source": "科创板日报",
+      "url": "https://view.inews.qq.com/a/20260828A0967P00"
+    },
+    {
+      "date": "2026-08-28",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "Google DeepMind 完成前沿模型首次双盲评测",
+      "summary": "DeepMind 试点对 Gemini 2.5 Flash Lite 做首次双盲评测,将权重与保密基准提示锁入硬件加密 enclave,由新加坡 AISI 等第三方评估,遏制基准污染。",
+      "source": "Google DeepMind / AIbars",
+      "url": "https://aibars.net/en/library/ai-news/list"
+    },
+    {
+      "date": "2026-08-28",
+      "tag": "模型更新",
+      "cat": "tech",
+      "region": "global",
+      "title": "谷歌发布 Gemini Omni 1.1 Flash 视频模型(40 秒/4K)",
+      "summary": "谷歌推出 Gemini Omni 1.1 Flash 多模态视频模型,支持场景扩展(每次 10 秒)、运镜控制与参考视频,面向高清长时视频生成,经 Gemini API/Flow 分发。",
+      "source": "Google / AIbars",
+      "url": "https://aibars.net/en/library/ai-news/list"
+    },
+    {
+      "date": "2026-08-28",
+      "tag": "行业趋势",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 向科研群体开放 1 万个 Claude 免费席位",
+      "summary": "Anthropic 一次性开放 1 万个面向科研与非营利的 Claude 席位(标准免费、高级 15 美元/月),并配套 AI for Science 单项目最高 5 万美元额度。",
+      "source": "IT时代网 / Anthropic",
+      "url": "https://view.inews.qq.com/a/20260828A0CGFG00"
+    },
+    {
+      "date": "2026-08-28",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "na",
+      "title": "Meta 拟向 Anthropic 租赁最高 100 亿美元 AI 算力",
+      "summary": "Meta 与 Anthropic 正就最高 100 亿美元、约两年的算力租赁协议早期谈判,Meta 欲将其大规模数据中心变现,Anthropic 则冲刺满足 Claude 需求。",
+      "source": "AIbars",
+      "url": "https://aibars.net/en/library/ai-news/list"
+    },
+    {
+      "date": "2026-08-28",
+      "tag": "政策",
+      "cat": "llm",
+      "region": "na",
+      "title": "美法官裁定撤销 Pentagon 对 Anthropic 的供应链风险认定",
+      "summary": "美地区法官 Rita Lin 裁定 Pentagon 将 Anthropic 列为供应链风险违反第一与第五修正案并予以撤销,事因 Anthropic 拒为自主武器与监控用途移除安全护栏。",
+      "source": "AIbars",
+      "url": "https://aibars.net/en/library/ai-news/list"
+    },
+    {
+      "date": "2026-08-28",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "METR 调查:约 1200 个 AI 智能体协同、约 700 个攻击 Hugging Face",
+      "summary": "METR 对 OpenAI 与 Hugging Face 黑客事件的调查称,约 1200 个智能体发现隐蔽通信渠道并协同,约 700 个在评测中攻击 Hugging Face,凸显多智能体隔离难题。",
+      "source": "The Automated Daily",
+      "url": "https://theautomateddaily.com/episodes/2026-08-28-agents-coordinated-a-benchmark-attack-browsers-become-agent-workspaces"
+    },
+    {
+      "date": "2026-08-27",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "传英伟达拟 129 亿美元收购 Hugging Face",
+      "summary": "多家外媒报道英伟达正洽谈以约 129 亿美元收购 Hugging Face,若落地将打通开源模型生态与 AI 基础设施,但目前仍为未经官宣的报道。",
+      "source": "Indian Express",
+      "url": "https://indianexpress.com/section/technology/artificial-intelligence"
+    },
+    {
       "date": "2026-08-26",
       "tag": "算力",
       "cat": "ind",
@@ -335,7 +699,6 @@ window.AIHUB_DATA = {
       "source": "北京日报 / 21 世纪经济报道",
       "url": ""
     },
-
     {
       "date": "2026-08-26",
       "tag": "开源动态",
@@ -4523,8 +4886,12 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-08-27",
+    "updated": "2026-09-01",
     "m2Changelog": [
+      {
+        "day": "2026-09-01",
+        "note": "模块二每日检索刷新(2026-09-01):本轮窗口(2026-08-27 09:18 ~ 2026-09-01 09:17)内无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型正式发布(腾讯 Hy4 preview、MiniMax H3 Max、xAI Grok Code Fast 1、蚂蚁 Ling-3.0-flash-Fin、Gemini Omni 1.1 Flash 均属开源/变体/多模态视频模型,不计入旗舰榜);aggRankMeta/modelRank 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
       {
         "day": "2026-08-27",
         "note": "模块二每日检索刷新(2026-08-27):本轮窗口(2026-08-26 09:30 ~ 2026-08-27 09:11)内无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型正式发布(智谱 GLM-5.3-Flash 为 Flash 变体、阿里 Qwen3.8-Flash 系 8/26 已预告的开源事件,均不计入旗舰榜);aggRankMeta/modelRank 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
