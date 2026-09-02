@@ -2,7 +2,7 @@ window.AIHUB_DATA_VERSION = "2026-09-02.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-09-02",
-    "note": "每日自动更新(时间窗口 2026-09-01T09:31 ~ 2026-09-02T09:28):新增 14 条动态——09-01 科大讯飞开源星火X2.5端侧百万上下文模型/Runway界面世界模型Solaris/清华AIR具身自进化模型Zeva/阿里云Qwen3-VL-Rerank降价/腾讯混元Hy4 preview轻量版/英伟达35亿认购联发科可转债/沙特HUMAIN万亿阿拉伯语开源M3/Anthropic与Lambda 350亿云协议;09-02 Anthropic发布Claude Fable 5.1与Mythos 5.1(缓存价降75%)/马斯克G20称AI或令全球经济增长20%-30%/三星HBM5路线图/苹果新CEO特努斯将AI列第一优先级/OpenAI终止Cursor合作/腾讯Marvis自定义模型接入;信源:新浪/腾讯新闻/机器之心/36氪/贝果财经/全球AI日报/CSDN/The AI Wrap/Pondero等;模块二新增Anthropic旗舰Claude Fable 5.1至modelRank(verify通过);GitHub 推送:待执行"
+    "note": "每日自动更新(时间窗口 2026-09-01T09:31 ~ 2026-09-02T09:28):新增 14 条动态——09-01 科大讯飞开源星火X2.5端侧百万上下文模型/Runway界面世界模型Solaris/清华AIR具身自进化模型Zeva/阿里云Qwen3-VL-Rerank降价/腾讯混元Hy4 preview轻量版/英伟达35亿认购联发科可转债/沙特HUMAIN万亿阿拉伯语开源M3/Anthropic与Lambda 350亿云协议;09-02 Anthropic发布Claude Fable 5.1与Mythos 5.1(缓存价降75%)/马斯克G20称AI或令全球经济增长20%-30%/三星HBM5路线图/苹果新CEO特努斯将AI列第一优先级/OpenAI终止Cursor合作/腾讯Marvis自定义模型接入;信源:新浪/腾讯新闻/机器之心/36氪/贝果财经/全球AI日报/CSDN/The AI Wrap/Pondero等;模块二新增Anthropic旗舰Claude Fable 5.1至modelRank(verify通过);GitHub 推送:成功"
   },
   {
     "date": "2026-09-01",
