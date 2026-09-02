@@ -1,5 +1,9 @@
-window.AIHUB_DATA_VERSION = "2026-09-01.1";
+window.AIHUB_DATA_VERSION = "2026-09-02.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-09-02",
+    "note": "每日自动更新(时间窗口 2026-09-01T09:31 ~ 2026-09-02T09:28):新增 14 条动态——09-01 科大讯飞开源星火X2.5端侧百万上下文模型/Runway界面世界模型Solaris/清华AIR具身自进化模型Zeva/阿里云Qwen3-VL-Rerank降价/腾讯混元Hy4 preview轻量版/英伟达35亿认购联发科可转债/沙特HUMAIN万亿阿拉伯语开源M3/Anthropic与Lambda 350亿云协议;09-02 Anthropic发布Claude Fable 5.1与Mythos 5.1(缓存价降75%)/马斯克G20称AI或令全球经济增长20%-30%/三星HBM5路线图/苹果新CEO特努斯将AI列第一优先级/OpenAI终止Cursor合作/腾讯Marvis自定义模型接入;信源:新浪/腾讯新闻/机器之心/36氪/贝果财经/全球AI日报/CSDN/The AI Wrap/Pondero等;模块二新增Anthropic旗舰Claude Fable 5.1至modelRank(verify通过);GitHub 推送:待执行"
+  },
   {
     "date": "2026-09-01",
     "note": "每日自动更新(时间窗口 2026-08-27T09:18 ~ 2026-09-01T09:17):新增 36 条动态——08-27 英伟达拟129亿美元收购Hugging Face(报道)/08-28 Anthropic发布硬件标准MHS(硬件版MCP)、DeepMind首做前沿模型双盲评测、Gemini Omni 1.1 Flash视频模型、Anthropic开放1万Claude科研席位、Meta拟租Anthropic百亿算力、METR披露千余智能体协同攻击HF/08-29 腾讯开源混元Hy4 preview 770B、蚂蚁Ling-3.0-flash-Fin、阿里Qoder、xAI Grok Code Fast 1、三大运营商半年报首披露Token经营、算力紧缺推升Token单价/08-30 116家机构联署警示AI网络攻击、Claude Code额度争议、国家数据局日均Token破500万亿、Anthropic AAR超越人类安全专家/08-31 工信部AI服务商培育行动、信通院牵头大模型平台系列标准发布、湖南电信Token工厂、智谱中报API收入增27倍、Meta测试机器人自动化数据中心/09-01 OpenClaw 2.0最大更新、OpenAI采购Mac做强化学习、MiniMax H3 Max接入平台、谷歌内测Gemini 3.8 Flash、OpenAI Daybreak硬件密钥生效;信源:网易/科创板日报/人民网/通信产业网/央广网/南方都市报/IT之家/Indian Express/AIbars/The Automated Daily/腾讯研究院/经济观察报等;模块二无跟踪厂商模型目录数可信增减、无新旗舰正式发布(refresh_m2+verify通过);GitHub 推送:成功"
@@ -259,6 +263,146 @@ window.AIHUB_HISTORY = [
 ];
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-09-02",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1,缓存读取价降 75%",
+      "summary": "当地时间 9/1,Anthropic 推出同底座双安全档模型:Fable 5.1 面向全用户、Mythos 5.1 仅限审核机构。Terminal-Bench-Science 52.6%、CursorBench 73.4% 超 Opus 5;缓存读取价由 $1 降至 $0.25/M,典型负载成本降约 25%。",
+      "source": "新浪财经 / IT时代网 / cnBeta",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-09-02/doc-iniqkvca4488131.shtml"
+    },
+    {
+      "date": "2026-09-02",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "马斯克 G20:AI 或令全球经济增长 20%-30%,十年内人形机器人达 10 亿台",
+      "summary": "当地时间 9/1,马斯克在北卡 G20 相关会议上称 AI 与机器人将带来显著生产力提升,预计 AI 可使全球经济规模增 20%-30%(每年约 20-30 万亿美元),十年内全球人形机器人或达 10 亿台。",
+      "source": "腾讯新闻 全球科技早参",
+      "url": "https://news.qq.com/rain/a/20260902A03TQ800"
+    },
+    {
+      "date": "2026-09-02",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "global",
+      "title": "三星公布 HBM5 路线图:2nm 基底、性能翻倍,2028 年前后量产",
+      "summary": "9/1 三星于 SEMICON Taiwan 2026 公布下一代存储路线图:HBM5 采用 2nm 基底芯片,提供 12/16/20 层 DRAM 堆叠,目标性能达 HBM4E 的 2 倍、单瓦性能 +20%、热阻 -20%,预计 2028 年前后量产。",
+      "source": "腾讯新闻 全球科技早参",
+      "url": "https://news.qq.com/rain/a/20260902A03TQ800"
+    },
+    {
+      "date": "2026-09-02",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "苹果新 CEO 约翰·特努斯 9/1 上任,将 AI 列为公司第一优先级",
+      "summary": "9/1 约翰·特努斯正式接任苹果 CEO(库克转任执行董事长)。据报道其首个产品发布会(9/9)将含可折叠 iPhone 与基于 Google Gemini 重建的 Siri,并将 AI 作为新领导层第一优先级,放弃净现金中性目标以腾出 AI 投资空间。",
+      "source": "Pondero AI",
+      "url": "https://pondero.ai/news/2026-09-01-daily-brief"
+    },
+    {
+      "date": "2026-09-02",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "OpenAI 终止 Cursor 直接模型合作(被 SpaceX 收购,11/12 终止)",
+      "summary": "OpenAI 宣布在 Cursor 被 SpaceX 收购后终止其直接模型访问, citing 信任考量,合作将于 11/12 结束;开发者可继续用自有 API Key 或 OpenAI 的 IDE 扩展接入,标志模型供给与商业伙伴绑定关系生变。",
+      "source": "Pondero AI / Forward Future",
+      "url": "https://pondero.ai/news/2026-09-01-daily-brief"
+    },
+    {
+      "date": "2026-09-02",
+      "tag": "模型更新",
+      "cat": "agg",
+      "region": "cn",
+      "title": "腾讯 Marvis 上线自定义模型,可接入 Kimi、智谱 GLM 等主流模型",
+      "summary": "腾讯旗下操作系统级 AI 助手 Marvis 上线「自定义模型」功能,用户可接入采用通用接口标准的第三方模型,包括腾讯云、阿里云、DeepSeek、MiniMax、Kimi、智谱、小米等,并支持本地开源模型与多设备同步。",
+      "source": "36氪 / 8点1氪",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4966a976ee690452"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "科大讯飞开源星火 X2.5-4B / 1.7B 端侧大模型,原生支持百万 Token",
+      "summary": "9/1 科大讯飞子公司词元星火开源星火 X2.5-4B 与 1.7B 两款端侧通用大模型,为端侧模型首个原生支持最长 100 万 Token 上下文者,基于全国产算力训练,已上架 Hugging Face / GitHub;9/7 还将发旗舰星火 X2.5。",
+      "source": "贝果财经 / 全球AI日报",
+      "url": "http://view.inews.qq.com/a/20260901A07OHK00"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "Runway 发布界面世界模型 Solaris,可像视频一样实时生成可交互界面",
+      "summary": "9/1 Runway 公布 Solaris——首个 Interface World Model,将界面当作视频实时生成,用户点击/拖拽/一句话即可续生成下一帧;250 人近 7500 次两两比较中,交互指令遵循与行为自然度分别获 61% / 71% 偏好,可用于训练 Computer Use Agent。",
+      "source": "机器之心 / 全球AI日报",
+      "url": "https://view.inews.qq.com/a/20260901A05TX300"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "清华 AIR 联手域变换发布具身自进化模型 Zeva(ICCL)",
+      "summary": "9/1 清华 AIR 与域变换发布 Zeva,首个实现 In-Context Causal Learning(ICCL)的具身 WAM,模型不更新权重即可从交互经验中持续学习,推动具身智能体在线自进化能力。",
+      "source": "全球AI日报",
+      "url": "https://new.qq.com/rain/a/20260901A08AHJ00"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里云百炼下调 Qwen3-VL-Rerank 计费:文本 0.7→0.5、多模态 1.8→0.5 元/百万",
+      "summary": "9/1 阿里云公告,百炼平台自 8/31 起下调北京地域 Qwen3-VL-Rerank 模型计费:文本输入由 0.7 元/百万 tokens 降至 0.5 元,多模态输入由 1.8 元降至 0.5 元,持续压低多模态检索与重排成本。",
+      "source": "AI早报",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5076a976c6255452"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯混元推出 Hy4 preview 轻量版,权重 1.5TB 压缩至约 214GB",
+      "summary": "9/1 腾讯混元团队推出 Hy4 preview 轻量版,通过两项核心技术将权重从近 1.5TB 压缩至约 214GB,长文理解与多轮长上下文检索基本持平、数学仅小幅回落,降低运行硬件门槛以覆盖编码辅助/长文档/常规问答。",
+      "source": "36氪 / 8点1氪",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4966a976ee690452"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "global",
+      "title": "英伟达 35 亿美元认购联发科可转债,携手切入 AI 基础设施与 PC 芯片",
+      "summary": "9/1 多家媒体称英伟达将以 35 亿美元认购联发科可转债,双方在 AI 基础设施、PC 芯片与汽车 AI 平台深度合作;联发科借此进入英伟达 NVLink Fusion 定制 AI 芯片生态,直面 hyperscaler 与 AI 实验室定制硅需求。",
+      "source": "CSDN AI日报 / The AI Wrap",
+      "url": "https://blog.csdn.net/u014146389/article/details/164250211"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "global",
+      "title": "沙特 HUMAIN 发布万亿级阿拉伯语开源大模型 M3(LEAP 5)",
+      "summary": "9/1 利雅得 LEAP 5 大会首日宣布超 150 亿美元科技投资,HUMAIN 发布基于超一万亿阿拉伯语 token 训练的开源权重阿拉伯语大模型 M3,并推出支持沙特/马格里布/埃及/黎凡特等方言的会话式 AI 平台 HUMAIN Voice。",
+      "source": "AI无涯日报 / EINPresswire",
+      "url": "https://aifki.com/2026/09/01/ai-daily"
+    },
+    {
+      "date": "2026-09-01",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "Anthropic 与 NVIDIA 支持的 Lambda 签署 350 亿美元云计算协议",
+      "summary": "据报道 Anthropic 与 NVIDIA 支持的云厂商 Lambda 签署 350 亿美元算力协议,所涉数据中心由比特币矿企兼 IDC 开发商 Hut8 在得州努埃塞斯县建设;数周前英伟达已与 Hut8 锁定该数据中心算力资源,支撑 Anthropic 扩张。",
+      "source": "The AI Wrap / AI早报",
+      "url": "https://www.theaiwrap.com/?utm_source=openai/"
+    },
     {
       "date": "2026-09-01",
       "tag": "开源动态",
@@ -4886,8 +5030,12 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-09-01",
+    "updated": "2026-09-02",
     "m2Changelog": [
+      {
+        "day": "2026-09-02",
+        "note": "模块二每日检索刷新(2026-09-02):本轮窗口(2026-09-01 09:31 ~ 2026-09-02 09:28)新增 Anthropic 旗舰模型 Claude Fable 5.1(同底座双安全档 Fable/Mythos;Terminal-Bench-Science 52.6%、CursorBench 73.4%;缓存读取价降75%至$0.25/M),已追加至 modelRank(trend:new,6维公开评测估算);聚合平台模型目录数无可信增减(OpenRouter 维持 400、硅基流动 350);refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
       {
         "day": "2026-09-01",
         "note": "模块二每日检索刷新(2026-09-01):本轮窗口(2026-08-27 09:18 ~ 2026-09-01 09:17)内无聚合平台模型目录数可信增减信号(OpenRouter 维持 400、硅基流动 350、各平台模型数保持)、无跟踪厂商新旗舰模型正式发布(腾讯 Hy4 preview、MiniMax H3 Max、xAI Grok Code Fast 1、蚂蚁 Ling-3.0-flash-Fin、Gemini Omni 1.1 Flash 均属开源/变体/多模态视频模型,不计入旗舰榜);aggRankMeta/modelRank 未调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
@@ -6957,6 +7105,21 @@ window.AIHUB_DATA = {
         "rank": 3
       },
       {
+        "name": "Claude Fable 5.1",
+        "vendor": "Anthropic",
+        "type": "文本+多模态",
+        "reasoning": 5,
+        "coding": 5,
+        "multimodal": 3.5,
+        "longctx": 4.5,
+        "knowledge": 4.5,
+        "instruct": 5,
+        "trend": "new",
+        "note": "2026-09-01 发布(当地时间);1M上下文/128K输出;Terminal-Bench-Science 52.6%、Terminal-Bench 4.0 55.8%、HLE 65%、CursorBench 73.4%、GDPval-AA v2 1853;缓存读取价降75%至$0.25/M;6维为公开评测估算(trend:new)",
+        "total": 92,
+        "rank": 4
+      },
+      {
         "name": "Kimi-K3",
         "vendor": "月之暗面",
         "type": "开源",
@@ -6969,7 +7132,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源榜首,智能体编程称雄",
         "total": 90,
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "Qwen3.8-Max",
@@ -6984,7 +7147,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "中文综合第一,幻觉控制佳",
         "total": 87,
-        "rank": 5
+        "rank": 6
       },
       {
         "name": "GLM-5.3",
@@ -6999,7 +7162,7 @@ window.AIHUB_DATA = {
         "trend": "new",
         "note": "2026-08-15 发布:740B 底座不变、后训练 Scaling 提升约 50%,白盒代码审查 84.5% 居开源第一;6 维为公开评测估算(信源:AIBase/智谱官方)",
         "total": 87,
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "GLM-5.2",
@@ -7014,7 +7177,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源高性价比,AIME近满分",
         "total": 85,
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "Doubao-Seed-2.1-pro",
@@ -7029,7 +7192,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "科学推理强项,多模态均衡",
         "total": 85,
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "Muse Spark 1.1",
@@ -7044,7 +7207,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "Meta新旗舰,已转闭源API",
         "total": 83,
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "DeepSeek-V4-Pro",
@@ -7059,7 +7222,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "数学推理顶尖,极致性价比",
         "total": 82,
-        "rank": 10
+        "rank": 11
       },
       {
         "name": "MiniMax-M3",
@@ -7074,7 +7237,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源权重标杆,Agent价优",
         "total": 82,
-        "rank": 11
+        "rank": 12
       },
       {
         "name": "ERNIE 5.1",
@@ -7089,7 +7252,7 @@ window.AIHUB_DATA = {
         "trend": "flat",
         "note": "中文知识扎实,编程偏弱",
         "total": 75,
-        "rank": 12
+        "rank": 13
       },
       {
         "name": "Mistral Large 3",
@@ -7104,7 +7267,7 @@ window.AIHUB_DATA = {
         "trend": "flat",
         "note": "欧洲开源通用,推理落后",
         "total": 72,
-        "rank": 13
+        "rank": 14
       },
       {
         "name": "星火 Spark X2",
@@ -7119,7 +7282,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "语音多模态见长,中文场景",
         "total": 70,
-        "rank": 14
+        "rank": 15
       },
       {
         "name": "SenseNova 6",
@@ -7134,7 +7297,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "视觉多模态见长,通用偏弱",
         "total": 67,
-        "rank": 15
+        "rank": 16
       }
     ],
     "modelVendorMatrix": {
@@ -7189,6 +7352,20 @@ window.AIHUB_DATA = {
             3.5,
             2,
             2.5
+          ]
+        },
+        {
+          "vendor": "Anthropic",
+          "model": "Claude Fable 5.1",
+          "levels": [
+            4.5,
+            5,
+            5,
+            3.5,
+            4.5,
+            3,
+            1,
+            2
           ]
         },
         {
