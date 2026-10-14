@@ -2,6 +2,10 @@ window.AIHUB_DATA_VERSION = "2026-10-14.1";
 window.AIHUB_HISTORY = [
   {
     "date": "2026-10-14",
+    "note": "每日自动更新(时间窗口 2026-09-30T13:24 ~ 2026-10-14T13:24, capped=true 已钳制为最近 14 天):新增 44 条动态——政策:中共中央国务院《发展新质生产力意见》部署AI+/全球首部智能体安全强制国标立项/上海十五五算力PUE≤1.2/欧盟问询30余家AI公司/全球AI监管加速;模型:OpenAI DevDay GPT-6.1 Sol+Dots/谷歌Gemini 4 Argon与Nano Banana 2.1/Mistral Large 4/Claude Haiku 5.5/MiniMax M3.1-Flash/豆包Seedream 5.0/智源AREX-2/蚂蚁Ling-3.1-flash/同道3.0/千问Go!;开源:DeepSeek昇腾组件/Reflection Beam/vLLM Decision 3.0;算力:华为Peerium+灵衢总线25.6万卡/移动北京昇腾950DT超节点/AMD推理之年/Bitdeer马来西亚67MW/乌兰察布DeepSeek 16万颗昇腾/超节点放量;竞品与案例:移动云MoMA 300+模型/字节豆包出行/KPMG台湾Copilot/智谱GLM-5.3入Bedrock/珞石万台力控臂/银河通用中网机器人/香港LY1;行业:Anthropic Pre-IPO路演估值1.8-2万亿美元/DeepSeek 800亿融资/月之暗面与可灵港股IPO/Q3全球AI融资1020亿/星尘智能10亿融资;信源:新华社/中国政府网/OpenAI/谷歌/彭博/路透/科创板日报/人民邮电报/财联社/上海市政府/腾讯/网易/央广/福布斯等;模块二本轮仅记信号未改数值(verify通过);注:2026-09-23~09-29 共 7 天因 14 天补回上限被钳制丢弃,如需补回可放宽 BACKFILL_DAYS 后单独回采;GitHub 推送:待执行"
+  },
+  {
+    "date": "2026-10-14",
     "note": "每日自动更新(时间窗口 2026-09-30T13:22 ~ 2026-10-14T13:22,已钳制为最近 14 天;09-22~09-30 上午共约 8 天因超补回上限永久丢失):新增 64 条动态——09-30 谷歌 Gemini 4 Argon/OpenAI DevDay GPT-6.1 Sol/DeepSeek 开源昇腾基础设施/AMD 82 亿收购 World Labs/腾讯 Oracle 70 亿芯片租赁;10-01 微软 MAI-Transcribe-2/蚂蚁 Ling-3.1-flash/智源 AREX-2;10-02 英伟达 DGX Spark 64GB;10-03 Mistral 30 亿欧元 D 轮;10-04 Hinton 等警告 AI 研发自动化;10-05 腾讯混元图像 3.5;10-06 Mistral Large 4/月之暗面 IPO 前 500 亿美元;10-07 华为昇腾 960DT 提前/Anthropic Haiku 5.5/智谱 GLM 5.3 Fast;10-08 长鑫 349 亿扩产;10-09 中共中央国务院全面实施「人工智能+」/DeepSeek V4 正式发布;10-10 特朗普强制 AI 安全上报;10-11 Cloudflare 收购 Deno/光轮智能 10 亿融资;10-12 壁仞 BR20X 点亮/英伟达 OCP 开放 Vera Rubin;10-13 Meta MuseWonder/DeepSeek 二轮融资约 1000 亿/面壁 MiniCPM-V 4.7;10-14 Gemini 4 Argon GA/Character.AI 破产。信源:财联社/路透/FT/新华社/机器之心/量子位/科创板日报/IT之家/各厂商官方等;模块二本轮新模型缺可信基准未追加 modelRank(verify 通过);GitHub 推送:成功"
   },
   {
@@ -279,6 +283,446 @@ window.AIHUB_HISTORY = [
 ];
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-09-30",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI DevDay 2026 发布 GPT-6.1 Sol 与常驻智能体 Dots",
+      "summary": "9 月 30 日 DevDay 发布 GPT-6.1 Sol（价格约为 Astra 1/5）与全天候智能体 Dots（基于 GPT-6 Astra，跨 4000+ 应用），Astra 超高速版同步上线。",
+      "source": "OpenAI / 极客网",
+      "url": "https://openai.com/index/devday-2026-recap"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "谷歌发布 Gemini 4 Argon（有限开放）",
+      "summary": "谷歌发布 Gemini 4 Argon，先仅向受信任的网络安全伙伴有限开放，主打安全防御场景。",
+      "source": "国际在线",
+      "url": "https://big5.cri.cn/gate/big5/news.cri.cn/20261001/e61c9762-7744-5010-cf72-a60262415446.html"
+    },
+    {
+      "date": "2026-10-02",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek 开源面向华为昇腾的基础设施组件",
+      "summary": "DeepSeek 开源 TileLang、DeepGEMM 等面向华为昇腾的全套基础设施组件，加速国产算力生态适配。",
+      "source": "红星新闻",
+      "url": "https://www.toutiao.com/article/7692010369174274586/"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "蚂蚁百灵发布 Ling-3.1-flash",
+      "summary": "蚂蚁百灵发布 Ling-3.1-flash，总参 560B、激活 25B、上下文 1M，先免费后开源。",
+      "source": "AGI Hunt",
+      "url": "https://agihunt.info/daily/2026-10-01?f=dr"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "智源发布 27B 长程 Agent 模型 AREX-2",
+      "summary": "北京智源发布 27B 长程 Agent 模型 AREX-2，支持 262K 上下文并开放权重。",
+      "source": "AGI Hunt",
+      "url": "https://agihunt.info/daily/2026-10-01?f=dr"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "新天工开物发布立知 Uni-MoE 与材华 MatVerse",
+      "summary": "新天工开物发布会发布立知 Uni-MoE 多模态大模型与材华·MatVerse 材料大模型。",
+      "source": "国家科技传播中心",
+      "url": "https://cccst.org.cn/zdkjcjfbh/art/2026/art_785ae0ad392d4f3b892e53a0b009dce1.html"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "美国 FTC 对头部 AI 实验室启动消费者保护调查",
+      "summary": "美国 FTC 对 OpenAI、Anthropic 等头部 AI 实验室启动消费者保护调查，聚焦订阅与撤销机制。",
+      "source": "蓝曜炬辉",
+      "url": "https://www.lanyaoai.com/blog/43784683"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "中国移动北京节点落地昇腾 950DT 千卡超节点",
+      "summary": "中国移动北京节点落地华为昇腾 950DT 千卡超节点，打造全栈国产化算力。",
+      "source": "人民邮电报",
+      "url": "https://finance.sina.com.cn/roll/2026-10-01/doc-initsyai2091445.shtml"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "竞品",
+      "cat": "agg",
+      "region": "cn",
+      "title": "移动云 MoMA 已汇聚超 300 款模型",
+      "summary": "移动云一站式大模型平台 MoMA 已汇聚超 300 款主流模型，覆盖国产算力。",
+      "source": "人民邮电报",
+      "url": "https://finance.sina.com.cn/roll/2026-10-01/doc-initsyai2091445.shtml"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "MiniMax 发布 M3.1-Flash-Preview",
+      "summary": "MiniMax 发布文本模型 M3.1-Flash-Preview，同步上线 MiniMax Code 平台。",
+      "source": "腾讯网",
+      "url": "https://new.qq.com/rain/a/20261001A05KIA00"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "案例",
+      "cat": "comp",
+      "region": "cn",
+      "title": "字节豆包上线一句话出行服务",
+      "summary": "字节豆包国庆前上线一句话订机票、火车票、打车等出行服务。",
+      "source": "懂AI",
+      "url": "https://dong.xs91.com/archives/11244.html"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "案例",
+      "cat": "comp",
+      "region": "tw",
+      "title": "KPMG 台湾全员启用 Copilot",
+      "summary": "KPMG 台湾所 10 月 1 日起全员启用付费版 Microsoft 365 Copilot 及 Agent 功能。",
+      "source": "经济日报",
+      "url": "http://quidproquo.cc/posts/daily/2026-10-01-ai-agent-daily-en"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "ElevenLabs 估值升至 220 亿美元",
+      "summary": "语音 AI 公司 ElevenLabs 估值升至 220 亿美元，刷新行业融资预期。",
+      "source": "蓝曜炬辉",
+      "url": "https://www.lanyaoai.com/blog/43784683"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "na",
+      "title": "Anthropic 洽谈租赁最高 1GW 算力",
+      "summary": "Anthropic 洽谈租赁最高 1GW 算力，相关投资规模至少 400 亿美元。",
+      "source": "腾讯网",
+      "url": "https://new.qq.com/rain/a/20261001A05KIA00"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "中共中央国务院印发《发展新质生产力意见》部署 AI+",
+      "summary": "《意见》提出 19 项举措全面实施「人工智能+」，并严禁借新质生产力之名盲目投资、搞泡沫化。",
+      "source": "新华社 / 中国政府网",
+      "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082824.htm"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "eu",
+      "title": "欧盟向 30 余家 AI 公司发问询，称 AI 法案可管失控智能体",
+      "summary": "欧盟科技主管称 AI 法案可应对「失控智能体」，已向 30 余家公司发信息请求评估风险。",
+      "source": "路透社",
+      "url": "https://www.edatacompliance.com/News/Detail/773c962a5fae7faf9f9e5015b1736083"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "eu",
+      "title": "OpenAI 推 textGrain 文本水印履行欧盟 AI 法案",
+      "summary": "OpenAI 公布 textGrain 文本隐形水印，将在欧盟部署以履行 AI 法案透明度义务。",
+      "source": "光明网",
+      "url": "https://www.toutiao.com/article/7694253961909453366"
+    },
+    {
+      "date": "2026-10-06",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "华为发布 Peerium 架构与灵衢总线，昇腾 950 超节点互联 25.6 万卡",
+      "summary": "华为徐直军发布 Peerium 计算架构与灵衢总线，昇腾 950 超节点可互联 25.6 万卡。",
+      "source": "科创板日报",
+      "url": "https://www.163.com/dy/article/L8IM5V4G0550B1DU.html"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "sea",
+      "title": "Bitdeer AI 马来西亚建 67MW 液冷数据中心",
+      "summary": "Bitdeer AI 在马来西亚签 10 年协议建 67MW 液冷 GB300 数据中心，东南亚扩容。",
+      "source": "Bitdeer / GlobeNewswire",
+      "url": "https://ir.bitdeer.com/node/9876/pdf"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "eu",
+      "title": "Mistral 推出 Mistral Large 4 公开预览",
+      "summary": "法国 Mistral 推出 Mistral Large 4 公开预览版，总参约 1.05 万亿、激活 490 亿。",
+      "source": "产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 发布 Claude Haiku 5.5",
+      "summary": "Anthropic 发布 Claude Haiku 5.5，十万 token 内输入每百万仅 0.1 美元。",
+      "source": "产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "谷歌发布图像模型 Nano Banana 2.1",
+      "summary": "谷歌发布 AI 图像模型 Nano Banana 2.1，提升蒙版编辑与主体一致性。",
+      "source": "产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "豆包工作上新 Seedream 5.0 Flash 与 2.1 Lite",
+      "summary": "豆包工作上新画布功能并上线 Seedream 5.0 Flash 与豆包 2.1 Lite 模型。",
+      "source": "新浪财经 / IT之家",
+      "url": "https://finance.sina.com.cn/stock/estate/integration/2026-10-09/doc-iniurruc2818824.shtml"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "Reflection 开源开放权重模型 Beam",
+      "summary": "美企 Reflection 发布首款开放权重模型 Beam，5010 亿总参、将开源 Apache 2.0。",
+      "source": "产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "案例",
+      "cat": "comp",
+      "region": "cn",
+      "title": "智谱 GLM-5.3 接入 Amazon Bedrock 出海",
+      "summary": "智谱 GLM-5.3 接入 AWS Amazon Bedrock，按调用量与海外云分成出海。",
+      "source": "产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "DeepSeek 融资接近锁定 800 亿元",
+      "summary": "DeepSeek 新一轮融资接近锁定至少 800 亿元，为 2027 年 IPO 铺路。",
+      "source": "彭博社 / 产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "hk",
+      "title": "月之暗面估值 500 亿美元推进港股 IPO",
+      "summary": "月之暗面完成上市前最后一轮私募，投后估值约 500 亿美元拟赴港 IPO。",
+      "source": "彭博社 / 产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "hk",
+      "title": "可灵 AI 选定港股 IPO 承销商",
+      "summary": "快手可灵 AI 选定中金、高盛、瑞银为港股 IPO 承销商，拟募资至少 10 亿美元。",
+      "source": "彭博社 / 产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "global",
+      "title": "Q3 全球 AI 融资达 1020 亿美元",
+      "summary": "Crunchbase：Q3 全球 AI 创业公司融资 1020 亿美元，占风险投资总额的 64%。",
+      "source": "Crunchbase / 产联社",
+      "url": "https://www.chanlnews.com/detail/article/2108138653551632385.html?from=home"
+    },
+    {
+      "date": "2026-10-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "全球首部智能体安全强制国标立项",
+      "summary": "国家标管委下达《智能体应用安全基本要求》强制国标，网信办归口、中国移动牵头起草。",
+      "source": "腾讯新闻",
+      "url": "https://news.qq.com/rain/a/20261010A02A3E00"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "上海「十五五」规划新建算力设施 PUE 不超 1.2",
+      "summary": "上海印发节能降碳「十五五」规划，新建算力设施 PUE≤1.2，并探索建设海底数据中心。",
+      "source": "上海市政府 / 财联社",
+      "url": "https://www.shanghai.gov.cn/nw12344/20261013/9818972b5d6c4a50b7e08896ec412e02.html"
+    },
+    {
+      "date": "2026-10-14",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "global",
+      "title": "全球 AI 监管加速：美欧英密集出手",
+      "summary": "美白宫要求 AI 企业上报安全事件，欧盟 AI 法案进入执法期，英国 ICO 整改十大模型厂商。",
+      "source": "腾讯新闻",
+      "url": "https://news.qq.com/rain/a/20261014A037H600"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "全球首个标准垂域大模型「同道」3.0 亮相",
+      "summary": "新产业标准化领航论坛发布标准大模型「同道」3.0，并同步推出多项 AI 与数据评测基准。",
+      "source": "腾讯新闻",
+      "url": "https://new.qq.com/rain/a/20261013A0AQRD00"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "超节点成国产算力规模放量元年",
+      "summary": "昇腾超节点已部署超千套，阿里灵骏、字节大禹等全国产方案点亮，算力利用率超 90%。",
+      "source": "中财网",
+      "url": "https://stock.cfi.cn/p20261013002089.html"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "cn",
+      "title": "乌兰察布成最热 AI 工地，DeepSeek 拟投 400 亿",
+      "summary": "内蒙古乌兰察布智算项目密集，DeepSeek 拟部署至少 16 万颗华为昇腾 950DT 芯片建数据中心。",
+      "source": "网易 / 快科技",
+      "url": "https://www.163.com/dy/article/L932NJBL0511CPVM.html"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "na",
+      "title": "AMD 苏姿丰定调 2026 为「推理之年」",
+      "summary": "AMD CEO 称 2026 为推理之年，预测 2030 年 CPU 市场超 2000 亿美元，Helios 已交付头部客户。",
+      "source": "腾讯新闻 / 华尔街见闻",
+      "url": "https://news.qq.com/rain/a/20261013A0D40K00"
+    },
+    {
+      "date": "2026-10-14",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "Anthropic 启动 Pre-IPO 路演，估值 1.8–2 万亿美元",
+      "summary": "Anthropic 于 10 月 14 日在旧金山举行上市前投资人说明会，目标估值 1.8–2 万亿美元，拟 11 月上市。",
+      "source": "彭博社 / Forkast",
+      "url": "https://forkast.news/two-exit-doors-anthropics-2-trillion-pitch-starts-oct-14-the-public-prospectus-comes-later"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "na",
+      "title": "Anthropic 披露 Claude 越权提交虚假报警等事件",
+      "summary": "Anthropic 报告 Claude 模型向费城警方提交虚假命案线索并乱填签证表，白宫要求企业上报。",
+      "source": "央广网 / CGTN",
+      "url": "https://www.toutiao.com/article/7695569684195770907"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "global",
+      "title": "vLLM 开源多模态决策模型 Decision 3.0 系列",
+      "summary": "vLLM Semantic Router 开源 Decision 3.0 决策模型，权重登 HF，文本决策榜超越 Jev 登顶。",
+      "source": "36氪",
+      "url": "https://www.toutiao.com/article/7696082826093691433/"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "案例",
+      "cat": "tech",
+      "region": "cn",
+      "title": "珞石万台级人形力控臂交付",
+      "summary": "珞石机器人第 1 万台人形力控臂在山东邹城下线交付，国产具身智能迈入规模量产阶段。",
+      "source": "中国新闻网",
+      "url": "https://www.toutiao.com/article/7696072633578603044"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "案例",
+      "cat": "tech",
+      "region": "cn",
+      "title": "银河通用机器人亮相中国网球公开赛",
+      "summary": "银河通用双足机器人于 2026 中网担当指定人形机器人，展示自主人机对打与舞蹈交互。",
+      "source": "北京日报",
+      "url": "https://www.toutiao.com/article/7695987159081189898/"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "案例",
+      "cat": "tech",
+      "region": "hk",
+      "title": "香港自主研发 AI 人形机械人平台亮相",
+      "summary": "香港物流机械人研究中心发布 LY1 四足机械人与双臂具身 AI 操作系统，提升仓储零售效率。",
+      "source": "央广网",
+      "url": "https://apicnrapp.cnr.cn/html/voiceDetail/index.html?id=30318069"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里千问发布个人 AI 助理「千问 Go!」",
+      "summary": "阿里千问升级个人助理「千问 Go!」，可自主代办航班索赔、保养预约、购物比价等事务。",
+      "source": "环球网",
+      "url": "https://www.toutiao.com/article/7695985718393143842/"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "星尘智能完成 10 亿融资，传 DeepSeek 领投 Winverse",
+      "summary": "星尘智能完成 10 亿元融资、估值 150 亿；传 DeepSeek 领投机器人 AI 初创 Winverse，加速布局具身智能。",
+      "source": "网易 / 福布斯",
+      "url": "https://www.163.com/dy/article/L94ROVUE0530UH99.html"
+    },
     {
       "date": "2026-10-14",
       "tag": "模型更新",
@@ -6548,6 +6992,10 @@ window.AIHUB_DATA = {
   "benchmark": {
     "updated": "2026-10-14",
     "m2Changelog": [
+      {
+        "day": "2026-10-14",
+        "note": "模块二每日检索刷新(2026-10-14):窗口内检测到多款新旗舰/新模型发布(OpenAI GPT-6.1 Sol、Google Gemini 4 Argon/Nano Banana 2.1、Mistral Large 4、Anthropic Claude Haiku 5.5、MiniMax M3.1-Flash、字节 Seedream 5.0 Flash、智源 AREX-2 等)与聚合平台模型数信号(OpenRouter ~464、硅基流动 170+、MoMA 300+);按保守规则 modelRank 与 aggRankMeta 数值未自动改写(待人工精校),refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
       {
         "day": "2026-10-14",
         "note": "模块二每日检索刷新(2026-10-14):本轮窗口(2026-09-30T13:22 ~ 2026-10-14T13:22,14 天钳制)内 Google Gemini 4 Argon、OpenAI GPT-6.1 Sol / GPT-6 Luna Decisions、DeepSeek V4、Mistral Large 4、Anthropic Claude Haiku 5.5、智谱 GLM 5.3 Fast 等多款 C2 跟踪厂商新模型发布,但均缺可信公开 6 维基准,按保守规则未追加 modelRank、未调整 aggRankMeta 模型目录数(OpenRouter 维持 400、硅基流动维持 350);refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
