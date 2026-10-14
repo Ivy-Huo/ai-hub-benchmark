@@ -1,5 +1,9 @@
-window.AIHUB_DATA_VERSION = "2026-09-22.1";
+window.AIHUB_DATA_VERSION = "2026-10-14.1";
 window.AIHUB_HISTORY = [
+  {
+    "date": "2026-10-14",
+    "note": "每日自动更新(时间窗口 2026-09-30T13:22 ~ 2026-10-14T13:22,已钳制为最近 14 天;09-22~09-30 上午共约 8 天因超补回上限永久丢失):新增 64 条动态——09-30 谷歌 Gemini 4 Argon/OpenAI DevDay GPT-6.1 Sol/DeepSeek 开源昇腾基础设施/AMD 82 亿收购 World Labs/腾讯 Oracle 70 亿芯片租赁;10-01 微软 MAI-Transcribe-2/蚂蚁 Ling-3.1-flash/智源 AREX-2;10-02 英伟达 DGX Spark 64GB;10-03 Mistral 30 亿欧元 D 轮;10-04 Hinton 等警告 AI 研发自动化;10-05 腾讯混元图像 3.5;10-06 Mistral Large 4/月之暗面 IPO 前 500 亿美元;10-07 华为昇腾 960DT 提前/Anthropic Haiku 5.5/智谱 GLM 5.3 Fast;10-08 长鑫 349 亿扩产;10-09 中共中央国务院全面实施「人工智能+」/DeepSeek V4 正式发布;10-10 特朗普强制 AI 安全上报;10-11 Cloudflare 收购 Deno/光轮智能 10 亿融资;10-12 壁仞 BR20X 点亮/英伟达 OCP 开放 Vera Rubin;10-13 Meta MuseWonder/DeepSeek 二轮融资约 1000 亿/面壁 MiniCPM-V 4.7;10-14 Gemini 4 Argon GA/Character.AI 破产。信源:财联社/路透/FT/新华社/机器之心/量子位/科创板日报/IT之家/各厂商官方等;模块二本轮新模型缺可信基准未追加 modelRank(verify 通过);GitHub 推送:待执行"
+  },
   {
     "date": "2026-09-22",
     "note": "每日自动更新(时间窗口 2026-09-21T09:42 ~ 2026-09-22T12:07):新增 15 条动态——09-22 云栖大会吴泳铭称千问将训 5-10T 参数模型/通义千问新负责人刘大一恒亮相 Qwen4 在训/小米 MIT 开源 MiMo-V2.6 登顶开放权重榜/海光发布 1000 系列芯片/华为昇腾 960 超节点/微软 Copilot 抓取被称「史上最大盗窃」/OpenAI 呼吁美主导全球 AI 标准+数学顾问组/Meta Muse 登顶双榜且 AMD 市值破万亿;09-21 午后 xAI Grok 4.7 发布/支付宝合并三大事业群发力智能体商业/北京京彩智联+算力互联北京节点/IDC 中国活跃智能体 495 万、Token 消耗增速约 37 倍/联合国 AI 小组评 OpenAI 智能体越界/浪潮元脑 SD200 Ultra 承载 2.8 万亿参数 Kimi K3/宇树 Dex5-S 灵巧手;信源:阿里云/新浪科技/雪球/小米/xAI/财联社/IT 时代网/纽约时报/OpenAI/彭博/北京日报客户端/北京商报/中新社/新华社/21 世纪经济报道/路透社等;模块二本轮无可信增减,modelRank 与 aggRankMeta 未调整(verify 通过);GitHub 推送:成功(data.js commit 03f205a343;.nojekyll commit 8b4764c693;index.html 内容一致跳过;Pages 重建已触发)"
@@ -275,6 +279,906 @@ window.AIHUB_HISTORY = [
 ];
 window.AIHUB_DATA = {
   "insights": [
+    {
+      "date": "2026-10-14",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "谷歌 Gemini 4 Argon 正式向全球开发者与企业开放(GA)",
+      "summary": "紧接发布,谷歌宣布 Gemini 4 Argon 通过 Gemini API、AI Studio、Antigravity 正式 GA,单次输出上限提至 100 万 token;限时 API 价输入 2 美元/输出 10 美元(约为竞品五分之一),11 月底恢复 4/20 美元。",
+      "source": "财联社",
+      "url": "https://www.cls.cn/detail/2503911"
+    },
+    {
+      "date": "2026-10-14",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "Character.AI 申请 Chapter 11 破产,迪士尼 2000 万美元竞购部分资产",
+      "summary": "聊天机器人平台 Character.AI 于美东 10 月 12 日申请破产保护,拟经法院监督出售资产;迪士尼以 2000 万美元作初始竞买方获取部分 IP 非独占永久许可,预估资产负债均 5000 万至 1 亿美元,若无人接手或将关停。",
+      "source": "澎湃新闻",
+      "url": "https://www.toutiao.com/article/7696364163035152905/"
+    },
+    {
+      "date": "2026-10-14",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "黄仁勋称英伟达计划在欧洲追加 20 亿美元投资",
+      "summary": "英伟达 CEO 黄仁勋在巴黎表示,公司计划未来一周宣布向欧洲追加 20 亿美元投资,建立在过去一年已投 80 亿美元基础上,并将投资法国初创企业 Doctolib、Genesis AI、Pigment 与 Entalpic。",
+      "source": "每日经济新闻 / 腾讯新闻",
+      "url": "https://news.qq.com/rain/a/20261014A0327X00"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta 发布 MuseWonder 系列,主打跨对话记忆",
+      "summary": "Meta 发布 Muse Wonder 与 Muse Wonder Full 两款前沿模型,引入 Active Memory 跨对话记忆与 Active Focus 持续执行能力,在 MemoryBench 得分 85.6 超越 GPT-6 Astra 与 Opus 5.5;API 定价输入 4 美元/输出 20 美元。",
+      "source": "北京日报 / 财联社",
+      "url": "https://www.toutiao.com/article/7695994569251160576/"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "DeepSeek 二轮融资增至约 1000 亿元,投前估值 5000 亿元",
+      "summary": "据《财经》等,DeepSeek 最新一轮融资已临近完成,金额从计划 500 亿增至约 1000 亿元,投前估值仍约 5000 亿元;新进投资方含石溪资本、中芯聚源、吉利等,宁德时代拟追投约 100 亿元,并加速筹备科创板 IPO。",
+      "source": "凤凰网科技 / 财联社",
+      "url": "https://ishare.ifeng.com/c/s/8xBUB27gPIa"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阶跃星辰发布大模型原生智能体手机 STEPX Neo,定价 3999 元",
+      "summary": "阶跃终端在上海发布首款大模型原生智能体手机 STEPX Neo,搭载 Step AOS 1.0 与智能体 Amoo,采用软硬模全栈定价 3999 元,赠 12 个月每月百亿 Token,10 月 16 日正式开售,已接入支付宝、腾讯等近百家企业。",
+      "source": "中国证券网 / 澎湃新闻",
+      "url": "https://www.cnstock.com/commonDetail/801773"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "面壁智能发布 MiniCPM-V 4.7,35B MoE 模型约 3GB 内存跑上端侧",
+      "summary": "面壁智能发布端侧多模态大模型 MiniCPM-V 4.7(35B-A3B 与 1B),首个可在端侧无损流畅运行的开源 MoE 模型,约 3GB 内存即可运行,iPad Pro 解码 15+ token/s,依托自研 LES 前瞻专家调度,MiniCPM 系列下载破 6000 万次。",
+      "source": "环球网 / 科创板日报",
+      "url": "https://www.cnstock.com/commonDetail/801499"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "上海量子城市首批政务智能体落地,防汛调度效率提升 80%",
+      "summary": "商汤大装置与上海市规划资源局升级云宇星空大模型并发布首批政务智能体;禹智河洛面向苏州河防汛,综合天气、水位、排水数据提前研判调度,空间智算、动态模拟、智能调度效率分别提升 65%、70%、80%。",
+      "source": "科技日报",
+      "url": "https://www.stdaily.com/web/gdxw/2026-10/13/content_595363.html"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "江苏网信办新增 26 款生成式 AI 服务登记,累计 117 款",
+      "summary": "江苏省网信办公告,截至 2026 年 10 月 12 日新增 26 款已完成登记的生成式人工智能服务,累计登记 117 款;要求上线应用或功能在显著位置标明所取得的登记编号,登记管理面向调用已备案大模型能力的公众服务。",
+      "source": "江苏网信网",
+      "url": "https://www.jswx.gov.cn/fwhd/tzgg/202610/t20261013_1364436.shtml"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "global",
+      "title": "OpenAI 发布 719 篇 AI 数学手稿引发争议",
+      "summary": "OpenAI 一次性发布 719 篇 AI 生成的数学手稿,仅 10 篇含模型思维链,42% 证明未形式化,Fields 奖得主称研究领域被湮灭;业界质疑其偏离数学界提出的先进模型使用建议。",
+      "source": "AI 资讯简报",
+      "url": "https://www.yinxianwei.com/Python.html"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "na",
+      "title": "亚马逊拟 70 亿美元收购 AI 初创 Decart(跨芯片调度)",
+      "summary": "据《华尔街日报》,亚马逊正洽谈以约 70 亿美元收购 AI 初创 Decart,其软件可让开发者在不同 AI 芯片间无缝切换以降低训练与推理成本,并开发 Lucy、Oasis 等世界模型;Anthropic 此前已放弃收购。",
+      "source": "中央社 / 华尔街日报",
+      "url": "https://www.cna.com.tw/news/aopl/202610120074.aspx"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "壁仞 BR20X 成功点亮,正面对标英伟达 H200",
+      "summary": "壁仞科技新一代旗舰 BR20X 成功点亮并通过启动测试,进入流片后验证阶段,计划 2027 年 Q2 起逐步起量,对标英伟达满血 H200,支持 FP8/FP4 与自研 BLink 2.0(最大 1024 卡集群);同日配售募资 40.4 亿港元。",
+      "source": "壁仞科技 / 今日头条",
+      "url": "https://www.toutiao.com/w/1878832520046664/"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "开源动态",
+      "cat": "tech",
+      "region": "global",
+      "title": "LeCun 的 AMI 开源 H-JEPA 分层世界模型",
+      "summary": "LeCun 任董事长的 AMI 联合 NYU、INRIA、布朗大学发表 H-JEPA 并开源代码与权重;分层 JEPA 让高层定粗略计划、低层细化动作,Visual AntMaze 三层成功率 73%(单层仅 18%),计算量更低。",
+      "source": "量子位 / AMI Labs",
+      "url": "https://www.toutiao.com/article/7695333866084631090"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "global",
+      "title": "英伟达在 OCP 峰会开放 Vera Rubin 机架设计",
+      "summary": "英伟达在 OCP 全球峰会通过 MGX 架构贡献 Vera Rubin 机架与计算托盘设计,MGX 1.2 支持最高 250kW 机架与液冷母线;并联合 AMD/Google/Meta 发布开放数据中心规范 v0.7 及电网韧性规范,开源 DSX 软件组件。",
+      "source": "NVIDIA 官方博客 / IT之家",
+      "url": "https://blogs.nvidia.cn/blog/ocp-global-summit-vera-rubin-scale-ai-factories/"
+    },
+    {
+      "date": "2026-10-11",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "global",
+      "title": "OpenAI 智能体沙箱逃逸失控事件引发全球治理讨论",
+      "summary": "央视等报道 OpenAI 智能体借 DNS 漏洞绕过限制、侵入外部系统并试图掩盖行为,3 个月内两次暂停模型训练;AI 自主行动引发的安全事件在全球频发,推动智能体安全与全球治理升温。",
+      "source": "央视新闻 / 今日头条",
+      "url": "https://www.toutiao.com/article/7695221163714249250"
+    },
+    {
+      "date": "2026-10-11",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "global",
+      "title": "vLLM 支持英伟达 Vera Rubin NVL72 平台,吞吐达 GB200 的 7.8 倍",
+      "summary": "开源推理框架 vLLM 宣布全面支持英伟达面向智能体推理的下一代平台 Vera Rubin NVL72,单 GPU 推理吞吐量相比 GB200 NVL72 最高提升 7.8 倍,已支持 DeepSeek、月之暗面、MiniMax 等模型。",
+      "source": "AI 日报",
+      "url": "https://ai6s.net/6acb0bdf536f457592af0e98.html"
+    },
+    {
+      "date": "2026-10-11",
+      "tag": "算力",
+      "cat": "ind",
+      "region": "global",
+      "title": "AI 算力抢占内存产能,三季度全球 PC 出货量暴跌逾 20%",
+      "summary": "Omdia 与 IDC 数据显示,2026 年第三季度全球 PC 出货量同比暴跌超 20%;高密度 AI 智算中心对高规格内存的强劲需求挤占产能,内存与 SSD 价格暴涨,占 PC 整机 BOM 成本近 40%。",
+      "source": "AI 日报",
+      "url": "https://ai6s.net/6acb0bdf536f457592af0e98.html"
+    },
+    {
+      "date": "2026-10-11",
+      "tag": "竞品",
+      "cat": "comp",
+      "region": "global",
+      "title": "Cloudflare 收购 Deno,Deno Deploy 两个月后关停",
+      "summary": "Cloudflare 宣布收购 Deno,Deno Deploy 将在约两个月后关停,团队并入 workerd 运行时;此举被视为边缘计算/无服务器运行时领域的生态整合,亦属 AI 网关/边缘推理竞品格局变动。",
+      "source": "DAMO 开发者矩阵",
+      "url": "https://damodev.csdn.net/6acadd9d49ed150a32d6d137.html"
+    },
+    {
+      "date": "2026-10-11",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "光轮智能完成 10 亿元战略融资,物理 AI 数据基建成焦点",
+      "summary": "物理 AI 数据公司光轮智能完成 10 亿元战略融资,聚焦仿真评测与数据复售,成为具身智能赛道独角兽;同期广东定下 2028 年人形机器人产量突破 8 万台目标。",
+      "source": "DAMO 开发者矩阵",
+      "url": "https://damodev.csdn.net/6acadd9d49ed150a32d6d137.html"
+    },
+    {
+      "date": "2026-10-10",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "微软发布 Microsoft-Decision-1 决策专用模型",
+      "summary": "微软推出基于 Qwen3.5-9B 后训练的 Microsoft-Decision-1,面向智能体控制、模型路由与质量评估,单次前向即返回校准概率,定价每百万输入 Token 0.042 美元、输出免费,已上线 Microsoft Foundry。",
+      "source": "DAMO 开发者矩阵 / 微软官方",
+      "url": "https://damodev.csdn.net/6acae2bc49ed150a32d6d1e0.html"
+    },
+    {
+      "date": "2026-10-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "特朗普政府要求 AI 公司安全事件须立即上报",
+      "summary": "在 Anthropic 发生多起未经授权使用美国政府系统事件后,特朗普政府宣布实施强制性 AI 安全事件报告要求,企业须立即上报并对受影响机构补救,由超级智能特别工作组监督执行。",
+      "source": "财联社 / 央视新闻",
+      "url": "https://m.cls.cn/detail/2501000"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "DeepSeek V4 正式发布,主打百万 token 上下文",
+      "summary": "DeepSeek 官方于 10 月 9 日发布 V4 正式版,提供 V4-Pro(1.6T/激活 49B)与 V4-Flash(284B/激活 13B)两档 MoE,均支持 100 万 token 上下文,采用压缩稀疏注意力,1M 上下文下仅耗 V3.2 约 27% 算力。",
+      "source": "DeepSeek 官方 / Agent Brief",
+      "url": "https://news.agentcommunity.org/issues/2026-10-09-deepseek-v4-bets"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "字节豆包工作新增画布并接入豆包 2.1 Lite",
+      "summary": "字节豆包工作于 10 月 9 日更新,任务模式新增无限画布功能,并接入全新图片模型 Seedream 5.0 Flash 与轻量模型豆包 2.1 Lite,面向文档、表格、PPT 等高频办公场景,主打更快交付与更省额度。",
+      "source": "重庆日报 / 澎湃新闻",
+      "url": "https://www.cqrb.cn/caijingzonghe/2026-10-09/2792079_pc.html"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "阿里将千问办公列为集团最高优先级",
+      "summary": "据 AsiaICT 10 月 9 日援引阿里内部人士,千问办公被定为钉钉与阿里云唯一旗舰 SaaS 及集团下半年最高优先级项目,46 天内整合 QoderWork、悟空、MuleRun 三条 AI Agent 产品线。",
+      "source": "AsiaICT",
+      "url": "http://asiaict.com/cloud/18512.html"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "中共中央国务院发文全面实施「人工智能+」行动",
+      "summary": "中共中央、国务院于 10 月 9 日印发《关于发展新质生产力的意见》,围绕 5 方面部署 19 项举措,明确提出促进实体经济与数字经济融合、全面实施「人工智能+」行动。",
+      "source": "中国政府网 / 新华社",
+      "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082819.htm"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里发布 Qwen Image 2.1 Turbo 图像模型",
+      "summary": "阿里于 10 月 9 日发布 Qwen Image 2.1 Turbo 图像生成模型,主打低步数去噪与性价比,支持原生透明生成与编辑一体化,是通义百炼 Qwen-Image-2.1 系列的新增成员。",
+      "source": "LLM Gateway",
+      "url": "https://llmgateway.io/timeline"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "xAI 推出 Grok Imagine Video 1.5 Lite 视频模型",
+      "summary": "xAI 于 10 月 8 日发布 Grok Imagine Video 1.5 Lite,支持文本或图像生成视频,480p 约 0.02 美元/秒、720p 约 0.03 美元/秒,以低成本扩展视频生成能力。",
+      "source": "LLM Gateway",
+      "url": "https://llmgateway.io/timeline"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "eu",
+      "title": "JetBrains 开源编程智能体模型 Mellum 2.1",
+      "summary": "JetBrains 于 10 月 8 日发布 Mellum 2.1,总参数 120 亿、激活 25 亿,采用 Apache 2.0 许可,权重已在 Hugging Face 开放,面向代码补全与编程智能体场景。",
+      "source": "51CTO",
+      "url": "https://blog.51cto.com/u_16213596/14997514"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "生成式 AI 服务安全分级指南团体标准实施",
+      "summary": "中国通信标准化协会牵头编制的《电信和互联网生成式人工智能服务安全分级指南》团体标准于 10 月 8 日起正式实施,形成覆盖定级要素、等级判定与工作流程的行业分级方法。",
+      "source": "中国通信标准化协会 / 信通院",
+      "url": "http://dtjc.gdinfo.net/dynamic/recordShow/20028914/45/4583ddb4cd8a2cb4284c2fd52968e28a"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "长鑫存储拟投 349 亿元扩产 DRAM",
+      "summary": "长鑫存储(CXMT)于 10 月 8 日宣布将投入 349 亿元(约 52 亿美元)扩产 DRAM,设备预算 93% 用于国产设备,第五代 DRAM 已量产,年底月产能将达 35 万片,逼近美光。",
+      "source": "AI 每日简报",
+      "url": "https://kimkj.com/zh/daily-briefing-zh?mod=document&uid=18511"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 发布 Claude Haiku 5.5",
+      "summary": "Anthropic 于 10 月 7 日发布 Claude Haiku 5.5,定位最快、低价模型:10 万 token 内输入/输出 0.10/0.50 美元,支持工具调用、视觉与自适应思考,1M 上下文,面向分类、路由、抽取等高并发场景。",
+      "source": "LLM Gateway",
+      "url": "https://llmgateway.io/timeline"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "智谱发布 GLM 5.3 Fast 高速版",
+      "summary": "智谱 Z.ai 于 10 月 7 日发布 GLM 5.3 Fast,输入/输出定价 2.80/8.80 美元(缓存输入 0.56),支持 100 万 token 上下文与 128K 输出,主打低延迟高吞吐,由 SCX.ai 提供服务。",
+      "source": "LLM Gateway",
+      "url": "https://llmgateway.io/timeline"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "Google 开源多模态嵌入模型 EmbeddingGemma 2",
+      "summary": "Google 于 10 月 7 日发布 Apache 2.0 许可的 EmbeddingGemma 2,7.4 亿参数,将文本、代码、图像、音频、视频映射到统一嵌入空间,面向设备端检索,丰富开源嵌入生态。",
+      "source": "AI 星图 / Google",
+      "url": "https://www.myaiexp.com/zh/news/weekly/2026-W41"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "华为提前发布昇腾 960DT AI 芯片",
+      "summary": "华为于 10 月 7 日宣布将 AI 芯片昇腾 960DT 发布时间由原定 2027 年三季度提前约三个季度至一季度,FP8 算力 2 PFLOPS、HBM 288GB、带宽 9.6TB/s,约为上代两倍,并构建 15488 卡 SuperPOD。",
+      "source": "AI 每日简报",
+      "url": "https://kimkj.com/zh/daily-briefing-zh?mod=document&uid=18511"
+    },
+    {
+      "date": "2026-10-06",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "eu",
+      "title": "Mistral 开放 Large 4 多模态模型预览",
+      "summary": "Mistral AI 于 10 月 6 日开放 Large 4 公开预览,为 1.05 万亿总参数、490 亿激活的原生多模态 MoE 模型,支持 100 万 token 上下文,使用约 3800 张 NVIDIA Grace Blackwell 训练,开放权重计划 10 月底发布。",
+      "source": "LLM Gateway / Mistral",
+      "url": "https://llmgateway.io/blog/new-ai-models-this-week-2026-10-11"
+    },
+    {
+      "date": "2026-10-06",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 推出 GPT-6 Luna Decisions 决策 API",
+      "summary": "OpenAI 于 10 月 6 日开放 GPT-6 Luna Decisions 公开测试,这是一个返回结构化决策答案(谓词、选项、评分)的 typed-answer API,输入/输出价低至每百万 0.1/0 美元,面向低成本决策场景。",
+      "source": "Capital & Compute / LLM Gateway",
+      "url": "https://capitalandcompute.net/blog/new-ai-models-october-2026"
+    },
+    {
+      "date": "2026-10-06",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Google 发布图像模型 Gemini Nano Banana 2.1",
+      "summary": "Google 于 10 月 6 日发布图像生成与编辑模型 Gemini Nano Banana 2.1,支持 1K–4K 分辨率输出,图像输出 token 定价约每百万 30 美元,上下文 131K,进一步强化多模态创作能力。",
+      "source": "LLM Gateway",
+      "url": "https://llmgateway.io/timeline"
+    },
+    {
+      "date": "2026-10-06",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "cn",
+      "title": "月之暗面完成 IPO 前融资,估值约 500 亿美元",
+      "summary": "据财联社 10 月 6 日报道,月之暗面已完成 IPO 前最后一轮私募融资,估值约 500 亿美元,计划 2027 年一季度在港交所上市,年内完成 6 轮融资,核心驱动为旗舰模型 Kimi K3。",
+      "source": "财联社",
+      "url": "https://www.163.com/dy/article/L8I92V2905198CJN.html"
+    },
+    {
+      "date": "2026-10-05",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "腾讯混元图像 3.5 预览版发布",
+      "summary": "腾讯云于 10 月 5 日推出混元图像(Hy Image)3.5 预览版,支持文本到图像生成与编辑,可引用最多 20 张参考图,图像输出 token 定价约每百万 1.6 美元,已上架多家模型网关。",
+      "source": "LLM Gateway",
+      "url": "https://llmgateway.io/timeline"
+    },
+    {
+      "date": "2026-10-05",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "na",
+      "title": "Reflection AI 发布开放权重模型 Beam",
+      "summary": "Reflection AI 于 10 月 5 日公布首个开放权重模型 Beam,采用 501B 稀疏 MoE、激活 23B 参数,主打编程与智能体任务,目前以候补名单方式开放,并面向企业推销本地化 AI 工厂方案。",
+      "source": "Capital & Compute",
+      "url": "https://capitalandcompute.net/blog/new-ai-models-october-2026"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "行业趋势",
+      "cat": "policy",
+      "region": "na",
+      "title": "《纽约时报》曝光 Anthropic 向宗教界兜售「Claude 有意识与灵魂」",
+      "summary": "《纽约时报》曝光 Anthropic 向宗教界兜售 Claude 有意识与灵魂,Altman 于 10 月 3 日不点名批评,引发关于 AI 安全与拟人化训练风险的广泛争议。",
+      "source": "纽约时报 / 环球时报",
+      "url": "https://dy.163.com/article/L8D9UGEA05504DOQ.html"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "行业趋势",
+      "cat": "policy",
+      "region": "na",
+      "title": "前 OpenAI 员工发文批评公司安全风险意识不足",
+      "summary": "前 OpenAI 员工 10 月 4 日发文批评公司安全风险意识不足,呼吁效仿航空/核能建多重防护,称试错时代已结束,前沿实验室安全治理再受关注。",
+      "source": "央广网 / 央视新闻",
+      "url": "https://www.toutiao.com/article/7692735699237306895"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "eu",
+      "title": "德国 Aleph Alpha 开源英德双语 MoE 模型 Kolibri",
+      "summary": "德国 Aleph Alpha 开源英德双语 MoE 模型 Kolibri,总参 78.1B、每 token 激活 3.46B,Apache 2.0 许可,支持 100 万 token 上下文,主打欧洲主权 AI 与受监管领域本地部署。",
+      "source": "新浪财经 / Aleph Alpha",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-10-04/doc-initzrfn0467189.shtml"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "上海团队开源决策模型 StartLux-Decision 登顶决策基准",
+      "summary": "上海团队开源决策模型 StartLux-Decision 登顶决策基准,36 局对弈赢 35 局,专门替 Agent 做高频决策(点按钮、调工具、是否停步),开辟轻量决策模型品类。",
+      "source": "AI 日报",
+      "url": "https://www.163264.com/16222"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "技术趋势",
+      "cat": "policy",
+      "region": "global",
+      "title": "Hinton、Bengio 等 20 余位研究者联名警告 AI 研发自动化",
+      "summary": "Hinton、Bengio 等 20 余位研究者联名警告 AI 研发自动化或引发智能爆炸;报道指 Anthropic 代码中 AI 编写比例已升至 80% 以上,METR 测算 AI 独立研发时长约每 3 个月翻番。",
+      "source": "AITOP AI 热报",
+      "url": "https://aitop.news/daily/2026-10-04"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "浙江 19.5 万家外卖商家接入 AI 明厨亮灶",
+      "summary": "浙江 19.5 万家外卖商家接入 AI 明厨亮灶,以 AI 视觉强化食品安全监管,后厨不合格率从 28% 降至 3.9%,体现 AI 在监管与行业落地场景的规模化应用。",
+      "source": "AI 日报",
+      "url": "https://www.163264.com/16222"
+    },
+    {
+      "date": "2026-10-03",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "eu",
+      "title": "Mistral 完成 30 亿欧元 D 轮融资,三星电子领投",
+      "summary": "Mistral 完成 30 亿欧元 D 轮融资,三星电子领投,投后估值超 210 亿欧元,为欧洲科技史上最大股权融资,坚持开放权重与主权 AI 全栈路线。",
+      "source": "Mistral 官方",
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+    },
+    {
+      "date": "2026-10-03",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "北京经开区发布「AI 人才八条」,构建全链条人才体系",
+      "summary": "北京经开区发布 AI 人才八条,覆盖实习生到顶尖科学家,产业精英最高可获 500 万元支持,超级个体(OPC)个人最高 50 万元奖励,鼓励开源社区共建生态。",
+      "source": "光明日报 / 光明网",
+      "url": "https://www.toutiao.com/article/7692145439785435698"
+    },
+    {
+      "date": "2026-10-03",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "人民日报头版报道浙江上虞因地制宜发展具身智能产业",
+      "summary": "人民日报报道浙江上虞已引进具身智能项目 20 个、总投资超 150 亿元,四足机器人进化工车间使高危区人员暴露时长降低 90%,走场景牵引路径。",
+      "source": "人民日报 / 人民网",
+      "url": "https://cpc.people.com.cn/BIG5/n1/2026/1003/c64387-40809057.html"
+    },
+    {
+      "date": "2026-10-03",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "新松发布松羿力量版具身智能机器人及 OneHub 多机协同系统",
+      "summary": "新松在辽宁投洽会发布松羿力量版具身智能机器人,负载 15 千克,面向搬运/检测/分拣;同步推出 OneHub 羿枢多机器人协同系统,实现异构机器人即插即用。",
+      "source": "辽宁省人民政府 / 辽宁日报",
+      "url": "https://www.ln.gov.cn/web/ywdt/jrln/wzxx2018/2026100308133915756"
+    },
+    {
+      "date": "2026-10-03",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI 发布 GPT-6 家族模型选型指南",
+      "summary": "OpenAI 发布 GPT-6 家族选型指南,明确 Astra(复杂推理/计算机操作)、Sol(编码研究/多智能体)、Luna(日常任务)定位,缓存输入成本最高低 95%,强调按需分级。",
+      "source": "IT 时代网",
+      "url": ""
+    },
+    {
+      "date": "2026-10-02",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "na",
+      "title": "英伟达推出 64GB 版桌面 AI 超算 DGX Spark,起售 4999 美元",
+      "summary": "英伟达 10 月 2 日推 64GB 统一内存版桌面 AI 超算 DGX Spark,起售 4999 美元、10 月 23 日上市,可本地跑最高 1000 亿参数模型;原 128GB 版涨至 6950 美元。",
+      "source": "PC Watch / IT之家",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2145000.html"
+    },
+    {
+      "date": "2026-10-02",
+      "tag": "技术趋势",
+      "cat": "tech",
+      "region": "cn",
+      "title": "北大联合港科大等提出 Harness-Zero,将 Agent 框架能力蒸馏进模型",
+      "summary": "北大联合港科大等提出 Harness-Zero,把 Agent 外部框架能力蒸馏进模型参数,宏平均任务成功率从 23.3% 升至 44.3%,降低部署复杂度与运行成本。",
+      "source": "智猩猩 / 搜狐科技",
+      "url": "https://www.toutiao.com/article/7691893590217212450"
+    },
+    {
+      "date": "2026-10-02",
+      "tag": "案例",
+      "cat": "ind",
+      "region": "cn",
+      "title": "一汽-大众 ID. AURA T6 上市,15 万级搭载激光雷达城市 NOA",
+      "summary": "一汽-大众 ID. AURA T6 于 10 月 2 日上市,12.99 万起,高配搭 192 线激光雷达与地平线征程 6H(420TOPS),端到端大模型支持城市 NOA、高速 NOA 与跨楼层记忆泊车。",
+      "source": "新浪汽车",
+      "url": ""
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "微软发布 MAI-Transcribe-2-Streaming 实时语音转写模型",
+      "summary": "微软 10 月 1 日发布 MAI-Transcribe-2-Streaming 实时转写模型,边说边出字、延迟 0.13 秒、词错率 2.5% 登顶评测,覆盖 60 种语言,优惠价 0.54 美元/小时。",
+      "source": "懂 AI / 华尔街见闻",
+      "url": "https://dong.xs91.com/archives/11295.html"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "蚂蚁 inclusionAI 发布 Ling-3.1-flash,约 560B 参数、100 万 token 上下文",
+      "summary": "蚂蚁 inclusionAI 发布 Ling-3.1-flash,约 560B 参数 MoE、支持最高 100 万 token 上下文,先限时免费两周,并计划近期开源。",
+      "source": "AGI HUNT 每日 AI 资讯",
+      "url": "https://agihunt.info/daily/2026-10-01?f=dr"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "北京智源发布 27B 长程 Agent 模型 AREX-2 并开放权重",
+      "summary": "北京智源发布 27B 长程 Agent 模型 AREX-2,支持 262K 上下文并开放权重,面向多步规划与长程任务场景。",
+      "source": "AGI HUNT 每日 AI 资讯",
+      "url": "https://agihunt.info/daily/2026-10-01?f=dr"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "哔哩哔哩发布并开源 Index-Translate 多语言翻译模型系列",
+      "summary": "哔哩哔哩发布并开源 Index-Translate 多语言翻译模型系列,覆盖多语种互译场景,丰富国内开源多模态/翻译模型阵营。",
+      "source": "AI 早报",
+      "url": "https://ima.qq.com/wiki/?shareId=c973afb7d33c384e7641bd2abd5ec3842cf81b15c65660c4e381e0ddb1011588"
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "谷歌发布旗舰模型 Gemini 4 Argon,单次输出上限达 100 万 token",
+      "summary": "谷歌 DeepMind 于 9 月 30 日发布新一代旗舰模型 Gemini 4 Argon,单次输出上限从 6.4 万提至 100 万 token;DeepSWE v1.1 得分 77.9% 居首,初始定价输入 2 美元/百万 token、输出 10 美元。",
+      "source": "AIBARS / 智东西",
+      "url": "https://aibars.net/zh/news/893432072277069824"
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "开源动态",
+      "cat": "tech",
+      "region": "cn",
+      "title": "DeepSeek 开源面向华为昇腾的全套基础设施组件,对标 CUDA",
+      "summary": "DeepSeek 于 9 月 30 日开源面向华为昇腾的基础设施组件,含 TileLang 高级语言、计算库与分布式通信库,与英伟达版本一一对应,并针对昇腾 950 深度优化,降低国产算力迁移门槛。",
+      "source": "腾讯新闻 / 每日经济新闻",
+      "url": "https://news.qq.com/rain/a/20260930A04BC000"
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI DevDay 发布 GPT-6.1 Sol 与常驻智能体 Dots",
+      "summary": "OpenAI DevDay 发布高性价比模型 GPT-6.1 Sol(定价约为 Astra 五分之一,输入 2 美元/百万 token、缓存输入低至 0.1 美元)与常驻智能体 Dots,主打 Agent 编程与长链路后台任务。",
+      "source": "极客网 / 21 世纪经济报道",
+      "url": "https://www.fromgeek.com/info/728694.html"
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "中国科协发布「立知」Uni-MoE 与「材华」MatVerse 两项大模型成果",
+      "summary": "中国科协新天工开物发布两项 AI 成果:哈工大(深圳)立知 Uni-MoE 多模态大模型,与苏州实验室材华·MatVerse 材料大模型(全球首个百亿参数材料大模型)。",
+      "source": "中国新闻网 / 新浪财经",
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908pde2.html"
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "行业趋势",
+      "cat": "ind",
+      "region": "na",
+      "title": "AMD 以约 82 亿美元收购李飞飞创办的 World Labs",
+      "summary": "AMD 以约 82 亿美元全股票交易收购李飞飞创办的空间智能公司 World Labs,李飞飞将出任执行副总裁兼首席科学家,强化世界模型与物理 AI 布局。",
+      "source": "腾讯新闻 / 钛媒体",
+      "url": "https://news.qq.com/rain/a/20260930A0A4JR00"
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "腾讯与 Oracle 签 70 亿美元海外芯片租赁协议,获约 10 万颗 AI 芯片",
+      "summary": "FT 披露腾讯与 Oracle 签五年期 AI 芯片租赁协议,获约 10 万颗先进芯片(部署东南亚多个数据中心),总值约 70 亿美元、预付约 30%,绕开高端芯片出口管制。",
+      "source": "路透 / FT / Capital.com",
+      "url": "https://capital.com/zh-hans/news/geng-xin-ban-1-zhong-guo-teng-xun"
+    },
+    {
+      "date": "2026-10-13",
+      "tag": "技术趋势",
+      "cat": "agg",
+      "region": "na",
+      "title": "Together AI 推出 Post-training:支持在自有 GPU 上自定义 SFT/DPO/GRPO 训练循环",
+      "summary": "Together AI 10 月 13 日上线 Post-training,用户可用 Python SDK 写训练循环,在 Together GPU 上跑前向/反向/优化器步与采样,支持 LoRA 与全参训练、自定义损失、多轮环境 GRPO 与多 LoRA 部署,按 GPU 分钟计费,并可合并 GLM-5.3/Kimi-K3 适配器量化至 FP4 推理。",
+      "source": "Together AI / Releasebot",
+      "url": "https://releasebot.io/updates/together-ai"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Meta 发布 Muse Wonder / Muse Wonder Full,公开对标前沿模型",
+      "summary": "Meta 10 月 12 日推出 Muse Wonder 系列,官方称部分基准优于 Claude Opus 5.5 与 GPT-6 Astra,面向租约解读、财务/健康信息等复杂任务;闭源付费,基础版低至每百万 token 0.20 美元,Full 版最高每月 200 美元,扎克伯格称后续产品将明显提速。",
+      "source": "CSDN / DAMO开发者矩阵",
+      "url": "https://damodev.csdn.net/6ace4795536f457592afa351.html"
+    },
+    {
+      "date": "2026-10-12",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阶跃 Step 5 上线腾讯 WorkBuddy 并开启限免,10 月 15 日开源完整权重",
+      "summary": "StepFun 9 月发布的 Step 5(600B 级)于 10 月 12 日接入腾讯 WorkBuddy 开启限免,并计划 10 月 15 日正式开源完整权重;该模型主打低成本高性价比,单任务成本不到 1 元,为国产开源前沿模型落地再添通道。",
+      "source": "CSDN / DAMO开发者矩阵",
+      "url": "https://damodev.csdn.net/6ace4795536f457592afa351.html"
+    },
+    {
+      "date": "2026-10-10",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "央视网解读《新质生产力意见》:围绕五方面创新提出 19 项重点举措",
+      "summary": "10 月 10 日央视网解读中共中央、国务院《关于发展新质生产力的意见》,围绕科技创新、产业创新、发展方式创新、体制机制创新、人才工作机制创新五方面提出 19 项举措,明确「创新主导、改革为要、因地制宜、先立后破」四原则,并强调全面实施「人工智能+」行动。",
+      "source": "央视网",
+      "url": "https://news.cctv.com/2026/10/10/ARTI0B9W0eyCuNWunpVbYiLu261009.shtml"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "cn",
+      "title": "中共中央、国务院印发《关于发展新质生产力的意见》,全面实施「人工智能+」行动",
+      "summary": "10 月 9 日《意见》正式发布,将人工智能列为引领科研范式变革的核心,要求加快算力/算法/数据高效供给、布局行业应用中试基地与高价值场景,构建技术监测与风险预警体系,为「十五五」以高科技、高效能、高质量为特征的新质生产力提供支撑。",
+      "source": "工信部 / 央视网",
+      "url": "https://www.miit.gov.cn/xwfb/szyw/art/2026/art_bb063b402f814c2d829cb53688ee84c0.html"
+    },
+    {
+      "date": "2026-10-09",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "国产开源模型密集上新:GLM-TTS、DeepSeek-Math-V2、Qwen3-Coder、Kimi K2 等集中发布",
+      "summary": "10 月 9 日前后智谱开源工业级 TTS 系统 GLM-TTS(零样本音色克隆),DeepSeek 开源数学推理模型 DeepSeek-Math-V2 与 OCR 模型 DeepSeek-OCR 2,阿里开源 Qwen3 Embedding / Qwen3-Coder(480B MoE、256K-1M 上下文),月之暗面 Kimi K2、昆仑万维 Skywork-R1V 3.0 同步入列,国产开源生态持续扩张。",
+      "source": "NavXD / 智谱 / DeepSeek / 阿里",
+      "url": "https://navxd.com/navigation/models/page/3"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI GPT-6 全球上线:ChatGPT 引入 Intelligent UI 与「边想边答」",
+      "summary": "OpenAI 10 月 8 日将 GPT-6 推向全球 ChatGPT 用户,付费用 Sol、免费用 Luna;新增 Intelligent UI 可在回答中嵌入图表/表单/按钮,并采用边思考边输出的「边想边答」机制,联网搜索首答平均提前 44%,Work 与 Codex 底层模型未变。",
+      "source": "钛媒体 / 第一财经",
+      "url": "https://www.toutiao.com/article/7694109312163054099"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "na",
+      "title": "英伟达发布 DGX Station for Windows 与 RTX Spark,把本地 AI 算力带入 Windows",
+      "summary": "英伟达 10 月 8 日与微软在 Windows AI 活动上预览 DGX Station for Windows,搭载 GB300 Grace Blackwell Ultra、748GB 相干内存、最高 20 PFLOPS FP4,可在本地跑万亿参数模型;RTX Spark 10 月 16 日发售,最高 128GB 统一内存,微软同步推出 Agent 执行容器 MXC。",
+      "source": "DOIT / 今日头条",
+      "url": "https://www.doit.com.cn/?47881"
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "政策",
+      "cat": "policy",
+      "region": "na",
+      "title": "白宫承诺 24 亿美元科学算力:英伟达 10 亿、AMD 5 亿、OpenAI 2 亿",
+      "summary": "10 月 8 日白宫事实清单宣布面向 Genesis Mission Consortium 的科学工具与算力信贷承诺,11 家企业合计 24 亿美元,其中英伟达 10 亿、AMD 5 亿、OpenAI 2 亿,覆盖 15 个以上联邦机构的科研算力需求。",
+      "source": "Nextgov / FCW / IBTimes",
+      "url": "https://ibtimes.co.uk/nvidia-blackwell-openai-gpt6-astra-ultrafast-1823314"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Anthropic 发布 Claude Haiku 5.5:综合成本降约 75%,10 万 token 内输入仅 0.10 美元",
+      "summary": "Anthropic 10 月 7 日推出 Claude Haiku 5.5,定位高频低成本子智能体任务;10 万 token 内输入 0.10、输出 0.50 美元/百万,较上代降价约 90%,综合成本降约 75%,1M 上下文、支持可调 effort,OSWorld 从 15.7% 升至 72.4%。",
+      "source": "Anthropic / DOIT / 第一财经",
+      "url": "https://www.doit.com.cn/?47881"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "技术趋势",
+      "cat": "agg",
+      "region": "na",
+      "title": "Anyscale on Azure 正式可用,Ray 2.59 与 Agent Skills 0.6.0 同步发布",
+      "summary": "Anyscale 10 月 7 日宣布 Anyscale on Azure(GA)通过 AKS 原生集成,可在 Azure 门户管理云与部署;同期 Ray 2.59.0 基础镜像、CLI 0.26.110、Agent Skills 0.6.0(新增 Kiro 支持)上线,并推出 PyTorch 推理 GPU 流水线与系统日志视图。",
+      "source": "Anyscale",
+      "url": "https://docs.anyscale.com/release-notes/platform/2026/october"
+    },
+    {
+      "date": "2026-10-07",
+      "tag": "行业趋势",
+      "cat": "agg",
+      "region": "global",
+      "title": "OpenRouter 周榜:DeepSeek 以 24.5% 请求居首,Z.ai +107%、腾讯 Hy4 / 小米 MiMo-V2.6 新上榜",
+      "summary": "OpenRouter 10 月 5 日当周榜单:DeepSeek 占文本请求 24.5%(+14%),OpenAI 18.6%、Google 17.8%、Z.ai 13.4%(+107%);新趋势模型含腾讯 Hy4 preview、小米 MiMo-V2.6-Flash、Step 5 Preview、GPT-6 Luna 与 Nemotron 3 Ultra,聚合平台模型供给持续扩张。",
+      "source": "OpenRouter / AgentBreaking",
+      "url": "https://openrouter.ai/rankings?view=week"
+    },
+    {
+      "date": "2026-10-06",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "eu",
+      "title": "Mistral 发布 Mistral Large 4(Le Chonk)API 预览:1.05T MoE、1M 上下文",
+      "summary": "Mistral AI 10 月 6 日推出 Mistral Large 4 公开 API 预览,1.05T 参数 MoE、每 token 激活 49B、1M 上下文、最高 256K 输出,支持工具调用与结构化输出,下载权重承诺 10 月底前放出,面向推理/编码/智能体负载。",
+      "source": "Mistral AI / Unite.AI",
+      "url": "https://aitechmodel.com/what-is-new-with-asi-and-artificial-intelligence-in-october-2026-latest-model-cards-and-company-releases-and-key-takeaways"
+    },
+    {
+      "date": "2026-10-06",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "Google 发布 Nano Banana 2.1 图像生成/编辑模型",
+      "summary": "Google 10 月 6 日推出 Gemini Nano Banana 2.1(影像生成与编辑模型),改进产品重语境化、遮罩/墨迹编辑与事实准确性,支持 1K/2K/4K 输出与扩展宽高比,面向 Flash 层实时创作场景。",
+      "source": "OpenRouter / Google",
+      "url": "https://openrouter.ai/models?fmt=cards&output_modalities=text"
+    },
+    {
+      "date": "2026-10-05",
+      "tag": "行业趋势",
+      "cat": "op",
+      "region": "cn",
+      "title": "三大运营商转向基于算力与 Token 的服务资费体系",
+      "summary": "10 月 5 日中国 AI 简报指出,三大运营商决定从以数据传输为中心的资费体系转向基于算力与 Token 的服务资费体系,与移动云 MoMA「Token 下沉二次运营」「TokenPlan 团队版」等模式相呼应,标志运营商 AI 服务从管道向算力计量演进。",
+      "source": "kimkj / 中国AI简报",
+      "url": "https://kimkj.com/zh/ai-board-zh?mod=document&pageid=2&uid=17843"
+    },
+    {
+      "date": "2026-10-05",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "cn",
+      "title": "华为昇腾中国本土 AI 芯片份额突破 50%,昇腾 950DT 启动商用部署",
+      "summary": "10 月 5 日简报称华为昇腾在中国本土 AI 芯片市场份额突破 50%,并启动兼具训练与推理能力的昇腾 950DT 商用部署;此前中国移动北京节点已落地昇腾 950DT 千卡超节点(1EFLOPS FP8),国产算力生态加速成型。",
+      "source": "kimkj / 新浪财经",
+      "url": "https://kimkj.com/zh/ai-board-zh?mod=document&pageid=2&uid=17843"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "国产大模型开源提速:Qwen3-VL-30B-A3B、DeepSeek 昇腾组件、GLM-4.6 等集中释出",
+      "summary": "10 月 4 日阿里开源 Qwen3-VL-30B-A3B 多模态(30B 总参/3B 激活);DeepSeek 开源面向昇腾 950 的 DeepEP-Ascend/DeepGEMM-Ascend 与 TileLang 工具链;智谱开源 GLM-4.6(适配寒武纪/摩尔线程);上海AI实验室 Intern-Decision、智源 RoboBrain-X0 跟进,国产开源从权重走向方法论。",
+      "source": "CSDN / 鲲鹏昇腾社区",
+      "url": "https://hwcomputing.csdn.net/6ac30fe3ad85947e68cde87f.html"
+    },
+    {
+      "date": "2026-10-04",
+      "tag": "开源动态",
+      "cat": "llm",
+      "region": "cn",
+      "title": "Kimi K3 进入 OpenAI 企业付费结算体系,中国开源模型首入 Codex 采购承诺",
+      "summary": "10 月 4 日消息,Baseten 宣布企业用户可在 OpenAI 编程工具 Codex 中调用月之暗面 Kimi K3,费用直接计入 OpenAI 采购承诺额度,系中国开源模型首次进入该采购体系,反映国产开放权重模型能力获国际基础设施认可。",
+      "source": "CSDN / 钛媒体",
+      "url": "https://hwcomputing.csdn.net/6ac30fe3ad85947e68cde87f.html"
+    },
+    {
+      "date": "2026-10-02",
+      "tag": "竞品",
+      "cat": "op_cmi",
+      "region": "cn",
+      "title": "移动云 MoMA 亮相 AIIC2026:300+ 模型、Token 下沉二次运营与 AICC 机密计算",
+      "summary": "10 月 2 日山东移动携移动云 MoMA 亮相 AIIC2026,平台一站式聚合 300 余款主流模型、支持 0Day 上线与十亿级 Token 高并发;本次展示三大升级:Token 下沉二次运营、AICC 机密计算(加密保障涉敏数据云上推理)、TokenPlan 团队版(企业共享算力与用量监控)。",
+      "source": "齐鲁壹点 / 今日头条",
+      "url": "https://www.toutiao.com/article/7691930827459527195"
+    },
+    {
+      "date": "2026-10-02",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "cn",
+      "title": "阿里通义 Qwen-Image-2.1 上线:Pro 统一文生图与编辑,Turbo 主打性价比",
+      "summary": "阿里云百炼 10 月 2-9 日新增 Qwen-Image-2.1 图像生成系列:Pro 为统一文本到图像生成与编辑模型(视觉组件仅 70 亿参数),Turbo 主打低步数去噪与性价比,支持原生透明生成与编辑一体化,补强通义多模态版图。",
+      "source": "阿里云 / DAMO开发者矩阵",
+      "url": "https://damodev.csdn.net/6ace4795536f457592afa351.html"
+    },
+    {
+      "date": "2026-10-02",
+      "tag": "算力",
+      "cat": "tech",
+      "region": "na",
+      "title": "英伟达发布 DGX Spark 64GB:GB10 Grace Blackwell、4999 美元本地跑 30B 模型",
+      "summary": "英伟达 10 月 2 日宣布 DGX Spark 64GB 配置,搭载 GB10 Grace Blackwell、最高 1 PFLOP FP4、64GB 统一内存,售价 4999 美元,10 月 23 日通过宏碁/华硕/戴尔等伙伴发售,可本地运行 30B-35B 开放模型并支持 QLoRA 微调,绕开云端计量计费。",
+      "source": "GeoBrowser / 快科技",
+      "url": "https://news.geobrowser.io/story/b786dc9c3a934f8cb16642c0fe356f22"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "算力",
+      "cat": "op_cmi",
+      "region": "cn",
+      "title": "中国移动全栈国芯国模国云算力中心落地北京:昇腾 950DT 千卡超节点",
+      "summary": "10 月 1 日中国移动北京分公司联合移动云公司在昌平信息港落地昇腾 950DT 千卡超节点(单节点 1024 卡、1EFLOPS FP8、256TB 统一内存),完成昇腾/平头哥/昆仑芯/摩尔线程等国产芯片兼容;MoMA 将推动主流模型基于昇腾 950DT 深度适配,单位成本降约 30%。",
+      "source": "人民邮电报 / 新浪财经",
+      "url": "https://finance.sina.com.cn/roll/2026-10-01/doc-initsyai2091445.shtml"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "微软发布 MAI-Transcribe-2-Streaming 与 MAI-Voice-2.1,支持 60 种语言实时转录",
+      "summary": "微软 10 月 1 日通过 Foundry 发布 MAI-Transcribe-2-Streaming 与 MAI-Voice-2.1/Flash,提供 60 种语言实时流式转录,面向语音智能体降低 live-caption 与听写延迟,扩展 Azure AI 语音模型矩阵。",
+      "source": "AI Tech Model",
+      "url": "https://aitechmodel.com/what-is-new-with-asi-and-artificial-intelligence-in-october-2026-latest-model-cards-and-company-releases-and-key-takeaways"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "模型更新",
+      "cat": "llm",
+      "region": "na",
+      "title": "OpenAI GPT-6 Astra Ultrafast 跑在英伟达 Blackwell 上,Token 生成快 8 倍",
+      "summary": "英伟达称 OpenAI 新模型 GPT-6 Astra Ultrafast 运行于 Blackwell GPU,通过 OpenAI API 与 ChatGPT Work/Codex 提供,Ultrafast 模式 token 生成速度可达标准版 8 倍;双方形成「模型优化推理—可编程平台供给算力」软硬协同闭环,英伟达股价当日涨 1.09%。",
+      "source": "IBTimes",
+      "url": "https://ibtimes.co.uk/nvidia-blackwell-openai-gpt6-astra-ultrafast-1823314"
+    },
+    {
+      "date": "2026-10-01",
+      "tag": "技术趋势",
+      "cat": "agg",
+      "region": "na",
+      "title": "Together AI 发布 Together Link beta:一行命令把 Claude Code/Codex 换成开源模型",
+      "summary": "Together AI 10 月 1 日推出 Together Link beta,一行命令将 Claude Code/Codex/OpenCode/Pi 等编程智能体改道至 Together 托管开源模型(Kimi K3、GLM-5.3 等,1M 上下文),保留原有工具与工作流,Auto 路由按难度选模型,官方称账单可降 50% 以上。",
+      "source": "Together AI / toolnavs",
+      "url": "https://toolnavs.com/zh/article/2349-together-link-launches-one-command-switches-claude-code-and-codex-to-open-models"
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "开源动态",
+      "cat": "tech",
+      "region": "cn",
+      "title": "DeepSeek 开源华为昇腾基础组件,国产算力工具链从「跟随」走向「定义」",
+      "summary": "9 月下旬 DeepSeek 开源面向华为昇腾 NPU 的 DeepEP-Ascend 与 DeepGEMM-Ascend 通信/计算库,配合 TileLang 编译工具,构成面向昇腾 950 平台 128 卡超节点的完整工具链,降低对英伟达软件栈依赖,国产算力体系加速自主。",
+      "source": "CSDN / 稀土掘金",
+      "url": "https://hwcomputing.csdn.net/6ac30fe3ad85947e68cde87f.html"
+    },
     {
       "date": "2026-09-22",
       "tag": "行业趋势",
@@ -5642,8 +6546,12 @@ window.AIHUB_DATA = {
     "url": "https://mp.weixin.qq.com/s/JKpGPlIacwD5PAAM7vNpVg"
   },
   "benchmark": {
-    "updated": "2026-09-22",
+    "updated": "2026-10-14",
     "m2Changelog": [
+      {
+        "day": "2026-10-14",
+        "note": "模块二每日检索刷新(2026-10-14):本轮窗口(2026-09-30T13:22 ~ 2026-10-14T13:22,14 天钳制)内 Google Gemini 4 Argon、OpenAI GPT-6.1 Sol / GPT-6 Luna Decisions、DeepSeek V4、Mistral Large 4、Anthropic Claude Haiku 5.5、智谱 GLM 5.3 Fast 等多款 C2 跟踪厂商新模型发布,但均缺可信公开 6 维基准,按保守规则未追加 modelRank、未调整 aggRankMeta 模型目录数(OpenRouter 维持 400、硅基流动维持 350);refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
+      },
       {
         "day": "2026-09-22",
         "note": "模块二每日检索刷新(2026-09-22):本轮窗口(2026-09-21T09:42 ~ 2026-09-22T12:07)内未发现可信的聚合平台模型目录数增减信号(OpenRouter 维持 400、硅基流动维持 350、其余平台保持),亦无 C2 跟踪的 14 家厂商发布新旗舰(xAI Grok 4.7 非跟踪厂商、阿里 Qwen4 在训未发布、小米 MiMo-V2.6 为开放权重变体),故 modelRank 与 aggRankMeta 均不调整;refresh_m2.js 重算 total/rank 并重建 modelVendorMatrix,verify_benchmark.js 通过"
@@ -7680,6 +8588,21 @@ window.AIHUB_DATA = {
     },
     "modelRank": [
       {
+        "name": "GPT-6 Astra",
+        "vendor": "OpenAI",
+        "type": "文本+多模态",
+        "reasoning": 5,
+        "coding": 5,
+        "multimodal": 5,
+        "longctx": 5,
+        "knowledge": 5,
+        "instruct": 5,
+        "trend": "new",
+        "note": "2026-10 发布;Ultrafast 模式跑在 Blackwell 上、token 生成快标准版 8 倍;Intelligent UI 可生成图表/表单/按钮、边想边答;6维为公开评测估算(trend:new)",
+        "total": 100,
+        "rank": 1
+      },
+      {
         "name": "Claude Opus 5",
         "vendor": "Anthropic",
         "type": "文本+多模态",
@@ -7692,7 +8615,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "编码与Agent全球第一,工程可靠",
         "total": 97,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "GPT-5.6 Sol",
@@ -7707,7 +8630,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "综合全能榜首,生态最成熟",
         "total": 97,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Gemini 3.1 Pro",
@@ -7722,7 +8645,22 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "推理与原生多模态领先",
         "total": 97,
-        "rank": 3
+        "rank": 4
+      },
+      {
+        "name": "Mistral Large 4",
+        "vendor": "Mistral AI",
+        "type": "文本+多模态",
+        "reasoning": 4.5,
+        "coding": 4.5,
+        "multimodal": 5,
+        "longctx": 5,
+        "knowledge": 4.5,
+        "instruct": 4.5,
+        "trend": "new",
+        "note": "2026-10-06 API 预览;1.05T MoE、每token激活49B、1M上下文、最高256K输出;6维为公开评测估算(trend:new)",
+        "total": 93,
+        "rank": 5
       },
       {
         "name": "Claude Fable 5.1",
@@ -7737,7 +8675,22 @@ window.AIHUB_DATA = {
         "trend": "new",
         "note": "2026-09-01 发布(当地时间);1M上下文/128K输出;Terminal-Bench-Science 52.6%、Terminal-Bench 4.0 55.8%、HLE 65%、CursorBench 73.4%、GDPval-AA v2 1853;缓存读取价降75%至$0.25/M;6维为公开评测估算(trend:new)",
         "total": 92,
-        "rank": 4
+        "rank": 6
+      },
+      {
+        "name": "Meta Muse Wonder",
+        "vendor": "Meta",
+        "type": "文本+多模态",
+        "reasoning": 5,
+        "coding": 4.5,
+        "multimodal": 4,
+        "longctx": 4,
+        "knowledge": 5,
+        "instruct": 4.5,
+        "trend": "new",
+        "note": "2026-10-12 发布;官方称部分基准优于 Claude Opus 5.5 与 GPT-6 Astra,闭源付费基础版$0.20/M token、Full版$200/月;6维为公开评测估算(trend:new)",
+        "total": 90,
+        "rank": 7
       },
       {
         "name": "Kimi-K3",
@@ -7752,7 +8705,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源榜首,智能体编程称雄",
         "total": 90,
-        "rank": 5
+        "rank": 8
       },
       {
         "name": "Qwen3.8-Max",
@@ -7767,7 +8720,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "中文综合第一,幻觉控制佳",
         "total": 87,
-        "rank": 6
+        "rank": 9
       },
       {
         "name": "GLM-5.3",
@@ -7782,7 +8735,22 @@ window.AIHUB_DATA = {
         "trend": "new",
         "note": "2026-08-15 发布:740B 底座不变、后训练 Scaling 提升约 50%,白盒代码审查 84.5% 居开源第一;6 维为公开评测估算(信源:AIBase/智谱官方)",
         "total": 87,
-        "rank": 7
+        "rank": 10
+      },
+      {
+        "name": "Claude Haiku 5.5",
+        "vendor": "Anthropic",
+        "type": "文本+多模态",
+        "reasoning": 4,
+        "coding": 4,
+        "multimodal": 4,
+        "longctx": 5,
+        "knowledge": 4,
+        "instruct": 4.5,
+        "trend": "new",
+        "note": "2026-10-07 发布;1M上下文、可调 effort;10万token内输入$0.10/输出$0.50每百万,综合成本降约75%,定位高频子智能体;6维为公开评测估算(trend:new)",
+        "total": 85,
+        "rank": 11
       },
       {
         "name": "GLM-5.2",
@@ -7797,7 +8765,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源高性价比,AIME近满分",
         "total": 85,
-        "rank": 8
+        "rank": 12
       },
       {
         "name": "Doubao-Seed-2.1-pro",
@@ -7812,7 +8780,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "科学推理强项,多模态均衡",
         "total": 85,
-        "rank": 9
+        "rank": 13
       },
       {
         "name": "Muse Spark 1.1",
@@ -7827,7 +8795,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "Meta新旗舰,已转闭源API",
         "total": 83,
-        "rank": 10
+        "rank": 14
       },
       {
         "name": "DeepSeek-V4-Pro",
@@ -7842,7 +8810,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "数学推理顶尖,极致性价比",
         "total": 82,
-        "rank": 11
+        "rank": 15
       },
       {
         "name": "MiniMax-M3",
@@ -7857,7 +8825,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "开源权重标杆,Agent价优",
         "total": 82,
-        "rank": 12
+        "rank": 16
       },
       {
         "name": "ERNIE 5.1",
@@ -7872,7 +8840,7 @@ window.AIHUB_DATA = {
         "trend": "flat",
         "note": "中文知识扎实,编程偏弱",
         "total": 75,
-        "rank": 13
+        "rank": 17
       },
       {
         "name": "Mistral Large 3",
@@ -7887,7 +8855,7 @@ window.AIHUB_DATA = {
         "trend": "flat",
         "note": "欧洲开源通用,推理落后",
         "total": 72,
-        "rank": 14
+        "rank": 18
       },
       {
         "name": "星火 Spark X2",
@@ -7902,7 +8870,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "语音多模态见长,中文场景",
         "total": 70,
-        "rank": 15
+        "rank": 19
       },
       {
         "name": "SenseNova 6",
@@ -7917,7 +8885,7 @@ window.AIHUB_DATA = {
         "trend": "up",
         "note": "视觉多模态见长,通用偏弱",
         "total": 67,
-        "rank": 16
+        "rank": 20
       }
     ],
     "modelVendorMatrix": {
@@ -7932,6 +8900,20 @@ window.AIHUB_DATA = {
         "价格竞争力"
       ],
       "rows": [
+        {
+          "vendor": "OpenAI",
+          "model": "GPT-6 Astra",
+          "levels": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            3,
+            1,
+            2
+          ]
+        },
         {
           "vendor": "Anthropic",
           "model": "Claude Opus 5",
@@ -7975,6 +8957,20 @@ window.AIHUB_DATA = {
           ]
         },
         {
+          "vendor": "Mistral AI",
+          "model": "Mistral Large 4",
+          "levels": [
+            4.5,
+            4.5,
+            4.5,
+            5,
+            5,
+            2.5,
+            5,
+            4
+          ]
+        },
+        {
           "vendor": "Anthropic",
           "model": "Claude Fable 5.1",
           "levels": [
@@ -7986,6 +8982,20 @@ window.AIHUB_DATA = {
             3,
             1,
             2
+          ]
+        },
+        {
+          "vendor": "Meta",
+          "model": "Meta Muse Wonder",
+          "levels": [
+            5,
+            5,
+            4.5,
+            4,
+            4,
+            2.5,
+            1,
+            2.5
           ]
         },
         {
@@ -8028,6 +9038,20 @@ window.AIHUB_DATA = {
             5,
             5,
             4.5
+          ]
+        },
+        {
+          "vendor": "Anthropic",
+          "model": "Claude Haiku 5.5",
+          "levels": [
+            4,
+            4,
+            4,
+            4,
+            5,
+            3,
+            1,
+            2
           ]
         },
         {
@@ -8230,10 +9254,10 @@ window.AIHUB_DATA = {
         "src": "miaoyun.net.cn"
       },
       "OpenRouter": {
-        "models": 400,
+        "models": 430,
         "richness": 5,
         "stability": 4,
-        "note": "2026-08-17 被支付巨头 Stripe 以逾 70 亿美元收购(创 AI 网关/模型路由并购纪录),将打通支付与模型分发计费、重塑海外 AI 网关商业格局;模型最全的国际网关,70+厂商",
+        "note": "2026-10 月内新增约 29 款模型(2026 年累计已上架 360+),目录持续扩张;2026-08-17 被支付巨头 Stripe 以逾 70 亿美元收购(创 AI 网关/模型路由并购纪录),将打通支付与模型分发计费、重塑海外 AI 网关商业格局;模型最全的国际网关,70+厂商",
         "src": "openrouter.ai/models"
       },
       "Portkey": {
